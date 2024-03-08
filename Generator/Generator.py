@@ -18,10 +18,13 @@ class Generator:
         else:
             np.random.seed(seed)
 
-    def generate_images(self, draw_circle=True, draw_square=False, directory="dataset", filename="shapes", quantity=1):
+    def generate_images(self, draw_random=False, draw_circle=True, draw_square=False, directory="dataset", filename="shapes", quantity=1):
         np.random.seed(self.seed)
         i = 0
         while i < quantity:
+            if draw_random:
+                draw_circle = np.random.choice([True, False])
+                draw_square = np.random.choice([True, False])
             background_color = self._generate_nonmatching_color()
             fig = plt.figure(figsize=(self.image_width / 100, self.image_height / 100), facecolor=background_color)
             ax = fig.add_subplot(111)
