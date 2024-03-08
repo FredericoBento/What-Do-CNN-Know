@@ -15,3 +15,7 @@ generator = Generator()
 generator.generate_images(False, True, SQUARE_TEST_DIRECTORY, "square", 20)
 generator.generate_images(True, False, CIRCLE_TEST_DIRECTORY, "circle", 20)
 generator.generate_images(True, True, SQUARE_CIRCLE_TEST_DIRECTORY, "square_circle", 20)
+
+# Save seed to file
+with open("dataset/test/seed.txt", "w") as f:
+    f.write(str(generator.seed))
