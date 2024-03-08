@@ -8,7 +8,7 @@ class Generator:
         self.image_width = image_width
         self.image_height = image_height
         self.seed = seed
-        self.min_square_side_length = 5
+        self.min_square_side_length = 8
         self.min_circle_radius = 2
         if seed == None:
             rand_seed = np.random.randint(0, 1000)
@@ -18,7 +18,7 @@ class Generator:
         else:
             np.random.seed(seed)
 
-    def generate_images(self, draw_random=False, draw_circle=True, draw_square=False, directory="dataset", filename="shapes", quantity=1):
+    def generate_images(self, draw_random=False, draw_circle=False, draw_square=False, directory="dataset", quantity=1):
         np.random.seed(self.seed)
         i = 0
         while i < quantity:
@@ -29,8 +29,9 @@ class Generator:
             fig = plt.figure(figsize=(self.image_width / 100, self.image_height / 100), facecolor=background_color)
             ax = fig.add_subplot(111)
             if draw_square:
+                filename = "square_"
                 square_color = self._generate_nonmatching_color(background_color)
-                side_length = np.random.uniform(1, min(self.image_width, self.image_height)) // 4
+                side_length = np.random.uniform(self.min_square_side_length, min(self.image_width, self.image_height)) // 4
                 square_x = np.random.uniform(0, self.image_width - side_length)
                 square_y = np.random.uniform(0, self.image_height - side_length)
 
@@ -44,9 +45,13 @@ class Generator:
                 image_height_adjusted = self.image_height
 
             if draw_circle:
+                if draw_square:
+                    filename += "circle_"
+                else:
+                    filename = "circle_"
                 circle_color = self._generate_nonmatching_color(background_color)
                 max_radius = min(image_width_adjusted, image_height_adjusted)
-                radius = np.random.uniform(1, max_radius)
+                radius = np.random.uniform(self.min_circle_radius, max_radius)
                 circle_x = np.random.uniform(0, image_width_adjusted - radius)
                 circle_y = np.random.uniform(0, image_height_adjusted - radius)
 
@@ -71,7 +76,8 @@ class Generator:
             ax.set_ylim(0, self.image_height)
             ax.set_aspect('equal', adjustable='box')
             ax.axis('off')
-
+            if draw_square == False and draw_circle == False:
+                filename = "none_"
             plt.savefig(f'{directory + "/" + filename + str(i+1)}.jpg', bbox_inches='tight', pad_inches=0)
             plt.close()
             self.num_images += 1
