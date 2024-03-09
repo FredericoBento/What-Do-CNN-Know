@@ -39,8 +39,8 @@ for folder in folders:
         os.makedirs(folder)
 
 
-test_quantity = 100
-train_quantity = 100 / 4
+test_quantity = 1000
+train_quantity = 3000 / 4
 
 print("Starting to generate images")
 generator = Generator()
