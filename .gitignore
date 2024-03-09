@@ -2,3 +2,5 @@
 .idea/
 
 Generator/__pycache__/
+
+Generator/dataset/

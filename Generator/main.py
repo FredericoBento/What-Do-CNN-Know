@@ -39,18 +39,20 @@ for folder in folders:
         os.makedirs(folder)
 
 
-test_quantity = 1000
-train_quantity = 3000 / 4
+test_quantity = 100
+train_quantity = 100 / 4
 
 print("Starting to generate images")
 generator = Generator()
 start = pc()
+generator.generate_images(draw_random=True, directory=TEST_DIRECTORY, quantity=test_quantity)
+
 generator.generate_images(False, False, True, SQUARE_TRAIN_DIRECTORY, train_quantity)
 generator.generate_images(False, True, False, CIRCLE_TRAIN_DIRECTORY, train_quantity)
 generator.generate_images(False, False, False, NONE_TRAIN_DIRECTORY, train_quantity)
 generator.generate_images(False, True, True, SQUARE_CIRCLE_TRAIN_DIRECTORY, train_quantity)
 
-generator.generate_images(draw_random=True, directory=TEST_DIRECTORY, quantity=test_quantity)
+
 
 #move image from test to subdirectory
 for filename in os.listdir(TEST_DIRECTORY):
