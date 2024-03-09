@@ -5,14 +5,22 @@ from time import perf_counter as pc
 TRAIN_DIRECTORY = "dataset/train/"
 TEST_DIRECTORY = "dataset/test/"
 
-SQUARE_TRAIN_DIRECTORY = TRAIN_DIRECTORY + "square"
 CIRCLE_TRAIN_DIRECTORY = TRAIN_DIRECTORY + "circle"
-SQUARE_CIRCLE_TRAIN_DIRECTORY = TRAIN_DIRECTORY + "square_circle"
 NONE_TRAIN_DIRECTORY = TRAIN_DIRECTORY + "none"
+SQUARE_TRAIN_DIRECTORY = TRAIN_DIRECTORY + "square"
+SQUARE_CIRCLE_TRAIN_DIRECTORY = TRAIN_DIRECTORY + "square_circle"
 
-SQUARE_AND_CIRCLE_TEST_DIRECTORY = TEST_DIRECTORY + "square_and_circle"
 
+CIRCLE_TEST_DIRECTORY = TEST_DIRECTORY + "circle"
 
+NONE_TEST_DIRECTORY = TEST_DIRECTORY + "none"
+SQUARE_TEST_DIRECTORY = TEST_DIRECTORY + "square"
+SQUARE_CIRCLE_TEST_DIRECTORY = TEST_DIRECTORY + "square_circle"
+
+folders = [CIRCLE_TRAIN_DIRECTORY, NONE_TRAIN_DIRECTORY,
+        SQUARE_TRAIN_DIRECTORY, SQUARE_CIRCLE_TRAIN_DIRECTORY,
+        CIRCLE_TEST_DIRECTORY, NONE_TEST_DIRECTORY,
+        SQUARE_TEST_DIRECTORY, SQUARE_CIRCLE_TEST_DIRECTORY]
 
 def del_dir(rootdir):
     if(os.path.isdir(rootdir)):
@@ -26,16 +34,9 @@ def del_dir(rootdir):
 del_dir(TRAIN_DIRECTORY)
 del_dir(TEST_DIRECTORY)
 
-# Create new directories
-os.makedirs(TRAIN_DIRECTORY, exist_ok=True)
-os.makedirs(TEST_DIRECTORY, exist_ok=True)
-
-os.makedirs(SQUARE_TRAIN_DIRECTORY, exist_ok=True)
-os.makedirs(CIRCLE_TRAIN_DIRECTORY, exist_ok=True)
-os.makedirs(NONE_TRAIN_DIRECTORY, exist_ok=True)
-os.makedirs(SQUARE_CIRCLE_TRAIN_DIRECTORY, exist_ok=True)
-
-os.makedirs(SQUARE_AND_CIRCLE_TEST_DIRECTORY, exist_ok=True)
+for folder in folders:
+    if not os.path.exists(folder):
+        os.makedirs(folder)
 
 
 test_quantity = 1000
@@ -49,10 +50,22 @@ generator.generate_images(False, True, False, CIRCLE_TRAIN_DIRECTORY, train_quan
 generator.generate_images(False, False, False, NONE_TRAIN_DIRECTORY, train_quantity)
 generator.generate_images(False, True, True, SQUARE_CIRCLE_TRAIN_DIRECTORY, train_quantity)
 
-generator.generate_images(draw_random=True, directory=SQUARE_AND_CIRCLE_TEST_DIRECTORY, quantity=test_quantity)
+generator.generate_images(draw_random=True, directory=TEST_DIRECTORY, quantity=test_quantity)
 
-
-
+#move image from test to subdirectory
+for filename in os.listdir(TEST_DIRECTORY):
+    #skip dir
+    if os.path.isdir(TEST_DIRECTORY + filename):
+        continue
+    if filename.__contains__("square_circle_"):
+       os.rename(TEST_DIRECTORY + filename, SQUARE_CIRCLE_TEST_DIRECTORY + "/" + filename)
+    elif filename.__contains__("circle_"):
+        os.rename(TEST_DIRECTORY + filename, CIRCLE_TEST_DIRECTORY + "/" + filename)
+    elif filename.__contains__("square_"):
+        os.rename(TEST_DIRECTORY + filename, SQUARE_TEST_DIRECTORY + "/" + filename)
+    else:
+        os.rename(TEST_DIRECTORY + filename, NONE_TEST_DIRECTORY + "/" + filename)
+    
 # Save seed to file
 with open("dataset/seed.txt", "w") as f:
     f.write(str(generator.seed))
