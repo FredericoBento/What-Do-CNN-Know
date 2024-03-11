@@ -4,3 +4,5 @@
 Generator/__pycache__/
 
 Generator/dataset/
+
+CNN_Model/models/

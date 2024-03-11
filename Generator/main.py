@@ -2,8 +2,8 @@ from Generator import Generator
 import os
 from time import perf_counter as pc
 
-TRAIN_DIRECTORY = "dataset/train/"
-TEST_DIRECTORY = "dataset/test/"
+TRAIN_DIRECTORY = "dataset1/train/"
+TEST_DIRECTORY = "dataset1/test/"
 
 CIRCLE_TRAIN_DIRECTORY = TRAIN_DIRECTORY + "circle"
 NONE_TRAIN_DIRECTORY = TRAIN_DIRECTORY + "none"
@@ -39,8 +39,8 @@ for folder in folders:
         os.makedirs(folder)
 
 
-test_quantity = 1000
-train_quantity = 3000 / 4
+test_quantity = 100
+train_quantity = 100 / 4
 
 print("Starting to generate images")
 generator = Generator()
