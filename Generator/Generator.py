@@ -33,7 +33,7 @@ class Generator:
                 draw_square = np.random.choice([True, False])
             background_color = self._generate_nonmatching_color()
             
-            fig = plt.figure(figsize=(self.image_width / 100, self.image_height / 100), facecolor=background_color, linewidth=0.0)
+            fig = plt.figure(figsize=(self.image_width / 100, self.image_height / 100), facecolor=background_color, linewidth=0.0, dpi=130)
             ax = fig.add_subplot(111)
             #add anti-aliasing
             ax.set_rasterized(True)
@@ -49,7 +49,7 @@ class Generator:
                 center_x = square_x + side_length / 2
                 center_y = square_y + side_length / 2
                 square = Rectangle((square_x, square_y), side_length, side_length, color=square_color, angle=square_angle, rotation_point=(center_x, center_y))
-                
+                square.set_antialiased(True)
                 corners = square.get_corners()
                 shape_square = geometry.Polygon(corners)
 
