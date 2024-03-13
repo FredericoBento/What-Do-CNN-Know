@@ -10,21 +10,27 @@ class Generator:
         self.image_width = image_width
         self.image_height = image_height
         self.seed = seed
+
+        self.circle_ratio = []
+        self.square_ratio = []
+        self.circle_square_ratio = []
+
         self.min_square_side_length = 24
         self.min_circle_radius = 12
-
         self.max_circle_radius = image_width / 4
         self.max_square_side_length = image_width / 2
+
         if seed == None:
             rand_seed = np.random.randint(0, 1000)
             np.random.seed(rand_seed)
             self.seed = rand_seed
             print(f"Seed not provided. Using random seed {rand_seed}")
         else:
+            print(f"Seed provided. Using seed {seed}")
             np.random.seed(seed)
 
     def generate_images(self, draw_random=False, draw_circle=False, draw_square=False, directory="dataset", quantity=1):
-        np.random.seed(self.seed)
+        # np.random.seed(self.seed)
         i = 0
 
         while i < quantity:
@@ -33,9 +39,8 @@ class Generator:
                 draw_square = np.random.choice([True, False])
             background_color = self._generate_nonmatching_color()
             
-            fig = plt.figure(figsize=(500/100, 500/100), facecolor=background_color, linewidth=0.0)
+            fig = plt.figure(figsize=(self.image_width/100, self.image_height/100), facecolor=background_color, linewidth=0.0)
             ax = fig.add_subplot(111)
-            #add anti-aliasing
             ax.set_rasterized(True)
             
             if draw_square:
@@ -60,10 +65,11 @@ class Generator:
                     self._cornerOutOfBounds(corners[3][0], corners[3][1]):
                     plt.close()
                     continue
-                #square = Rectangle((0, 0), side_length, side_length, color=square_color)   
+
                
                 ax.add_patch(square)
-
+                # change ratio based on size
+                self.square_ratio.append(side_length / self.image_width)
             if draw_circle:
                 if draw_square:
                     filename += "circle_"
@@ -76,7 +82,6 @@ class Generator:
 
                 if draw_square:
                     # check with shapely if circle intersects square
-                    
                     shape_circle = geometry.Point(circle_x, circle_y).buffer(radius)
                     if shape_square.intersects(shape_circle):
                         plt.close()
@@ -88,10 +93,15 @@ class Generator:
                     circle_y - radius < 0 or circle_y + radius > self.image_height:
                     plt.close()
                     continue
+                
+                if draw_square:
+                    self.circle_square_ratio.append((radius * 2) / side_length)
 
                 circle = Circle((circle_x, circle_y), radius, color=circle_color)
                 circle.set_antialiased(True)
                 ax.add_patch(circle)
+                # change ratio based on size
+                self.circle_ratio.append(radius * 2 / self.image_width)
 
             ax.set_xlim(0, self.image_width)
             ax.set_ylim(0, self.image_height)
@@ -125,5 +135,10 @@ class Generator:
             return True
 
         return False
+    
+    def getAverageRatio(self):
+        return (np.mean(self.circle_ratio).round(2),
+                 np.mean(self.square_ratio).round(2),
+                   np.mean(self.circle_square_ratio).round(2))
 
         
