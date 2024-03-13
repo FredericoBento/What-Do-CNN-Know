@@ -33,7 +33,7 @@ class Generator:
                 draw_square = np.random.choice([True, False])
             background_color = self._generate_nonmatching_color()
             
-            fig = plt.figure(figsize=(self.image_width / 100, self.image_height / 100), facecolor=background_color, linewidth=0.0, dpi=130)
+            fig = plt.figure(figsize=(500/100, 500/100), facecolor=background_color, linewidth=0.0)
             ax = fig.add_subplot(111)
             #add anti-aliasing
             ax.set_rasterized(True)
@@ -90,6 +90,7 @@ class Generator:
                     continue
 
                 circle = Circle((circle_x, circle_y), radius, color=circle_color)
+                circle.set_antialiased(True)
                 ax.add_patch(circle)
 
             ax.set_xlim(0, self.image_width)
@@ -98,7 +99,8 @@ class Generator:
             ax.axis('off')
             if draw_square == False and draw_circle == False:
                 filename = "none_"
-            plt.savefig(f'{directory + "/" + filename + str(i+1)}.jpg', bbox_inches='tight', pad_inches=0)
+            plt.tight_layout()
+            plt.savefig(f'{directory + "/" + filename + str(i+1)}.png', bbox_inches='tight', pad_inches=0, dpi=106.5)
             plt.close()
             self.num_images += 1
             i += 1
