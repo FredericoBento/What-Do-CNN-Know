@@ -39,11 +39,11 @@ for folder in folders:
         os.makedirs(folder)
 
 
-test_quantity = 1000
-train_quantity = 3000 / 4
+test_quantity = 100
+train_quantity = 300 / 4
 
 print("Starting to generate images")
-generator = Generator(seed=848)
+generator = Generator(seed=891)
 start = pc()
 generator.generate_images(draw_random=True, directory=TEST_DIRECTORY, quantity=test_quantity)
 
@@ -69,7 +69,7 @@ for filename in os.listdir(TEST_DIRECTORY):
         os.rename(TEST_DIRECTORY + filename, NONE_TEST_DIRECTORY + "/" + filename)
     
 # Save seed to file
-with open("dataset/seed.txt", "w") as f:
+with open("dataset1/seed.txt", "w") as f:
     f.write(str(generator.seed))
 
 end = pc()

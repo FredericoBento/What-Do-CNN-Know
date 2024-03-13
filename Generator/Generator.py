@@ -15,8 +15,8 @@ class Generator:
         self.square_ratio = []
         self.circle_square_ratio = []
 
-        self.min_square_side_length = 24
-        self.min_circle_radius = 12
+        self.min_square_side_length = 20
+        self.min_circle_radius = 10
         self.max_circle_radius = image_width / 4
         self.max_square_side_length = image_width / 2
 
@@ -42,7 +42,8 @@ class Generator:
             fig = plt.figure(figsize=(self.image_width/100, self.image_height/100), facecolor=background_color, linewidth=0.0)
             ax = fig.add_subplot(111)
             ax.set_rasterized(True)
-            
+            side_length = -1
+            radius = -1
             if draw_square:
                 filename = "square_"
                 square_color = self._generate_nonmatching_color(background_color)
@@ -69,7 +70,6 @@ class Generator:
                
                 ax.add_patch(square)
                 # change ratio based on size
-                self.square_ratio.append(side_length / self.image_width)
             if draw_circle:
                 if draw_square:
                     filename += "circle_"
@@ -93,15 +93,12 @@ class Generator:
                     circle_y - radius < 0 or circle_y + radius > self.image_height:
                     plt.close()
                     continue
-                
-                if draw_square:
-                    self.circle_square_ratio.append((radius * 2) / side_length)
-
+            
                 circle = Circle((circle_x, circle_y), radius, color=circle_color)
                 circle.set_antialiased(True)
                 ax.add_patch(circle)
                 # change ratio based on size
-                self.circle_ratio.append(radius * 2 / self.image_width)
+                
 
             ax.set_xlim(0, self.image_width)
             ax.set_ylim(0, self.image_height)
@@ -112,6 +109,15 @@ class Generator:
             plt.tight_layout()
             plt.savefig(f'{directory + "/" + filename + str(i+1)}.png', bbox_inches='tight', pad_inches=0, dpi=106.5)
             plt.close()
+            if draw_square and draw_circle:
+                self.circle_square_ratio.append((radius * 2) / side_length)
+            else:
+                if draw_square:
+                    self.square_ratio.append(side_length / self.image_width)
+                if draw_circle:
+                    self.circle_ratio.append((radius * 2) / self.image_width)
+            
+            
             self.num_images += 1
             i += 1
 
@@ -137,6 +143,10 @@ class Generator:
         return False
     
     def getAverageRatio(self):
+        print("Circle: size: " + str(len(self.circle_ratio)))
+        print("Square: size: " + str(len(self.square_ratio)))
+        print("Circle_Square: size: " + str(len(self.circle_square_ratio)))
+        print("Number Images" + str(self.num_images))
         return (np.mean(self.circle_ratio).round(2),
                  np.mean(self.square_ratio).round(2),
                    np.mean(self.circle_square_ratio).round(2))
