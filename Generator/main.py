@@ -2,8 +2,8 @@ from Generator import Generator
 import os
 from time import perf_counter as pc
 
-TRAIN_DIRECTORY = "dataset1/train/"
-TEST_DIRECTORY = "dataset1/test/"
+TRAIN_DIRECTORY = "dataset3/train/"
+TEST_DIRECTORY = "dataset3/test/"
 
 CIRCLE_TRAIN_DIRECTORY = TRAIN_DIRECTORY + "circle"
 NONE_TRAIN_DIRECTORY = TRAIN_DIRECTORY + "none"
@@ -39,11 +39,11 @@ for folder in folders:
         os.makedirs(folder)
 
 
-test_quantity = 100
-train_quantity = 100 / 4
+test_quantity = 1000
+train_quantity = 3000 / 4
 
 print("Starting to generate images")
-generator = Generator()
+generator = Generator(seed=848)
 start = pc()
 generator.generate_images(draw_random=True, directory=TEST_DIRECTORY, quantity=test_quantity)
 
@@ -74,3 +74,8 @@ with open("dataset/seed.txt", "w") as f:
 
 end = pc()
 print("Finished generating images in " + str(end - start ) + " seconds")
+
+(c_ratio, s_ratio, cs_ratio) = generator.getAverageRatio() 
+print("Circle Ratio: " + str(c_ratio))  
+print("Square Ratio: " + str(s_ratio))
+print("Circle Square Ratio: " + str(cs_ratio))
