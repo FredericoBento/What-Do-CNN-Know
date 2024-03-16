@@ -30,6 +30,7 @@ class Generator:
             np.random.seed(seed)
 
     def generate_images(self, draw_random=False, draw_circle=False, draw_square=False, directory="dataset", quantity=1):
+
         i = 0
 
         while i < quantity:
@@ -108,6 +109,7 @@ class Generator:
 
             self.num_images += 1
             i += 1
+        return self.num_images, self.squares_area, self.circle_area
 
     def _generate_nonmatching_color(self, *excluded_colors):
         while True:
@@ -137,18 +139,18 @@ class Generator:
                 np.mean(self.square_ratio).round(2),
                 np.mean(self.circle_square_ratio).round(2))
 
-    def getAreaHistogram(self, circle_areas=None, square_areas=None, num_bins=30, folder=None):
+    def getAreaHistogram(self, circle_areas=None, square_areas=None, folder=None):
         if circle_areas is None:
             circle_areas = self.circle_area
 
         if square_areas is None:
             square_areas = self.squares_area
 
-        print(str(len(square_areas)))
-        print(str(len(circle_areas)))
+        # print(str(len(square_areas)))
+        # print(str(len(circle_areas)))
         data = []
         colors = []
-        if len(circle_areas) > 0 and square_areas > 0:
+        if len(circle_areas) > 0 and len(square_areas) > 0:
             data = [square_areas, circle_areas]
             colors = ["blue", "red"]
         elif len(circle_areas) > 0:
@@ -161,7 +163,7 @@ class Generator:
             print("No Data has been generated yet, failed to generate graph")
             return
 
-        hist = plt.hist(data, bins=num_bins, color=colors, alpha=0.7, label=['Square', 'Circle'])
+        hist = plt.hist(data, bins='sqrt', color=colors, alpha=0.7, label=['Square', 'Circle'])
         plt.xlabel("Areas")
         plt.ylabel("Number of Samples")
         plt.title("Square and Circle Area Comparison")
@@ -187,24 +189,53 @@ class Generator:
 
         square_len = len(square_areas)
         circle_len = len(circle_areas)
-        if square_len > 0:
-            x1 = np.linspace(0, 1, len(square_areas))
 
-        if circle_len > 0:
+        if square_len < 0 and circle_len < 0:
+            print("No Data has been generated yet, failed to generate graph")
+            return
+
+        if square_len > 0 and circle_len <= 0:
+            return self.squareLineGraph(squareAreas=square_areas, folder=folder)
+        elif circle_len > 0 and square_len <= 0:
+            return self.circleLineGraph(circleAreas=circle_areas, folder=folder)
+        
+        if square_len > 0 and circle_len > 0:
+
+            x1 = np.linspace(0, 1, len(square_areas))
             x2 = np.linspace(0, 1, len(circle_areas))
 
-        # Interpolate data2 to match the length of data1
-        if circle_len > 0:
+            # Interpolate data2 to match the length of data1
             f = interp1d(x2, circle_areas)
             data2_interp = f(x1)
 
+            plt.plot(x1, square_areas, color='blue', label='Square Areas (' + str(len(square_areas)) + ')')
+            plt.plot(x2, data2_interp, color='red', label='Circle Areas' + str(len(circle_areas)) + ')')
+
+            plt.xlabel('Number of Samples')
+            plt.ylabel('Areas')
+            plt.title('Comparison of Areas')
+            plt.legend()
+            plt.grid(True)
+            fig = plt.gcf()
+            fig.set_size_inches(10, 5)
+            filename = 'Dataset_Line_seed_' + str(self.seed) + '.png'
+            if folder is not None:
+                filename = folder + "/" + filename
+            fig.savefig(filename, dpi=100)
+            plt.close()
+
+    def squareLineGraph(self, squareAreas=None, folder=None):
+        if squareAreas is None:
+            squareAreas = self.squares_area
+
+        squareAreas = np.sort(squareAreas)
+        square_len = len(squareAreas)
+        if square_len > 0:
+            x1 = np.linspace(0, 1, len(squareAreas))
 
         # Plot the line graph
         if square_len > 0:
-            plt.plot(x1, square_areas, color='blue', label='Square Areas (' + str(len(square_areas)) + ')')
-
-        if circle_len > 0:
-            plt.plot(x1, data2_interp, color='red', label='Circle Areas' + str(len(circle_areas)) + ')')
+            plt.plot(x1, squareAreas, color='blue', label='Square Areas (' + str(len(squareAreas)) + ')')
 
         plt.xlabel('Number of Samples')
         plt.ylabel('Areas')
@@ -218,3 +249,31 @@ class Generator:
             filename = folder + "/" + filename
         fig.savefig(filename, dpi=100)
         plt.close()
+
+    def circleLineGraph(self, circleAreas=None, folder=None):
+        if circleAreas is None:
+            circleAreas = self.circle_area
+
+        circleAreas = np.sort(circleAreas)
+        circle_len = len(circleAreas)
+        if circle_len > 0:
+            x1 = np.linspace(0, 1, len(circleAreas))
+
+        # Plot the line graph
+        if circle_len > 0:
+            plt.plot(x1, circleAreas, color='red', label='Circle Areas (' + str(len(circleAreas)) + ')')
+
+        plt.xlabel('Number of Samples')
+        plt.ylabel('Areas')
+        plt.title('Comparison of Areas')
+        plt.legend()
+        plt.grid(True)
+        fig = plt.gcf()
+        fig.set_size_inches(10, 5)
+        filename = 'Dataset_Line_seed_' + str(self.seed) + '.png'
+        if folder is not None:
+            filename = folder + "/" + filename
+        fig.savefig(filename, dpi=100)
+        plt.close()
+
+

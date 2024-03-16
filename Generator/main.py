@@ -1,8 +1,9 @@
 from Generator import Generator
 import os
 from time import perf_counter as pc
+from multiprocessing import Process, Queue
 
-DATASET_DIRECTORY_NAME = "dataset"
+DATASET_DIRECTORY_NAME = "dataset_only_circles_multi_processor"
 DATASET_GRAPH_DIRECTORY = DATASET_DIRECTORY_NAME + "/graphs"
 
 TRAIN_DIRECTORY = DATASET_DIRECTORY_NAME + "/train/"
@@ -50,7 +51,7 @@ test_quantity = 1000
 train_quantity = 3000 / 2
 
 print("Starting to generate images")
-generator = Generator()
+generator = Generator(seed=534)
 start = pc()
 
 # generator.generate_images(draw_random=True, directory=TEST_DIRECTORY, quantity=test_quantity)
@@ -60,13 +61,49 @@ start = pc()
 # generator.generate_images(False, False, False, NONE_TRAIN_DIRECTORY, train_quantity)
 # generator.generate_images(False, True, True, SQUARE_CIRCLE_TRAIN_DIRECTORY, train_quantity)
 
-generator.generate_images(False, False, True, SQUARE_TRAIN_DIRECTORY, train_quantity)
-generator.generate_images(False, False, False, NONE_TRAIN_DIRECTORY, train_quantity)
-
-generator.generate_images(False, False, True, TEST_DIRECTORY, test_quantity)
-generator.generate_images(False, False, False, TEST_DIRECTORY, test_quantity)
 
 
+
+# generator.generate_images(False, True, False, CIRCLE_TRAIN_DIRECTORY, train_quantity)
+# generator.generate_images(False, False, False, NONE_TRAIN_DIRECTORY, train_quantity)
+#
+# generator.generate_images(False, True, False, TEST_DIRECTORY, test_quantity)
+# generator.generate_images(False, False, False, TEST_DIRECTORY, test_quantity)
+
+queue = Queue()
+
+def generate_images(*args):
+    result = generator.generate_images(*args)
+    queue.put(result)
+
+p1 = Process(target=generate_images, args=(False, True, False, CIRCLE_TRAIN_DIRECTORY, train_quantity))
+p2 = Process(target=generate_images, args=(False, False, False, NONE_TRAIN_DIRECTORY, train_quantity))
+
+p3 = Process(target=generate_images, args=(False, True, False, TEST_DIRECTORY, test_quantity))
+p4 = Process(target=generate_images, args=(False, False, False, TEST_DIRECTORY, test_quantity))
+
+processes = [p1, p2, p3, p4]
+
+for p in processes:
+    p.start()
+
+for p in processes:
+    p.join()
+
+
+total_num_images = 0
+total_squares_area = []
+total_circle_area = []
+    
+while not queue.empty():
+    num_images, squares_area, circle_area = queue.get()
+    total_num_images += num_images
+    total_squares_area.extend(squares_area)
+    total_circle_area.extend(circle_area)
+
+print("Total num_images:", total_num_images)
+print("Total squares_area:", len(total_squares_area))  # Sum of all values in the list
+print("Total circle_area:", len(total_circle_area)) 
 
 # move image from test to subdirectory
 for filename in os.listdir(TEST_DIRECTORY):
@@ -88,5 +125,5 @@ with open(DATASET_DIRECTORY_NAME + "/seed.txt", "w") as f:
 end = pc()
 print("Finished generating images in " + str(end - start) + " seconds")
 
-generator.getAreaHistogram(folder=DATASET_GRAPH_DIRECTORY)
-generator.getAreaLineGraph(folder=DATASET_GRAPH_DIRECTORY)
+generator.getAreaHistogram(total_circle_area, total_squares_area, folder=DATASET_GRAPH_DIRECTORY)
+generator.getAreaLineGraph(total_circle_area, total_squares_area, folder=DATASET_GRAPH_DIRECTORY)
