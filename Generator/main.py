@@ -3,7 +3,7 @@ import os
 from time import perf_counter as pc
 
 
-DATASET_DIRECTORY_NAME = "Dataset_A"
+DATASET_DIRECTORY_NAME = "Dataset_B"
 DATASET_GRAPH_DIRECTORY = DATASET_DIRECTORY_NAME + "/graphs"
 DATASET_DATA_DIRECTORY = DATASET_DIRECTORY_NAME + "/data"
 
@@ -28,7 +28,6 @@ folders = [CIRCLE_TRAIN_DIRECTORY, NONE_TRAIN_DIRECTORY,
            SQUARE_TEST_DIRECTORY, SQUARE_CIRCLE_TEST_DIRECTORY,
            DATASET_GRAPH_DIRECTORY, DATASET_DATA_DIRECTORY]
 
-
 def del_dir(rootdir):
     if os.path.isdir(rootdir):
         for (dirpath, dirnames, filenames) in os.walk(rootdir):
@@ -52,7 +51,7 @@ test_quantity = 1000
 train_quantity = 3000 / 2
 
 print("Starting to generate images")
-generator = Generator(seed=14)
+generator = Generator()
 start = pc()
 
 # generator.generate_images(draw_random=True, directory=TEST_DIRECTORY, quantity=test_quantity)
@@ -63,10 +62,10 @@ start = pc()
 # generator.generate_images(False, True, True, SQUARE_CIRCLE_TRAIN_DIRECTORY, train_quantity)
 
 
-generator.generate_images(False, True, False, CIRCLE_TRAIN_DIRECTORY, train_quantity)
+generator.generate_images(False, False, True, SQUARE_TRAIN_DIRECTORY, train_quantity)
 generator.generate_images(False, False, False, NONE_TRAIN_DIRECTORY, train_quantity)
 
-generator.generate_images(False, True, False, TEST_DIRECTORY, test_quantity)
+generator.generate_images(False, False, True, TEST_DIRECTORY, test_quantity)
 generator.generate_images(False, False, False, TEST_DIRECTORY, test_quantity)
 
 
@@ -90,7 +89,7 @@ with open(DATASET_DIRECTORY_NAME + "/seed.txt", "w") as f:
 end = pc()
 print("Finished generating images in " + str(end - start) + " seconds")
 
-generator.getAreaHistogram(folder=DATASET_GRAPH_DIRECTORY, title="Circle Areas")
-generator.getAreaLineGraph(folder=DATASET_GRAPH_DIRECTORY, title="Circle Areas")
+generator.getAreaHistogram(folder=DATASET_GRAPH_DIRECTORY, title="Square Areas")
+generator.getAreaLineGraph(folder=DATASET_GRAPH_DIRECTORY, title="Square Areas")
 
 generator.saveMetadata(folder=DATASET_DATA_DIRECTORY)

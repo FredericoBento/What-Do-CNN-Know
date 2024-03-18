@@ -21,7 +21,7 @@ class Generator:
 
         self.squares_area = []
         self.circle_area = []
-
+        self.lenghts = []
         if seed is None:
             rand_seed = np.random.randint(0, 1000)
             np.random.seed(rand_seed)
@@ -48,9 +48,9 @@ class Generator:
             if draw_square:
                 filename = "square_"
                 square_color = self._generate_nonmatching_color(background_color)
-                side_length = np.random.uniform(self.min_square_side_length, self.max_square_side_length)
-                square_x = np.random.uniform(0, self.image_width - side_length)
-                square_y = np.random.uniform(0, self.image_height - side_length)
+                side_length = np.random.randint(self.min_square_side_length, self.max_square_side_length)
+                square_x = np.random.randint(0, self.image_width - side_length)
+                square_y = np.random.randint(0, self.image_height - side_length)
                 square_angle = np.random.uniform(0, 360)
 
                 center_x = square_x + side_length / 2
@@ -70,6 +70,7 @@ class Generator:
 
                 ax.add_patch(square)
                 self.squares_area.append(side_length * side_length)
+                self.lenghts.append(side_length)
             if draw_circle:
                 if draw_square:
                     filename += "circle_"
@@ -169,8 +170,19 @@ class Generator:
         else:
             print("No Data has been generated yet, failed to generate graph")
             return
-        max = np.max(data)
-        min = np.min(data)
+        """"
+        c_max = np.max(data[1])
+        c_min = np.min(data[1])
+
+        s_max = np.max(data[0])
+        s_min = np.min(data[0])
+
+        max = c_max if c_max > s_max else s_max
+        min = c_min if c_min < s_min else s_min
+        """
+        
+        max = np.max(data[0])
+        min = np.min(data[0])
         interval = 2000
         hist = plt.hist(data, bins=np.arange(min, max+1, interval), color=colors,label=labels)
 
@@ -290,12 +302,12 @@ class Generator:
     def saveMetadata(self, folder=""):
         square_data = asarray(self.squares_area)
         circle_data = asarray(self.circle_area)
-
         filename = folder + "/square_data.csv"
         savetxt(filename, square_data, delimiter=",")
 
         filename = folder + "/circle_data.csv"
         savetxt(filename, circle_data, delimiter=",")
+        print(sum(self.lenghts)/len(self.lenghts))
 
 
 
