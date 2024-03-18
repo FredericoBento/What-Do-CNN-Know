@@ -3,6 +3,8 @@ import matplotlib.pyplot as plt
 from matplotlib.patches import Circle, Rectangle
 from shapely import geometry
 from scipy.interpolate import interp1d
+from numpy import asarray
+from numpy import savetxt
 
 
 class Generator:
@@ -32,6 +34,7 @@ class Generator:
     def generate_images(self, draw_random=False, draw_circle=False, draw_square=False, directory="dataset", quantity=1):
 
         i = 0
+
 
         while i < quantity:
             if draw_random:
@@ -139,34 +142,43 @@ class Generator:
                 np.mean(self.square_ratio).round(2),
                 np.mean(self.circle_square_ratio).round(2))
 
-    def getAreaHistogram(self, circle_areas=None, square_areas=None, folder=None):
+    def getAreaHistogram(self, circle_areas=None, square_areas=None, folder=None, title=""):
         if circle_areas is None:
             circle_areas = self.circle_area
 
         if square_areas is None:
             square_areas = self.squares_area
 
-        # print(str(len(square_areas)))
-        # print(str(len(circle_areas)))
         data = []
         colors = []
+        labels = ["Circles"]
+        text = ""
         if len(circle_areas) > 0 and len(square_areas) > 0:
             data = [square_areas, circle_areas]
             colors = ["blue", "red"]
+            labels = ["Circles", "Squares"]
+            text = "Total Circles: " + str(len(circle_areas)) + "Total Squares: " + str(len(square_areas))
         elif len(circle_areas) > 0:
             data = [circle_areas]
             colors = ["red"]
+            text = "Total Circles: " + str(len(circle_areas))
         elif len(square_areas) > 0:
             data = [square_areas]
             colors = ["blue"]
+            labels = ["Squares"]
+            text = "Total Squares: " + str(len(square_areas))
         else:
             print("No Data has been generated yet, failed to generate graph")
             return
+        max = np.max(data)
+        min = np.min(data)
+        interval = 2000
+        hist = plt.hist(data, bins=np.arange(min, max+1, interval), color=colors,label=labels)
 
-        hist = plt.hist(data, bins='sqrt', color=colors, alpha=0.7, label=['Square', 'Circle'])
+        plt.text(0.5, 0.95, text, horizontalalignment='center', verticalalignment='center', transform=plt.gca().transAxes)
         plt.xlabel("Areas")
         plt.ylabel("Number of Samples")
-        plt.title("Square and Circle Area Comparison")
+        plt.title(title)
         plt.legend()
         plt.grid(True)
         fig = plt.gcf()
@@ -177,7 +189,7 @@ class Generator:
         fig.savefig(filename, dpi=100)
         plt.close()
 
-    def getAreaLineGraph(self, circle_areas=None, square_areas=None, folder=None):
+    def getAreaLineGraph(self, circle_areas=None, square_areas=None, folder=None, title=""):
         if circle_areas is None:
             circle_areas = self.circle_area
 
@@ -198,7 +210,7 @@ class Generator:
             return self.squareLineGraph(squareAreas=square_areas, folder=folder)
         elif circle_len > 0 and square_len <= 0:
             return self.circleLineGraph(circleAreas=circle_areas, folder=folder)
-        
+
         if square_len > 0 and circle_len > 0:
 
             x1 = np.linspace(0, 1, len(square_areas))
@@ -213,7 +225,7 @@ class Generator:
 
             plt.xlabel('Number of Samples')
             plt.ylabel('Areas')
-            plt.title('Comparison of Areas')
+            plt.title(title)
             plt.legend()
             plt.grid(True)
             fig = plt.gcf()
@@ -265,7 +277,7 @@ class Generator:
 
         plt.xlabel('Number of Samples')
         plt.ylabel('Areas')
-        plt.title('Comparison of Areas')
+        plt.title('Circle Areas')
         plt.legend()
         plt.grid(True)
         fig = plt.gcf()
@@ -275,5 +287,16 @@ class Generator:
             filename = folder + "/" + filename
         fig.savefig(filename, dpi=100)
         plt.close()
+
+    def saveMetadata(self, folder=""):
+        square_data = asarray(self.squares_area)
+        circle_data = asarray(self.circle_area)
+
+        filename = folder + "/square_data.csv"
+        savetxt(filename, square_data, delimiter=",")
+
+        filename = folder + "/circle_data.csv"
+        savetxt(filename, circle_data, delimiter=",")
+
 
 

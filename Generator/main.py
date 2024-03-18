@@ -3,8 +3,9 @@ import os
 from time import perf_counter as pc
 
 
-DATASET_DIRECTORY_NAME = "dataset_only_circles_multi_processor_2"
+DATASET_DIRECTORY_NAME = "Dataset_A"
 DATASET_GRAPH_DIRECTORY = DATASET_DIRECTORY_NAME + "/graphs"
+DATASET_DATA_DIRECTORY = DATASET_DIRECTORY_NAME + "/data"
 
 TRAIN_DIRECTORY = DATASET_DIRECTORY_NAME + "/train/"
 TEST_DIRECTORY = DATASET_DIRECTORY_NAME + "/test/"
@@ -25,7 +26,7 @@ folders = [CIRCLE_TRAIN_DIRECTORY, NONE_TRAIN_DIRECTORY,
            SQUARE_TRAIN_DIRECTORY, SQUARE_CIRCLE_TRAIN_DIRECTORY,
            CIRCLE_TEST_DIRECTORY, NONE_TEST_DIRECTORY,
            SQUARE_TEST_DIRECTORY, SQUARE_CIRCLE_TEST_DIRECTORY,
-           DATASET_GRAPH_DIRECTORY]
+           DATASET_GRAPH_DIRECTORY, DATASET_DATA_DIRECTORY]
 
 
 def del_dir(rootdir):
@@ -51,7 +52,7 @@ test_quantity = 1000
 train_quantity = 3000 / 2
 
 print("Starting to generate images")
-generator = Generator(seed=534)
+generator = Generator(seed=14)
 start = pc()
 
 # generator.generate_images(draw_random=True, directory=TEST_DIRECTORY, quantity=test_quantity)
@@ -89,5 +90,7 @@ with open(DATASET_DIRECTORY_NAME + "/seed.txt", "w") as f:
 end = pc()
 print("Finished generating images in " + str(end - start) + " seconds")
 
-generator.getAreaHistogram(folder=DATASET_GRAPH_DIRECTORY)
-generator.getAreaLineGraph(folder=DATASET_GRAPH_DIRECTORY)
+generator.getAreaHistogram(folder=DATASET_GRAPH_DIRECTORY, title="Circle Areas")
+generator.getAreaLineGraph(folder=DATASET_GRAPH_DIRECTORY, title="Circle Areas")
+
+generator.saveMetadata(folder=DATASET_DATA_DIRECTORY)
