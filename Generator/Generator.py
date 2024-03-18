@@ -34,8 +34,6 @@ class Generator:
     def generate_images(self, draw_random=False, draw_circle=False, draw_square=False, directory="dataset", quantity=1):
 
         i = 0
-
-
         while i < quantity:
             if draw_random:
                 draw_circle = np.random.choice([True, False])
@@ -78,7 +76,7 @@ class Generator:
                 else:
                     filename = "circle_"
                 circle_color = self._generate_nonmatching_color(background_color)
-                radius = np.random.uniform(self.min_circle_radius, self.max_circle_radius)
+                radius = np.random.rand() * (self.max_circle_radius - self.min_circle_radius) + self.min_circle_radius
                 circle_x = np.random.uniform(0, self.image_width - radius)
                 circle_y = np.random.uniform(0, self.image_height - radius)
 
@@ -98,7 +96,8 @@ class Generator:
                 circle = Circle((circle_x, circle_y), radius, color=circle_color)
                 circle.set_antialiased(True)
                 ax.add_patch(circle)
-                self.circle_area.append((radius**2) * np.pi)
+                area = (radius**2) * np.pi
+                self.circle_area.append(area)
 
             ax.set_xlim(0, self.image_width)
             ax.set_ylim(0, self.image_height)

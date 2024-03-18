@@ -6,3 +6,11 @@ Generator/__pycache__/
 Generator/dataset/
 
 CNN_Model/models/
+
+Generator/Dataset_A/
+
+Generator/Dataset_B/
+
+CNN_Model/Test_1/models/
+
+Generator/dataset1/
