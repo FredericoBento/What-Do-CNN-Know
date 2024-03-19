@@ -374,7 +374,7 @@ class Generator:
             data2_interp = f(x1)
 
             plt.plot(x1, square_areas, color='blue', label='Square Areas (' + str(len(square_areas)) + ')')
-            plt.plot(x2, data2_interp, color='red', label='Circle Areas' + str(len(circle_areas)) + ')')
+            plt.plot(x2, data2_interp, color='red', label='Circle Areas (' + str(len(circle_areas)) + ')')
 
             plt.xlabel('Number of Samples')
             plt.ylabel('Areas')
