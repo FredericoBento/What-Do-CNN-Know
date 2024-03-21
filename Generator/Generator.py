@@ -6,9 +6,9 @@ from scipy.interpolate import interp1d
 from numpy import asarray
 from numpy import savetxt
 import sys
+import matplotlib
 # increase pyplot speed
-plt.rcParams['agg.path.chunksize'] = 10000
-
+matplotlib.use('TkAgg')
 
 
 class Generator:
@@ -59,6 +59,9 @@ class Generator:
         figure_width = self.image_width / 100
         figure_height = self.image_height / 100
 
+        sys.stdout.write('\r')
+
+        fig = plt.figure(figsize=(figure_width, figure_height), linewidth=0.0)
         while i < quantity:
             b = f"Generating image {i+1}/{quantity}"
             sys.stdout.write('\r'+b)
@@ -66,29 +69,31 @@ class Generator:
                 draw_circle = np.random.choice([True, False])
                 draw_square = np.random.choice([True, False])
             background_color = self._generate_nonmatching_color()
-
-            fig = plt.figure(figsize=(figure_width, figure_height), facecolor=background_color, linewidth=0.0)
+            # fig = plt.figure(figsize=(figure_width, figure_height), linewidth=0.0)
+            fig.set_facecolor(background_color)
             ax = fig.add_subplot(111)
             ax.set_rasterized(True)
             radius = -1
             length = -1
             if draw_square:
                 filename = "square_"
-                square, shape_square, length = self.makeSquare(background_color=background_color, dist_idx=i)
+                # square, shape_square, length = self.makeSquare(background_color=background_color, dist_idx=i)
+                circle, shape_circle, radius = self.make_circle(background_color=background_color, dist_idx=i)
 
             if draw_circle:
                 if draw_square:
                     filename += "circle_"
                 else:
                     filename = "circle_"
-                circle, shape_circle, radius = self.makeCircle(background_color=background_color, dist_idx=i)
+                # circle, shape_circle, radius = self.makeCircle(background_color=background_color, dist_idx=i)
+                square, shape_square, length = self.make_square(background_color=background_color, dist_idx=i)
 
                 if draw_square:
                     if shape_square.intersects(shape_circle):
                         while shape_square.intersects(shape_circle):
-                            circle, shape_circle, radius = self.makeCircle(background_color=background_color, dist_idx=None)
-                            square, shape_square, length = self.makeSquare(background_color=background_color, dist_idx=None)
-                
+                            circle, shape_circle, radius = self.make_circle(background_color=background_color, dist_idx=None)
+                            square, shape_square, length = self.make_square(background_color=background_color, dist_idx=None)
+
                 ax.add_patch(circle)
                 area = (radius**2) * np.pi
                 self.circle_area.append(area)
@@ -106,17 +111,18 @@ class Generator:
 
             if draw_square is False and draw_circle is False:
                 filename = "none_"
-        
+
             plt.savefig(f'{directory + "/" + filename + str(i+1)}.png', bbox_inches='tight', pad_inches=0, dpi=106.5)
-            plt.close()
+            plt.clf()
+            # plt.close()
 
             self.num_images += 1
             i += 1
         return self.num_images, self.squares_area, self.circle_area
 
-    def makeSquare(self, x=None, y=None, angle=None, length=None, color=None, background_color=None, dist_idx=None):
+    def make_square(self, x=None, y=None, angle=None, length=None, color=None, background_color=None, dist_idx=None):
         isOutoffBounds = True
-        
+
         if color is None:
             color = self._generate_nonmatching_color(background_color)
 
@@ -137,7 +143,6 @@ class Generator:
         if angle is None:
             angle = np.random.uniform(0, 360)
 
-
         center_x = x + length / 2
         center_y = y + length / 2
 
@@ -145,9 +150,13 @@ class Generator:
         corners = square.get_corners()
 
         isOutoffBounds = self.square_out_of_bounds(corners)
-
+        max_tries = 5
+        tries = 0
         while isOutoffBounds is True:
-        
+            if tries >= max_tries:
+                length = np.random.choice(self.square_areas_distribution)
+                tries = 0
+
             x = np.random.uniform(0, self.image_width - length)
             y = np.random.uniform(0, self.image_height - length)
 
@@ -159,43 +168,44 @@ class Generator:
             corners = square.get_corners()
 
             isOutoffBounds = self.square_out_of_bounds(corners)
+            tries += 1
 
         square.set_antialiased(True)
         shape_square = geometry.Polygon(corners)
 
         return square, shape_square, length
-    
+
     def square_out_of_bounds(self, corners):
         if self._cornerOutOfBounds(corners[0][0], corners[0][1]) or \
             self._cornerOutOfBounds(corners[1][0], corners[1][1]) or \
             self._cornerOutOfBounds(corners[2][0], corners[2][1]) or \
                 self._cornerOutOfBounds(corners[3][0], corners[3][1]):
             return True
-        
+
         return False
-    
+
     def circle_out_of_bounds(self, x, y, radius):
         if x - radius < 0 or x + radius > self.image_width or \
                     y - radius < 0 or y + radius > self.image_height:
             return True
-        
+
         return False
-        
-    def makeCircle(self, x=None, y=None, radius=None, color=None, dist_idx=None, background_color=None):
+
+    def make_circle(self, x=None, y=None, radius=None, color=None, dist_idx=None, background_color=None):
         isOutOfBounds = True
         if color is None:
             color = self._generate_nonmatching_color(background_color)
 
         if radius is None and dist_idx is not None:
-                radius = np.sqrt(self.circle_areas_distribution[dist_idx] / np.pi)
-            
+            radius = np.sqrt(self.circle_areas_distribution[dist_idx] / np.pi)
+
         if dist_idx is None and radius is None:
             radius = np.random.choice(self.circle_areas_distribution)
             radius = np.sqrt(radius / np.pi)
 
         if x is None:
             x = np.random.uniform(0, self.image_width - radius)
-        
+
         if y is None:
             y = np.random.uniform(0, self.image_height - radius)
 
@@ -203,21 +213,24 @@ class Generator:
             radius = np.random.uniform(self.min_circle_radius, self.max_circle_radius)
 
         isOutOfBounds = self.circle_out_of_bounds(x, y, radius)
-
+        max_tries = 5
+        tries = 0
         while isOutOfBounds is True:
+            if tries >= max_tries:
+                radius = np.random.uniform(self.min_circle_radius, self.max_circle_radius)
+                tries = 0
             x = np.random.uniform(0, self.image_width - radius)
             y = np.random.uniform(0, self.image_height - radius)
-            
+
             isOutOfBounds = self.circle_out_of_bounds(x, y, radius)
-        
+            tries += 1
+
         circle = Circle((x, y), radius, color=color)
         circle.set_antialiased(True)
         shape = geometry.Point(x, y).buffer(radius)
 
         return circle, shape, radius
 
-        
-         
     def _generate_nonmatching_color(self, *excluded_colors):
         while True:
             color = np.random.rand(3)
@@ -237,7 +250,7 @@ class Generator:
 
         return False
 
-    def getRadiusHistogram(self, circle_radius=None, folder=None, title=""):
+    def g_radius_histogram(self, circle_radius=None, folder=None, title=""):
         if circle_radius is None:
             circle_radius = self.circle_radius
 
@@ -260,10 +273,10 @@ class Generator:
         else:
             print("No Data has been generated yet, failed to generate graph")
 
-    def getSquareLengthHistogram(self, lengths=None, folder=None, title=""):
+    def g_square_length_histogram(self, lengths=None, folder=None, title=""):
         if lengths is None:
             lengths = self.lenghts
-        
+
         if len(lengths) > 0:
             max = np.max(lengths)
             min = np.min(lengths)
@@ -281,8 +294,7 @@ class Generator:
             fig.savefig(filename, dpi=100)
             plt.close()
 
-
-    def getAreaHistogram(self, circle_areas=None, square_areas=None, folder=None, title=""):
+    def g_area_histogram(self, circle_areas=None, square_areas=None, folder=None, title=""):
         if circle_areas is None:
             circle_areas = self.circle_area
 
@@ -310,7 +322,7 @@ class Generator:
         else:
             print("No Data has been generated yet, failed to generate graph")
             return
-        
+
         if len(data) > 2:
             c_max = np.max(data[1])
             c_min = np.min(data[1])
@@ -342,7 +354,7 @@ class Generator:
         fig.savefig(filename, dpi=100)
         plt.close()
 
-    def getAreaLineGraph(self, circle_areas=None, square_areas=None, folder=None, title=""):
+    def g_area_line_graph(self, circle_areas=None, square_areas=None, folder=None, title=""):
         if circle_areas is None:
             circle_areas = self.circle_area
 
@@ -389,7 +401,7 @@ class Generator:
             fig.savefig(filename, dpi=100)
             plt.close()
 
-    def squareLineGraph(self, squareAreas=None, folder=None):
+    def square_line_graph(self, squareAreas=None, folder=None):
         if squareAreas is None:
             squareAreas = self.squares_area
 
@@ -415,7 +427,7 @@ class Generator:
         fig.savefig(filename, dpi=100)
         plt.close()
 
-    def circleLineGraph(self, circleAreas=None, folder=None):
+    def circle_line_graph(self, circleAreas=None, folder=None):
         if circleAreas is None:
             circleAreas = self.circle_area
 
@@ -441,15 +453,12 @@ class Generator:
         fig.savefig(filename, dpi=100)
         plt.close()
 
-    def saveMetadata(self, folder=""):
+    def save_metadata(self, folder=""):
         square_data = asarray(self.squares_area)
         circle_data = asarray(self.circle_area)
+
         filename = folder + "/square_data.csv"
         savetxt(filename, square_data, delimiter=",")
 
         filename = folder + "/circle_data.csv"
         savetxt(filename, circle_data, delimiter=",")
-    
-
-
-
