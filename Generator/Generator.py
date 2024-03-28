@@ -24,11 +24,17 @@ class Generator:
         self.max_circle_radius = (image_width / 4) + 15
         self.max_square_side_length = image_width / 2
 
-        self.squares_area = []
-        self.circle_area = []
+        self.squares_area_train = []
+        self.circle_area_train = []
 
-        self.circle_radius = []
-        self.lenghts = []
+        self.squares_area_test = []
+        self.circle_area_test = []
+
+        self.circle_radius_train = []
+        self.lenghts_train = []
+
+        self.circle_radius_test = []
+        self.lenghts_test = []
 
         self.square_areas_distribution = []
         self.circle_areas_distribution = []
@@ -42,8 +48,7 @@ class Generator:
             print(f"Seed provided. Using seed {seed}")
             np.random.seed(seed)
 
-    def generate_images(self, draw_random=False, draw_circle=False, draw_square=False, directory="dataset", quantity=1):
-
+    def generate_images(self, draw_random=False, draw_circle=False, draw_square=False, directory="dataset", quantity=1, train=False):
         i = 0
         quantity = int(quantity)
         if draw_random or draw_circle:
@@ -59,7 +64,8 @@ class Generator:
         figure_width = self.image_width / 100
         figure_height = self.image_height / 100
 
-        sys.stdout.write('\r')
+        # sys.stdout.write('\r'+" ")
+        print("", flush=True)
 
         fig = plt.figure(figsize=(figure_width, figure_height), linewidth=0.0)
         while i < quantity:
@@ -77,16 +83,16 @@ class Generator:
             length = -1
             if draw_square:
                 filename = "square_"
-                # square, shape_square, length = self.makeSquare(background_color=background_color, dist_idx=i)
-                circle, shape_circle, radius = self.make_circle(background_color=background_color, dist_idx=i)
+                square, shape_square, length = self.make_square(background_color=background_color, dist_idx=i)
+                # circle, shape_circle, radius = self.make_circle(background_color=background_color, dist_idx=i)
 
             if draw_circle:
                 if draw_square:
                     filename += "circle_"
                 else:
                     filename = "circle_"
-                # circle, shape_circle, radius = self.makeCircle(background_color=background_color, dist_idx=i)
-                square, shape_square, length = self.make_square(background_color=background_color, dist_idx=i)
+                circle, shape_circle, radius = self.make_circle(background_color=background_color, dist_idx=i)
+                # square, shape_square, length = self.make_square(background_color=background_color, dist_idx=i)
 
                 if draw_square:
                     if shape_square.intersects(shape_circle):
@@ -96,13 +102,21 @@ class Generator:
 
                 ax.add_patch(circle)
                 area = (radius**2) * np.pi
-                self.circle_area.append(area)
-                self.circle_radius.append(radius)
+                if train:
+                    self.circle_area_train.append(area)
+                    self.circle_radius_train.append(radius)
+                else:
+                    self.circle_area_test.append(area)
+                    self.circle_radius_test.append(radius)
 
             if draw_square and length > 0:
                 ax.add_patch(square)
-                self.squares_area.append(length * length)
-                self.lenghts.append(length)
+                if train:
+                    self.squares_area_train.append(length * length)
+                    self.lenghts_train.append(length)
+                else:
+                    self.squares_area_test.append(length * length)
+                    self.lenghts_test.append(length)
 
             ax.set_xlim(0, self.image_width)
             ax.set_ylim(0, self.image_height)
@@ -118,7 +132,9 @@ class Generator:
 
             self.num_images += 1
             i += 1
-        return self.num_images, self.squares_area, self.circle_area
+        plt.close()
+
+        return self.num_images, self.squares_area_train, self.circle_area_train, self.squares_area_test, self.circle_area_test
 
     def make_square(self, x=None, y=None, angle=None, length=None, color=None, background_color=None, dist_idx=None):
         isOutoffBounds = True
@@ -295,30 +311,43 @@ class Generator:
             plt.close()
 
     def g_area_histogram(self, circle_areas=None, square_areas=None, folder=None, title=""):
-        if circle_areas is None:
-            circle_areas = self.circle_area
-
-        if square_areas is None:
-            square_areas = self.squares_area
+        # if circle_areas is None:
+        #     circle_areas = self.circle_area_train
+        #     circle_areas = np.append(circle_areas, self.circle_area_test)
+        #
+        # if square_areas is None:
+        #     square_areas = self.squares_area_train
+        #     square_areas = np.append(square_areas, self.squares_area_test)
 
         data = []
         colors = []
         labels = ["Circles"]
         text = ""
-        if len(circle_areas) > 0 and len(square_areas) > 0:
+
+        if circle_areas is not None:
+            ci_a_len = len(circle_areas)
+        else:
+            ci_a_len = 0
+
+        if square_areas is not None:
+            sq_a_len = len(square_areas)
+        else:
+            sq_a_len = 0
+
+        if ci_a_len > 0 and sq_a_len > 0:
             data = [square_areas, circle_areas]
             colors = ["blue", "red"]
             labels = ["Circles", "Squares"]
-            text = "Total Circles: " + str(len(circle_areas)) + " Total Squares: " + str(len(square_areas))
-        elif len(circle_areas) > 0:
+            text = "Total Circles: " + str(ci_a_len)+ " Total Squares: " + str(sq_a_len)
+        elif ci_a_len > 0:
             data = [circle_areas]
             colors = ["red"]
-            text = "Total Circles: " + str(len(circle_areas))
-        elif len(square_areas) > 0:
+            text = "Total Circles: " + str(ci_a_len)
+        elif sq_a_len > 0:
             data = [square_areas]
             colors = ["blue"]
             labels = ["Squares"]
-            text = "Total Squares: " + str(len(square_areas))
+            text = "Total Squares: " + str(sq_a_len)
         else:
             print("No Data has been generated yet, failed to generate graph")
             return
@@ -355,14 +384,23 @@ class Generator:
         plt.close()
 
     def g_area_line_graph(self, circle_areas=None, square_areas=None, folder=None, title=""):
-        if circle_areas is None:
-            circle_areas = self.circle_area
+        # if circle_areas is None:
+        #     circle_areas = self.circle_area_train
+        #     circle_areas = np.append(circle_areas, self.circle_area_test)
+        #
+        # if square_areas is None:
+        #     square_areas = self.squares_area_train
+        #     square_areas = np.append(square_areas, self.squares_area_test)
+        #
+        if circle_areas is not None:
+            circle_areas = np.sort(circle_areas)
+        else:
+            circle_areas = []
 
-        if square_areas is None:
-            square_areas = self.squares_area
-
-        square_areas = np.sort(square_areas)
-        circle_areas = np.sort(circle_areas)
+        if square_areas is not None:
+            square_areas = np.sort(square_areas)
+        else:
+            square_areas = []
 
         square_len = len(square_areas)
         circle_len = len(circle_areas)
@@ -403,7 +441,8 @@ class Generator:
 
     def square_line_graph(self, squareAreas=None, folder=None):
         if squareAreas is None:
-            squareAreas = self.squares_area
+            squareAreas = self.squares_area_train
+            squareAreas = np.append(squareAreas, self.squares_area_test)
 
         squareAreas = np.sort(squareAreas)
         square_len = len(squareAreas)
@@ -429,7 +468,8 @@ class Generator:
 
     def circle_line_graph(self, circleAreas=None, folder=None):
         if circleAreas is None:
-            circleAreas = self.circle_area
+            circleAreas = self.circle_area_train
+            circleAreas = np.append(circleAreas, self.circle_area_test)
 
         circleAreas = np.sort(circleAreas)
         circle_len = len(circleAreas)
@@ -453,12 +493,60 @@ class Generator:
         fig.savefig(filename, dpi=100)
         plt.close()
 
+    def save_graphs(self, folder=""):
+        sq_a_train_len = len(self.squares_area_train)
+        ci_a_train_len = len(self.circle_area_train)
+
+        sq_a_test_len = len(self.squares_area_test)
+        ci_a_test_len = len(self.circle_area_test)
+
+        if sq_a_train_len > 0 and ci_a_train_len > 0:
+            title = "Square and Circle Train Areas"
+            self.g_area_histogram(circle_areas=self.circle_area_train, square_areas=self.squares_area_train, folder=folder, title=title)
+            self.g_area_line_graph(circle_areas=self.circle_area_train, square_areas=self.squares_area_train, folder=folder, title=title)
+        elif sq_a_train_len > 0:
+            title = "Square Train Areas"
+            self.g_area_histogram(square_areas=self.squares_area_train, folder=folder, title=title)
+            self.g_area_line_graph(square_areas=self.squares_area_train, folder=folder, title=title)
+        elif ci_a_train_len > 0:
+            title = "Circle Train Areas"
+            self.g_area_histogram(circle_areas=self.circle_area_train, folder=folder, title=title)
+            self.g_area_line_graph(circle_areas=self.circle_area_train, folder=folder, title=title)
+
+        if sq_a_test_len > 0 and ci_a_test_len > 0:
+            title = "Square and Circle Test Areas"
+            self.g_area_histogram(circle_areas=self.circle_area_test, square_areas=self.squares_area_test, folder=folder, title=title)
+            self.g_area_line_graph(circle_areas=self.circle_area_test, square_areas=self.squares_area_test, folder=folder, title=title)
+        elif sq_a_test_len > 0:
+            title = "Square Test Areas"
+            self.g_area_histogram(square_areas=self.squares_area_test, folder=folder, title=title)
+            self.g_area_line_graph(square_areas=self.squares_area_test, folder=folder, title=title)
+        elif ci_a_test_len > 0:
+            title = "Circle Test Areas"
+            self.g_area_histogram(circle_areas=self.circle_area_test, folder=folder, title=title)
+            self.g_area_line_graph(circle_areas=self.circle_area_test, folder=folder, title=title)
+
+
+
     def save_metadata(self, folder=""):
-        square_data = asarray(self.squares_area)
-        circle_data = asarray(self.circle_area)
+        square_data_train = asarray(self.squares_area_train)
+        circle_data_train = asarray(self.circle_area_train)
 
-        filename = folder + "/square_data.csv"
-        savetxt(filename, square_data, delimiter=",")
+        square_data_test = asarray(self.squares_area_test)
+        circle_data_test = asarray(self.circle_area_test)
 
-        filename = folder + "/circle_data.csv"
-        savetxt(filename, circle_data, delimiter=",")
+        if len(square_data_train) > 0:
+            filename = folder + "/square_data_train.csv"
+            savetxt(filename, square_data_train, delimiter=",")
+
+        if len(circle_data_train) > 0:
+            filename = folder + "/circle_data_train.csv"
+            savetxt(filename, circle_data_train, delimiter=",")
+
+        if len(square_data_test) > 0:
+            filename = folder + "/square_data_test.csv"
+            savetxt(filename, square_data_test, delimiter=",")
+
+        if len(circle_data_test) > 0:
+            filename = folder + "/circle_data_test.csv"
+            savetxt(filename, circle_data_test, delimiter=",")

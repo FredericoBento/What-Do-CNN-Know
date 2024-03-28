@@ -2,8 +2,7 @@ from Generator import Generator
 import os
 from time import perf_counter as pc
 
-
-DATASET_DIRECTORY_NAME = "Datasets/Dataset_A5"
+DATASET_DIRECTORY_NAME = "Datasets/Dataset_A2"
 DATASET_GRAPH_DIRECTORY = DATASET_DIRECTORY_NAME + "/graphs"
 DATASET_DATA_DIRECTORY = DATASET_DIRECTORY_NAME + "/data"
 
@@ -28,6 +27,7 @@ folders = [CIRCLE_TRAIN_DIRECTORY, NONE_TRAIN_DIRECTORY,
            SQUARE_TEST_DIRECTORY, SQUARE_CIRCLE_TEST_DIRECTORY,
            DATASET_GRAPH_DIRECTORY, DATASET_DATA_DIRECTORY]
 
+
 def del_dir(rootdir):
     if os.path.isdir(rootdir):
         for (dirpath, dirnames, filenames) in os.walk(rootdir):
@@ -46,21 +46,24 @@ for folder in folders:
     if not os.path.exists(folder):
         os.makedirs(folder)
 
-
-test_quantity = 1000
-train_quantity = 3000 / 2
+test_quantity = 100
+train_quantity = 300 / 2
 
 print("Starting to generate images")
-generator = Generator(seed=19)
+generator = Generator(seed=406)
 start = pc()
 
 
-generator.generate_images(False, True, False, CIRCLE_TRAIN_DIRECTORY, train_quantity)
-generator.generate_images(False, False, False, NONE_TRAIN_DIRECTORY, train_quantity)
+generator.generate_images(False, True, False, CIRCLE_TRAIN_DIRECTORY, train_quantity, train=True)
+generator.generate_images(False, False, False, NONE_TRAIN_DIRECTORY, train_quantity, train=True)
 
 generator.generate_images(False, True, False, TEST_DIRECTORY, test_quantity)
 generator.generate_images(False, False, False, TEST_DIRECTORY, test_quantity)
 
+
+end = pc()
+print("\nFinished generating images in " + str(end - start) + " seconds")
+start_2 = pc()
 
 # move image from test to subdirectory
 for filename in os.listdir(TEST_DIRECTORY):
@@ -75,18 +78,27 @@ for filename in os.listdir(TEST_DIRECTORY):
     else:
         os.rename(TEST_DIRECTORY + filename, NONE_TEST_DIRECTORY + "/" + filename)
 
+end = pc()
+print("\nFinished moving images in " + str(end - start_2) + " seconds")
+start_2 = pc()
+
 # Save seed to file
 with open(DATASET_DIRECTORY_NAME + "/seed.txt", "w") as f:
     f.write(str(generator.seed))
 
 end = pc()
+print("\nFinished writing seed file" + str(end - start_2) + " seconds")
+start_2 = pc()
 
+# generator.g_area_histogram(folder=DATASET_GRAPH_DIRECTORY, title="Square and Circle Areas")
+# generator.g_area_line_graph(folder=DATASET_GRAPH_DIRECTORY, title="Square and Circle Areas")
+#
+# generator.g_radius_histogram(folder=DATASET_GRAPH_DIRECTORY, title="Circle Radius")
+# generator.g_square_length_histogram(folder=DATASET_GRAPH_DIRECTORY, title="Square Length")
 
-generator.getAreaHistogram(folder=DATASET_GRAPH_DIRECTORY, title="Circle Areas")
-generator.getAreaLineGraph(folder=DATASET_GRAPH_DIRECTORY, title="Circle Areas")
+generator.save_graphs(folder=DATASET_GRAPH_DIRECTORY)
+generator.save_metadata(folder=DATASET_DATA_DIRECTORY)
 
-generator.getRadiusHistogram(folder=DATASET_GRAPH_DIRECTORY, title="Circle Radius")
-#generator.getSquareLengthHistogram(folder=DATASET_GRAPH_DIRECTORY, title="Square Length")
-
-generator.saveMetadata(folder=DATASET_DATA_DIRECTORY)
-print("\nFinished generating images in " + str(end - start) + " seconds")
+end = pc()
+print("\nFinished generating graphs" + str(end - start_2) + " seconds")
+print("\nFinished generation" + str(end - start) + " seconds")
