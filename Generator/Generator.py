@@ -30,11 +30,11 @@ class Generator:
         self.squares_area_test = []
         self.circle_area_test = []
 
-        self.circle_radius_train = []
-        self.lenghts_train = []
+        self.squares_area_both_train = []
+        self.circle_area_both_train = []
 
-        self.circle_radius_test = []
-        self.lenghts_test = []
+        self.squares_area_both_test = []
+        self.circle_area_both_test = []
 
         self.square_areas_distribution = []
         self.circle_areas_distribution = []
@@ -64,18 +64,16 @@ class Generator:
         figure_width = self.image_width / 100
         figure_height = self.image_height / 100
 
-        # sys.stdout.write('\r'+" ")
         print("", flush=True)
 
         fig = plt.figure(figsize=(figure_width, figure_height), linewidth=0.0)
         while i < quantity:
-            b = f"Generating image {i+1}/{quantity}"
+            b = f"Generating images {i+1}/{quantity}"
             sys.stdout.write('\r'+b)
             if draw_random:
                 draw_circle = np.random.choice([True, False])
                 draw_square = np.random.choice([True, False])
             background_color = self._generate_nonmatching_color()
-            # fig = plt.figure(figsize=(figure_width, figure_height), linewidth=0.0)
             fig.set_facecolor(background_color)
             ax = fig.add_subplot(111)
             ax.set_rasterized(True)
@@ -84,7 +82,6 @@ class Generator:
             if draw_square:
                 filename = "square_"
                 square, shape_square, length = self.make_square(background_color=background_color, dist_idx=i)
-                # circle, shape_circle, radius = self.make_circle(background_color=background_color, dist_idx=i)
 
             if draw_circle:
                 if draw_square:
@@ -92,7 +89,6 @@ class Generator:
                 else:
                     filename = "circle_"
                 circle, shape_circle, radius = self.make_circle(background_color=background_color, dist_idx=i)
-                # square, shape_square, length = self.make_square(background_color=background_color, dist_idx=i)
 
                 if draw_square:
                     if shape_square.intersects(shape_circle):
@@ -102,21 +98,27 @@ class Generator:
 
                 ax.add_patch(circle)
                 area = (radius**2) * np.pi
-                if train:
-                    self.circle_area_train.append(area)
-                    self.circle_radius_train.append(radius)
-                else:
-                    self.circle_area_test.append(area)
-                    self.circle_radius_test.append(radius)
 
             if draw_square and length > 0:
                 ax.add_patch(square)
+
+            if draw_square and draw_circle:
+                if train:
+                    self.squares_area_both_train.append(length * length)
+                    self.circle_area_both_train.append(area)
+                else:
+                    self.squares_area_both_test.append(length * length)
+                    self.circle_area_both_test.append(area)
+            elif draw_square:
                 if train:
                     self.squares_area_train.append(length * length)
-                    self.lenghts_train.append(length)
                 else:
                     self.squares_area_test.append(length * length)
-                    self.lenghts_test.append(length)
+            elif draw_circle:
+                if train:
+                    self.circle_area_train.append(area)
+                else:
+                    self.circle_area_test.append(area)
 
             ax.set_xlim(0, self.image_width)
             ax.set_ylim(0, self.image_height)
@@ -128,7 +130,6 @@ class Generator:
 
             plt.savefig(f'{directory + "/" + filename + str(i+1)}.png', bbox_inches='tight', pad_inches=0, dpi=106.5)
             plt.clf()
-            # plt.close()
 
             self.num_images += 1
             i += 1
@@ -167,15 +168,24 @@ class Generator:
 
         isOutoffBounds = self.square_out_of_bounds(corners)
         max_tries = 5
+        max_limit = 100
         tries = 0
+        limit_breaker = 0
+
         while isOutoffBounds is True:
             if tries >= max_tries:
                 length = np.random.choice(self.square_areas_distribution)
+                length = np.sqrt(length)
                 tries = 0
+                limit_breaker += 1
+
+            if limit_breaker >= max_limit:
+                print("Max limit reached. Breaking loop")
+                print("x=", x, "y=", y, "length=", length, "angle=", angle)
+                break
 
             x = np.random.uniform(0, self.image_width - length)
             y = np.random.uniform(0, self.image_height - length)
-
             angle = np.random.uniform(0, 360)
 
             center_x = x + length / 2
@@ -266,93 +276,31 @@ class Generator:
 
         return False
 
-    def g_radius_histogram(self, circle_radius=None, folder=None, title=""):
-        if circle_radius is None:
-            circle_radius = self.circle_radius
+    def g_area_histogram(self, data=None, colors=None, labels=None, text=None, folder=None, filename=None, title=""):
 
-        if len(circle_radius) > 0:
-            max = np.max(circle_radius)
-            min = np.min(circle_radius)
-            interval = 10
-            hist = plt.hist(circle_radius, bins=np.arange(min, max+1, interval), color="red")
-            plt.xlabel("Radius")
-            plt.ylabel("Number of Samples")
-            plt.title(title)
-            plt.grid(True)
-            fig = plt.gcf()
-            fig.set_size_inches(10, 5)
-            filename = 'Radius_Histogram_seed_' + str(self.seed) + '.png'
-            if folder is not None:
-                filename = folder + "/" + filename
-            fig.savefig(filename, dpi=100)
-            plt.close()
+        colors_default = ["red", "blue", "green"]
+        data_len = 0
+
+        if data is None:
+            print("Could not generate histogram. No data provided")
+            return
         else:
-            print("No Data has been generated yet, failed to generate graph")
+            data_len = len(data)
 
-    def g_square_length_histogram(self, lengths=None, folder=None, title=""):
-        if lengths is None:
-            lengths = self.lenghts
-
-        if len(lengths) > 0:
-            max = np.max(lengths)
-            min = np.min(lengths)
-            interval = 10
-            hist = plt.hist(lengths, bins=np.arange(min, max+1, interval), color="blue")
-            plt.xlabel("Length")
-            plt.ylabel("Number of Samples")
-            plt.title(title)
-            plt.grid(True)
-            fig = plt.gcf()
-            fig.set_size_inches(10, 5)
-            filename = 'Length_Histogram_seed_' + str(self.seed) + '.png'
-            if folder is not None:
-                filename = folder + "/" + filename
-            fig.savefig(filename, dpi=100)
-            plt.close()
-
-    def g_area_histogram(self, circle_areas=None, square_areas=None, folder=None, title=""):
-        # if circle_areas is None:
-        #     circle_areas = self.circle_area_train
-        #     circle_areas = np.append(circle_areas, self.circle_area_test)
-        #
-        # if square_areas is None:
-        #     square_areas = self.squares_area_train
-        #     square_areas = np.append(square_areas, self.squares_area_test)
-
-        data = []
-        colors = []
-        labels = ["Circles"]
-        text = ""
-
-        if circle_areas is not None:
-            ci_a_len = len(circle_areas)
-        else:
-            ci_a_len = 0
-
-        if square_areas is not None:
-            sq_a_len = len(square_areas)
-        else:
-            sq_a_len = 0
-
-        if ci_a_len > 0 and sq_a_len > 0:
-            data = [square_areas, circle_areas]
-            colors = ["blue", "red"]
-            labels = ["Circles", "Squares"]
-            text = "Total Circles: " + str(ci_a_len)+ " Total Squares: " + str(sq_a_len)
-        elif ci_a_len > 0:
-            data = [circle_areas]
-            colors = ["red"]
-            text = "Total Circles: " + str(ci_a_len)
-        elif sq_a_len > 0:
-            data = [square_areas]
-            colors = ["blue"]
-            labels = ["Squares"]
-            text = "Total Squares: " + str(sq_a_len)
-        else:
-            print("No Data has been generated yet, failed to generate graph")
+        if labels is None:
+            print("Could not generate histogram. No labels provided")
             return
 
-        if len(data) > 2:
+        if text is None:
+            print("Could not generate histogram. No plot text provided")
+            return
+
+        if colors is None:
+            colors = []
+            for i in range(data_len):
+                colors.append(colors_default[i])
+
+        if data_len > 2:
             c_max = np.max(data[1])
             c_min = np.min(data[1])
 
@@ -377,7 +325,12 @@ class Generator:
         plt.grid(True)
         fig = plt.gcf()
         fig.set_size_inches(10, 5)
-        filename = 'Dataset_Histogram_seed_' + str(self.seed) + '.png'
+
+        if filename is None:
+            filename = 'Dataset_Histogram_seed_' + str(self.seed) + '.png'
+        else:
+            filename = filename + str(self.seed) + '.png'
+
         if folder is not None:
             filename = folder + "/" + filename
         fig.savefig(filename, dpi=100)
@@ -410,9 +363,9 @@ class Generator:
             return
 
         if square_len > 0 and circle_len <= 0:
-            return self.squareLineGraph(squareAreas=square_areas, folder=folder)
+            return self.square_line_Graph(squareAreas=square_areas, folder=folder)
         elif circle_len > 0 and square_len <= 0:
-            return self.circleLineGraph(circleAreas=circle_areas, folder=folder)
+            return self.circle_line_graph(circleAreas=circle_areas, folder=folder)
 
         if square_len > 0 and circle_len > 0:
 
@@ -500,33 +453,100 @@ class Generator:
         sq_a_test_len = len(self.squares_area_test)
         ci_a_test_len = len(self.circle_area_test)
 
+        sq_a_both_test_len = len(self.squares_area_both_test)
+        ci_a_both_test_len = len(self.circle_area_both_test)
+
+        sq_a_both_train_len = len(self.squares_area_both_train)
+        ci_a_both_train_len = len(self.circle_area_both_train)
+
+
         if sq_a_train_len > 0 and ci_a_train_len > 0:
-            title = "Square and Circle Train Areas"
-            self.g_area_histogram(circle_areas=self.circle_area_train, square_areas=self.squares_area_train, folder=folder, title=title)
-            self.g_area_line_graph(circle_areas=self.circle_area_train, square_areas=self.squares_area_train, folder=folder, title=title)
+            title = "Square and Circle Areas (TRAIN)"
+            filename = "Hist_Square_Circle_Train_Areas_"
+            data = [self.squares_area_train, self.circle_area_train]
+            labels = ["Squares", "Circles"]
+            text = "Squares (" + str(sq_a_train_len) + ") and Circles (" + str(ci_a_train_len) + ")"
+            self.g_area_histogram(data=data, labels=labels, text=text, folder=folder, filename=filename, title=title)
         elif sq_a_train_len > 0:
-            title = "Square Train Areas"
-            self.g_area_histogram(square_areas=self.squares_area_train, folder=folder, title=title)
-            self.g_area_line_graph(square_areas=self.squares_area_train, folder=folder, title=title)
+            title = "Square Areas (TRAIN)"
+            filename = "Hist_Square_Train_Areas_"
+            data = [self.squares_area_train]
+            labels = ["Squares"]
+            text = "Squares (" + str(sq_a_train_len) + ")"
+            self.g_area_histogram(data=data, labels=labels, text=text, folder=folder, filename=filename, title=title)
         elif ci_a_train_len > 0:
-            title = "Circle Train Areas"
-            self.g_area_histogram(circle_areas=self.circle_area_train, folder=folder, title=title)
-            self.g_area_line_graph(circle_areas=self.circle_area_train, folder=folder, title=title)
+            title = "Circle Areas (TRAIN)"
+            filename = "Hist_Circle_Train_Areas_"
+            data = [self.circle_area_train]
+            labels = ["Circles"]
+            text = "Circles (" + str(ci_a_train_len) + ")"
+            self.g_area_histogram(data=data, labels=labels, text=text, folder=folder, filename=filename, title=title)
 
         if sq_a_test_len > 0 and ci_a_test_len > 0:
-            title = "Square and Circle Test Areas"
-            self.g_area_histogram(circle_areas=self.circle_area_test, square_areas=self.squares_area_test, folder=folder, title=title)
-            self.g_area_line_graph(circle_areas=self.circle_area_test, square_areas=self.squares_area_test, folder=folder, title=title)
+            title = "Square and Circle Areas (TEST)"
+            filename = "Hist_Square_Circle_Test_Areas_"
+            data = [self.squares_area_test, self.circle_area_test]
+            labels = ["Squares", "Circles"]
+            self.g_area_histogram(data=data, labels=labels, text=text, folder=folder, filename=filename, title=title)
+            text = "Squares (" + str(sq_a_test_len) + ") and Circles (" + str(ci_a_test_len) + ")"
         elif sq_a_test_len > 0:
-            title = "Square Test Areas"
-            self.g_area_histogram(square_areas=self.squares_area_test, folder=folder, title=title)
-            self.g_area_line_graph(square_areas=self.squares_area_test, folder=folder, title=title)
+            title = "Square Areas (TEST)"
+            filename = "Hist_Square_Test_Areas_"
+            data = [self.squares_area_test]
+            labels = ["Squares"]
+            text = "Squares (" + str(sq_a_test_len) + ")"
+            self.g_area_histogram(data=data, labels=labels, text=text, folder=folder, filename=filename, title=title)
         elif ci_a_test_len > 0:
-            title = "Circle Test Areas"
-            self.g_area_histogram(circle_areas=self.circle_area_test, folder=folder, title=title)
-            self.g_area_line_graph(circle_areas=self.circle_area_test, folder=folder, title=title)
+            title = "Circle Areas (TEST)"
+            filename = "Hist_Circle_Test_Areas_"
+            data = [self.circle_area_test]
+            labels = ["Circles"]
+            text = "Circles (" + str(ci_a_test_len) + ")"
+            self.g_area_histogram(data=data, labels=labels, text=text, folder=folder, filename=filename, title=title)
 
+        if sq_a_both_train_len > 0 and ci_a_both_train_len > 0:
+            title = "(SWC) Square and Circle Areas (TRAIN)"
+            filename = "Hist_SWC_Train_Areas_"
+            data = [self.squares_area_both_train, self.circle_area_both_train]
+            labels = ["Squares", "Circles"]
+            text = "Squares (" + str(sq_a_both_train_len) + ") and Circles (" + str(ci_a_both_train_len) + ")"
+            self.g_area_histogram(data=data, labels=labels, text=text, folder=folder, filename=filename, title=title)
+        elif sq_a_both_train_len > 0:
+            title = "(SWC) Square Areas (TRAIN)"
+            filename = "Hist_SWC_SQ_Train_Areas_"
+            data = [self.squares_area_both_train]
+            labels = ["Squares"]
+            text = "Squares (" + str(sq_a_both_train_len) + ")"
+            self.g_area_histogram(data=data, labels=labels, text=text, folder=folder, filename=filename, title=title)
+        elif ci_a_train_len > 0:
+            title = "(SWC) Circle Areas (TRAIN)"
+            filename = "Hist_SWC_CI_Train_Areas_"
+            data = [self.circle_area_both_train]
+            labels = ["Circles"]
+            text = "Circles (" + str(ci_a_both_train_len) + ")"
+            self.g_area_histogram(data=data, labels=labels, text=text, folder=folder, filename=filename, title=title)
 
+        if sq_a_both_test_len > 0 and ci_a_both_test_len > 0:
+            title = "(SWC) Square and Circle Areas (TEST)"
+            filename = "Hist_SWC_Test_Areas_"
+            data = [self.squares_area_both_test, self.circle_area_both_test]
+            labels = ["Squares", "Circles"]
+            text = "Squares (" + str(sq_a_both_test_len) + ") and Circles (" + str(ci_a_both_test_len) + ")"
+            self.g_area_histogram(data=data, labels=labels, text=text, folder=folder, filename=filename, title=title)
+        elif sq_a_both_test_len > 0:
+            title = "(SWC) Square Areas (TEST)"
+            filename = "Hist_SWC_SQ_Test_Areas_"
+            data = [self.squares_area_both_test]
+            labels = ["Squares"]
+            text = "Squares (" + str(sq_a_both_test_len) + ")"
+            self.g_area_histogram(data=data, labels=labels, text=text, folder=folder, filename=filename, title=title)
+        elif ci_a_test_len > 0:
+            title = "(SWC) Circle Areas (TEST)"
+            filename = "Hist_SWC_CI_Test_Areas_"
+            data = [self.circle_area_both_test]
+            labels = ["Circles"]
+            text = "Circles (" + str(ci_a_both_test_len) + ")"
+            self.g_area_histogram(data=data, labels=labels, text=text, folder=folder, filename=filename, title=title)
 
     def save_metadata(self, folder=""):
         square_data_train = asarray(self.squares_area_train)
@@ -534,6 +554,12 @@ class Generator:
 
         square_data_test = asarray(self.squares_area_test)
         circle_data_test = asarray(self.circle_area_test)
+
+        square_data_both_train = asarray(self.squares_area_both_train)
+        circle_data_both_train = asarray(self.circle_area_both_train)
+
+        square_data_both_test = asarray(self.squares_area_both_test)
+        circle_data_both_test = asarray(self.circle_area_both_test)
 
         if len(square_data_train) > 0:
             filename = folder + "/square_data_train.csv"
@@ -550,3 +576,20 @@ class Generator:
         if len(circle_data_test) > 0:
             filename = folder + "/circle_data_test.csv"
             savetxt(filename, circle_data_test, delimiter=",")
+
+        if len(square_data_both_train) > 0:
+            filename = folder + "/square_data_both_train.csv"
+            savetxt(filename, square_data_both_train, delimiter=",")
+
+        if len(circle_data_both_train) > 0:
+            filename = folder + "/circle_data_both_train.csv"
+            savetxt(filename, circle_data_both_train, delimiter=",")
+
+        if len(square_data_both_test) > 0:
+            filename = folder + "/square_data_both_test.csv"
+            savetxt(filename, square_data_both_test, delimiter=",")
+
+        if len(circle_data_both_test) > 0:
+            filename = folder + "/circle_data_both_test.csv"
+            savetxt(filename, circle_data_both_test, delimiter=",")
+

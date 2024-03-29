@@ -38,6 +38,13 @@ def del_dir(rootdir):
         os.rmdir(rootdir)
 
 
+def delete_empty_dirs(dir):
+    for filename in os.listdir(dir):
+        if os.path.isdir(dir + filename):
+            if len(os.listdir(dir + filename)) == 0:
+                os.rmdir(dir + filename)
+
+
 # Delete old test dataset
 del_dir(TRAIN_DIRECTORY)
 del_dir(TEST_DIRECTORY)
@@ -47,25 +54,28 @@ for folder in folders:
         os.makedirs(folder)
 
 test_quantity = 100
-train_quantity = 300 / 2
+train_quantity = 300 / 3
 
 print("Starting to generate images")
 generator = Generator(seed=406)
 start = pc()
 
 
+generator.generate_images(False, True, True, SQUARE_CIRCLE_TRAIN_DIRECTORY, train_quantity, train=True)
 generator.generate_images(False, True, False, CIRCLE_TRAIN_DIRECTORY, train_quantity, train=True)
-generator.generate_images(False, False, False, NONE_TRAIN_DIRECTORY, train_quantity, train=True)
+generator.generate_images(False, False, True, SQUARE_TRAIN_DIRECTORY, train_quantity, train=True)
 
-generator.generate_images(False, True, False, TEST_DIRECTORY, test_quantity)
-generator.generate_images(False, False, False, TEST_DIRECTORY, test_quantity)
+generator.generate_images(False, True, True, SQUARE_CIRCLE_TEST_DIRECTORY, test_quantity, train=False)
+generator.generate_images(False, True, False, TEST_DIRECTORY, test_quantity, train=False)
+generator.generate_images(False, False, True, TEST_DIRECTORY, test_quantity, train=False)
 
 
 end = pc()
-print("\nFinished generating images in " + str(end - start) + " seconds")
+time = round(end - start, 4)
+print("\nFinished generating images (" + str(time) + "s)")
 start_2 = pc()
 
-# move image from test to subdirectory
+# move images from test to subdirectory
 for filename in os.listdir(TEST_DIRECTORY):
     if os.path.isdir(TEST_DIRECTORY + filename):
         continue
@@ -78,8 +88,12 @@ for filename in os.listdir(TEST_DIRECTORY):
     else:
         os.rename(TEST_DIRECTORY + filename, NONE_TEST_DIRECTORY + "/" + filename)
 
+delete_empty_dirs(TEST_DIRECTORY)
+delete_empty_dirs(TRAIN_DIRECTORY)
+
 end = pc()
-print("\nFinished moving images in " + str(end - start_2) + " seconds")
+time = round(end - start_2, 4)
+print("Finished moving images (" + str(time) + "s)")
 start_2 = pc()
 
 # Save seed to file
@@ -87,18 +101,15 @@ with open(DATASET_DIRECTORY_NAME + "/seed.txt", "w") as f:
     f.write(str(generator.seed))
 
 end = pc()
-print("\nFinished writing seed file" + str(end - start_2) + " seconds")
+time = round(end - start_2, 4)
+print("Finished writing seed file (" + str(time) + "s)")
 start_2 = pc()
-
-# generator.g_area_histogram(folder=DATASET_GRAPH_DIRECTORY, title="Square and Circle Areas")
-# generator.g_area_line_graph(folder=DATASET_GRAPH_DIRECTORY, title="Square and Circle Areas")
-#
-# generator.g_radius_histogram(folder=DATASET_GRAPH_DIRECTORY, title="Circle Radius")
-# generator.g_square_length_histogram(folder=DATASET_GRAPH_DIRECTORY, title="Square Length")
 
 generator.save_graphs(folder=DATASET_GRAPH_DIRECTORY)
 generator.save_metadata(folder=DATASET_DATA_DIRECTORY)
 
 end = pc()
-print("\nFinished generating graphs" + str(end - start_2) + " seconds")
-print("\nFinished generation" + str(end - start) + " seconds")
+time = round(end - start_2, 4)
+print("Finished generating graphs (" + str(time) + "s)")
+time = round(end - start, 4)
+print("Finished generation (" + str(time) + "s)")
