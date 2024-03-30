@@ -4,15 +4,16 @@ import csv
 
 
 class Circle:
-    def __init__(self, radius, x, y):
+    def __init__(self, radius, x, y, img_width=500, img_height=500):
         self.radius = radius
         self.x = x
         self.y = y
         self.area = 3.14159 * radius * radius
+        self.distance_from_center = np.sqrt((x - img_width/2)**2 + (y - img_height/2)**2)
 
 
 class CircleCollection:
-    def __init__(self, seed):
+    def __init__(self, seed, img_width=500, img_height=500):
         self.circles_train = []
         self.circles_test = []
 
@@ -29,6 +30,8 @@ class CircleCollection:
         self.size_test = 0
 
         self.seed = seed
+        self.img_width = img_width
+        self.img_height = img_height
 
     def contains_data(self, variant=None):
         if variant is None:
@@ -66,7 +69,7 @@ class CircleCollection:
         if radius < 0:
             print("radius cannot be negative")
             return
-        circle = Circle(radius, x, y)
+        circle = Circle(radius, x, y, img_width=self.img_width, img_height=self.img_height)
         self.circles_train.append(circle)
         self.areas_train.append(circle.area)
         self.size_train += 1
@@ -75,7 +78,7 @@ class CircleCollection:
         if radius < 0:
             print("radius cannot be negative")
             return
-        circle = Circle(radius, x, y)
+        circle = Circle(radius, x, y, img_width=self.img_width, img_height=self.img_height)
         self.circles_test.append(circle)
         self.areas_test.append(circle.area)
         self.size_test += 1
@@ -144,6 +147,55 @@ class CircleCollection:
         if folder is not None:
             filename = folder + "/" + filename
 
+        fig.savefig(filename, dpi=100)
+        plt.close()
+
+    def save_distance_histogram(self, filename=None, folder=None, variant=None):
+        size = 0
+        filename_tag = None
+        tag = None
+        circles = None
+        if variant is None:
+            self.save_distance_histogram(filename, folder, "train")
+            self.save_distance_histogram(filename, folder, "test")
+            return
+        if variant == "train":
+            size = self.size_train
+            circles = self.circles_train
+            filename_tag = self.filename_tag_train
+            tag = self.tag_train
+        elif variant == "test":
+            size = self.size_test
+            circles = self.circles_test
+            filename_tag = self.filename_tag_test
+            tag = self.tag_test
+        else:
+            print("Invalid variant")
+            return
+        if size < 1:
+            print("Not enough samples to generate histogram")
+            return
+        if filename is None:
+            filename = "Circle_Distance_Histogram_"
+        filename = filename + filename_tag + "_" + str(self.seed) + ".png"
+        colors = ["blue"]
+        labels = ["Circles"]
+        text = "Circles (" + str(size) + ")"
+        title = "Circle Distance from Center " + tag
+        max = np.max([circle.distance_from_center for circle in circles])
+        min = np.min([circle.distance_from_center for circle in circles])
+        interval = 10
+        hist = plt.hist([circle.distance_from_center for circle in circles], bins=np.arange(min, max+1, interval), color=colors, label=labels)
+        plt.text(0.5, 0.95, text, horizontalalignment='center', verticalalignment='center', transform=plt.gca().transAxes)
+        plt.xlabel("Distance from Center")
+        plt.ylabel("Number of Samples")
+        plt.title(title)
+        plt.legend()
+        plt.grid(True)
+        fig = plt.gcf()
+        fig.set_size_inches(10, 5)
+        if folder is not None:
+            filename = folder + "/" + filename
         fig.savefig(filename, dpi=100)
         plt.close()
 
@@ -228,6 +280,6 @@ class CircleCollection:
 
         with open(filename, mode='w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow(['Radius', 'Area', 'X', 'Y'])
+            writer.writerow(['Radius', 'Area', 'X', 'Y', 'Distance_From_Center'])
             for circle in circles:
-                writer.writerow([circle.radius, circle.area, circle.x, circle.y])
+                writer.writerow([circle.radius, circle.area, circle.x, circle.y, circle.distance_from_center])

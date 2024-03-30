@@ -4,12 +4,15 @@ import csv
 
 
 class Square:
-    def __init__(self, length, angle, x, y):
+    def __init__(self, length, angle, x, y, img_width=500, img_height=500):
         self.length = length
         self.area = length * length
         self.x = x
         self.y = y
         self.angle = angle
+        self.center_x = x + length / 2
+        self.center_y = y + length / 2
+        self.distance_from_center = np.sqrt((self.center_x - img_width / 2) ** 2 + (self.center_y - img_height / 2) ** 2)
 
 
 class SquareCollection:
@@ -51,32 +54,42 @@ class SquareCollection:
             print("Invalid variant")
             return
 
-    def add_square(self, length, angle, x, y, variant=None):
+    def add_square(self, length, angle, x, y, img_width=500, img_height=500, variant=None):
+        if img_width < 0 or img_height < 0:
+            print("Image dimensions cannot be negative")
+            return
+
         if variant is None:
             print("Variant not specified, (test or train)")
             return
         if variant == "train":
-            self.add_square_train(length, angle, x, y)
+            self.add_square_train(length, angle, x, y, img_width, img_height)
         elif variant == "test":
-            self.add_square_test(length, angle, x, y)
+            self.add_square_test(length, angle, x, y, img_width, img_height)
         else:
             print("Invalid variant")
             return
 
-    def add_square_train(self, length, angle, x, y):
+    def add_square_train(self, length, angle, x, y, img_width=500, img_height=500):
         if length < 0:
             print("Length cannot be negative")
             return
-        square = Square(length, angle, x, y)
+        if x < 0 or y < 0:
+            print("Coordinates cannot be negative")
+            return
+        if img_width < 0 or img_height < 0:
+            print("Image dimensions cannot be negative")
+            return
+        square = Square(length, angle, x, y, img_width, img_height)
         self.squares_train.append(square)
         self.areas_train.append(square.area)
         self.size_train += 1
 
-    def add_square_test(self, length, angle, x, y):
+    def add_square_test(self, length, angle, x, y, img_width=500, img_height=500):
         if length < 0:
             print("Length cannot be negative")
             return
-        square = Square(length, angle, x, y)
+        square = Square(length, angle, x, y, img_width, img_height)
         self.squares_test.append(square)
         self.areas_test.append(square.area)
         self.size_test += 1
@@ -145,6 +158,55 @@ class SquareCollection:
         if folder is not None:
             filename = folder + "/" + filename
 
+        fig.savefig(filename, dpi=100)
+        plt.close()
+
+    def save_distance_histogram(self, filename=None, folder=None, variant=None):
+        size = 0
+        filename_tag = None
+        tag = None
+        squares = None
+        if variant is None:
+            self.save_distance_histogram(None, folder, "train")
+            self.save_distance_histogram(None, folder, "test")
+            return
+        if variant == "train":
+            size = self.size_train
+            squares = self.squares_train
+            filename_tag = self.filename_tag_train
+            tag = self.tag_train
+        elif variant == "test":
+            size = self.size_test
+            squares = self.squares_test
+            filename_tag = self.filename_tag_test
+            tag = self.tag_test
+        else:
+            print("Invalid variant")
+            return
+        if size < 1:
+            print("Not enough samples to generate histogram")
+            return
+        if filename is None:
+            filename = "Square_Distance_Histogram_"
+        filename = filename + filename_tag + "_" + str(self.seed) + ".png"
+        colors = ["red"]
+        labels = ["Squares"]
+        text = "Squares (" + str(size) + ")"
+        title = "Square Distance from Center " + tag
+        max = np.max([square.distance_from_center for square in squares])
+        min = np.min([square.distance_from_center for square in squares])
+        interval = 50
+        hist = plt.hist([square.distance_from_center for square in squares], bins=np.arange(min, max+1, interval), color=colors, label=labels)
+        plt.text(0.5, 0.95, text, horizontalalignment='center', verticalalignment='center', transform=plt.gca().transAxes)
+        plt.xlabel("Distance from Center")
+        plt.ylabel("Number of Samples")
+        plt.title(title)
+        plt.legend()
+        plt.grid(True)
+        fig = plt.gcf()
+        fig.set_size_inches(10, 5)
+        if folder is not None:
+            filename = folder + "/" + filename
         fig.savefig(filename, dpi=100)
         plt.close()
 
@@ -229,6 +291,6 @@ class SquareCollection:
 
         with open(filename, mode='w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow(['Length', 'Area', 'X', 'Y', 'Angle'])
+            writer.writerow(['Length', 'Area', 'X', 'Y', 'Angle', 'Distance_From_Center'])
             for square in squares:
-                writer.writerow([square.length, square.area, square.x, square.y, square.angle])
+                writer.writerow([square.length, square.area, square.x, square.y, square.angle, square.distance_from_center])
