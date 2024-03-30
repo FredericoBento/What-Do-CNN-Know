@@ -276,7 +276,7 @@ class Generator:
             self.circle_collection.save_distance_histogram(folder=folder)
             self.circle_collection.save_area_linegraph(folder=folder)
 
-        swc_folder = folder + "/swc"
+        swc_folder = folder + "/SWC"
         if os.path.isdir(swc_folder) is False:
             os.mkdir(swc_folder)
         if self.swc_collection.contains_data():

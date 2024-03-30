@@ -284,7 +284,7 @@ class SquareWithCircleCollection:
             return
 
         if filename is None:
-            filename = "SWC_Areas_Linegraph_" + filename_tag + "_" + str(self.seed) + ".csv"
+            filename = "SWC_" + filename_tag + "_" + str(self.seed) + ".csv"
 
         if folder is not None:
             filename = folder + "/" + filename
