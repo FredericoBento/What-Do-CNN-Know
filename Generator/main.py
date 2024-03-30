@@ -2,7 +2,7 @@ from Generator import Generator
 import os
 from time import perf_counter as pc
 
-DATASET_DIRECTORY_NAME = "Datasets/Dataset_A2"
+DATASET_DIRECTORY_NAME = "Datasets/Dataset_A3"
 DATASET_GRAPH_DIRECTORY = DATASET_DIRECTORY_NAME + "/graphs"
 DATASET_DATA_DIRECTORY = DATASET_DIRECTORY_NAME + "/data"
 
@@ -61,13 +61,13 @@ generator = Generator(seed=406)
 start = pc()
 
 
-generator.generate_images(False, True, True, SQUARE_CIRCLE_TRAIN_DIRECTORY, train_quantity, train=True)
-generator.generate_images(False, True, False, CIRCLE_TRAIN_DIRECTORY, train_quantity, train=True)
-generator.generate_images(False, False, True, SQUARE_TRAIN_DIRECTORY, train_quantity, train=True)
+generator.generate_images(False, True, True, SQUARE_CIRCLE_TRAIN_DIRECTORY, train_quantity, variant="train")
+generator.generate_images(False, True, False, CIRCLE_TRAIN_DIRECTORY, train_quantity, variant="train")
+generator.generate_images(False, False, True, SQUARE_TRAIN_DIRECTORY, train_quantity, variant="train")
 
-generator.generate_images(False, True, True, SQUARE_CIRCLE_TEST_DIRECTORY, test_quantity, train=False)
-generator.generate_images(False, True, False, TEST_DIRECTORY, test_quantity, train=False)
-generator.generate_images(False, False, True, TEST_DIRECTORY, test_quantity, train=False)
+generator.generate_images(False, True, True, SQUARE_CIRCLE_TEST_DIRECTORY, test_quantity, variant="test")
+generator.generate_images(False, True, False, TEST_DIRECTORY, test_quantity, variant="test")
+generator.generate_images(False, False, True, TEST_DIRECTORY, test_quantity, variant="test")
 
 
 end = pc()
