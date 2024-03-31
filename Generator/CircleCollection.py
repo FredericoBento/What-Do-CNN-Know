@@ -4,12 +4,15 @@ import csv
 
 
 class Circle:
-    def __init__(self, radius, x, y, img_width=500, img_height=500):
+    def __init__(self, radius, x, y, distance=None, img_width=500, img_height=500):
         self.radius = radius
         self.x = x
         self.y = y
         self.area = 3.14159 * radius * radius
-        self.distance_from_center = np.sqrt((x - img_width/2)**2 + (y - img_height/2)**2)
+        if distance is None:
+            self.distance_from_center = np.sqrt((x - img_width/2)**2 + (y - img_height/2)**2)
+        else:
+            self.distance_from_center = distance
 
 
 class CircleCollection:
@@ -53,32 +56,32 @@ class CircleCollection:
             print("Invalid variant")
             return
 
-    def add_circle(self, radius, x, y, variant=None):
+    def add_circle(self, radius, x, y, distance_from_center=None, variant=None):
         if variant is None:
             print("Variant not specified, (test or train)")
             return
         if variant == "train":
-            self.add_circle_train(radius, x, y)
+            self.add_circle_train(radius, x, y, distance_from_center)
         elif variant == "test":
-            self.add_circle_test(radius, x, y)
+            self.add_circle_test(radius, x, y, distance_from_center)
         else:
             print("Invalid variant")
             return
 
-    def add_circle_train(self, radius, x, y):
+    def add_circle_train(self, radius, x, y, distance_from_center=None):
         if radius < 0:
             print("radius cannot be negative")
             return
-        circle = Circle(radius, x, y, img_width=self.img_width, img_height=self.img_height)
+        circle = Circle(radius, x, y, distance_from_center, img_width=self.img_width, img_height=self.img_height)
         self.circles_train.append(circle)
         self.areas_train.append(circle.area)
         self.size_train += 1
 
-    def add_circle_test(self, radius, x, y):
+    def add_circle_test(self, radius, x, y, distance_from_center=None):
         if radius < 0:
             print("radius cannot be negative")
             return
-        circle = Circle(radius, x, y, img_width=self.img_width, img_height=self.img_height)
+        circle = Circle(radius, x, y, distance_from_center, img_width=self.img_width, img_height=self.img_height)
         self.circles_test.append(circle)
         self.areas_test.append(circle.area)
         self.size_test += 1

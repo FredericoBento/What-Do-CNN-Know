@@ -4,7 +4,7 @@ import csv
 
 
 class Square:
-    def __init__(self, length, angle, x, y, img_width=500, img_height=500):
+    def __init__(self, length, angle, x, y, distance=None, img_width=500, img_height=500):
         self.length = length
         self.area = length * length
         self.x = x
@@ -12,11 +12,14 @@ class Square:
         self.angle = angle
         self.center_x = x + length / 2
         self.center_y = y + length / 2
-        self.distance_from_center = np.sqrt((self.center_x - img_width / 2) ** 2 + (self.center_y - img_height / 2) ** 2)
+        if distance is None:
+            self.distance_from_center = np.sqrt((self.center_x - img_width / 2) ** 2 + (self.center_y - img_height / 2) ** 2)
+        else:
+            self.distance_from_center = distance
 
 
 class SquareCollection:
-    def __init__(self, seed):
+    def __init__(self, seed, img_width=500, img_height=500):
         self.squares_train = []
         self.squares_test = []
 
@@ -33,6 +36,8 @@ class SquareCollection:
         self.size_test = 0
 
         self.seed = seed
+        self.img_width = img_width
+        self.img_height = img_height
 
     def contains_data(self, variant=None):
         if variant is None:
@@ -54,7 +59,35 @@ class SquareCollection:
             print("Invalid variant")
             return
 
-    def add_square(self, length, angle, x, y, img_width=500, img_height=500, variant=None):
+    def load_from_csv(self, filename=None, variant=None):
+        if variant is None:
+            print("Variant not specified, (test or train)")
+            return
+        elif variant != "train" and variant != "test":
+            print("Invalid variant")
+            return
+
+        if filename is None:
+            print("Filename not specified")
+            return
+        with open(filename, mode='r') as file:
+            reader = csv.reader(file)
+            for row in reader:
+                if len(row) >= 5:
+                    length = int(row[0])
+                    angle = int(row[1])
+                    x = int(row[2])
+                    y = int(row[3])
+                    if len(row) == 6:
+                        distance = int(row[4])
+                        self.add_square(length, angle, x, y, distance, variant=variant)
+                    else:
+                        self.add_square(length, angle, x, y, variant=variant)
+                else:
+                    print("Invalid row")
+                    return
+
+    def add_square(self, length, angle, x, y, img_width=500, img_height=500, distance_from_center=None, variant=None):
         if img_width < 0 or img_height < 0:
             print("Image dimensions cannot be negative")
             return
@@ -63,33 +96,30 @@ class SquareCollection:
             print("Variant not specified, (test or train)")
             return
         if variant == "train":
-            self.add_square_train(length, angle, x, y, img_width, img_height)
+            self.add_square_train(length, angle, x, y, distance_from_center)
         elif variant == "test":
-            self.add_square_test(length, angle, x, y, img_width, img_height)
+            self.add_square_test(length, angle, x, y, distance_from_center)
         else:
             print("Invalid variant")
             return
 
-    def add_square_train(self, length, angle, x, y, img_width=500, img_height=500):
+    def add_square_train(self, length, angle, x, y, distance_from_center=None):
         if length < 0:
             print("Length cannot be negative")
             return
         if x < 0 or y < 0:
             print("Coordinates cannot be negative")
             return
-        if img_width < 0 or img_height < 0:
-            print("Image dimensions cannot be negative")
-            return
-        square = Square(length, angle, x, y, img_width, img_height)
+        square = Square(length, angle, x, y, distance_from_center, self.img_width, self.img_height)
         self.squares_train.append(square)
         self.areas_train.append(square.area)
         self.size_train += 1
 
-    def add_square_test(self, length, angle, x, y, img_width=500, img_height=500):
+    def add_square_test(self, length, angle, x, y, distance_from_center=None):
         if length < 0:
             print("Length cannot be negative")
             return
-        square = Square(length, angle, x, y, img_width, img_height)
+        square = Square(length, angle, x, y, distance_from_center, self.img_width, self.img_height)
         self.squares_test.append(square)
         self.areas_test.append(square.area)
         self.size_test += 1
