@@ -87,12 +87,12 @@ class Generator:
                     filename += "circle_"
                 else:
                     filename = "circle_"
-                circle, shape_circle, radius = self.make_circle(background_color=bg_color, dist_idx=i)
+                circle, shape_circle, radius = self.make_circle(cut=cut, background_color=bg_color, dist_idx=i)
 
                 if draw_square:
                     if shape_square.intersects(shape_circle):
                         while shape_square.intersects(shape_circle):
-                            circle, shape_circle, radius = self.make_circle(background_color=bg_color, dist_idx=None)
+                            circle, shape_circle, radius = self.make_circle(cut=cut, background_color=bg_color, dist_idx=None)
                             square, shape_square, length = self.make_square(cut=cut, background_color=bg_color, dist_idx=None)
 
                 ax.add_patch(circle)
@@ -229,6 +229,12 @@ class Generator:
 
         return True
 
+    def circle_is_cut(self, x, y, radius):
+        if x - radius < 0 or x + radius > self.image_width or \
+                y - radius < 0 or y + radius > self.image_height:
+            return True
+        return False
+
     def circle_out_of_bounds(self, x, y, radius):
         if x - radius < 0 or x + radius > self.image_width or \
                     y - radius < 0 or y + radius > self.image_height:
@@ -236,8 +242,7 @@ class Generator:
 
         return False
 
-    def make_circle(self, x=None, y=None, radius=None, color=None, dist_idx=None, background_color=None):
-        isOutOfBounds = True
+    def make_circle(self, x=None, y=None, radius=None, color=None, cut=False, dist_idx=None, background_color=None):
         if color is None:
             color = self._generate_nonmatching_color(background_color)
 
@@ -257,17 +262,29 @@ class Generator:
         if radius is None:
             radius = np.random.uniform(self.min_circle_radius, self.max_circle_radius)
 
-        isOutOfBounds = self.circle_out_of_bounds(x, y, radius)
+        if cut is False:
+            do_again = self.circle_out_of_bounds(x, y, radius)
+        else:
+            do_again = not self.circle_is_cut(x, y, radius)
+
         max_tries = 5
         tries = 0
-        while isOutOfBounds is True:
+        while do_again is True:
             if tries >= max_tries:
                 radius = np.random.uniform(self.min_circle_radius, self.max_circle_radius)
                 tries = 0
-            x = np.random.uniform(0, self.image_width - radius)
-            y = np.random.uniform(0, self.image_height - radius)
 
-            isOutOfBounds = self.circle_out_of_bounds(x, y, radius)
+            if cut is False:
+                x = np.random.uniform(0, self.image_width - radius)
+                y = np.random.uniform(0, self.image_height - radius)
+            else:
+                x = np.random.uniform(0-radius, self.image_width + radius)
+                y = np.random.uniform(0-radius, self.image_height + radius)
+
+            if cut is False:
+                do_again = self.circle_out_of_bounds(x, y, radius)
+            else:
+                do_again = not self.circle_is_cut(x, y, radius)
             tries += 1
 
         circle = Circle((x, y), radius, color=color)
