@@ -61,13 +61,13 @@ generator = Generator(seed=406)
 start = pc()
 
 
-generator.generate_images(False, True, True, SQUARE_CIRCLE_TRAIN_DIRECTORY, train_quantity, variant="train")
-generator.generate_images(False, True, False, CIRCLE_TRAIN_DIRECTORY, train_quantity, variant="train")
-generator.generate_images(False, False, True, SQUARE_TRAIN_DIRECTORY, train_quantity, variant="train")
+# generator.generate_images(False, True, True, SQUARE_CIRCLE_TRAIN_DIRECTORY, train_quantity, variant="train")
+# generator.generate_images(False, True, False, CIRCLE_TRAIN_DIRECTORY, train_quantity, variant="train")
+generator.generate_images(False, False, True, True, SQUARE_TRAIN_DIRECTORY, train_quantity, variant="train")
 
-generator.generate_images(False, True, True, SQUARE_CIRCLE_TEST_DIRECTORY, test_quantity, variant="test")
-generator.generate_images(False, True, False, TEST_DIRECTORY, test_quantity, variant="test")
-generator.generate_images(False, False, True, TEST_DIRECTORY, test_quantity, variant="test")
+# generator.generate_images(False, True, True, SQUARE_CIRCLE_TEST_DIRECTORY, test_quantity, variant="test")
+# generator.generate_images(False, True, False, TEST_DIRECTORY, test_quantity, variant="test")
+generator.generate_images(False, False, True, True, TEST_DIRECTORY, test_quantity, variant="test")
 
 
 end = pc()

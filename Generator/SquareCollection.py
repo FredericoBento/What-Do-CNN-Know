@@ -107,9 +107,6 @@ class SquareCollection:
         if length < 0:
             print("Length cannot be negative")
             return
-        if x < 0 or y < 0:
-            print("Coordinates cannot be negative")
-            return
         square = Square(length, angle, x, y, distance_from_center, self.img_width, self.img_height)
         self.squares_train.append(square)
         self.areas_train.append(square.area)

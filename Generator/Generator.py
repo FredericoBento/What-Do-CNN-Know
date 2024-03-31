@@ -41,7 +41,7 @@ class Generator:
             print(f"Seed provided. Using seed {seed}")
             np.random.seed(seed)
 
-    def generate_images(self, draw_random=False, draw_circle=False, draw_square=False, directory="dataset", quantity=1, variant=None):
+    def generate_images(self, draw_random=False, draw_circle=False, draw_square=False, cut=False, directory="dataset", quantity=1, variant=None):
         if variant is None:
             print("Variant not specified")
             return
@@ -80,7 +80,7 @@ class Generator:
             length = -1
             if draw_square:
                 filename = "square_"
-                square, shape_square, length = self.make_square(background_color=bg_color, dist_idx=i)
+                square, shape_square, length = self.make_square(cut=cut, background_color=bg_color, dist_idx=i)
 
             if draw_circle:
                 if draw_square:
@@ -93,7 +93,7 @@ class Generator:
                     if shape_square.intersects(shape_circle):
                         while shape_square.intersects(shape_circle):
                             circle, shape_circle, radius = self.make_circle(background_color=bg_color, dist_idx=None)
-                            square, shape_square, length = self.make_square(background_color=bg_color, dist_idx=None)
+                            square, shape_square, length = self.make_square(cut=cut, background_color=bg_color, dist_idx=None)
 
                 ax.add_patch(circle)
 
@@ -126,9 +126,7 @@ class Generator:
             i += 1
         plt.close()
 
-    def make_square(self, x=None, y=None, angle=None, length=None, color=None, background_color=None, dist_idx=None):
-        isOutoffBounds = True
-
+    def make_square(self, x=None, y=None, angle=None, length=None, color=None, cut=False, background_color=None, dist_idx=None):
         if color is None:
             color = self._generate_nonmatching_color(background_color)
 
@@ -155,13 +153,17 @@ class Generator:
         square = Rectangle((x, y), length, length, color=color, angle=angle, rotation_point=(center_x, center_y))
         corners = square.get_corners()
 
-        isOutoffBounds = self.square_out_of_bounds(corners)
+        if cut is True:
+            do_again = not self.square_is_cut(corners)
+        else:
+            do_again = self.square_out_of_bounds(corners)
+
         max_tries = 5
         max_limit = 100
         tries = 0
         limit_breaker = 0
 
-        while isOutoffBounds is True:
+        while do_again is True:
             if tries >= max_tries:
                 length = np.random.choice(self.square_areas_distribution)
                 length = np.sqrt(length)
@@ -173,16 +175,24 @@ class Generator:
                 print("x=", x, "y=", y, "length=", length, "angle=", angle)
                 break
 
-            x = np.random.uniform(0, self.image_width - length)
-            y = np.random.uniform(0, self.image_height - length)
-            angle = np.random.uniform(0, 360)
+            if cut is False:
+                x = np.random.uniform(0, self.image_width - length)
+                y = np.random.uniform(0, self.image_height - length)
+            else:
+                x = np.random.uniform(0-length, self.image_width + length)
+                y = np.random.uniform(0-length, self.image_height + length)
 
+            angle = np.random.uniform(0, 360)
             center_x = x + length / 2
             center_y = y + length / 2
             square = Rectangle((x, y), length, length, color=color, angle=angle, rotation_point=(center_x, center_y))
             corners = square.get_corners()
 
-            isOutoffBounds = self.square_out_of_bounds(corners)
+            if cut is False:
+                do_again = self.square_out_of_bounds(corners)
+            else:
+                isCut = self.square_is_cut(corners)
+                do_again = not isCut
             tries += 1
 
         square.set_antialiased(True)
@@ -198,6 +208,26 @@ class Generator:
             return True
 
         return False
+
+    def square_is_cut(self, corners):
+        # check if any corner is outside of the image and that at least one corner is inside
+        if self.square_out_of_bounds(corners) is False:
+            return False
+
+        corners_outside = 0
+        if corners[0][0] < 0 or corners[0][0] > self.image_width or corners[0][1] < 0 or corners[0][1] > self.image_height:
+            corners_outside += 1
+        if corners[1][0] < 0 or corners[1][0] > self.image_width or corners[1][1] < 0 or corners[1][1] > self.image_height:
+            corners_outside += 1
+        if corners[2][0] < 0 or corners[2][0] > self.image_width or corners[2][1] < 0 or corners[2][1] > self.image_height:
+            corners_outside += 1
+        if corners[3][0] < 0 or corners[3][0] > self.image_width or corners[3][1] < 0 or corners[3][1] > self.image_height:
+            corners_outside += 1
+
+        if corners_outside >= 3:
+            return False
+
+        return True
 
     def circle_out_of_bounds(self, x, y, radius):
         if x - radius < 0 or x + radius > self.image_width or \
