@@ -28,10 +28,6 @@ class Generator:
         self.square_areas_distribution = []
         self.circle_areas_distribution = []
 
-        self.square_collection = SquareCollection(seed=seed)
-        self.circle_collection = CircleCollection(seed=seed)
-        self.swc_collection = SquareWithCircleCollection(seed=seed)
-
         if seed is None:
             rand_seed = np.random.randint(0, 1000)
             np.random.seed(rand_seed)
@@ -40,6 +36,10 @@ class Generator:
         else:
             print(f"Seed provided. Using seed {seed}")
             np.random.seed(seed)
+
+        self.square_collection = SquareCollection(seed=self.seed)
+        self.circle_collection = CircleCollection(seed=self.seed)
+        self.swc_collection = SquareWithCircleCollection(seed=self.seed)
 
     def generate_images(self, draw_random=False, draw_circle=False, draw_square=False, cut=False, directory="dataset", quantity=1, variant=None):
         if variant is None:
@@ -324,9 +324,8 @@ class Generator:
             self.circle_collection.save_area_linegraph(folder=folder)
 
         swc_folder = folder + "/SWC"
-        if os.path.isdir(swc_folder) is False:
+        if os.path.isdir(swc_folder) is False and self.swc_collection.contains_data():
             os.mkdir(swc_folder)
-        if self.swc_collection.contains_data():
             self.swc_collection.save_area_histogram(folder=swc_folder, variant="both")
             self.swc_collection.save_area_histogram(folder=swc_folder, variant=None) # Does 2 hist (test & train)
             # self.swc_collection.save_area_linegraph(folder=swc_folder)
