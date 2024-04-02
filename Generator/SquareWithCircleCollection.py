@@ -321,9 +321,9 @@ class SquareWithCircleCollection:
         with open(filename, mode='w', newline='') as file:
             writer = csv.writer(file)
 
-            writer.writerow(['Length', 'Angle', 'X', 'Y', 'Distance_From_Center'])
+            writer.writerow(['Length', 'Area', 'X', 'Y', 'Angle', 'Distance_From_Center'])
             for square in squares:
-                writer.writerow([square.length, square.angle, square.x, square.y, square.distance_from_center])
+                writer.writerow([square.length, square.area, square.x, square.y, square.angle, square.distance_from_center])
             writer.writerow(['Radius', 'Area', 'X', 'Y', 'Distance_From_Center'])
             for circle in circles:
                 writer.writerow([circle.radius, circle.area, circle.x, circle.y, square.distance_from_center])
