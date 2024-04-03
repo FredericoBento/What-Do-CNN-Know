@@ -4,7 +4,8 @@ import csv
 
 
 class Circle:
-    def __init__(self, radius, x, y, distance=None, img_width=500, img_height=500):
+    def __init__(self, radius, x, y, distance=None, filename=None, img_width=500, img_height=500):
+        self.filename = filename
         self.radius = radius
         self.x = x
         self.y = y
@@ -72,7 +73,8 @@ class CircleCollection:
         if radius < 0:
             print("radius cannot be negative")
             return
-        circle = Circle(radius, x, y, distance_from_center, img_width=self.img_width, img_height=self.img_height)
+        filename = "circle_" + str(self.size_train+1) + ".png"
+        circle = Circle(radius, x, y, distance_from_center, filename, img_width=self.img_width, img_height=self.img_height)
         self.circles_train.append(circle)
         self.areas_train.append(circle.area)
         self.size_train += 1
@@ -81,7 +83,8 @@ class CircleCollection:
         if radius < 0:
             print("radius cannot be negative")
             return
-        circle = Circle(radius, x, y, distance_from_center, img_width=self.img_width, img_height=self.img_height)
+        filename = "circle_" + str(self.size_test+1) + ".png"
+        circle = Circle(radius, x, y, distance_from_center, filename, img_width=self.img_width, img_height=self.img_height)
         self.circles_test.append(circle)
         self.areas_test.append(circle.area)
         self.size_test += 1
@@ -283,6 +286,6 @@ class CircleCollection:
 
         with open(filename, mode='w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow(['Radius', 'Area', 'X', 'Y', 'Distance_From_Center'])
+            writer.writerow(['Filename', 'Radius', 'Area', 'X', 'Y', 'Distance_From_Center'])
             for circle in circles:
-                writer.writerow([circle.radius, circle.area, circle.x, circle.y, circle.distance_from_center])
+                writer.writerow([circle.filename, circle.radius, circle.area, circle.x, circle.y, circle.distance_from_center])

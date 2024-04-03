@@ -21,35 +21,6 @@ class SquareWithCircleCollection:
 
         self.seed = seed
 
-    def load_from_csv(self, filename=None, variant=None):
-        if variant is None:
-            print("Variant not specified, (test or train)")
-            return
-        elif variant != "train" and variant != "test":
-            print("Invalid variant")
-            return
-
-        with open(filename, mode='r') as file:
-            reader = csv.reader(file)
-            for row in reader:
-                if row[0] == 'Length':
-                    continue
-                if row[0] == 'Radius':
-                    continue
-                if len(row) == 5:
-                    self.add_square(float(row[0]), float(row[1]), float(row[2]), float(row[3]), variant)
-                elif len(row) == 6:
-                    self.add_circle(float(row[0]), float(row[2]), float(row[3]), variant)
-            if variant == "train":
-                if len(self.square_collection.areas_train) != len(self.circle_collection.areas_train):
-                    print("Number of squares and circles do not match")
-                self.size_train = len(self.square_collection.areas_train)
-            elif variant == "test":
-                if len(self.square_collection.areas_test) != len(self.circle_collection.areas_test):
-                    print("Number of squares and circles do not match")
-                self.size_test = len(self.square_collection.areas_test)
-
-
     def contains_data(self, variant=None, form=None):
         if variant is None:
             if form is None:
@@ -321,9 +292,16 @@ class SquareWithCircleCollection:
         with open(filename, mode='w', newline='') as file:
             writer = csv.writer(file)
 
-            writer.writerow(['Length', 'Area', 'X', 'Y', 'Angle', 'Distance_From_Center'])
+            writer.writerow(['Filename', 'Length', 'Area', 'X', 'Y', 'Angle', 'Distance_From_Center'])
+            counter = 1
             for square in squares:
-                writer.writerow([square.length, square.area, square.x, square.y, square.angle, square.distance_from_center])
-            writer.writerow(['Radius', 'Area', 'X', 'Y', 'Distance_From_Center'])
+                name = "square_circle_" + str(counter) + ".png"
+                writer.writerow([name, square.length, square.area, square.x, square.y, square.angle, square.distance_from_center])
+                counter += 1
+            
+            counter = 1
+            writer.writerow(['Filename', 'Radius', 'Area', 'X', 'Y', 'Distance_From_Center'])
             for circle in circles:
-                writer.writerow([circle.radius, circle.area, circle.x, circle.y, square.distance_from_center])
+                name = "square_circle_" + str(counter) + ".png"
+                writer.writerow([name, circle.radius, circle.area, circle.x, circle.y, square.distance_from_center])
+                counter += 1

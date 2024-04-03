@@ -4,7 +4,8 @@ import csv
 
 
 class Square:
-    def __init__(self, length, angle, x, y, distance=None, img_width=500, img_height=500):
+    def __init__(self, length, angle, x, y, distance=None, filename=None, img_width=500, img_height=500):
+        self.filename = filename
         self.length = length
         self.area = length * length
         self.x = x
@@ -107,7 +108,8 @@ class SquareCollection:
         if length < 0:
             print("Length cannot be negative")
             return
-        square = Square(length, angle, x, y, distance_from_center, self.img_width, self.img_height)
+        filename = "square_" + str(self.size_train+1) + ".png"
+        square = Square(length, angle, x, y, distance_from_center, filename, self.img_width, self.img_height)
         self.squares_train.append(square)
         self.areas_train.append(square.area)
         self.size_train += 1
@@ -116,7 +118,8 @@ class SquareCollection:
         if length < 0:
             print("Length cannot be negative")
             return
-        square = Square(length, angle, x, y, distance_from_center, self.img_width, self.img_height)
+        filename = "square_" + str(self.size_test+1) + ".png"
+        square = Square(length, angle, x, y, distance_from_center, filename, self.img_width, self.img_height)
         self.squares_test.append(square)
         self.areas_test.append(square.area)
         self.size_test += 1
@@ -318,6 +321,6 @@ class SquareCollection:
 
         with open(filename, mode='w', newline='') as file:
             writer = csv.writer(file)
-            writer.writerow(['Length', 'Area', 'X', 'Y', 'Angle', 'Distance_From_Center'])
+            writer.writerow(['Filename', 'Length', 'Area', 'X', 'Y', 'Angle', 'Distance_From_Center'])
             for square in squares:
-                writer.writerow([square.length, square.area, square.x, square.y, square.angle, square.distance_from_center])
+                writer.writerow([square.filename, square.length, square.area, square.x, square.y, square.angle, square.distance_from_center])
