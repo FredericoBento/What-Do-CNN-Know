@@ -1,3 +1,7 @@
 Found num hidden dense units: 60
 Found learning rate: 0.0013693618689800777
 Found batch size: 119
+
+Found num hidden dense units: 335
+Found learning rate: 0.0035631753149032055
+Found batch size: 92
