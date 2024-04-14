@@ -31,8 +31,8 @@ img_height = 500
 min_square_length = 10
 max_square_length = img_width / 2
 
-min_square_area = np.pi * min_square_length ** 2
-max_square_area = np.pi * max_square_length ** 2
+min_square_area = min_square_length ** 2
+max_square_area = max_square_length ** 2
 
 # Create data_folder if it does not exist
 os.makedirs(data_folder, exist_ok=True)

@@ -1,4 +1,5 @@
 import numpy as np
+import shapely.geometry as geometry
 
 
 def cornerOutOfBounds(x, y, width, height):
@@ -43,6 +44,18 @@ def square_cut(corners, width, height):
         return False
 
     return True
+
+
+def square_overlap(corners, other_corners):
+    shape1 = geometry.Polygon(corners)
+    shape2 = geometry.Polygon(other_corners)
+    return shape1.intersects(shape2)
+
+
+def circle_overlap(x1, y1, r1, x2, y2, r2):
+    shape = geometry.Point(x1, y1).buffer(r1)
+    other_shape = geometry.Point(x2, y2).buffer(r2)
+    return shape.intersects(other_shape)
 
 
 def circle_is_cut(x, y, radius, width, height):
