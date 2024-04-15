@@ -40,7 +40,7 @@ max_circle_radius = img_width / 4
 min_circle_area = np.pi * min_circle_radius ** 2
 max_circle_area = np.pi * max_circle_radius ** 2
 
-outside_min_length = 8
+outside_min = 5
 
 os.makedirs(data_folder, exist_ok=True)
 os.makedirs(squares_folder_train, exist_ok=True)
@@ -52,7 +52,6 @@ os.makedirs(circles_folder_test, exist_ok=True)
 file = open(os.path.join(data_folder, 'seed.txt'), 'w')
 file.write(str(seed))
 
-# Squares(Not Cut)
 start = pc()
 squares_writer = csv.writer(open(os.path.join(data_folder, 'squares.csv'), 'w'))
 squares_writer.writerow(['Filename', 'X', 'Y', 'Length', 'Area', 'Angle', 'Color', 'Bg_color', 'Distance From Center', 'Corners', 'Cut', 'Variant'])
@@ -87,8 +86,8 @@ for j in range(2):
             else:
                 length = np.sqrt(distribution[i])
             angle = np.random.uniform(0, 360)
-            x = np.random.uniform(0 - length, img_width - length)
-            y = np.random.uniform(0 - length, img_height - length)
+            x = np.random.uniform(0 - length + outside_min, img_width + length - outside_min)
+            y = np.random.uniform(0 - length + outside_min, img_height + length - outside_min)
             # check if square is outside of the image
             center_x = x + length / 2
             center_y = y + length / 2
@@ -121,7 +120,6 @@ for j in range(2):
         plt.clf()
         counter += 1
 
-# Circles
 print("\r", flush=True)
 counter = 1
 for j in range(2):
@@ -148,8 +146,8 @@ for j in range(2):
                 tries = 0
             else:
                 radius = np.sqrt(distribution[i]/np.pi)
-            x = np.random.uniform(0, img_width - radius)
-            y = np.random.uniform(0, img_height - radius)
+            x = np.random.uniform(0-radius+outside_min, img_width + radius - outside_min)
+            y = np.random.uniform(0-radius+outside_min, img_height + radius - outside_min)
 
             if du.circle_is_cut(x, y, radius, img_width, img_height) is False:
                 tries += 1
