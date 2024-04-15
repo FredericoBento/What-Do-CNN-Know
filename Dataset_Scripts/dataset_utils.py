@@ -25,9 +25,8 @@ def square_out_of_bounds(corners, width, height):
     return False
 
 
-def square_cut(corners, width, height):
-    # check if any corner is outside of the image and that at least one corner is inside
-    if square_out_of_bounds(corners) is False:
+def square_is_cut(corners, width, height):
+    if square_out_of_bounds(corners, width, height) is False:
         return False
 
     corners_outside = 0

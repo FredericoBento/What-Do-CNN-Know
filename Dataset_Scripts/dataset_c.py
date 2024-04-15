@@ -22,8 +22,8 @@ data_folder = 'Datasets/Dataset_C/data'
 seed = 117
 np.random.seed(seed)
 
-train_size = int(110 / 2)
-test_size = int(50 / 2)
+train_size = int(11_000 / 2)
+test_size = int(5_000 / 2)
 
 img_width = 500
 img_height = 500
@@ -31,11 +31,11 @@ img_height = 500
 min_square_length = 10
 max_square_length = img_width / 2
 
-min_square_area = np.pi * min_square_length ** 2
-max_square_area = np.pi * max_square_length ** 2
+min_square_area = min_square_length ** 2
+max_square_area = max_square_length ** 2
 
 min_circle_radius = 10
-max_circle_radius = img_width / 2
+max_circle_radius = img_width / 4
 
 min_circle_area = np.pi * min_circle_radius ** 2
 max_circle_area = np.pi * max_circle_radius ** 2
@@ -59,6 +59,7 @@ circles_writer = csv.writer(open(os.path.join(data_folder, 'circles.csv'), 'w'))
 circles_writer.writerow(['Filename', 'X', 'Y', 'Radius', 'Area', 'Color', 'Bg_color', 'Distance From Center', 'Variant'])
 
 fig = plt.figure(figsize=(img_width/100, img_height/100))
+fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
 counter = 1
 for j in range(2):
     if j == 0:

@@ -59,6 +59,7 @@ circles_writer = csv.writer(open(os.path.join(data_folder, 'circles.csv'), 'w'))
 circles_writer.writerow(['Filename', 'X', 'Y', 'Radius', 'Area', 'Color', 'Bg_color', 'Distance From Center', 'Variant'])
 
 fig = plt.figure(figsize=(img_width/100, img_height/100))
+fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
 counter = 1
 for j in range(2):
     if j == 0:
