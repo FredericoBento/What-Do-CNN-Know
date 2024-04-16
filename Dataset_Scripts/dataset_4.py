@@ -10,7 +10,7 @@ matplotlib.use('QtAgg')
 
 
 # Dataset 4
-# Circles Cut and Circles 
+# Circles Cut and Circles
 
 circles_folder_train = 'Datasets/Dataset_4/train/circles'
 circles_folder_test = 'Datasets/Dataset_4/test/circles'
@@ -58,7 +58,7 @@ circles_writer = csv.writer(open(os.path.join(data_folder, 'circles.csv'), 'w'))
 circles_writer.writerow(['Filename', 'X', 'Y', 'Radius', 'Area', 'Color', 'Bg_color', 'Distance From Center', 'Cut', 'Variant'])
 
 circles_cut_writer = csv.writer(open(os.path.join(data_folder, 'circles_cut.csv'), 'w'))
-circles_cut_writer.writerow(['Filename', 'X', 'Y', 'Radius', 'Area', 'Color', 'Bg_color', 'Distance From Center', 'Cut', 'Variant'])
+circles_cut_writer.writerow(['Filename', 'X', 'Y', 'Radius', 'Area', 'Visible Area', 'Color', 'Bg_color', 'Distance From Center', 'Cut', 'Variant'])
 
 fig = plt.figure(figsize=(img_width/100, img_height/100))
 fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
@@ -101,9 +101,9 @@ for j in range(2):
         bg_color = du.generate_nonmatching_color()
         color = du.generate_nonmatching_color(bg_color)
         area = np.pi * radius ** 2
-        # dfc = (x2 - x1)^2 + (y2 - y1)^2
+        visible_area = du.calculate_visible_area_circle(x, y, radius, img_width, img_height)
         dfc = np.sqrt((x - img_width/2) ** 2 + (y - img_height/2) ** 2)
-        circles_cut_writer.writerow([f'circle_cut_{counter}.png', x, y, radius, area, color, bg_color, dfc, "True", variant])
+        circles_cut_writer.writerow([f'circle_cut_{counter}.png', x, y, radius, area, visible_area, color, bg_color, dfc, "True", variant])
         fig.set_facecolor(bg_color)
         circle = patches.Circle((x, y), radius, color=color)
         ax.add_patch(circle)
@@ -157,7 +157,6 @@ for j in range(2):
         bg_color = du.generate_nonmatching_color()
         color = du.generate_nonmatching_color(bg_color)
         area = np.pi * radius ** 2
-        # dfc = (x2 - x1)^2 + (y2 - y1)^2
         dfc = np.sqrt((x - img_width/2) ** 2 + (y - img_height/2) ** 2)
         circles_writer.writerow([f'circle_{counter}.png', x, y, radius, area, color, bg_color, dfc, "False", variant])
         fig.set_facecolor(bg_color)
@@ -177,6 +176,3 @@ for j in range(2):
 
 end = pc()
 print(f"Finished generating images ({round(end - start, 4)}s)")
-
-
-

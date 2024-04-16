@@ -57,7 +57,7 @@ squares_writer = csv.writer(open(os.path.join(data_folder, 'squares.csv'), 'w'))
 squares_writer.writerow(['Filename', 'X', 'Y', 'Length', 'Area', 'Angle', 'Color', 'Bg_color', 'Distance From Center', 'Corners', 'Cut', 'Variant'])
 
 squares_cut_writer = csv.writer(open(os.path.join(data_folder, 'squares_cut.csv'), 'w'))
-squares_cut_writer.writerow(['Filename', 'X', 'Y', 'Length', 'Area', 'Angle', 'Color', 'Bg_color', 'Distance From Center', 'Corners', 'Cut', 'Variant'])
+squares_cut_writer.writerow(['Filename', 'X', 'Y', 'Length', 'Area', 'Visible Area', 'Angle', 'Color', 'Bg_color', 'Distance From Center', 'Corners', 'Cut', 'Variant'])
 
 fig = plt.figure(figsize=(img_width/100, img_height/100))
 fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
@@ -103,8 +103,9 @@ for j in range(2):
         bg_color = du.generate_nonmatching_color()
         color = du.generate_nonmatching_color(bg_color)
         area = length ** 2
+        visible_area = du.calculate_visible_area([x], [y], [length], img_width, img_height)
         dfc = np.sqrt((center_x - img_width/2) ** 2 + (center_y - img_height/2) ** 2)
-        squares_cut_writer.writerow([f'square_cut_{counter}.png', x, y, length, area, angle, color, bg_color, dfc, corners, "True", variant])
+        squares_cut_writer.writerow([f'square_cut_{counter}.png', x, y, length, area, visible_area, angle, color, bg_color, dfc, corners, "True", variant])
         fig.set_facecolor(bg_color)
         square.set_color(color)
         ax.add_patch(square)
@@ -161,7 +162,6 @@ for j in range(2):
         bg_color = du.generate_nonmatching_color()
         color = du.generate_nonmatching_color(bg_color)
         area = length ** 2
-        # dfc = (x2 - x1)^2 + (y2 - y1)^2
         dfc = np.sqrt((center_x - img_width/2) ** 2 + (center_y - img_height/2) ** 2)
         squares_writer.writerow([f'square_{counter}.png', x, y, length, area, angle, color, bg_color, dfc, corners, "False", variant])
         fig.set_facecolor(bg_color)

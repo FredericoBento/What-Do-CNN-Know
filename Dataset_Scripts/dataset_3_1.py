@@ -10,7 +10,7 @@ matplotlib.use('QtAgg')
 
 
 # Dataset 3_1
-# Mutiplos Circles / Mutiplos Squares 
+# Mutiplos Circles / Mutiplos Squares
 
 squares_folder_train = 'Datasets/Dataset_3_1/train/squares'
 squares_folder_test = 'Datasets/Dataset_3_1/test/squares'
@@ -115,7 +115,6 @@ for j in range(2):
                 square_corners.append(corners)
                 color = du.generate_nonmatching_color(bg_color)
                 area = length ** 2
-                # dfc = (x2 - x1)^2 + (y2 - y1)^2
                 dfc = np.sqrt((center_x - img_width/2) ** 2 + (center_y - img_height/2) ** 2)
                 squares_writer.writerow([f'square_{counter}.png', x, y, length, area, angle, color, bg_color, dfc, variant])
                 square.set_color(color)

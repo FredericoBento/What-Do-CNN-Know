@@ -58,7 +58,7 @@ circles_writer = csv.writer(open(os.path.join(data_folder, 'circles.csv'), 'w'))
 circles_writer.writerow(['Filename', 'X', 'Y', 'Radius', 'Area', 'Color', 'Bg_color', 'Distance From Center', 'Cut', 'Variant'])
 
 circles_cut_writer = csv.writer(open(os.path.join(data_folder, 'circles_cut.csv'), 'w'))
-circles_cut_writer.writerow(['Filename', 'X', 'Y', 'Radius', 'Area', 'Color', 'Bg_color', 'Distance From Center', 'Cut', 'Variant'])
+circles_cut_writer.writerow(['Filename', 'X', 'Y', 'Radius', 'Area', 'Visible Area', 'Color', 'Bg_color', 'Distance From Center', 'Cut', 'Variant'])
 
 fig = plt.figure(figsize=(img_width/100, img_height/100))
 fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
@@ -119,8 +119,9 @@ for j in range(2):
                 color = du.generate_nonmatching_color(excluded_colors)
                 excluded_colors.append(color)
                 area = np.pi * radius ** 2
+                visible_area = du.calculate_visible_area_circle(x, y, radius, img_width, img_height)
                 dfc = np.sqrt((x - img_width/2) ** 2 + (y - img_height/2) ** 2)
-                circles_cut_writer.writerow([f'circle_cut_{counter}.png', x, y, radius, area, color, bg_color, dfc, "True", variant])
+                circles_cut_writer.writerow([f'circle_cut_{counter}.png', x, y, radius, area, visible_area, color, bg_color, dfc, "True", variant])
                 circle = patches.Circle((x, y), radius, color=color)
                 ax.add_patch(circle)
             k += 1
@@ -132,7 +133,7 @@ for j in range(2):
             folder = circles_cut_folder_train
         else:
             folder = circles_cut_folder_test
-        path = os.path.join(folder, f'circle_{counter}.png')
+        path = os.path.join(folder, f'circle_cut_{counter}.png')
         plt.savefig(path, bbox_inches=None, pad_inches=0, dpi=100)
         plt.clf()
         counter += 1
