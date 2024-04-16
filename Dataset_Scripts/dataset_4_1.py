@@ -151,13 +151,16 @@ for j in range(2):
         size = test_size
 
     distribution = np.random.uniform(min_circle_area, max_circle_area, size)
-    count_distribution = np.random.randint(1, 5, size)
+    count_distribution = np.random.randint(1, 6, size)
     for i in range(size):
         ax = fig.add_subplot(111, aspect='equal')
         b = f"Generating Circles {i+1}/{size}"
         print(b, end='\r', flush=True)
         circles = []
-        for k in range(count_distribution[i]+1):
+        bg_color = du.generate_nonmatching_color()
+        excluded_colors = [bg_color]
+        k = 0
+        while k < int(count_distribution[i]):
             all_ok = False
             tries = 0
             max_tries = 10
@@ -190,14 +193,14 @@ for j in range(2):
                     all_ok = True
 
                 circles.append([x, y, radius])
-                color = du.generate_nonmatching_color(bg_color)
+                color = du.generate_nonmatching_color(excluded_colors)
                 area = np.pi * radius ** 2
                 dfc = np.sqrt((x - img_width/2) ** 2 + (y - img_height/2) ** 2)
                 circles_writer.writerow([f'circle_{counter}.png', x, y, radius, area, color, bg_color, dfc, "False", variant])
-                fig.set_facecolor(bg_color)
                 circle = patches.Circle((x, y), radius, color=color)
                 ax.add_patch(circle)
-
+            k += 1
+        fig.set_facecolor(bg_color)
         ax.set_xlim(0, img_width)
         ax.set_ylim(0, img_height)
         ax.axis('off')

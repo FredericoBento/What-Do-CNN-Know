@@ -114,7 +114,7 @@ for j in range(2):
             folder = circles_cut_folder_train
         else:
             folder = circles_cut_folder_test
-        path = os.path.join(folder, f'circle_cut{counter}.png')
+        path = os.path.join(folder, f'circle_cut_{counter}.png')
         plt.savefig(path, bbox_inches=None, pad_inches=0, dpi=100)
         plt.clf()
         counter += 1
