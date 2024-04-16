@@ -22,8 +22,8 @@ data_folder = 'Datasets/Dataset_6_1/data'
 seed = 565
 np.random.seed(seed)
 
-train_size = int(100 / 2)
-test_size = int(50 / 2)
+train_size = int(3000 / 2)
+test_size = int(1000 / 2)
 
 img_width = 500
 img_height = 500
@@ -52,7 +52,7 @@ os.makedirs(circles_folder_test, exist_ok=True)
 file = open(os.path.join(data_folder, 'seed.txt'), 'w')
 file.write(str(seed))
 
-# Squares(Not Cut)
+# Squares
 start = pc()
 squares_writer = csv.writer(open(os.path.join(data_folder, 'squares.csv'), 'w'))
 squares_writer.writerow(['Filename', 'X', 'Y', 'Length', 'Area', 'Angle', 'Color', 'Bg_color', 'Distance From Center', 'Corners', 'Cut', 'Variant'])

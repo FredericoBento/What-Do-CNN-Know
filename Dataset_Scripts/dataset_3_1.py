@@ -10,7 +10,7 @@ matplotlib.use('QtAgg')
 
 
 # Dataset 3_1
-# Mutiplos Circulos / Mutiplos Quadrados
+# Mutiplos Circles / Mutiplos Squares 
 
 squares_folder_train = 'Datasets/Dataset_3_1/train/squares'
 squares_folder_test = 'Datasets/Dataset_3_1/test/squares'
