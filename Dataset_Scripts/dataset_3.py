@@ -9,16 +9,16 @@ from time import perf_counter as pc
 matplotlib.use('QtAgg')
 
 
-# Dataset C
+# Dataset 3
 # Squares and Circles
 
-squares_folder_train = 'Datasets/Dataset_C/train/squares'
-squares_folder_test = 'Datasets/Dataset_C/test/squares'
+squares_folder_train = 'Datasets/Dataset_3/train/squares'
+squares_folder_test = 'Datasets/Dataset_3/test/squares'
 
-circles_folder_train = 'Datasets/Dataset_C/train/circles'
-circles_folder_test = 'Datasets/Dataset_C/test/circles'
+circles_folder_train = 'Datasets/Dataset_3/train/circles'
+circles_folder_test = 'Datasets/Dataset_3/test/circles'
 
-data_folder = 'Datasets/Dataset_C/data'
+data_folder = 'Datasets/Dataset_3/data'
 seed = 117
 np.random.seed(seed)
 
