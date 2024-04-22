@@ -1,6 +1,6 @@
 import numpy as np
-import math
-import shapely.geometry as geometry
+from shapely import geometry
+from shapely import affinity
 
 
 def cornerOutOfBounds(x, y, width, height):
@@ -52,61 +52,48 @@ def square_overlap(corners, other_corners):
     return shape1.intersects(shape2)
 
 
-def calculate_visible_area(x, y, length, image_width, image_height):
-    total_visible_area = 0
-    for i in range(len(x)):
-        # Calculate the coordinates of the visible rectangle
-        x1 = max(x[i], 0)
-        y1 = max(y[i], 0)
-        x2 = min(x[i] + length[i], image_width)
-        y2 = min(y[i] + length[i], image_height)
+def calculate_visible_area_square(x, y, length, angle, image_width, image_height):
+    total_visible_area = 0.00
+    border = geometry.Polygon([(0, 0), (image_width, 0), (image_width, image_height), (0, image_height)])
+    square = geometry.Polygon([(x, y), (x + length, y), (x + length, y + length), (x, y + length)])
+    square = affinity.rotate(square, angle)
 
-        # Calculate the width and height of the visible rectangle
-        width = x2 - x1
-        height = y2 - y1
+    if border.contains(square):
+        total_visible_area = square.area
+    elif border.intersects(square):
+        total_visible_area = square.intersection(border).area
 
-        # If any part of the square is within the image boundaries
-        if width > 0 and height > 0:
-            # Calculate the area of the visible portion
-            visible_area = width * height
-            total_visible_area += visible_area
-
-    return total_visible_area
+    return round(total_visible_area, 2)
 
 
 def calculate_visible_area_circle(x, y, radius, image_width, image_height):
-    # Calculate the bounding box of the circle
-    x_min = max(x - radius, 0)
-    x_max = min(x + radius, image_width)
-    y_min = max(y - radius, 0)
-    y_max = min(y + radius, image_height)
+    visible_area = 0
+    circle = geometry.Point(x, y).buffer(radius, resolution=120)
+    border = geometry.Polygon([(0, 0), (image_width, 0), (image_width, image_height), (0, image_height)])
 
-    # Check if the circle lies completely outside the image boundaries
-    if x_min >= image_width or x_max <= 0 or y_min >= image_height or y_max <= 0:
-        return 0
-    # Calculate area based on the intersection with image boundaries
-    area = 0
-    if x_min <= 0 and x_max >= image_width and y_min <= 0 and y_max >= image_height:
-        # Circle lies completely inside the image boundaries
-        area = math.pi * radius**2
-    else:
-        # Circle partially intersects with image boundaries
-        dx = min(x_max, image_width) - max(x_min, 0)
-        dy = min(y_max, image_height) - max(y_min, 0)
+    if border.contains(circle):
+        visible_area = circle.area
+    elif border.intersects(circle):
+        visible_area = circle.intersection(border).area
 
-        if dx < radius * 2 and dy < radius * 2:
-            # Circle intersects both horizontally and vertically
-            angle1 = 2 * math.acos(dx / (2 * radius))
-            angle2 = 2 * math.acos(dy / (2 * radius))
-            sector_area1 = 0.5 * radius**2 * (angle1 - math.sin(angle1))
-            sector_area2 = 0.5 * radius**2 * (angle2 - math.sin(angle2))
-            intersection_area = sector_area1 + sector_area2
-            area = intersection_area
-        else:
-            # Circle intersects either horizontally or vertically
-            area = math.pi * radius**2 * (dx * dy) / (math.pi * radius**2)
+    return round(visible_area, 2)
 
-    return area
+
+def calculate_dfc_square(x, y, length, angle, image_width, image_height):
+    center_image = geometry.Point(image_width/2, image_height/2)
+    square = geometry.Polygon([(x, y), (x + length, y), (x + length, y + length), (x, y + length)])
+    square = affinity.rotate(square, angle)
+    dfc = center_image.distance(square)
+
+    return round(dfc, 2)
+
+
+def calculate_dfc_circle(x, y, radius, image_width, image_height):
+    center_image = geometry.Point(image_width/2, image_height/2)
+    circle = geometry.Point(x, y).buffer(radius, resolution=120)
+    dfc = center_image.distance(circle)
+
+    return round(dfc, 2)
 
 
 def circle_overlap(x1, y1, r1, x2, y2, r2):
@@ -135,4 +122,3 @@ def generate_nonmatching_color(*excluded_colors):
         color = np.random.rand(3)
         if all(np.linalg.norm(color - excluded) > 0.1 for excluded in excluded_colors):
             return color
-

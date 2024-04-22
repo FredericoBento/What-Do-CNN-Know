@@ -5,6 +5,7 @@ from matplotlib import patches
 import csv
 import os
 import dataset_utils as du
+from variables import *
 from time import perf_counter as pc
 matplotlib.use('QtAgg')
 
@@ -22,24 +23,6 @@ data_folder = 'Datasets/Dataset_3_1/data'
 seed = 120
 np.random.seed(seed)
 
-train_size = int(3000 / 2)
-test_size = int(1000 / 2)
-
-img_width = 500
-img_height = 500
-
-min_square_length = 10
-max_square_length = img_width / 2
-
-min_square_area = min_square_length ** 2
-max_square_area = max_square_length ** 2
-
-min_circle_radius = 10
-max_circle_radius = img_width / 4
-
-min_circle_area = np.pi * min_circle_radius ** 2
-max_circle_area = np.pi * max_circle_radius ** 2
-
 os.makedirs(data_folder, exist_ok=True)
 os.makedirs(squares_folder_train, exist_ok=True)
 os.makedirs(squares_folder_test, exist_ok=True)
@@ -53,7 +36,7 @@ file.write(str(seed))
 # Squares(Not Cut)
 start = pc()
 squares_writer = csv.writer(open(os.path.join(data_folder, 'squares.csv'), 'w'))
-squares_writer.writerow(['Filename', 'X', 'Y', 'Length', 'Area', 'Angle', 'Color', 'Bg_color', 'Distance From Center', 'Variant'])
+squares_writer.writerow(['Filename', 'X', 'Y', 'Length', 'Angle', 'Area', 'Color', 'Bg_color', 'Distance From Center', 'Variant'])
 
 circles_writer = csv.writer(open(os.path.join(data_folder, 'circles.csv'), 'w'))
 circles_writer.writerow(['Filename', 'X', 'Y', 'Radius', 'Area', 'Color', 'Bg_color', 'Distance From Center', 'Variant'])
@@ -91,11 +74,11 @@ for j in range(2):
                 angle = np.random.uniform(0, 360)
                 x = np.random.uniform(0, img_width - length)
                 y = np.random.uniform(0, img_height - length)
-                # check if square is outside of the image
                 center_x = x + length / 2
                 center_y = y + length / 2
                 square = patches.Rectangle((x, y), length, length, angle=angle, rotation_point=(center_x, center_y))
                 corners = square.get_corners()
+
                 if du.square_out_of_bounds(corners, img_width, img_height):
                     tries += 1
                     continue
@@ -115,8 +98,10 @@ for j in range(2):
                 square_corners.append(corners)
                 color = du.generate_nonmatching_color(bg_color)
                 area = length ** 2
-                dfc = np.sqrt((center_x - img_width/2) ** 2 + (center_y - img_height/2) ** 2)
-                squares_writer.writerow([f'square_{counter}.png', x, y, length, area, angle, color, bg_color, dfc, variant])
+                dfc = du.calculate_dfc_square(x, y, length, angle, img_width, img_height)
+                dfc = round(dfc, 2)
+                area = round(area, 2)
+                squares_writer.writerow([f'square_{counter}.png', x, y, length, angle, area, color, bg_color, dfc, variant])
                 square.set_color(color)
                 ax.add_patch(square)
 
@@ -188,7 +173,8 @@ for j in range(2):
                 circles.append([x, y, radius])
                 color = du.generate_nonmatching_color(bg_color)
                 area = np.pi * radius ** 2
-                dfc = np.sqrt((x - img_width/2) ** 2 + (y - img_height/2) ** 2)
+                dfc = du.calculate_dfc_circle(x, y, radius, img_width, img_height)
+                dfc = round(dfc, 2)
                 circles_writer.writerow([f'circle_{counter}.png', x, y, radius, area, color, bg_color, dfc, variant])
                 fig.set_facecolor(bg_color)
                 circle = patches.Circle((x, y), radius, color=color)
