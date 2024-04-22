@@ -5,6 +5,7 @@ from matplotlib import patches
 import csv
 import os
 import dataset_utils as du
+from variables import *
 from time import perf_counter as pc
 matplotlib.use('QtAgg')
 
@@ -22,18 +23,6 @@ data_folder = 'Datasets/Dataset_B/data'
 seed = 111
 np.random.seed(seed)
 
-train_size = int(11_000 / 2)
-test_size = int(5_000 / 2)
-
-img_width = 500
-img_height = 500
-
-min_square_length = 10
-max_square_length = img_width / 2
-
-min_square_area = min_square_length ** 2
-max_square_area = max_square_length ** 2
-
 # Create data_folder if it does not exist
 os.makedirs(data_folder, exist_ok=True)
 os.makedirs(squares_folder_train, exist_ok=True)
@@ -48,7 +37,7 @@ file.write(str(seed))
 # Squares(Not Cut)
 start = pc()
 squares_writer = csv.writer(open(os.path.join(data_folder, 'squares.csv'), 'w'))
-squares_writer.writerow(['Filename', 'X', 'Y', 'Length', 'Area', 'Angle', 'Color', 'Bg_color', 'Distance From Center', 'Variant'])
+squares_writer.writerow(['Filename', 'X', 'Y', 'Length', 'Angle', 'Area', 'Color', 'Bg_color', 'Distance From Center', 'Variant'])
 fig = plt.figure(figsize=(img_width/100, img_height/100))
 fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
 counter = 1
@@ -91,9 +80,10 @@ for j in range(2):
         bg_color = du.generate_nonmatching_color()
         color = du.generate_nonmatching_color(bg_color)
         area = length ** 2
-        # dfc = (x2 - x1)^2 + (y2 - y1)^2
-        dfc = np.sqrt((center_x - img_width/2) ** 2 + (center_y - img_height/2) ** 2)
-        squares_writer.writerow([f'square_{counter}.png', x, y, length, area, angle, color, bg_color, dfc, variant])
+        dfc = du.calculate_dfc_square(x, y, length, angle, img_width, img_height)
+        dfc = round(dfc, 2)
+        area = round(area, 2)
+        squares_writer.writerow([f'square_{counter}.png', x, y, length, angle, area, color, bg_color, dfc, variant])
         fig.set_facecolor(bg_color)
         square.set_color(color)
         ax.add_patch(square)

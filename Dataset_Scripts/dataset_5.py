@@ -5,6 +5,7 @@ from matplotlib import patches
 import csv
 import os
 import dataset_utils as du
+from variables import *
 from time import perf_counter as pc
 matplotlib.use('QtAgg')
 
@@ -22,26 +23,6 @@ data_folder = 'Datasets/Dataset_5/data'
 seed = 921
 np.random.seed(seed)
 
-train_size = int(100 / 2)
-test_size = int(50 / 2)
-
-img_width = 500
-img_height = 500
-
-min_square_length = 10
-max_square_length = img_width / 2
-
-min_square_area = min_square_length ** 2
-max_square_area = max_square_length ** 2
-
-min_circle_radius = 10
-max_circle_radius = img_width / 4
-
-min_circle_area = np.pi * min_circle_radius ** 2
-max_circle_area = np.pi * max_circle_radius ** 2
-
-outside_min = 5
-
 os.makedirs(data_folder, exist_ok=True)
 os.makedirs(squares_folder_train, exist_ok=True)
 os.makedirs(squares_folder_test, exist_ok=True)
@@ -54,10 +35,10 @@ file.write(str(seed))
 
 start = pc()
 squares_writer = csv.writer(open(os.path.join(data_folder, 'squares.csv'), 'w'))
-squares_writer.writerow(['Filename', 'X', 'Y', 'Length', 'Area', 'Angle', 'Color', 'Bg_color', 'Distance From Center', 'Corners', 'Cut', 'Variant'])
+squares_writer.writerow(['Filename', 'X', 'Y', 'Length', 'Angle', 'Area', 'Color', 'Bg_color', 'Distance From Center', 'Corners', 'Cut', 'Variant'])
 
 squares_cut_writer = csv.writer(open(os.path.join(data_folder, 'squares_cut.csv'), 'w'))
-squares_cut_writer.writerow(['Filename', 'X', 'Y', 'Length', 'Area', 'Visible Area', 'Angle', 'Color', 'Bg_color', 'Distance From Center', 'Corners', 'Cut', 'Variant'])
+squares_cut_writer.writerow(['Filename', 'X', 'Y', 'Length', 'Angle', 'Area', 'Visible Area', 'Color', 'Bg_color', 'Distance From Center', 'Corners', 'Cut', 'Variant'])
 
 fig = plt.figure(figsize=(img_width/100, img_height/100))
 fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
@@ -102,10 +83,13 @@ for j in range(2):
 
         bg_color = du.generate_nonmatching_color()
         color = du.generate_nonmatching_color(bg_color)
-        area = length ** 2
-        visible_area = du.calculate_visible_area([x], [y], [length], img_width, img_height)
-        dfc = np.sqrt((center_x - img_width/2) ** 2 + (center_y - img_height/2) ** 2)
-        squares_cut_writer.writerow([f'square_cut_{counter}.png', x, y, length, area, visible_area, angle, color, bg_color, dfc, corners, "True", variant])
+        area = round(length ** 2, 2)
+        visible_area = du.calculate_visible_area_square(x, y, angle, length, img_width, img_height)
+        dfc = du.calculate_dfc_square(x, y, length, angle, img_width, img_height)
+        dfc = round(dfc, 2)
+        area = round(area, 2)
+        visible_area = round(visible_area, 2)
+        squares_cut_writer.writerow([f'square_cut_{counter}.png', x, y, length, angle, area, visible_area, color, bg_color, dfc, corners, "True", variant])
         fig.set_facecolor(bg_color)
         square.set_color(color)
         ax.add_patch(square)
@@ -162,8 +146,10 @@ for j in range(2):
         bg_color = du.generate_nonmatching_color()
         color = du.generate_nonmatching_color(bg_color)
         area = length ** 2
-        dfc = np.sqrt((center_x - img_width/2) ** 2 + (center_y - img_height/2) ** 2)
-        squares_writer.writerow([f'square_{counter}.png', x, y, length, area, angle, color, bg_color, dfc, corners, "False", variant])
+        dfc = du.calculate_dfc_square(x, y, length, angle, img_width, img_height)
+        dfc = round(dfc, 2)
+        area = round(area, 2)
+        squares_writer.writerow([f'square_{counter}.png', x, y, length, angle, area, color, bg_color, dfc, corners, "False", variant])
         fig.set_facecolor(bg_color)
         square.set_color(color)
         ax.add_patch(square)
@@ -178,4 +164,3 @@ for j in range(2):
         plt.savefig(path, bbox_inches=None, pad_inches=0, dpi=100)
         plt.clf()
         counter += 1
-

@@ -5,6 +5,7 @@ from matplotlib import patches
 import csv
 import os
 import dataset_utils as du
+from variables import *
 from time import perf_counter as pc
 matplotlib.use('QtAgg')
 
@@ -21,26 +22,6 @@ circles_cut_folder_test = 'Datasets/Dataset_4_1/test/circles_cut'
 data_folder = 'Datasets/Dataset_4_1/data'
 seed = 892
 np.random.seed(seed)
-
-train_size = int(100 / 2)
-test_size = int(50 / 2)
-
-img_width = 500
-img_height = 500
-
-min_square_length = 10
-max_square_length = img_width / 2
-
-min_square_area = min_square_length ** 2
-max_square_area = max_square_length ** 2
-
-min_circle_radius = 10
-max_circle_radius = img_width / 4
-
-min_circle_area = np.pi * min_circle_radius ** 2
-max_circle_area = np.pi * max_circle_radius ** 2
-
-outside_min = 5
 
 os.makedirs(data_folder, exist_ok=True)
 os.makedirs(circles_folder_train, exist_ok=True)
@@ -120,7 +101,10 @@ for j in range(2):
                 excluded_colors.append(color)
                 area = np.pi * radius ** 2
                 visible_area = du.calculate_visible_area_circle(x, y, radius, img_width, img_height)
-                dfc = np.sqrt((x - img_width/2) ** 2 + (y - img_height/2) ** 2)
+                dfc = du.calculate_dfc_circle(x, y, radius, img_width, img_height)
+                dfc = round(dfc, 2)
+                area = round(area, 2)
+                visible_area = round(visible_area, 2)
                 circles_cut_writer.writerow([f'circle_cut_{counter}.png', x, y, radius, area, visible_area, color, bg_color, dfc, "True", variant])
                 circle = patches.Circle((x, y), radius, color=color)
                 ax.add_patch(circle)
@@ -174,7 +158,6 @@ for j in range(2):
                     radius = np.sqrt(np.random.choice(distribution)/np.pi)
                 x = np.random.uniform(0, img_width - radius)
                 y = np.random.uniform(0, img_height - radius)
-                # check if circle is outside of the image
 
                 if du.circle_out_of_bounds(x, y, radius, img_width, img_height):
                     tries += 1
@@ -195,7 +178,9 @@ for j in range(2):
                 circles.append([x, y, radius])
                 color = du.generate_nonmatching_color(excluded_colors)
                 area = np.pi * radius ** 2
-                dfc = np.sqrt((x - img_width/2) ** 2 + (y - img_height/2) ** 2)
+                dfc = du.calculate_dfc_circle(x, y, radius, img_width, img_height)
+                dfc = round(dfc, 2)
+                area = round(area, 2)
                 circles_writer.writerow([f'circle_{counter}.png', x, y, radius, area, color, bg_color, dfc, "False", variant])
                 circle = patches.Circle((x, y), radius, color=color)
                 ax.add_patch(circle)

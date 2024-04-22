@@ -5,6 +5,7 @@ from matplotlib import patches
 import csv
 import os
 import dataset_utils as du
+from variables import *
 from time import perf_counter as pc
 matplotlib.use('QtAgg')
 
@@ -22,18 +23,6 @@ data_folder = 'Datasets/Dataset_A/data'
 seed = 42
 np.random.seed(seed)
 
-train_size = int(11_000 / 2)
-test_size = int(5_000 / 2)
-
-img_width = 500
-img_height = 500
-
-min_circle_radius = 10
-max_circle_radius = img_width / 2
-
-min_circle_area = np.pi * min_circle_radius ** 2
-max_circle_area = np.pi * max_circle_radius ** 2
-
 # Create data_folder if it does not exist
 os.makedirs(data_folder, exist_ok=True)
 os.makedirs(circles_folder_train, exist_ok=True)
@@ -50,6 +39,7 @@ start = pc()
 circles_writer = csv.writer(open(os.path.join(data_folder, 'circles.csv'), 'w'))
 circles_writer.writerow(['Filename', 'X', 'Y', 'Radius', 'Area', 'Color', 'Bg_color', 'Distance From Center', 'Variant'])
 fig = plt.figure(figsize=(img_width/100, img_height/100))
+fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
 counter = 1
 for j in range(2):
     print("\n")
@@ -86,8 +76,9 @@ for j in range(2):
         bg_color = du.generate_nonmatching_color()
         color = du.generate_nonmatching_color(bg_color)
         area = np.pi * radius ** 2
-        # dfc = (x2 - x1)^2 + (y2 - y1)^2
-        dfc = np.sqrt((x - img_width/2) ** 2 + (y - img_height/2) ** 2)
+        dfc = du.calculate_dfc_circle(x, y, radius, img_width, img_height)
+        dfc = round(dfc, 2)
+        area = round(area, 2)
         circles_writer.writerow([f'circle_{counter}.png', x, y, radius, area, color, bg_color, dfc, variant])
         fig.set_facecolor(bg_color)
         circle = patches.Circle((x, y), radius, color=color)
