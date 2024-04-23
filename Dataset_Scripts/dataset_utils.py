@@ -4,12 +4,12 @@ from shapely import affinity
 
 
 def cornerOutOfBounds(x, y, width, height):
-    if x < 0:
+    if x < 5:
         return True
     if x > width:
         return True
 
-    if y < 0:
+    if y < 5:
         return True
     if y > height:
         return True
@@ -85,6 +85,20 @@ def calculate_dfc_square(x, y, length, angle, image_width, image_height):
     square = affinity.rotate(square, angle)
     dfc = center_image.distance(square)
 
+    return round(dfc, 2)
+
+
+def calculate_dfc_further_square(x, y, length, angle, image_width, image_height):
+    center_image = geometry.Point(image_width/2, image_height/2)
+    square = geometry.Polygon([(x, y), (x + length, y), (x + length, y + length), (x, y + length)])
+    square = affinity.rotate(square, angle)
+    corners = square.exterior.coords
+    further_corner = corners[0]
+    for corner in corners:
+        if center_image.distance(geometry.Point(corner)) > center_image.distance(geometry.Point(further_corner)):
+            further_corner = corner
+
+    dfc = center_image.distance(geometry.Point(further_corner))
     return round(dfc, 2)
 
 
