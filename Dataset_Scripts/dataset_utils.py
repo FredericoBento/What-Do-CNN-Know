@@ -101,6 +101,11 @@ def calculate_dfc_further_square(x, y, length, angle, image_width, image_height)
     dfc = center_image.distance(geometry.Point(further_corner))
     return round(dfc, 2)
 
+def calculate_dfc_further_circle(x, y, radius, image_width, image_height):
+    distance = calculate_dfc_circle(x, y, radius, image_width, image_height)
+    dfc_further = distance + radius**2
+    
+    return round(dfc_further, 2)
 
 def calculate_dfc_circle(x, y, radius, image_width, image_height):
     center_image = geometry.Point(image_width/2, image_height/2)
