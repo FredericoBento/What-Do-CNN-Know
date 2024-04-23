@@ -3,73 +3,14 @@
 
 Generator/__pycache__/
 
-Generator/dataset/
+Dataset_Scripts/Datasets/
 
-CNN_Model/models/
+CNN_Model/OLD_TESTS/
 
-Generator/Dataset_A/
-
-Generator/Dataset_B/
-
-CNN_Model/Test_1/models/
-
-Generator/dataset1/
-
-CNN_Model/Test_2/models/
-
-CNN_Model/Test_3/models/
-
-Generator/Dataset_A/
-
-Generator/Dataset_B/
-
-Generator/Dataset_C/
-
-Generator/dataset3/
-
-Generator/dataset1/
-
-CNN_Model/Test_2/models/
-
-CNN_Model/Test_3/models/
-
-Generator/Dataset_A/
-
-Generator/Dataset_B/
-
-Generator/Dataset_C/
-
-Generator/dataset3/
-
-Generator/dataset1/
-
-Generator/Dataset_A2/
-
-Generator/Dataset_A3/
-
-Generator/Dataset_A4/
-
-Generator/Dataset_A5/
-
-Generator/Dataset_B2/
-
-Generator/Dataset_D/
-
-Generator/Dataset_B3/
+CNN_Model/old_trash/
 
 Generator/Datasets/
 
-CNN_Model/Test_4/models/
+CNN_Model/*/results/*/failed_images/
 
-CNN_Model/Test_5/models/
-Dataset_Scripts/Datasets/
-
-CNN_Model/Test_4/results/4-1/failed_images/
-
-CNN_Model/Test_4/results/4-1.1/failed_images/
-
-CNN_Model/Test_6/models/
-
-CNN_Model/Test_6/results/6/failed_images/
-
-CNN_Model/OLD_TESTS/Test_4/results/4-1/failed_images/
+CNN_Model/*/models/
