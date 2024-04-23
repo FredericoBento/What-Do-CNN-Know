@@ -63,3 +63,13 @@ CNN_Model/Test_4/models/
 
 CNN_Model/Test_5/models/
 Dataset_Scripts/Datasets/
+
+CNN_Model/Test_4/results/4-1/failed_images/
+
+CNN_Model/Test_4/results/4-1.1/failed_images/
+
+CNN_Model/Test_6/models/
+
+CNN_Model/Test_6/results/6/failed_images/
+
+CNN_Model/OLD_TESTS/Test_4/results/4-1/failed_images/
