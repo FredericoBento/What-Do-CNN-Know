@@ -36,7 +36,7 @@ file.write(str(seed))
 # Squares Cut
 start = pc()
 squares_writer = csv.writer(open(os.path.join(data_folder, 'squares_cut.csv'), 'w'))
-squares_writer.writerow(['Filename', 'X', 'Y', 'Length', 'Area', 'Visible Area', 'Angle', 'Color', 'Bg_color', 'Distance From Center', 'Corners', 'Cut', 'Variant'])
+squares_writer.writerow(['Filename', 'X', 'Y', 'Length', 'Angle', 'Area', 'Visible Area', 'Color', 'Bg_color', 'Distance From Center', 'Corners', 'Cut', 'Variant'])
 
 circles_writer = csv.writer(open(os.path.join(data_folder, 'circles_cut.csv'), 'w'))
 circles_writer.writerow(['Filename', 'X', 'Y', 'Radius', 'Area', 'Visible Area', 'Color', 'Bg_color', 'Distance From Center', 'Cut', 'Variant'])

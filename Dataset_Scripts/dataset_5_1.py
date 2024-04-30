@@ -35,7 +35,7 @@ file.write(str(seed))
 
 start = pc()
 squares_writer = csv.writer(open(os.path.join(data_folder, 'squares.csv'), 'w'))
-squares_writer.writerow(['Filename', 'X', 'Y', 'Length', 'Angle', 'Area', 'Color', 'Bg_color', 'Distance From Center', 'Corners', 'Cut', 'Variant'])
+squares_writer.writerow(['Filename', 'X', 'Y', 'Length', 'Angle', 'Area', 'Color', 'Bg_color', 'Distance From Center', 'Distance From Center Further', 'Corners', 'Cut', 'Variant'])
 
 squares_cut_writer = csv.writer(open(os.path.join(data_folder, 'squares_cut.csv'), 'w'))
 squares_cut_writer.writerow(['Filename', 'X', 'Y', 'Length', 'Angle', 'Area', 'Visible Area', 'Color', 'Bg_color', 'Distance From Center', 'Corners', 'Cut', 'Variant'])
@@ -186,9 +186,10 @@ for j in range(2):
                 excluded_colors.append(color)
                 area = length ** 2
                 dfc = du.calculate_dfc_square(x, y, length, angle, img_width, img_height)
+                dfc_further = du.calculate_dfc_further_square(x, y, length, angle, img_width, img_height)
                 dfc = round(dfc, 2)
                 area = round(area, 2)
-                squares_writer.writerow([f'square_{counter}.png', x, y, length, angle, area, color, bg_color, dfc, variant])
+                squares_writer.writerow([f'square_{counter}.png', x, y, length, angle, area, color, bg_color, dfc, dfc_fur3ther, corners, "False", variant])
                 square.set_color(color)
                 ax.add_patch(square)
             k += 1
