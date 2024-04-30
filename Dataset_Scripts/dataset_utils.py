@@ -46,6 +46,20 @@ def square_is_cut(corners, width, height):
     return True
 
 
+def square_is_at_right(corners, width, height):
+    # Check if the square is at the right
+    if corners[0][0] > width / 2 and corners[1][0] > width / 2 and corners[2][0] > width / 2 and corners[3][0] > width / 2:
+        return True
+    return False
+
+
+def circle_is_at_right(x, radius, width):
+    # Check if the circle is at the right
+    if x + radius > width / 2:
+        return True
+    return False
+
+
 def square_overlap(corners, other_corners):
     shape1 = geometry.Polygon(corners)
     shape2 = geometry.Polygon(other_corners)
@@ -64,6 +78,24 @@ def calculate_visible_area_square(x, y, length, angle, image_width, image_height
         total_visible_area = square.intersection(border).area
 
     return round(total_visible_area, 2)
+
+
+def calculate_intersect_area_sq_ci(corners, x, y, radius):
+    square = geometry.Polygon(corners)
+    circle = geometry.Point(x, y).buffer(radius)
+    return round(square.intersection(circle).area, 2)
+
+
+def calculate_intersect_area_sq_sq(corners, corners2):
+    square1 = geometry.Polygon(corners)
+    square2 = geometry.Polygon(corners2)
+    return round(square1.intersection(square2).area, 2)
+
+
+def calculate_intersect_area_ci_ci(x, y, radius, x2, y2, radius2):
+    circle1 = geometry.Point(x, y).buffer(radius, resolution=120)
+    circle2 = geometry.Point(x2, y2).buffer(radius2, resolution=120)
+    return round(circle1.intersection(circle2).area, 2)
 
 
 def calculate_visible_area_circle(x, y, radius, image_width, image_height):
@@ -101,17 +133,17 @@ def calculate_dfc_further_square(x, y, length, angle, image_width, image_height)
     dfc = center_image.distance(geometry.Point(further_corner))
     return round(dfc, 2)
 
+
 def calculate_dfc_further_circle(x, y, radius, image_width, image_height):
     distance = calculate_dfc_circle(x, y, radius, image_width, image_height)
-    dfc_further = distance + radius**2
-    
+    dfc_further = distance + (radius*2)
     return round(dfc_further, 2)
+
 
 def calculate_dfc_circle(x, y, radius, image_width, image_height):
     center_image = geometry.Point(image_width/2, image_height/2)
     circle = geometry.Point(x, y).buffer(radius, resolution=120)
     dfc = center_image.distance(circle)
-
     return round(dfc, 2)
 
 
@@ -119,6 +151,20 @@ def circle_overlap(x1, y1, r1, x2, y2, r2):
     shape = geometry.Point(x1, y1).buffer(r1)
     other_shape = geometry.Point(x2, y2).buffer(r2)
     return shape.intersects(other_shape)
+
+
+def circle_intersect_circle(x1, y1, r1, x2, y2, r2):
+    return circle_overlap(x1, y1, r1, x2, y2, r1)
+
+
+def square_intersect_circle(corners, x, y, radius):
+    shape1 = geometry.Polygon(corners)
+    shape2 = geometry.Point(x, y).buffer(radius)
+    return shape1.intersects(shape2)
+
+
+def circle_intersect_square(x, y, radius, corners):
+    return square_intersect_circle(corners, x, y, radius)
 
 
 def circle_is_cut(x, y, radius, width, height):

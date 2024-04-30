@@ -1,7 +1,7 @@
 import numpy as np
 
-train_size = int(11_000 / 2)
-test_size = int(5_000 / 2)
+train_size = int(200 / 2)
+test_size = int(100 / 2)
 
 img_width = 500
 img_height = 500
