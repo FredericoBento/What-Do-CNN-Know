@@ -130,8 +130,47 @@ def calculate_dfc_further_square(x, y, length, angle, image_width, image_height)
         if center_image.distance(geometry.Point(corner)) > center_image.distance(geometry.Point(further_corner)):
             further_corner = corner
 
+    # f = furthest_point_of_square([(x, y), (x + length, y), (x + length, y + length), (x, y + length)], (image_width/2, image_height/2))
+
     dfc = center_image.distance(geometry.Point(further_corner))
     return round(dfc, 2)
+
+
+def furthest_point_of_square(square_vertices, point):
+    max_distance = 0
+    furthest_point = None
+    # Iterate over each edge of the square
+
+    for i in range(len(square_vertices)):
+        x1, y1 = square_vertices[i]
+        x2, y2 = square_vertices[(i + 1) % len(square_vertices)]  # Next vertex, handling wrap-around
+
+        center_x = (x1 + x2) / 2
+        center_y = (y1 + y2) / 2
+        m_point = (point[1] - center_y) / (point[0] - center_x)
+        c_point = point[1] - m_point * point[0]
+
+        # Calculate the equation of the line for the current edge
+        if x2 - x1 == 0:  # Check if the line is vertical to avoid division by zero
+            m = float('inf')  # Set slope to infinity for a vertical line
+            intersection_x = x1  # x-coordinate of the intersection is the x-intercept
+            intersection_y = m_point * intersection_x + c_point  # Use given point's equation to find y-coordinate
+        else:
+            m = (y2 - y1) / (x2 - x1)
+            c = y1 - m * x1
+            # Calculate the intersection point of the two lines
+            intersection_x = (c_point - c) / (m - m_point)
+            intersection_y = m * intersection_x + c
+
+        # Check if the intersection point is within the range of the current edge
+        if min(x1, x2) <= intersection_x <= max(x1, x2) and min(y1, y2) <= intersection_y <= max(y1, y2):
+            # Calculate the distance from the given point to the intersection point
+            dist = geometry.Point(point).distance(geometry.Point(intersection_x, intersection_y))
+            if dist > max_distance:
+                max_distance = dist
+                furthest_point = (intersection_x, intersection_y)
+
+    return furthest_point
 
 
 def calculate_dfc_further_circle(x, y, radius, image_width, image_height):
@@ -155,6 +194,9 @@ def circle_overlap(x1, y1, r1, x2, y2, r2):
 
 def circle_intersect_circle(x1, y1, r1, x2, y2, r2):
     return circle_overlap(x1, y1, r1, x2, y2, r1)
+
+def square_intersect_square(corners, corners2):
+    return square_overlap(corners, corners2)
 
 
 def square_intersect_circle(corners, x, y, radius):
