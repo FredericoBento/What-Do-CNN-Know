@@ -73,10 +73,17 @@ for j in range(2):
         sq_big_color = du.generate_nonmatching_color()
         exclude_colors.append(sq_big_color)
 
-        # Generate Small Circle
+        # Generate Small Square
         sq_small_area = np.random.choice(distribution)
+        lock_limit = 100
+        lock_times = 0
         while sq_big_area <= sq_small_area:
-            sq_small_area = np.random.choice(distribution)
+            if lock_times > lock_limit:
+                sq_small_area = np.random.uniform(min_square_area, sq_big_area)
+                lock_times = 0
+            else:
+                sq_small_area = np.random.choice(distribution)
+                lock_times += 1
 
         # Repeat while there is intersection
         lock_limit = 100
@@ -86,7 +93,6 @@ for j in range(2):
             if lock_times > lock_limit:
                 # change size and try again
                 sq_small_area = np.random.choice(distribution)
-                lock_times = 0
 
             sq_small_length = np.sqrt(sq_small_area)
             sq_small_x = np.random.uniform(0, sq_small_length)

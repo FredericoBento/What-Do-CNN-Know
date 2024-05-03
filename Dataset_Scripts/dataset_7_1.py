@@ -58,6 +58,7 @@ max_square_area = 150 ** 2
 fig = plt.figure(figsize=(img_width/100, img_height/100))
 fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
 counter = 1
+permanent_counter = 1
 for j in range(2):
     if j == 0:
         variant = 'Train'
@@ -72,9 +73,8 @@ for j in range(2):
     put_circle_under = False
     intersection_counter_reached = False
     img_counter = 0
-    # for i in range(size):
+    counter = 1
     while counter <= size:
-        i = counter -1
         if img_counter >= size / 8 and put_circle_under is False:
             # change the position of the circle
             put_circle_under = True
@@ -96,7 +96,7 @@ for j in range(2):
             dist_idx = 0
             img_counter = 0
 
-        b = f"Generating car {i+1}/{size} "
+        b = f"Generating car {counter}/{size} "
         print(b, end='\r', flush=True)
         bg_color = du.generate_nonmatching_color()
         ax = fig.add_subplot(111, aspect='auto')
@@ -267,16 +267,17 @@ for j in range(2):
             intersected = not intersection_counter_reached
 
             # write circle at right
-            car_ci_writer.writerow([f'car_{counter}.png', ci_x, ci_y, radius, ci_area, ci_visible_area, ci_dfc, ci_dfc_f, ci_color, bg_color, "Right", intersected, ci_cut, variant])
+            filename = f'car_{permanent_counter}.png'
+            car_ci_writer.writerow([filename, ci_x, ci_y, radius, ci_area, ci_visible_area, ci_dfc, ci_dfc_f, ci_color, bg_color, "Right", intersected, ci_cut, variant])
 
             if do_2_ci is False:
                 # write and add square at left
-                car_sq_writer.writerow([f'car_{counter}.png', sq_x, sq_y, length, angle, sq_area, sq_visible_area, sq_dfc, sq_dfc_f, corners, sq_color, bg_color, "Left", intersected, sq_cut, variant])
+                car_sq_writer.writerow([filename, sq_x, sq_y, length, angle, sq_area, sq_visible_area, sq_dfc, sq_dfc_f, corners, sq_color, bg_color, "Left", intersected, sq_cut, variant])
                 if sq_intersected is False:
                     ax.add_patch(square)
             else:
                 # write and add circle at left
-                car_ci_writer.writerow([f'car_{counter}.png', ci_left_x, ci_left_y, radius, ci_left_area, ci_left_visible_area, ci_left_dfc, ci_left_dfc_f, ci_left_color, bg_color, "Left", intersected, ci_left_cut, variant])
+                car_ci_writer.writerow([filename, ci_left_x, ci_left_y, radius, ci_left_area, ci_left_visible_area, ci_left_dfc, ci_left_dfc_f, ci_left_color, bg_color, "Left", intersected, ci_left_cut, variant])
                 if ci_intersected is False:
                     ax.add_patch(cal)
 
@@ -288,16 +289,18 @@ for j in range(2):
                 folder = car_folder_train
             else:
                 folder = car_folder_test
-            path = os.path.join(folder, f'car_{counter}.png')
+            path = os.path.join(folder, filename)
             plt.savefig(path, bbox_inches=None, pad_inches=0, dpi=100)
             counter += 1
             img_counter += 1
+            permanent_counter += 1
 
         dist_idx += 1
         plt.clf()
 
 # sar (square at right)
 counter = 1
+permanent_counter = 1
 for j in range(2):
     if j == 0:
         variant = 'Train'
@@ -312,10 +315,10 @@ for j in range(2):
     put_square_under = False
     intersection_counter_reached = False
     img_counter = 0
-    for i in range(size):
-        i = counter - 1
+    counter = 1
+    while counter <= size:
         if img_counter >= size / 8 and put_square_under is False:
-            # change the position of the circle
+            # change the position of the square
             put_square_under = True
             distribution = np.random.uniform(min_square_length, 150, int(size / 8))
             dist_idx = 0
@@ -336,7 +339,7 @@ for j in range(2):
             img_counter = 0
 
 
-        b = f"Generating sar {i+1}/{size} "
+        b = f"Generating sar {counter}/{size} "
         print(b, end='\r', flush=True)
         bg_color = du.generate_nonmatching_color()
         ax = fig.add_subplot(111, aspect='auto')
@@ -463,9 +466,6 @@ for j in range(2):
                 if corner_count == 4:
                     repeat = True
 
-                if counter == 56:
-                    print(repeat, corner_count)
-
             if repeat is True:
                 continue
 
@@ -527,22 +527,24 @@ for j in range(2):
 
             if can_continue is False:
                 plt.clf()
+                counter -= 1
                 break
 
             ax.add_patch(square)
             intersected = not intersection_counter_reached
 
             # write square at right
-            sar_sq_writer.writerow([f'sar_{counter}.png', sq_x, sq_y, length, sq_angle, sq_area, sq_visible_area, sq_dfc, sq_dfc_f, corners, sq_color, bg_color, "Right", intersected, sq_cut, variant])
+            filename = f'sar_{permanent_counter}.png'
+            sar_sq_writer.writerow([filename, sq_x, sq_y, length, sq_angle, sq_area, sq_visible_area, sq_dfc, sq_dfc_f, corners, sq_color, bg_color, "Right", intersected, sq_cut, variant])
 
             if do_2_sq is False:
                 # write and add circle at left
-                sar_ci_writer.writerow([f'sar_{counter}.png', ci_left_x, ci_left_y, radius, ci_left_area, ci_left_visible_area, ci_left_dfc, ci_left_dfc_f, ci_left_color, bg_color, "Left", intersected, ci_left_cut, variant])
+                sar_ci_writer.writerow([filename, ci_left_x, ci_left_y, radius, ci_left_area, ci_left_visible_area, ci_left_dfc, ci_left_dfc_f, ci_left_color, bg_color, "Left", intersected, ci_left_cut, variant])
                 if ci_intersected is False:
                     ax.add_patch(cal)
             else:
                 # write and add square at left
-                sar_sq_writer.writerow([f'sar_{counter}.png', sq_left_x, sq_left_y, length, sq_left_angle, sq_left_area, sq_left_visible_area, sq_left_dfc, sq_left_dfc_f, left_corners, sq_left_color, bg_color, "Left", intersected, sq_left_cut, variant])
+                sar_sq_writer.writerow([filename, sq_left_x, sq_left_y, length, sq_left_angle, sq_left_area, sq_left_visible_area, sq_left_dfc, sq_left_dfc_f, left_corners, sq_left_color, bg_color, "Left", intersected, sq_left_cut, variant])
                 if sq_intersected is False:
                     ax.add_patch(left_square)
 
@@ -554,10 +556,11 @@ for j in range(2):
                 folder = sar_folder_train
             else:
                 folder = sar_folder_test
-            path = os.path.join(folder, f'sar_{counter}.png')
+            path = os.path.join(folder, filename)
             plt.savefig(path, bbox_inches=None, pad_inches=0, dpi=100)
             counter += 1
             img_counter += 1
+            permanent_counter += 1
 
         dist_idx += 1
         plt.clf()

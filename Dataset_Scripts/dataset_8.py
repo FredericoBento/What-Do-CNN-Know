@@ -65,7 +65,7 @@ for j in range(2):
         exclude_colors.append(ci_big_color)
 
         # Generate Small Circle
-        ci_small_area = np.random.uniform(min_circle_area, ci_big_area)
+        ci_small_area = np.random.choice(distribution)
         while ci_small_area <= min_circle_area:
             ci_small_area = np.random.choice(distribution)
 
