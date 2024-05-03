@@ -46,6 +46,12 @@ def square_is_cut(corners, width, height):
     return True
 
 
+def get_square_corners(x, y, length, angle):
+    corners = [(x, y), (x + length, y), (x + length, y + length), (x, y + length)]
+    # apply rotation
+    return affinity.rotate(geometry.Polygon(corners), angle).exterior.coords
+
+
 def square_is_at_right(corners, width, height):
     # Check if the square is at the right
     if corners[0][0] > width / 2 and corners[1][0] > width / 2 and corners[2][0] > width / 2 and corners[3][0] > width / 2:
@@ -82,7 +88,7 @@ def calculate_visible_area_square(x, y, length, angle, image_width, image_height
 
 def calculate_intersect_area_sq_ci(corners, x, y, radius):
     square = geometry.Polygon(corners)
-    circle = geometry.Point(x, y).buffer(radius)
+    circle = geometry.Point(x, y).buffer(radius, resolution=120)
     return round(square.intersection(circle).area, 2)
 
 
@@ -187,13 +193,14 @@ def calculate_dfc_circle(x, y, radius, image_width, image_height):
 
 
 def circle_overlap(x1, y1, r1, x2, y2, r2):
-    shape = geometry.Point(x1, y1).buffer(r1)
-    other_shape = geometry.Point(x2, y2).buffer(r2)
+    shape = geometry.Point(x1, y1).buffer(r1, resolution=120)
+    other_shape = geometry.Point(x2, y2).buffer(r2, resolution=120)
     return shape.intersects(other_shape)
 
 
 def circle_intersect_circle(x1, y1, r1, x2, y2, r2):
     return circle_overlap(x1, y1, r1, x2, y2, r1)
+
 
 def square_intersect_square(corners, corners2):
     return square_overlap(corners, corners2)
@@ -201,7 +208,7 @@ def square_intersect_square(corners, corners2):
 
 def square_intersect_circle(corners, x, y, radius):
     shape1 = geometry.Polygon(corners)
-    shape2 = geometry.Point(x, y).buffer(radius)
+    shape2 = geometry.Point(x, y).buffer(radius, resolution=120)
     return shape1.intersects(shape2)
 
 
