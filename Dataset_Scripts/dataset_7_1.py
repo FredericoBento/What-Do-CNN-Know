@@ -55,7 +55,7 @@ car_sq_writer.writerow(['Filename', 'X', 'Y', 'Length', 'Angle', 'Area', 'Visibl
 
 max_square_area = 150 ** 2
 # car (circle at right)
-fig = plt.figure(figsize=(img_width/100, img_height/100))
+fig = plt.figure(figsize=(img_width / 100, img_height / 100))
 fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
 counter = 1
 permanent_counter = 1
@@ -67,7 +67,7 @@ for j in range(2):
         variant = 'Test'
         size = test_size
 
-    distribution = np.random.uniform(min_square_length, 150, int(size / 8))
+    distribution = np.random.uniform(min_square_area, 150 * 150, int(size / 8))
     dist_idx = 0
     do_2_ci = False
     put_circle_under = False
@@ -78,13 +78,13 @@ for j in range(2):
         if img_counter >= size / 8 and put_circle_under is False:
             # change the position of the circle
             put_circle_under = True
-            distribution = np.random.uniform(min_square_length, 150, int(size / 8))
+            distribution = np.random.uniform(min_square_area, 150 * 150, int(size / 8))
             dist_idx = 0
 
         if img_counter >= size / 4 and intersection_counter_reached is False:
             # stop intersections
             intersection_counter_reached = True
-            distribution = np.random.uniform(min_square_length, 150, int(size / 4))
+            distribution = np.random.uniform(min_square_area, 150 * 150, int(size / 4))
             dist_idx = 0
 
         if img_counter >= size / 2 and do_2_ci is False:
@@ -92,7 +92,7 @@ for j in range(2):
             do_2_ci = True
             intersection_counter_reached = False
             put_circle_under = False
-            distribution = np.random.uniform(min_square_length, 150, int(size / 8))
+            distribution = np.random.uniform(min_square_area, 150 * 150, int(size / 8))
             dist_idx = 0
             img_counter = 0
 
@@ -104,12 +104,12 @@ for j in range(2):
         if dist_idx >= len(distribution):
             dist_idx -= 1
         dist_value = distribution[dist_idx]
-        radius = dist_value / 2
+        radius = np.sqrt(dist_value) / 2
         sq_intersected = False
         ci_intersected = False
         if do_2_ci is False:
             # add square at left
-            length = dist_value
+            length = np.sqrt(dist_value)
             all_ok = False
             while all_ok is False:
                 sq_x = np.random.uniform(0, img_width - length - 20)
@@ -309,7 +309,7 @@ for j in range(2):
         variant = 'Test'
         size = test_size
 
-    distribution = np.random.uniform(min_square_length, 150, int(size / 8))
+    distribution = np.random.uniform(min_square_area, 150 * 150, int(size / 8))
     dist_idx = 0
     do_2_sq = False
     put_square_under = False
@@ -320,13 +320,13 @@ for j in range(2):
         if img_counter >= size / 8 and put_square_under is False:
             # change the position of the square
             put_square_under = True
-            distribution = np.random.uniform(min_square_length, 150, int(size / 8))
+            distribution = np.random.uniform(min_square_area, 150 * 150, int(size / 8))
             dist_idx = 0
 
         if img_counter >= size / 4 and intersection_counter_reached is False:
             # stop intersections
             intersection_counter_reached = True
-            distribution = np.random.uniform(min_square_length, 150, int(size / 4))
+            distribution = np.random.uniform(min_square_area, 150 * 150, int(size / 4))
             dist_idx = 0
 
         if img_counter >= size / 2 and do_2_sq is False:
@@ -334,7 +334,7 @@ for j in range(2):
             do_2_sq = True
             intersection_counter_reached = False
             put_square_under = False
-            distribution = np.random.uniform(min_square_length, 150, int(size / 8))
+            distribution = np.random.uniform(min_square_area, 150 * 150, int(size / 8))
             dist_idx = 0
             img_counter = 0
 
@@ -347,13 +347,13 @@ for j in range(2):
         if dist_idx >= len(distribution):
             dist_idx -= 1
         dist_value = distribution[dist_idx]
-        length = dist_value
+        length = np.sqrt(dist_value)
         ci_intersected = False
         sq_intersected = False
         if do_2_sq is False:
             # add circle at left
             all_ok = False
-            radius = dist_value / 2
+            radius = np.sqrt(dist_value) / 2
             while all_ok is False:
                 ci_left_x = np.random.uniform(0 + radius, img_width - radius - 20)
                 ci_left_y = np.random.uniform(0 + radius, img_height - radius - 20)

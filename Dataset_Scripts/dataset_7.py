@@ -65,7 +65,7 @@ for j in range(2):
         variant = 'Test'
         size = test_size
 
-    distribution = np.random.uniform(min_square_length, 150, size)
+    distribution = np.random.uniform(min_square_area, 150 * 150, size)
     do_2_ci = False
     for i in range(size):
         if i >= size / 2:
@@ -78,11 +78,11 @@ for j in range(2):
         excluded_colors = [bg_color]
 
         dist_value = distribution[i]
-        radius = dist_value / 2
+        radius = np.sqrt(dist_value) / 2
         area = round(np.pi * radius ** 2, 2)
         if do_2_ci is False:
             # add square at left
-            length = dist_value
+            length = np.sqrt(dist_value)
             all_ok = False
             while all_ok is False:
                 sq_x = np.random.uniform(0, img_width - length)
@@ -127,6 +127,7 @@ for j in range(2):
             excluded_colors.append(ci_left_color)
             ci_left_dfc = du.calculate_dfc_circle(ci_left_x, ci_left_y, radius, img_width, img_height)
             ci_left_dfc_f = du.calculate_dfc_further_circle(ci_left_x, ci_left_y, radius, img_width, img_height)
+            ci_left_area = round(np.pi * radius ** 2, 2)
 
         all_ok = False
         while all_ok is False:
@@ -164,9 +165,10 @@ for j in range(2):
         ci_color = du.generate_nonmatching_color(excluded_colors)
         ci_dfc = du.calculate_dfc_circle(ci_x, ci_y, radius, img_width, img_height)
         ci_dfc_f = du.calculate_dfc_further_circle(ci_x, ci_y, radius, img_width, img_height)
+        ci_area = round(np.pi * radius ** 2, 2)
 
         # write circle at right
-        car_ci_writer.writerow([f'car_{counter}.png', ci_x, ci_y, radius, area, area, ci_dfc, ci_dfc_f, ci_color, bg_color, "Right", "True", variant])
+        car_ci_writer.writerow([f'car_{counter}.png', ci_x, ci_y, radius, ci_area, ci_area, ci_dfc, ci_dfc_f, ci_color, bg_color, "Right", "False", variant])
         car = patches.Circle((ci_x, ci_y), radius, color=ci_color)
         ax.add_patch(car)
 
@@ -177,7 +179,7 @@ for j in range(2):
             ax.add_patch(square)
         else:
             # write and add circle at left
-            car_ci_writer.writerow([f'car_{counter}.png', ci_left_x, ci_left_y, radius, area, area, ci_left_dfc, ci_left_dfc_f, ci_left_color, bg_color, "Left", "True", variant])
+            car_ci_writer.writerow([f'car_{counter}.png', ci_left_x, ci_left_y, radius, ci_left_area, ci_left_area, ci_left_dfc, ci_left_dfc_f, ci_left_color, bg_color, "Left", "False", variant])
             cal = patches.Circle((ci_left_x, ci_left_y), radius, color=ci_left_color)
             ax.add_patch(cal)
 
@@ -204,7 +206,7 @@ for j in range(2):
         variant = 'Test'
         size = test_size
 
-    distribution = np.random.uniform(min_square_area, max_square_area, size)
+    distribution = np.random.uniform(min_square_area, 150 * 150, size)
     do_2_sq = False
     for i in range(size):
         if i >= size / 2:
@@ -222,7 +224,7 @@ for j in range(2):
         if do_2_sq is False:
             # add circle at left
             all_ok = False
-            radius = np.sqrt(area/np.pi)
+            radius = np.sqrt(dist_value) / 2
             while all_ok is False:
                 ci_left_x = np.random.uniform(0 + radius, img_width - radius)
                 ci_left_y = np.random.uniform(0 + radius, img_height - radius)
@@ -239,6 +241,7 @@ for j in range(2):
             excluded_colors.append(ci_left_color)
             ci_left_dfc = du.calculate_dfc_circle(ci_left_x, ci_left_y, radius, img_width, img_height)
             ci_left_dfc_f = du.calculate_dfc_further_circle(ci_left_x, ci_left_y, radius, img_width, img_height)
+            ci_left_area = round(np.pi * radius ** 2, 2)
 
         else:
             # add square at left
@@ -329,7 +332,7 @@ for j in range(2):
 
         if do_2_sq is False:
             # write and add circle at left
-            sar_ci_writer.writerow([f'sar_{counter}.png', ci_left_x, ci_left_y, radius, area, area, ci_left_dfc, ci_left_dfc_f, ci_left_color, bg_color, "Left", "True", variant])
+            sar_ci_writer.writerow([f'sar_{counter}.png', ci_left_x, ci_left_y, radius, ci_left_area, ci_left_area, ci_left_dfc, ci_left_dfc_f, ci_left_color, bg_color, "Left", "False", variant])
             cal = patches.Circle((ci_left_x, ci_left_y), radius, color=ci_left_color)
             ax.add_patch(cal)
         else:
