@@ -75,15 +75,14 @@ for j in range(2):
 
         # Generate Small Square
         sq_small_area = np.random.choice(distribution)
-        lock_limit = 100
-        lock_times = 0
         while sq_big_area <= sq_small_area:
-            if lock_times > lock_limit:
-                sq_small_area = np.random.uniform(min_square_area, sq_big_area)
-                lock_times = 0
-            else:
-                sq_small_area = np.random.choice(distribution)
-                lock_times += 1
+            sq_small_area = np.random.uniform(min_square_area, sq_big_area)
+
+        if sq_big_area < sq_small_area:
+            print('Error: Big Square Area < Small Square Area')
+            print(f'Big Square Area: {sq_big_area}')
+            print(f'Small Square Area: {sq_small_area}')
+            exit()
 
         # Repeat while there is intersection
         lock_limit = 100

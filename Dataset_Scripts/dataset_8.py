@@ -66,8 +66,13 @@ for j in range(2):
 
         # Generate Small Circle
         ci_small_area = np.random.choice(distribution)
-        while ci_small_area <= min_circle_area:
-            ci_small_area = np.random.choice(distribution)
+        while ci_big_area <= ci_small_area:
+            ci_small_area = np.random.uniform(min_circle_area, ci_big_area)
+
+        if ci_big_area < ci_small_area:
+            print('Error: Big Circle Area < Small Circle Area')
+            print(f'Big Circle Area: {ci_big_area}')
+            print(f'Small Circle Area: {ci_small_area}')
 
         # Repeat while there is intersection
         lock_limit = 100
@@ -93,10 +98,10 @@ for j in range(2):
 
         # Proportion
         big_proportion = ci_big_area / ci_small_area
-        big_proportion = round(big_proportion, 2)
+        big_proportion = round(big_proportion, 3)
 
         small_proportion = ci_small_area / ci_big_area
-        small_proportion = round(small_proportion, 2)
+        small_proportion = round(small_proportion, 3)
 
         # Draw circles
         ax.add_patch(patches.Circle((ci_big_x, ci_big_y), ci_big_radius, color=ci_big_color))
