@@ -1,6 +1,8 @@
 import numpy as np
+import math
 from shapely import geometry
 from shapely import affinity
+from variables import *
 
 
 def cornerOutOfBounds(x, y, width, height):
@@ -15,6 +17,109 @@ def cornerOutOfBounds(x, y, width, height):
         return True
 
     return False
+
+
+def calc_triangle_side_for_area(area):
+     # Generate a random base within the range of valid bases for the given area
+    base = np.random.uniform(10, 1000)
+
+    # Calculate the corresponding height for the given area and base
+    height = (2 * area) / base
+
+    # Generate a random side within the range of valid sides for the given area and height
+    side = np.random.uniform(10, (2 * area) / height)
+
+    # Generate another random side within the same range
+    side2 = np.random.uniform(10, (2 * area) / height)
+
+    # Ensure that the sum of any two sides is greater than the third side
+    while side + side2 <= base or side + base <= side2 or base + side2 <= side:
+        side2 = np.random.uniform(10, (2 * area) / height)
+
+    return side, side2, base
+
+
+def random_triangle():
+    s1 = np.random.uniform(min_triangle_length, max_triangle_length)
+    s2 = np.random.uniform(min_triangle_length, max_triangle_length)
+    s3 = np.random.uniform(min_triangle_length, max_triangle_length)
+
+    while s1 + s2 <= s3 or s1 + s3 <= s2 or s2 + s3 <= s1:
+        s1 = np.random.uniform(min_triangle_length, max_triangle_length)
+        s2 = np.random.uniform(min_triangle_length, max_triangle_length)
+        s3 = np.random.uniform(min_triangle_length, max_triangle_length)
+
+    base = s3
+    if s1 > s2 and s1 > s3:
+        base = s1
+        s1 = s3
+    elif s2 > s1 and s2 > s3:
+        base = s2
+        s2 = s3
+
+    return s1, s2, base
+
+def triangle_out_of_bounds(corners, img_width, img_height):
+    if cornerOutOfBounds(corners[0][0], corners[0][1], img_width, img_height) or \
+        cornerOutOfBounds(corners[1][0], corners[1][1], img_width, img_height) or \
+            cornerOutOfBounds(corners[2][0], corners[2][1], img_width, img_height):
+        return True
+
+
+a = 1
+
+def get_triangle_corners(x, y, s1, s2, base, angle):
+    half_base = base / 2
+    height = math.sqrt(max(0, s1**2 - (half_base)**2))
+
+    # Calculate the coordinates of the left and right corners
+    left_corner_x = x - half_base
+    right_corner_x = x + half_base
+    left_corner_y = right_corner_y = y + (s2 / 2)  # Assuming the center is at the midpoint of the base
+
+    # Calculate the coordinates of the rotated top corner relative to the center
+    rotated_top_x = height * math.cos(math.radians(angle))
+    rotated_top_y = height * math.sin(math.radians(angle))
+
+
+    # Calculate the absolute coordinates of the top corner after rotation
+    top_corner_x = x + rotated_top_x
+    top_corner_y = y + rotated_top_y
+
+    if height < min_triangle_length * 2:
+        return None
+
+    lc = affinity.rotate(geometry.Point(left_corner_x, left_corner_y), angle, origin=geometry.Point(x, y))
+    rc = affinity.rotate(geometry.Point(right_corner_x, right_corner_y), angle, origin=geometry.Point(x, y))
+    tc = affinity.rotate(geometry.Point(top_corner_x, top_corner_y), angle, origin=geometry.Point(x, y))
+
+    return [(lc.x, lc.y), (rc.x, rc.y), (tc.x, tc.y)]
+    # return [(left_corner_x, left_corner_y), (right_corner_x, right_corner_y), (top_corner_x, top_corner_y)]
+
+
+
+def calculate_dfc_triangle(corners, img_width, img_height):
+    center_image = geometry.Point(img_width/2, img_height/2)
+    triangle = geometry.Polygon(corners)
+    dfc = center_image.distance(triangle)
+    return round(dfc, 2)
+
+
+def get_triangle_area(corners):
+    triangle = geometry.Polygon(corners)
+    return round(triangle.area, 2)
+
+
+def calculate_dfc_further_triangle(corners, img_width, img_height):
+    center_image = geometry.Point(img_width/2, img_height/2)
+    triangle = geometry.Polygon(corners)
+    corners = triangle.exterior.coords
+    further_corner = corners[0]
+    for corner in corners:
+        if center_image.distance(geometry.Point(corner)) > center_image.distance(geometry.Point(further_corner)):
+            further_corner = corner
+    dfc = center_image.distance(geometry.Point(further_corner))
+    return round(dfc, 2)
 
 
 def square_out_of_bounds(corners, width, height):
@@ -49,7 +154,8 @@ def square_is_cut(corners, width, height):
 def get_square_corners(x, y, length, angle):
     corners = [(x, y), (x + length, y), (x + length, y + length), (x, y + length)]
     # apply rotation
-    return affinity.rotate(geometry.Polygon(corners), angle).exterior.coords
+    corners = affinity.rotate(geometry.Polygon(corners), angle).exterior.coords
+    return [(corners[0][0], corners[0][1]), (corners[1][0], corners[1][1]), (corners[2][0], corners[2][1]), (corners[3][0], corners[3][1])]
 
 
 def square_is_at_right(corners, width, height):
