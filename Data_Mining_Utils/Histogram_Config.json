@@ -1,0 +1,278 @@
+{
+  "type" : "CHART",
+  "name" : null,
+  "generalConfiguration" : {
+    "inverted" : false,
+    "optimizedForPrinting" : false,
+    "timeZone" : null,
+    "width" : null,
+    "height" : null,
+    "displayType" : "REGULAR",
+    "zoomType" : "XY",
+    "style" : {
+      "backgroundColor" : "rgba(255,255,255,1.0)",
+      "plotBackgroundColor" : "rgba(255,255,255,1.0)"
+    }
+  },
+  "titleConfiguration" : {
+    "enabled" : false,
+    "title" : "ExampleSet",
+    "subTitle" : null,
+    "titleStyle" : {
+      "color" : null,
+      "fontSize" : 14,
+      "bold" : false,
+      "italic" : false
+    },
+    "subTitleStyle" : {
+      "color" : null,
+      "fontSize" : null,
+      "bold" : false,
+      "italic" : false
+    },
+    "horizontalAlignment" : "CENTER"
+  },
+  "tooltipConfiguration" : {
+    "enabled" : true,
+    "shared" : false,
+    "valuePrefix" : null,
+    "valueSuffix" : null,
+    "valueDecimals" : null
+  },
+  "legendConfiguration" : {
+    "enabled" : true,
+    "title" : null,
+    "layout" : "HORIZONTAL",
+    "horizontalAlignment" : "CENTER",
+    "verticalAlignment" : "TOP",
+    "style" : {
+      "color" : "rgba(0,0,0,1.0)",
+      "fontSize" : 28,
+      "bold" : true,
+      "italic" : false
+    }
+  },
+  "colorAxisConfiguration" : {
+    "id" : "color1",
+    "minValue" : null,
+    "maxValue" : null,
+    "logarithmic" : false,
+    "coloringType" : "GRADIENT",
+    "colorBins" : [ {
+      "from" : null,
+      "to" : 0.0,
+      "color" : "rgba(103,143,248,1.0)",
+      "name" : null
+    }, {
+      "from" : 0.0,
+      "to" : null,
+      "color" : "rgba(239,64,64,1.0)",
+      "name" : null
+    } ],
+    "colorStops" : [ {
+      "point" : 0.0,
+      "color" : "rgba(103,143,248,1.0)"
+    }, {
+      "point" : 0.5,
+      "color" : "rgba(247,247,164,1.0)"
+    }, {
+      "point" : 1.0,
+      "color" : "rgba(239,64,64,1.0)"
+    } ],
+    "labelConfiguration" : {
+      "enabled" : true,
+      "format" : null,
+      "labelInterval" : 0,
+      "style" : {
+        "color" : null,
+        "fontSize" : null,
+        "bold" : false,
+        "italic" : false
+      }
+    }
+  },
+  "plotConfigurations" : [ {
+    "columns" : [ "Area" ],
+    "plotType" : "histogram",
+    "stackingType" : "NONE",
+    "additionalColumns" : {
+      "color" : "Variant",
+      "color_group" : "Variant",
+      "group" : "Variant"
+    },
+    "aggregationConfiguration" : {
+      "enabled" : false,
+      "groupByColumns" : [ "Filename" ],
+      "aggregationFunction" : "AVERAGE",
+      "aggregationParameter" : null,
+      "sortingDirection" : "DESCENDING",
+      "sortingSource" : "NONE"
+    },
+    "typeSpecificConfiguration" : {
+      "configuration" : {
+        "regression_interpolation" : "-",
+        "pie_as_donut" : false,
+        "jitter_amount" : 0
+      }
+    },
+    "tooltipConfiguration" : {
+      "valuePrefix" : null,
+      "valueSuffix" : null,
+      "valueDecimals" : null
+    },
+    "styleConfiguration" : {
+      "visible" : true,
+      "markersEnabled" : false,
+      "showInLegend" : true,
+      "interactive" : true,
+      "colors" : null,
+      "missingColor" : null,
+      "lineWidth" : 2.0,
+      "areaFillOpacity" : 0.7,
+      "markerSize" : 4.0,
+      "markerFillOpacity" : 0.5,
+      "lineType" : "SOLID",
+      "markerShape" : "CIRCLE",
+      "dataLabelConfiguration" : {
+        "enabled" : false,
+        "format" : null,
+        "style" : {
+          "color" : null,
+          "fontSize" : null,
+          "bold" : false,
+          "italic" : false
+        },
+        "position" : {
+          "horizontalAlignment" : null,
+          "verticalAlignment" : null,
+          "anchorPoint" : null,
+          "rotation" : null,
+          "overlapAllowed" : false,
+          "xoffset" : 0,
+          "yoffset" : 0
+        },
+        "filter" : {
+          "enabled" : false,
+          "filterOperator" : "GREATER_THAN",
+          "filterProperty" : "y",
+          "filterValue" : null
+        }
+      }
+    },
+    "yaxisId" : "y1"
+  } ],
+  "mapConfiguration" : {
+    "mapKey" : "custom/world",
+    "navigationAllowed" : true,
+    "borderWidth" : 1.0
+  },
+  "xaxisConfiguration" : {
+    "id" : "x1",
+    "minValue" : null,
+    "maxValue" : null,
+    "logarithmic" : false,
+    "plotLines" : [ ],
+    "column" : "Filename",
+    "styleConfiguration" : {
+      "title" : null,
+      "titleStyle" : {
+        "color" : "rgba(0,0,0,1.0)",
+        "fontSize" : 28,
+        "bold" : true,
+        "italic" : false
+      },
+      "opposite" : false,
+      "reversed" : false,
+      "decimalsAllowed" : true,
+      "visible" : true,
+      "tickInterval" : null,
+      "axisColor" : "rgba(0,0,0,1.0)",
+      "gridLineType" : "SOLID",
+      "gridLineColor" : "rgba(0,0,0,1.0)",
+      "gridLineWidth" : null,
+      "labelConfiguration" : {
+        "enabled" : true,
+        "format" : null,
+        "labelInterval" : 0,
+        "style" : {
+          "color" : "rgba(0,0,0,1.0)",
+          "fontSize" : 18,
+          "bold" : true,
+          "italic" : false
+        }
+      }
+    }
+  },
+  "yaxisConfigurations" : [ {
+    "id" : "y1",
+    "minValue" : null,
+    "maxValue" : null,
+    "logarithmic" : false,
+    "plotLines" : [ ],
+    "styleConfiguration" : {
+      "title" : null,
+      "titleStyle" : {
+        "color" : "rgba(0,0,0,1.0)",
+        "fontSize" : 28,
+        "bold" : false,
+        "italic" : false
+      },
+      "opposite" : false,
+      "reversed" : false,
+      "decimalsAllowed" : true,
+      "visible" : true,
+      "tickInterval" : null,
+      "axisColor" : "rgba(0,0,0,1.0)",
+      "gridLineType" : "SOLID",
+      "gridLineColor" : null,
+      "gridLineWidth" : null,
+      "labelConfiguration" : {
+        "enabled" : true,
+        "format" : null,
+        "labelInterval" : 0,
+        "style" : {
+          "color" : "rgba(0,0,0,1.0)",
+          "fontSize" : 18,
+          "bold" : true,
+          "italic" : false
+        }
+      }
+    }
+  } ],
+  "zaxisConfiguration" : {
+    "id" : "z1",
+    "minValue" : null,
+    "maxValue" : null,
+    "logarithmic" : false,
+    "plotLines" : [ ],
+    "styleConfiguration" : {
+      "title" : null,
+      "titleStyle" : {
+        "color" : null,
+        "fontSize" : null,
+        "bold" : false,
+        "italic" : false
+      },
+      "opposite" : false,
+      "reversed" : false,
+      "decimalsAllowed" : true,
+      "visible" : true,
+      "tickInterval" : null,
+      "axisColor" : null,
+      "gridLineType" : "SOLID",
+      "gridLineColor" : null,
+      "gridLineWidth" : null,
+      "labelConfiguration" : {
+        "enabled" : true,
+        "format" : null,
+        "labelInterval" : 0,
+        "style" : {
+          "color" : null,
+          "fontSize" : null,
+          "bold" : false,
+          "italic" : false
+        }
+      }
+    }
+  }
+}
