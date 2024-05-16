@@ -1,0 +1,97 @@
+% Table of Contents - List of Tables/Figures/Listings and Acronyms
+
+\refstepcounter{dummy}
+
+\addcontentsline{toc}{chapter}{Índice}
+% \pdfbookmark[1]{\contentsname}{tableofcontents} % Bookmark name visible in a PDF viewer
+
+\setcounter{tocdepth}{2} % Depth of sections to include in the table of contents - currently up to subsections
+
+\setcounter{secnumdepth}{3} % Depth of sections to number in the text itself - currently up to subsubsections
+
+\renewcommand\contentsname{Índice}
+
+\manualmark
+\markboth{\spacedlowsmallcaps{\contentsname}}{\spacedlowsmallcaps{\contentsname}}
+\tableofcontents 
+\automark[section]{chapter}
+\renewcommand{\chaptermark}[1]{\markboth{\spacedlowsmallcaps{#1}}{\spacedlowsmallcaps{#1}}}
+\renewcommand{\sectionmark}[1]{\markright{\thesection\enspace\spacedlowsmallcaps{#1}}}
+
+% \clearpage
+
+\vspace*{8ex}
+\newpage
+\cleardoublepage
+
+% \begingroup 
+% \let\clearpage\relax
+% \let\cleardoublepage\relax
+% \let\cleardoublepage\relax
+
+%----------------------------------------------------------------------------------------
+%	List of Figures
+%----------------------------------------------------------------------------------------
+
+\refstepcounter{dummy}
+\addcontentsline{toc}{chapter}{\listfigurename} % Uncomment if you would like the list of figures to appear in the table of contents
+% \pdfbookmark[1]{\listfigurename}{lof} % Bookmark name visible in a PDF viewer
+
+\listoffigures
+
+\vspace*{8ex}
+% \newpage
+\cleardoublepage
+
+%----------------------------------------------------------------------------------------
+%	List of Tables
+%----------------------------------------------------------------------------------------
+
+% \phantomsection 
+\refstepcounter{dummy}
+\addcontentsline{toc}{chapter}{\listtablename} % Uncomment if you would like the list of tables to appear in the table of contents
+% \pdfbookmark[1]{\listtablename}{lot} % Bookmark name visible in a PDF viewer
+
+\listoftables
+
+\clearpage
+
+\vspace*{8ex}
+% \newpage
+% \cleardoublepage
+    
+%----------------------------------------------------------------------------------------
+%	List of Listings
+%---------------------------------------------------------------------------------------- 
+
+% \refstepcounter{dummy}
+% %\addcontentsline{toc}{chapter}{\lstlistlistingname} % Uncomment if you would like the list of listings to appear in the table of contents
+% \pdfbookmark[1]{\lstlistlistingname}{lol} % Bookmark name visible in a PDF viewer
+% 
+% % \lstlistoflistings 
+% 
+% \vspace*{8ex}
+% \newpage
+       
+% \endgroup
+
+
+
+% %----------------------------------------------------------------------------------------
+% %	Glossário
+% %----------------------------------------------------------------------------------------
+% 
+% 
+% \refstepcounter{dummy}
+% \addcontentsline{toc}{chapter}{Glossário} % Uncomment if you would like the acronyms to appear in the table of contents
+% % \pdfbookmark[1]{Lista de Acrónimos}{Lista de Acrónimos} % Bookmark name visible in a PDF viewer
+% 
+% 
+% 
+% \markboth{\spacedlowsmallcaps{Glossário}}{\spacedlowsmallcaps{Glossário}}
+% \printglossary[type=\glsdefaulttype,title=Glossário]
+% 
+% 
+% 
+% 
+% \cleardoublepage

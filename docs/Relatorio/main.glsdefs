@@ -1,0 +1,448 @@
+\glsdefs@newdocentry{dns}%
+{%
+name={\acronymfont {\glsentryshort {dns}}},%
+sort={DNS},%
+type={acronym},%
+first={DNS},%
+firstplural={DNSs},%
+text={DNS},%
+plural={DNSs},%
+description={Domain Name System},%
+descriptionplural={Domain Name System},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Domain Name System},%
+longplural={Domain Name Systems},%
+short={DNS},%
+shortplural={DNSs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{adsl}%
+{%
+name={\acronymfont {\glsentryshort {adsl}}},%
+sort={ADSL},%
+type={acronym},%
+first={ADSL},%
+firstplural={ADSLs},%
+text={ADSL},%
+plural={ADSLs},%
+description={Assimetric Digital Subscriber Line},%
+descriptionplural={Assimetric Digital Subscriber Line},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Assimetric Digital Subscriber Line},%
+longplural={Assimetric Digital Subscriber Lines},%
+short={ADSL},%
+shortplural={ADSLs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ascii}%
+{%
+name={\acronymfont {\glsentryshort {ascii}}},%
+sort={ASCII},%
+type={acronym},%
+first={ASCII},%
+firstplural={ASCIIs},%
+text={ASCII},%
+plural={ASCIIs},%
+description={American Standard Code for Information Interchange},%
+descriptionplural={American Standard Code for Information Interchange},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={American Standard Code for Information Interchange},%
+longplural={American Standard Code for Information Interchanges},%
+short={ASCII},%
+shortplural={ASCIIs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{bios}%
+{%
+name={\acronymfont {\glsentryshort {bios}}},%
+sort={BIOS},%
+type={acronym},%
+first={BIOS},%
+firstplural={BIOSs},%
+text={BIOS},%
+plural={BIOSs},%
+description={Basic Input/Output System},%
+descriptionplural={Basic Input/Output System},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Basic Input/Output System},%
+longplural={Basic Input/Output Systems},%
+short={BIOS},%
+shortplural={BIOSs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{bit}%
+{%
+name={\acronymfont {\glsentryshort {bit}}},%
+sort={bit},%
+type={acronym},%
+first={bit},%
+firstplural={bits},%
+text={bit},%
+plural={bits},%
+description={Digito binário},%
+descriptionplural={Digito binário},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Digito binário},%
+longplural={Digito binários},%
+short={bit},%
+shortplural={bits},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{byte}%
+{%
+name={\acronymfont {\glsentryshort {byte}}},%
+sort={Byte},%
+type={acronym},%
+first={Byte},%
+firstplural={Bytes},%
+text={Byte},%
+plural={Bytes},%
+description={Unidade de informação digital composta por oito bits},%
+descriptionplural={Unidade de informação digital composta por oito bits},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Unidade de informação digital composta por oito bits},%
+longplural={Unidade de informação digital composta por oito bitss},%
+short={Byte},%
+shortplural={Bytes},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{cpu}%
+{%
+name={\acronymfont {\glsentryshort {cpu}}},%
+sort={CPU},%
+type={acronym},%
+first={CPU},%
+firstplural={CPUs},%
+text={CPU},%
+plural={CPUs},%
+description={Central Processing Unit},%
+descriptionplural={Central Processing Unit},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Central Processing Unit},%
+longplural={Central Processing Units},%
+short={CPU},%
+shortplural={CPUs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{codec}%
+{%
+name={\acronymfont {\glsentryshort {codec}}},%
+sort={CODEC},%
+type={acronym},%
+first={CODEC},%
+firstplural={CODECs},%
+text={CODEC},%
+plural={CODECs},%
+description={COmpression/DECompression},%
+descriptionplural={COmpression/DECompression},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={COmpression/DECompression},%
+longplural={COmpression/DECompressions},%
+short={CODEC},%
+shortplural={CODECs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{dll}%
+{%
+name={\acronymfont {\glsentryshort {dll}}},%
+sort={DLL},%
+type={acronym},%
+first={DLL},%
+firstplural={DLLs},%
+text={DLL},%
+plural={DLLs},%
+description={Dynamic Link Library},%
+descriptionplural={Dynamic Link Library},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Dynamic Link Library},%
+longplural={Dynamic Link Librarys},%
+short={DLL},%
+shortplural={DLLs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{dhcp}%
+{%
+name={\acronymfont {\glsentryshort {dhcp}}},%
+sort={DHCP},%
+type={acronym},%
+first={DHCP},%
+firstplural={DHCPs},%
+text={DHCP},%
+plural={DHCPs},%
+description={Dynamic Host Configuration Protocol},%
+descriptionplural={Dynamic Host Configuration Protocol},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Dynamic Host Configuration Protocol},%
+longplural={Dynamic Host Configuration Protocols},%
+short={DHCP},%
+shortplural={DHCPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ftp}%
+{%
+name={\acronymfont {\glsentryshort {ftp}}},%
+sort={FTP},%
+type={acronym},%
+first={FTP},%
+firstplural={FTPs},%
+text={FTP},%
+plural={FTPs},%
+description={File Transfer Protocol},%
+descriptionplural={File Transfer Protocol},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={File Transfer Protocol},%
+longplural={File Transfer Protocols},%
+short={FTP},%
+shortplural={FTPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{ip}%
+{%
+name={\acronymfont {\glsentryshort {ip}}},%
+sort={IP},%
+type={acronym},%
+first={IP},%
+firstplural={IPs},%
+text={IP},%
+plural={IPs},%
+description={Internet Protocol},%
+descriptionplural={Internet Protocol},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Internet Protocol},%
+longplural={Internet Protocols},%
+short={IP},%
+shortplural={IPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{isp}%
+{%
+name={\acronymfont {\glsentryshort {isp}}},%
+sort={ISP},%
+type={acronym},%
+first={ISP},%
+firstplural={ISPs},%
+text={ISP},%
+plural={ISPs},%
+description={Internet Service Provider},%
+descriptionplural={Internet Service Provider},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Internet Service Provider},%
+longplural={Internet Service Providers},%
+short={ISP},%
+shortplural={ISPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{so}%
+{%
+name={\acronymfont {\glsentryshort {so}}},%
+sort={SO},%
+type={acronym},%
+first={SO},%
+firstplural={SOs},%
+text={SO},%
+plural={SOs},%
+description={Sistema Operativo},%
+descriptionplural={Sistema Operativo},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Sistema Operativo},%
+longplural={Sistema Operativos},%
+short={SO},%
+shortplural={SOs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{tcp}%
+{%
+name={\acronymfont {\glsentryshort {tcp}}},%
+sort={TCP},%
+type={acronym},%
+first={TCP},%
+firstplural={TCPs},%
+text={TCP},%
+plural={TCPs},%
+description={Transmission Control Protocol},%
+descriptionplural={Transmission Control Protocol},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={Transmission Control Protocol},%
+longplural={Transmission Control Protocols},%
+short={TCP},%
+shortplural={TCPs},%
+counter={page},%
+parent={},%
+%
+}%
+
+\glsdefs@newdocentry{abc}%
+{%
+name={\acronymfont {\glsentryshort {abc}}},%
+sort={ABC},%
+type={acronym},%
+first={ABC},%
+firstplural={ABCs},%
+text={ABC},%
+plural={ABCs},%
+description={A lista de acrónimos deve ficar ordenada alfabeticamente},%
+descriptionplural={A lista de acrónimos deve ficar ordenada alfabeticamente},%
+symbol={\relax },%
+symbolplural={\relax },%
+user1={},%
+user2={},%
+user3={},%
+user4={},%
+user5={},%
+user6={},%
+long={A lista de acrónimos deve ficar ordenada alfabeticamente},%
+longplural={A lista de acrónimos deve ficar ordenada alfabeticamentes},%
+short={ABC},%
+shortplural={ABCs},%
+counter={page},%
+parent={},%
+%
+}%
+

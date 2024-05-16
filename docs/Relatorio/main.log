@@ -1,0 +1,3650 @@
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.9)  16 MAY 2024 23:38
+entering extended mode
+ \write18 enabled.
+ %&-line parsing enabled.
+**./main.tex
+(main.tex
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2024-04-11>
+(/home/fred/.miktex/texmfs/install/tex/latex/koma-script/scrreprt.cls
+Document Class: scrreprt 2023/07/07 v3.41 KOMA-Script document class (report)
+(/home/fred/.miktex/texmfs/install/tex/latex/koma-script/scrkbase.sty
+Package: scrkbase 2023/07/07 v3.41 KOMA-Script package (KOMA-Script-dependent b
+asics and keyval usage)
+
+(/home/fred/.miktex/texmfs/install/tex/latex/koma-script/scrbase.sty
+Package: scrbase 2023/07/07 v3.41 KOMA-Script package (KOMA-Script-independent 
+basics and keyval usage)
+
+(/home/fred/.miktex/texmfs/install/tex/latex/koma-script/scrlfile.sty
+Package: scrlfile 2023/07/07 v3.41 KOMA-Script package (file load hooks)
+
+(/home/fred/.miktex/texmfs/install/tex/latex/koma-script/scrlfile-hook.sty
+Package: scrlfile-hook 2023/07/07 v3.41 KOMA-Script package (using LaTeX hooks)
+
+
+(/home/fred/.miktex/texmfs/install/tex/latex/koma-script/scrlogo.sty
+Package: scrlogo 2023/07/07 v3.41 KOMA-Script package (logo)
+)))
+(/home/fred/.miktex/texmfs/install/tex/latex/graphics/keyval.sty
+Package: keyval 2022/05/29 v1.15 key=value parser (DPC)
+\KV@toks@=\toks17
+)
+Applying: [2021/05/01] Usage of raw or classic option list on input line 252.
+Already applied: [0000/00/00] Usage of raw or classic option list on input line
+ 368.
+))
+(/home/fred/.miktex/texmfs/install/tex/latex/koma-script/tocbasic.sty
+Package: tocbasic 2023/07/07 v3.41 KOMA-Script package (handling toc-files)
+\scr@dte@tocline@numberwidth=\skip48
+\scr@dte@tocline@numbox=\box51
+)
+Package tocbasic Info: omitting babel extension for `toc'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `toc' on input line 135.
+Class scrreprt Info: You've used standard option `openright'.
+(scrreprt)           This is correct!
+(scrreprt)           Internally I'm using `open=right'.
+(scrreprt)           If you'd like to set the option with \KOMAoptions,
+(scrreprt)           you'd have to use `open=right' there
+(scrreprt)           instead of `openright', too.
+
+
+Class scrreprt Warning: You've used deprecated option `abstractoff'.
+(scrreprt)              Usage of this option indicates an old document
+(scrreprt)              and changes compatibility level using
+(scrreprt)              `abstract=false,version=first,
+(scrreprt)              enabledeprecatedfontcommands' that may result
+(scrreprt)              in further warnings.
+(scrreprt)              If you don't want this, you should simply
+(scrreprt)              replace option `abstractoff' by `abstract=false'.
+
+Class scrreprt Info: Switching compatibility level to `first'.
+
+Class scrreprt Warning: Switching back to an old KOMA-Script release does
+(scrreprt)              not mean, that KOMA-Script is fully compatible with
+(scrreprt)              the old release. If you need full compatibility
+(scrreprt)              to an old KOMA-Script release, you should use that
+(scrreprt)              old KOMA-Script release. However, in that case you
+(scrreprt)              could also need old releases of other packages and
+(scrreprt)              even of the LaTeX kernel.
+(scrreprt)              You should also note, that the KOMA-Script developers
+(scrreprt)              refuse support for documents using `version=first'.
+(scrreprt)              We recommend to eliminate all deprecated options
+(scrreprt)              and commands. We also recommend to not use option
+(scrreprt)              `version', i.e., with other values than `last'.
+
+
+Class scrreprt Warning: deprecated option `enabledeprecatedfontcommands'.
+(scrreprt)              Note, that this option was already depreacted when
+(scrreprt)              it has been defined. Support for old font commands
+(scrreprt)              has been removed from KOMA-Script more than one
+(scrreprt)              decade ago. It is not recommended to use them any
+(scrreprt)              longer. Therefore usage of this class option also
+(scrreprt)              is not recommended.
+
+Class scrreprt Info: File `scrsize11pt.clo' used to setup font sizes on input l
+ine 2688.
+(/home/fred/.miktex/texmfs/install/tex/latex/koma-script/scrsize11pt.clo
+File: scrsize11pt.clo 2023/07/07 v3.41 KOMA-Script font size class option (11pt
+)
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/koma-script/typearea.sty
+Package: typearea 2023/07/07 v3.41 KOMA-Script package (type area)
+\ta@bcor=\skip49
+\ta@div=\count189
+\ta@hblk=\skip50
+\ta@vblk=\skip51
+\ta@temp=\skip52
+\footheight=\skip53
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = 10
+(typearea)             BCOR = 14.22636pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 408.2971pt
+(typearea)              DIV departure   = -3%
+(typearea)              \evensidemargin = 44.38632pt
+(typearea)              \oddsidemargin  = 0.28453pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 514.20023pt
+(typearea)              \topmargin      = 12.2347pt
+(typearea)              \headheight     = 17.0pt
+(typearea)              \headsep        = 20.40001pt
+(typearea)              \topskip        = 11.0pt
+(typearea)              \footskip       = 47.6pt
+(typearea)              \baselineskip   = 13.6pt
+(typearea)              on input line 1799.
+)
+\c@part=\count190
+\c@chapter=\count191
+\c@section=\count192
+\c@subsection=\count193
+\c@subsubsection=\count194
+\c@paragraph=\count195
+\c@subparagraph=\count196
+\scr@dte@chapter@maxnumwidth=\skip54
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\chapter on input line 5994.
+\scr@dte@section@maxnumwidth=\skip55
+Class scrreprt Info: using compatibility default `runin=bysign'
+(scrreprt)           for `\section on input line 6005.
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\section on input line 6005.
+\scr@dte@part@maxnumwidth=\skip56
+Class scrreprt Info: using compatibility default `afterindent=true'
+(scrreprt)           for `\part on input line 6014.
+\scr@dte@subsection@maxnumwidth=\skip57
+Class scrreprt Info: using compatibility default `runin=bysign'
+(scrreprt)           for `\subsection on input line 6024.
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\subsection on input line 6024.
+\scr@dte@subsubsection@maxnumwidth=\skip58
+Class scrreprt Info: using compatibility default `runin=bysign'
+(scrreprt)           for `\subsubsection on input line 6034.
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\subsubsection on input line 6034.
+\scr@dte@paragraph@maxnumwidth=\skip59
+Class scrreprt Info: using compatibility default `runin=bysign'
+(scrreprt)           for `\paragraph on input line 6045.
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\paragraph on input line 6045.
+\scr@dte@subparagraph@maxnumwidth=\skip60
+Class scrreprt Info: using compatibility default `runin=bysign'
+(scrreprt)           for `\subparagraph on input line 6055.
+Class scrreprt Info: using compatibility default `afterindent=bysign'
+(scrreprt)           for `\subparagraph on input line 6055.
+\abovecaptionskip=\skip61
+\belowcaptionskip=\skip62
+\c@pti@nb@sid@b@x=\box52
+Package tocbasic Info: omitting babel extension for `lof'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lof' on input line 7240.
+\scr@dte@figure@maxnumwidth=\skip63
+\c@figure=\count197
+Package tocbasic Info: omitting babel extension for `lot'
+(tocbasic)             because of feature `nobabel' available
+(tocbasic)             for `lot' on input line 7257.
+\scr@dte@table@maxnumwidth=\skip64
+\c@table=\count198
+Class scrreprt Info: Using old \@makefntext due to compatibility level
+(scrreprt)           less than 3.22 on input line 7415.
+Class scrreprt Info: Redefining `\numberline' on input line 7428.
+\bibindent=\dimen140
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/base/inputenc.sty
+Package: inputenc 2021/02/14 v1.3d Input encoding file
+\inpenc@prehook=\toks18
+\inpenc@posthook=\toks19
+) (config.tex
+(/home/fred/.miktex/texmfs/install/tex/latex/base/ifthen.sty
+Package: ifthen 2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+)
+\c@dummy=\count199
+\abcd=\skip65
+
+(/home/fred/.miktex/texmfs/install/tex/generic/babel/babel.sty
+Package: babel 2024/04/20 v24.4 The Babel package
+\babel@savecnt=\count266
+\U@D=\dimen141
+\l@unhyphenated=\language1
+
+(/home/fred/.miktex/texmfs/install/tex/generic/babel/txtbabel.def)
+\bbl@readstream=\read2
+\bbl@dirlevel=\count267
+
+*************************************
+* Local config file bblopts.cfg used
+*
+(/home/fred/.miktex/texmfs/install/tex/latex/arabi/bblopts.cfg
+File: bblopts.cfg 2005/09/08 v0.1 add Arabic and Farsi to "declared" options of
+ babel
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/babel-portuges/portuguese.ldf
+Language: portuges 2021/07/09 v1.2t Portuguese support from the babel system
+
+
+Package babel Warning: No hyphenation patterns were preloaded for
+(babel)                the language 'Portuguese' into the format.
+(babel)                Please, configure your TeX system to add them and
+(babel)                rebuild the format. Now I will use the patterns
+(babel)                preloaded for \language=0 instead on input line 53.
+
+Package babel Info: Making " an active character on input line 143.
+))
+(/home/fred/.miktex/texmfs/install/tex/generic/babel/locale/pt/babel-portuguese
+.tex
+Package babel Info: Importing font and identification data for portuguese
+(babel)             from babel-pt.ini. Reported on input line 11.
+) (/home/fred/.miktex/texmfs/install/tex/latex/csquotes/csquotes.sty
+Package: csquotes 2024-04-04 v5.2o context-sensitive quotations (JAW)
+
+(/home/fred/.miktex/texmfs/install/tex/latex/etoolbox/etoolbox.sty
+Package: etoolbox 2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+\etb@tempcnta=\count268
+)
+\csq@reset=\count269
+\csq@gtype=\count270
+\csq@glevel=\count271
+\csq@qlevel=\count272
+\csq@maxlvl=\count273
+\csq@tshold=\count274
+\csq@ltx@everypar=\toks20
+
+(/home/fred/.miktex/texmfs/install/tex/latex/csquotes/csquotes.def
+File: csquotes.def 2024-04-04 v5.2o csquotes generic definitions (JAW)
+)
+Package csquotes Info: Trying to load configuration file 'csquotes.cfg'...
+Package csquotes Info: ... configuration file loaded successfully.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/csquotes/csquotes.cfg
+File: csquotes.cfg 
+))
+(/home/fred/.miktex/texmfs/install/tex/latex/biblatex/biblatex.sty
+Package: biblatex 2024/03/21 v3.20 programmable bibliographies (PK/MW)
+
+(/home/fred/.miktex/texmfs/install/tex/generic/pdftexcmds/pdftexcmds.sty
+Package: pdftexcmds 2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO
+)
+
+(/home/fred/.miktex/texmfs/install/tex/generic/infwarerr/infwarerr.sty
+Package: infwarerr 2019/12/03 v1.5 Providing info/warning/error messages (HO)
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/iftex/iftex.sty
+Package: iftex 2022/02/03 v1.0f TeX engine tests
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/ltxcmds/ltxcmds.sty
+Package: ltxcmds 2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+)
+Package pdftexcmds Info: \pdf@primitive is available.
+Package pdftexcmds Info: \pdf@ifprimitive is available.
+Package pdftexcmds Info: \pdfdraftmode found.
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/kvoptions/kvoptions.sty
+Package: kvoptions 2022-06-15 v3.15 Key value format for package options (HO)
+
+(/home/fred/.miktex/texmfs/install/tex/latex/kvsetkeys/kvsetkeys.sty
+Package: kvsetkeys 2022-10-05 v1.19 Key value parser (HO)
+))
+(/home/fred/.miktex/texmfs/install/tex/latex/logreq/logreq.sty
+Package: logreq 2010/08/04 v1.0 xml request logger
+\lrq@indent=\count275
+
+(/home/fred/.miktex/texmfs/install/tex/latex/logreq/logreq.def
+File: logreq.def 2010/08/04 v1.0 logreq spec v1.0
+))
+(/home/fred/.miktex/texmfs/install/tex/latex/url/url.sty
+\Urlmuskip=\muskip16
+Package: url 2013/09/16  ver 3.4  Verb mode for urls, etc.
+)
+\c@tabx@nest=\count276
+\c@listtotal=\count277
+\c@listcount=\count278
+\c@liststart=\count279
+\c@liststop=\count280
+\c@citecount=\count281
+\c@citetotal=\count282
+\c@multicitecount=\count283
+\c@multicitetotal=\count284
+\c@instcount=\count285
+\c@maxnames=\count286
+\c@minnames=\count287
+\c@maxitems=\count288
+\c@minitems=\count289
+\c@citecounter=\count290
+\c@maxcitecounter=\count291
+\c@savedcitecounter=\count292
+\c@uniquelist=\count293
+\c@uniquename=\count294
+\c@refsection=\count295
+\c@refsegment=\count296
+\c@maxextratitle=\count297
+\c@maxextratitleyear=\count298
+\c@maxextraname=\count299
+\c@maxextradate=\count300
+\c@maxextraalpha=\count301
+\c@abbrvpenalty=\count302
+\c@highnamepenalty=\count303
+\c@lownamepenalty=\count304
+\c@maxparens=\count305
+\c@parenlevel=\count306
+\blx@tempcnta=\count307
+\blx@tempcntb=\count308
+\blx@tempcntc=\count309
+\c@blx@maxsection=\count310
+\blx@maxsegment@0=\count311
+\blx@notetype=\count312
+\blx@parenlevel@text=\count313
+\blx@parenlevel@foot=\count314
+\blx@sectionciteorder@0=\count315
+\blx@sectionciteorderinternal@0=\count316
+\blx@entrysetcounter=\count317
+\blx@biblioinstance=\count318
+\labelnumberwidth=\skip66
+\labelalphawidth=\skip67
+\biblabelsep=\skip68
+\bibitemsep=\skip69
+\bibnamesep=\skip70
+\bibinitsep=\skip71
+\bibparsep=\skip72
+\bibhang=\skip73
+\blx@bcfin=\read3
+\blx@bcfout=\write3
+\blx@langwohyphens=\language2
+\c@mincomprange=\count319
+\c@maxcomprange=\count320
+\c@mincompwidth=\count321
+Package biblatex Info: Trying to load biblatex default data model...
+Package biblatex Info: ... file 'blx-dm.def' found.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/biblatex/blx-dm.def
+File: blx-dm.def 2024/03/21 v3.20 biblatex datamodel (PK/MW)
+)
+Package biblatex Info: Trying to load biblatex style data model...
+Package biblatex Info: ... file 'authoryear.dbx' not found.
+Package biblatex Info: Trying to load biblatex custom data model...
+Package biblatex Info: ... file 'biblatex-dm.cfg' not found.
+\c@afterword=\count322
+\c@savedafterword=\count323
+\c@annotator=\count324
+\c@savedannotator=\count325
+\c@author=\count326
+\c@savedauthor=\count327
+\c@bookauthor=\count328
+\c@savedbookauthor=\count329
+\c@commentator=\count330
+\c@savedcommentator=\count331
+\c@editor=\count332
+\c@savededitor=\count333
+\c@editora=\count334
+\c@savededitora=\count335
+\c@editorb=\count336
+\c@savededitorb=\count337
+\c@editorc=\count338
+\c@savededitorc=\count339
+\c@foreword=\count340
+\c@savedforeword=\count341
+\c@holder=\count342
+\c@savedholder=\count343
+\c@introduction=\count344
+\c@savedintroduction=\count345
+\c@namea=\count346
+\c@savednamea=\count347
+\c@nameb=\count348
+\c@savednameb=\count349
+\c@namec=\count350
+\c@savednamec=\count351
+\c@translator=\count352
+\c@savedtranslator=\count353
+\c@shortauthor=\count354
+\c@savedshortauthor=\count355
+\c@shorteditor=\count356
+\c@savedshorteditor=\count357
+\c@labelname=\count358
+\c@savedlabelname=\count359
+\c@institution=\count360
+\c@savedinstitution=\count361
+\c@lista=\count362
+\c@savedlista=\count363
+\c@listb=\count364
+\c@savedlistb=\count365
+\c@listc=\count366
+\c@savedlistc=\count367
+\c@listd=\count368
+\c@savedlistd=\count369
+\c@liste=\count370
+\c@savedliste=\count371
+\c@listf=\count372
+\c@savedlistf=\count373
+\c@location=\count374
+\c@savedlocation=\count375
+\c@organization=\count376
+\c@savedorganization=\count377
+\c@origlocation=\count378
+\c@savedoriglocation=\count379
+\c@origpublisher=\count380
+\c@savedorigpublisher=\count381
+\c@publisher=\count382
+\c@savedpublisher=\count383
+\c@language=\count384
+\c@savedlanguage=\count385
+\c@origlanguage=\count386
+\c@savedoriglanguage=\count387
+\c@pageref=\count388
+\c@savedpageref=\count389
+\shorthandwidth=\skip74
+\shortjournalwidth=\skip75
+\shortserieswidth=\skip76
+\shorttitlewidth=\skip77
+\shortauthorwidth=\skip78
+\shorteditorwidth=\skip79
+\locallabelnumberwidth=\skip80
+\locallabelalphawidth=\skip81
+\localshorthandwidth=\skip82
+\localshortjournalwidth=\skip83
+\localshortserieswidth=\skip84
+\localshorttitlewidth=\skip85
+\localshortauthorwidth=\skip86
+\localshorteditorwidth=\skip87
+Package biblatex Info: Trying to load compatibility code...
+Package biblatex Info: ... file 'blx-compat.def' found.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/biblatex/blx-compat.def
+File: blx-compat.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+)
+Package biblatex Info: Trying to load generic definitions...
+Package biblatex Info: ... file 'biblatex.def' found.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/biblatex/biblatex.def
+File: biblatex.def 2024/03/21 v3.20 biblatex compatibility (PK/MW)
+\c@textcitecount=\count390
+\c@textcitetotal=\count391
+\c@textcitemaxnames=\count392
+\c@biburlbigbreakpenalty=\count393
+\c@biburlbreakpenalty=\count394
+\c@biburlnumpenalty=\count395
+\c@biburlucpenalty=\count396
+\c@biburllcpenalty=\count397
+\biburlbigskip=\muskip17
+\biburlnumskip=\muskip18
+\biburlucskip=\muskip19
+\biburllcskip=\muskip20
+\c@smartand=\count398
+)
+Package biblatex Info: Trying to load bibliography style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.bbx' found.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/biblatex/bbx/authoryear.bbx
+File: authoryear.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+Package biblatex Info: Trying to load bibliography style 'standard'...
+Package biblatex Info: ... file 'standard.bbx' found.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/biblatex/bbx/standard.bbx
+File: standard.bbx 2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+\c@bbx:relatedcount=\count399
+\c@bbx:relatedtotal=\count400
+))
+Package biblatex Info: Trying to load citation style 'authoryear'...
+Package biblatex Info: ... file 'authoryear.cbx' found.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/biblatex/cbx/authoryear.cbx
+File: authoryear.cbx 2024/03/21 v3.20 biblatex citation style (PK/MW)
+Package biblatex Info: Redefining '\cite'.
+Package biblatex Info: Redefining '\parencite'.
+Package biblatex Info: Redefining '\footcite'.
+Package biblatex Info: Redefining '\footcitetext'.
+Package biblatex Info: Redefining '\smartcite'.
+Package biblatex Info: Redefining '\textcite'.
+Package biblatex Info: Redefining '\textcites'.
+)
+Package biblatex Info: Trying to load configuration file...
+Package biblatex Info: ... file 'biblatex.cfg' found.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/biblatex/biblatex.cfg
+File: biblatex.cfg 
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Document encoding is UTF8 ....
+
+(/home/fred/.miktex/texmfs/install/tex/latex/l3kernel/expl3.sty
+Package: expl3 2024-04-11 L3 programming layer (loader) 
+
+(/home/fred/.miktex/texmfs/install/tex/latex/l3backend/l3backend-pdftex.def
+File: l3backend-pdftex.def 2024-04-11 L3 backend support: PDF output (pdfTeX)
+\l__color_backend_stack_int=\count401
+\l__pdf_internal_box=\box53
+))
+Package biblatex Info: ... and expl3
+(biblatex)             2024-04-11 L3 programming layer (loader) 
+(biblatex)             is new enough (at least 2020/04/06),
+(biblatex)             setting 'casechanger=expl3'.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/biblatex/blx-case-expl3.sty
+(/home/fred/.miktex/texmfs/install/tex/latex/l3packages/xparse/xparse.sty
+Package: xparse 2024-03-14 L3 Experimental document command parser
+)
+Package: blx-case-expl3 2024/03/21 v3.20 expl3 case changing code for biblatex
+))
+(/home/fred/.miktex/texmfs/install/tex/latex/float/float.sty
+Package: float 2001/11/08 v1.3d Float enhancements (AL)
+\c@float@type=\count402
+\float@exts=\toks21
+\float@box=\box54
+\@float@everytoks=\toks22
+\@floatcapt=\box55
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/amsmath/amsmath.sty
+Package: amsmath 2023/05/13 v2.17o AMS math features
+\@mathmargin=\skip88
+
+For additional information on amsmath, use the `?' option.
+(/home/fred/.miktex/texmfs/install/tex/latex/amsmath/amstext.sty
+Package: amstext 2021/08/26 v2.01 AMS text
+
+(/home/fred/.miktex/texmfs/install/tex/latex/amsmath/amsgen.sty
+File: amsgen.sty 1999/11/30 v2.0 generic functions
+\@emptytoks=\toks23
+\ex@=\dimen142
+))
+(/home/fred/.miktex/texmfs/install/tex/latex/amsmath/amsbsy.sty
+Package: amsbsy 1999/11/29 v1.2d Bold Symbols
+\pmbraise@=\dimen143
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/amsmath/amsopn.sty
+Package: amsopn 2022/04/08 v2.04 operator names
+)
+\inf@bad=\count403
+LaTeX Info: Redefining \frac on input line 234.
+\uproot@=\count404
+\leftroot@=\count405
+LaTeX Info: Redefining \overline on input line 399.
+LaTeX Info: Redefining \colon on input line 410.
+\classnum@=\count406
+\DOTSCASE@=\count407
+LaTeX Info: Redefining \ldots on input line 496.
+LaTeX Info: Redefining \dots on input line 499.
+LaTeX Info: Redefining \cdots on input line 620.
+\Mathstrutbox@=\box56
+\strutbox@=\box57
+LaTeX Info: Redefining \big on input line 722.
+LaTeX Info: Redefining \Big on input line 723.
+LaTeX Info: Redefining \bigg on input line 724.
+LaTeX Info: Redefining \Bigg on input line 725.
+\big@size=\dimen144
+LaTeX Font Info:    Redeclaring font encoding OML on input line 743.
+LaTeX Font Info:    Redeclaring font encoding OMS on input line 744.
+\macc@depth=\count408
+LaTeX Info: Redefining \bmod on input line 905.
+LaTeX Info: Redefining \pmod on input line 910.
+LaTeX Info: Redefining \smash on input line 940.
+LaTeX Info: Redefining \relbar on input line 970.
+LaTeX Info: Redefining \Relbar on input line 971.
+\c@MaxMatrixCols=\count409
+\dotsspace@=\muskip21
+\c@parentequation=\count410
+\dspbrk@lvl=\count411
+\tag@help=\toks24
+\row@=\count412
+\column@=\count413
+\maxfields@=\count414
+\andhelp@=\toks25
+\eqnshift@=\dimen145
+\alignsep@=\dimen146
+\tagshift@=\dimen147
+\tagwidth@=\dimen148
+\totwidth@=\dimen149
+\lineht@=\dimen150
+\@envbody=\toks26
+\multlinegap=\skip89
+\multlinetaggap=\skip90
+\mathdisplay@stack=\toks27
+LaTeX Info: Redefining \[ on input line 2953.
+LaTeX Info: Redefining \] on input line 2954.
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/multirow/multirow.sty
+Package: multirow 2021/03/15 v2.8 Span multiple rows of a table
+\multirow@colwidth=\skip91
+\multirow@cntb=\count415
+\multirow@dima=\skip92
+\bigstrutjot=\dimen151
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/base/fontenc.sty
+Package: fontenc 2021/04/29 v2.0v Standard LaTeX package
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/base/textcomp.sty
+Package: textcomp 2020/02/02 v2.0n Standard LaTeX package
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/koma-script/scrhack.sty
+Package: scrhack 2023/07/07 v3.41 KOMA-Script package (hacking other packages)
+
+(/home/fred/.miktex/texmfs/install/tex/latex/xpatch/xpatch.sty
+Package: xpatch 2020/03/25 v0.3a Extending etoolbox patching commands
+)
+Package scrhack Info: loading float hack on input line 178.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/koma-script/float.hak
+File: float.hak 2023/07/07 v3.41 KOMA-Script scrhack part (hacking package floa
+t)
+Package scrhack Info: redefining \newfloat on input line 163.
+Package scrhack Info: redefining \listof on input line 163.
+Package scrhack Info: undefining \float@addtolists on input line 163.
+))
+(/home/fred/.miktex/texmfs/install/tex/latex/tools/xspace.sty
+Package: xspace 2014/10/28 v1.13 Space after command names (DPC,MH)
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/mparhack/mparhack.sty
+Package: mparhack 2021-05-02 v1.5 (T. Sgouros and S. Ulrich)
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/acronym/acronym.sty
+Package: acronym 2020/04/17 v1.47 Support for acronyms (Tobias Oetiker)
+
+(/home/fred/.miktex/texmfs/install/tex/latex/bigfoot/suffix.sty
+Package: suffix 2006/07/15 1.5a Variant command support
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/xstring/xstring.sty
+(/home/fred/.miktex/texmfs/install/tex/generic/xstring/xstring.tex
+\xs_counta=\count416
+\xs_countb=\count417
+)
+Package: xstring 2023/08/22 v1.86 String manipulations (CT)
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/relsize/relsize.sty
+Package: relsize 2013/03/29 ver 4.1
+)
+\AC@clearlist=\toks28
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/tools/tabularx.sty
+Package: tabularx 2023/07/08 v2.11c `tabularx' package (DPC)
+
+(/home/fred/.miktex/texmfs/install/tex/latex/tools/array.sty
+Package: array 2023/10/16 v2.5g Tabular extension package (FMi)
+\col@sep=\dimen152
+\ar@mcellbox=\box58
+\extrarowheight=\dimen153
+\NC@list=\toks29
+\extratabsurround=\skip93
+\backup@length=\skip94
+\ar@cellbox=\box59
+)
+\TX@col@width=\dimen154
+\TX@old@table=\dimen155
+\TX@old@col=\dimen156
+\TX@target=\dimen157
+\TX@delta=\dimen158
+\TX@cols=\count418
+\TX@ftn=\toks30
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/caption/caption.sty
+Package: caption 2023/08/05 v3.6o Customizing captions (AR)
+
+(/home/fred/.miktex/texmfs/install/tex/latex/caption/caption3.sty
+Package: caption3 2023/07/31 v2.4d caption3 kernel (AR)
+\caption@tempdima=\dimen159
+\captionmargin=\dimen160
+\caption@leftmargin=\dimen161
+\caption@rightmargin=\dimen162
+\caption@width=\dimen163
+\caption@indent=\dimen164
+\caption@parindent=\dimen165
+\caption@hangindent=\dimen166
+Package caption Info: KOMA-Script document class detected.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/caption/caption-koma.sto
+File: caption-koma.sto 2023/09/08 v2.0e Adaption of the caption package to the 
+KOMA-Script document classes (AR)
+))
+\c@caption@flags=\count419
+\c@continuedfloat=\count420
+Package caption Info: float package is loaded.
+Package caption Info: KOMA-Script scrextend package detected.
+\caption@addmargin@hsize=\dimen167
+\caption@addmargin@linewidth=\dimen168
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/subfig/subfig.sty
+Package: subfig 2005/06/28 ver: 1.3 subfig package
+\c@KVtest=\count421
+\sf@farskip=\skip95
+\sf@captopadj=\dimen169
+\sf@capskip=\skip96
+\sf@nearskip=\skip97
+\c@subfigure=\count422
+\c@subfigure@save=\count423
+\c@lofdepth=\count424
+\c@subtable=\count425
+\c@subtable@save=\count426
+\c@lotdepth=\count427
+\sf@top=\skip98
+\sf@bottom=\skip99
+)
+Package scrhack Info: hyperref hack deactivated because of
+(scrhack)             detection of KOMA-Script class, that doesn't
+(scrhack)             need that hack, on input line 168.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/hyperref/hyperref.sty
+Package: hyperref 2024-01-20 v7.01h Hypertext links for LaTeX
+
+(/home/fred/.miktex/texmfs/install/tex/generic/kvdefinekeys/kvdefinekeys.sty
+Package: kvdefinekeys 2019-12-19 v1.6 Define keys (HO)
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pdfescape/pdfescape.sty
+Package: pdfescape 2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/hycolor/hycolor.sty
+Package: hycolor 2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/auxhook/auxhook.sty
+Package: auxhook 2019-12-17 v1.6 Hooks for auxiliary files (HO)
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/hyperref/nameref.sty
+Package: nameref 2023-11-26 v2.56 Cross-referencing by name of section
+
+(/home/fred/.miktex/texmfs/install/tex/latex/refcount/refcount.sty
+Package: refcount 2019/12/15 v3.6 Data extraction from label references (HO)
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/gettitlestring/gettitlestring.st
+y
+Package: gettitlestring 2019/12/15 v1.6 Cleanup title references (HO)
+)
+\c@section@level=\count428
+)
+\@linkdim=\dimen170
+\Hy@linkcounter=\count429
+\Hy@pagecounter=\count430
+ (/home/fred/.miktex/texmfs/install/tex/latex/hyperref/pd1enc.def
+File: pd1enc.def 2024-01-20 v7.01h Hyperref: PDFDocEncoding definition (HO)
+Now handling font encoding PD1 ...
+... no UTF-8 mapping file for font encoding PD1
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/intcalc/intcalc.sty
+Package: intcalc 2019/12/15 v1.3 Expandable calculations with integers (HO)
+)
+\Hy@SavedSpaceFactor=\count431
+
+(/home/fred/.miktex/texmfs/install/tex/latex/hyperref/puenc.def
+File: puenc.def 2024-01-20 v7.01h Hyperref: PDF Unicode definition (HO)
+Now handling font encoding PU ...
+... no UTF-8 mapping file for font encoding PU
+)
+Package hyperref Info: Option `hyperfootnotes' set `false' on input line 4062.
+Package hyperref Info: Option `pdfpagelabels' set `true' on input line 4062.
+Package hyperref Info: Hyper figures OFF on input line 4179.
+Package hyperref Info: Link nesting OFF on input line 4184.
+Package hyperref Info: Hyper index ON on input line 4187.
+Package hyperref Info: Plain pages OFF on input line 4194.
+Package hyperref Info: Backreferencing OFF on input line 4199.
+Package hyperref Info: Implicit mode ON; LaTeX internals redefined.
+Package hyperref Info: Bookmarks ON on input line 4446.
+\c@Hy@tempcnt=\count432
+LaTeX Info: Redefining \url on input line 4784.
+\XeTeXLinkMargin=\dimen171
+
+(/home/fred/.miktex/texmfs/install/tex/generic/bitset/bitset.sty
+Package: bitset 2019/12/09 v1.3 Handle bit-vector datatype (HO)
+
+(/home/fred/.miktex/texmfs/install/tex/generic/bigintcalc/bigintcalc.sty
+Package: bigintcalc 2019/12/15 v1.5 Expandable calculations on big integers (HO
+)
+))
+\Fld@menulength=\count433
+\Field@Width=\dimen172
+\Fld@charsize=\dimen173
+Package hyperref Info: Hyper figures OFF on input line 6063.
+Package hyperref Info: Link nesting OFF on input line 6068.
+Package hyperref Info: Hyper index ON on input line 6071.
+Package hyperref Info: backreferencing OFF on input line 6078.
+Package hyperref Info: Link coloring OFF on input line 6083.
+Package hyperref Info: Link coloring with OCG OFF on input line 6088.
+Package hyperref Info: PDF/A mode OFF on input line 6093.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/base/atbegshi-ltx.sty
+Package: atbegshi-ltx 2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+)
+\Hy@abspage=\count434
+\c@Item=\count435
+)
+Package hyperref Info: Driver: hpdftex.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/hyperref/hpdftex.def
+File: hpdftex.def 2024-01-20 v7.01h Hyperref driver for pdfTeX
+
+(/home/fred/.miktex/texmfs/install/tex/latex/base/atveryend-ltx.sty
+Package: atveryend-ltx 2020/08/19 v1.0a Emulation of the original atveryend pac
+kage
+with kernel methods
+)
+\Fld@listcount=\count436
+\c@bookmark@seq@number=\count437
+
+(/home/fred/.miktex/texmfs/install/tex/latex/rerunfilecheck/rerunfilecheck.sty
+Package: rerunfilecheck 2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+
+(/home/fred/.miktex/texmfs/install/tex/generic/uniquecounter/uniquecounter.sty
+Package: uniquecounter 2019/12/15 v1.4 Provide unlimited unique counter (HO)
+)
+Package uniquecounter Info: New unique counter `rerunfilecheck' on input line 2
+85.
+)
+\Hy@SectionHShift=\skip100
+) (/home/fred/.miktex/texmfs/install/tex/latex/graphics/graphicx.sty
+Package: graphicx 2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+
+(/home/fred/.miktex/texmfs/install/tex/latex/graphics/graphics.sty
+Package: graphics 2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+
+(/home/fred/.miktex/texmfs/install/tex/latex/graphics/trig.sty
+Package: trig 2021/08/11 v1.11 sin cos tan (DPC)
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/graphics-cfg/graphics.cfg
+File: graphics.cfg 2016/06/04 v1.11 sample graphics configuration
+)
+Package graphics Info: Driver file: pdftex.def on input line 107.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/graphics-def/pdftex.def
+File: pdftex.def 2024/04/13 v1.2c Graphics/color driver for pdftex
+))
+\Gin@req@height=\dimen174
+\Gin@req@width=\dimen175
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 216.
+Package hyperref Info: Option `linktocpage' set `true' on input line 216.
+Package hyperref Info: Option `breaklinks' set `true' on input line 216.
+Package hyperref Info: Option `pageanchor' set `true' on input line 216.
+Package hyperref Info: Option `plainpages' set `false' on input line 216.
+Package hyperref Info: Option `bookmarksnumbered' set `true' on input line 216.
+
+Package hyperref Info: Option `bookmarksopen' set `true' on input line 216.
+Package hyperref Info: Option `hypertexnames' set `true' on input line 216.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/classicthesis/classicthesis.sty
+Package: classicthesis 2018/06/03 v4.6 Typographic style for a classic-looking 
+thesis
+
+(/home/fred/.miktex/texmfs/install/tex/generic/iftex/ifpdf.sty
+Package: ifpdf 2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/iftex/ifxetex.sty
+Package: ifxetex 2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/iftex/ifluatex.sty
+Package: ifluatex 2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/xcolor/xcolor.sty
+Package: xcolor 2023/11/15 v3.01 LaTeX color extensions (UK)
+
+(/home/fred/.miktex/texmfs/install/tex/latex/graphics-cfg/color.cfg
+File: color.cfg 2016/01/02 v1.6 sample color configuration
+)
+Package xcolor Info: Driver file: pdftex.def on input line 274.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/graphics/mathcolor.ltx)
+Package xcolor Info: Model `cmy' substituted by `cmy0' on input line 1350.
+Package xcolor Info: Model `hsb' substituted by `rgb' on input line 1354.
+Package xcolor Info: Model `RGB' extended on input line 1366.
+Package xcolor Info: Model `HTML' substituted by `rgb' on input line 1368.
+Package xcolor Info: Model `Hsb' substituted by `hsb' on input line 1369.
+Package xcolor Info: Model `tHsb' substituted by `hsb' on input line 1370.
+Package xcolor Info: Model `HSB' substituted by `hsb' on input line 1371.
+Package xcolor Info: Model `Gray' substituted by `gray' on input line 1372.
+Package xcolor Info: Model `wave' substituted by `hsb' on input line 1373.
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/graphics/dvipsnam.def
+File: dvipsnam.def 2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/psnfss/mathpazo.sty
+Package: mathpazo 2020/03/25 PSNFSS-v9.3 Palatino w/ Pazo Math (D.Puga, WaS) 
+\symupright=\mathgroup4
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/bera/beramono.sty
+Package: beramono 2004/01/31 (WaS)
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/eulervm/eulervm.sty
+Package: eulervm 2005/01/11 v4.0 (WaS)
+)
+LaTeX Font Info:    Trying to load font information for U+eur on input line 202
+.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/amsfonts/ueur.fd
+File: ueur.fd 2013/01/14 v3.01 Euler Roman
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/microtype/microtype.sty
+Package: microtype 2024/03/29 v3.1b Micro-typographical refinements (RS)
+\MT@toks=\toks31
+\MT@tempbox=\box60
+\MT@count=\count438
+LaTeX Info: Redefining \noprotrusionifhmode on input line 1061.
+LaTeX Info: Redefining \leftprotrusion on input line 1062.
+\MT@prot@toks=\toks32
+LaTeX Info: Redefining \rightprotrusion on input line 1081.
+LaTeX Info: Redefining \textls on input line 1392.
+\MT@outer@kern=\dimen176
+LaTeX Info: Redefining \textmicrotypecontext on input line 2013.
+\MT@listname@count=\count439
+
+(/home/fred/.miktex/texmfs/install/tex/latex/microtype/microtype-pdftex.def
+File: microtype-pdftex.def 2024/03/29 v3.1b Definitions specific to pdftex (RS)
+
+LaTeX Info: Redefining \lsstyle on input line 902.
+LaTeX Info: Redefining \lslig on input line 902.
+\MT@outer@space=\skip101
+)
+Package microtype Info: Loading configuration file microtype.cfg.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/microtype/microtype.cfg
+File: microtype.cfg 2024/03/29 v3.1b microtype main configuration file (RS)
+))
+Package classicthesis Info: A4 paper, Palatino or other on input line 251.
+Package typearea Info: These are the values describing the layout:
+(typearea)             DIV  = areaset
+(typearea)             BCOR = 14.22636pt
+(typearea)             \paperwidth      = 597.50793pt
+(typearea)              \textwidth      = 336.0pt
+(typearea)              \evensidemargin = 92.58438pt
+(typearea)              \oddsidemargin  = 24.38356pt
+(typearea)             \paperheight     = 845.04694pt
+(typearea)              \textheight     = 666.04997pt
+(typearea)              \topmargin      = -40.58768pt
+(typearea)              \headheight     = 15.95pt
+(typearea)              \headsep        = 20.40001pt
+(typearea)              \topskip        = 11.0pt
+(typearea)              \footskip       = 47.60002pt
+(typearea)              \baselineskip   = 13.6pt
+(typearea)              on input line 251.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/booktabs/booktabs.sty
+Package: booktabs 2020/01/12 v1.61803398 Publication quality tables
+\heavyrulewidth=\dimen177
+\lightrulewidth=\dimen178
+\cmidrulewidth=\dimen179
+\belowrulesep=\dimen180
+\belowbottomsep=\dimen181
+\aboverulesep=\dimen182
+\abovetopsep=\dimen183
+\cmidrulesep=\dimen184
+\cmidrulekern=\dimen185
+\defaultaddspace=\dimen186
+\@cmidla=\count440
+\@cmidlb=\count441
+\@aboverulesep=\dimen187
+\@belowrulesep=\dimen188
+\@thisruleclass=\count442
+\@lastruleclass=\count443
+\@thisrulewidth=\dimen189
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/textcase/textcase.sty
+Package: textcase 2023/07/27 v1.04 Text only upper/lower case changing (DPC)
+Package textcase Info: Defining Legacy names on input line 20.
+)
+Package classicthesis Info: Using microtype for character spacing.Make sure you
+r pdflatex is version 1.40 or higher. on input line 321.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/koma-script/scrlayer-scrpage.sty
+Package: scrlayer-scrpage 2023/07/07 v3.41 KOMA-Script package (end user interf
+ace for scrlayer)
+
+(/home/fred/.miktex/texmfs/install/tex/latex/koma-script/scrlayer.sty
+Package: scrlayer 2023/07/07 v3.41 KOMA-Script package (defining layers and pag
+e styles)
+Package scrlayer Info: patching LaTeX kernel macro \pagestyle on input line 218
+3.
+)
+Package scrlayer-scrpage Info: Makeing stand-alone element `pagehead' from
+(scrlayer-scrpage)             alias to `pageheadfoot' on input line 1106.
+)
+1: section
+1: chapter
+1: chapter
+1: section
+
+Class scrreprt Warning: Usage of package `titlesec' together
+(scrreprt)              with a KOMA-Script class is not recommended.
+(scrreprt)              I'd suggest to use KOMA-Script features
+(scrreprt)              like \setkomafont, \RedeclareSectionCommand, \sectionli
+nesformat
+(scrreprt)              and several others to re-configure section
+(scrreprt)              headings.
+(scrreprt)              Nevertheless, using requested
+(scrreprt)              package `titlesec' on input line 362.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/titlesec/titlesec.sty
+Package: titlesec 2023/10/27 v2.16 Sectioning titles
+\ttl@box=\box61
+\beforetitleunit=\skip102
+\aftertitleunit=\skip103
+\ttl@plus=\dimen190
+\ttl@minus=\dimen191
+\ttl@toksa=\toks33
+\titlewidth=\dimen192
+\titlewidthlast=\dimen193
+\titlewidthfirst=\dimen194
+
+
+Package titlesec Warning: Non standard sectioning command \section
+(titlesec)                detected. Using default spacing and no format.
+
+
+Package titlesec Warning: Non standard sectioning command \subsection
+(titlesec)                detected. Using default spacing and no format.
+
+
+Package titlesec Warning: Non standard sectioning command \subsubsection
+(titlesec)                detected. Using default spacing and no format.
+
+
+Package titlesec Warning: Non standard sectioning command \paragraph
+(titlesec)                detected. Using default spacing and no format.
+
+
+Package titlesec Warning: Non standard sectioning command \subparagraph
+(titlesec)                detected. Using default spacing and no format.
+
+)
+
+Class scrreprt Warning: Usage of package `tocloft' together
+(scrreprt)              with a KOMA-Script class is not recommended.
+(scrreprt)              I'd suggest to use options like `listof=entryprefix',
+(scrreprt)              commands like `\listoflofentryname' or
+(scrreprt)              `\listoflotentryname', and `\DeclareTOCStyleEntry' or
+(scrreprt)              `\RedeclareSectionCommand' instead of this package,
+(scrreprt)              because it breaks several KOMA-Script features of
+(scrreprt)              the list of figures, list of tables and table of
+(scrreprt)              contents, i.e., options like `listof=numbered',
+(scrreprt)              `listof=flat or `toc=flat', commands like
+(scrreprt)              `\BeforeTOCHead{...}' and `\AfterTOCHead{...}',
+(scrreprt)              `\BeforeStartingTOC{...}' and \AfterStartingTOC{...}',
+(scrreprt)              all features of `\DeclareTOCStyleEntry',
+(scrreprt)              and the ToC entry features of `\DeclareSecionCommand'
+(scrreprt)              and `\RedeclareSectionCommand' of levels
+(scrreprt)              `part', `section', `subsection',
+(scrreprt)              `subsubsection', `paragraph' and `subparagraph'.
+(scrreprt)              Nevertheless, using requested
+(scrreprt)              package `tocloft' on input line 416.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/tocloft/tocloft.sty
+Package: tocloft 2017/08/31 v2.3i parameterised ToC, etc., typesetting
+Package tocloft Info: The document has chapter divisions on input line 51.
+\cftparskip=\skip104
+\cftbeforetoctitleskip=\skip105
+\cftaftertoctitleskip=\skip106
+\cftbeforepartskip=\skip107
+\cftpartnumwidth=\skip108
+\cftpartindent=\skip109
+\cftbeforechapskip=\skip110
+\cftchapindent=\skip111
+\cftchapnumwidth=\skip112
+\cftbeforesecskip=\skip113
+\cftsecindent=\skip114
+\cftsecnumwidth=\skip115
+\cftbeforesubsecskip=\skip116
+\cftsubsecindent=\skip117
+\cftsubsecnumwidth=\skip118
+\cftbeforesubsubsecskip=\skip119
+\cftsubsubsecindent=\skip120
+\cftsubsubsecnumwidth=\skip121
+\cftbeforeparaskip=\skip122
+\cftparaindent=\skip123
+\cftparanumwidth=\skip124
+\cftbeforesubparaskip=\skip125
+\cftsubparaindent=\skip126
+\cftsubparanumwidth=\skip127
+\cftbeforeloftitleskip=\skip128
+\cftafterloftitleskip=\skip129
+\cftbeforefigskip=\skip130
+\cftfigindent=\skip131
+\cftfignumwidth=\skip132
+\cftbeforelottitleskip=\skip133
+\cftafterlottitleskip=\skip134
+\cftbeforetabskip=\skip135
+\cfttabindent=\skip136
+\cfttabnumwidth=\skip137
+\cftbeforesubfigskip=\skip138
+\cftsubfigindent=\skip139
+\cftsubfignumwidth=\skip140
+\cftbeforesubtabskip=\skip141
+\cftsubtabindent=\skip142
+\cftsubtabnumwidth=\skip143
+)
+\newnumberwidth=\skip144
+\beforebibskip=\skip145
+\newchnumberwidth=\skip146
+\figurelabelwidth=\skip147
+\tablelabelwidth=\skip148
+Class scrreprt Info: Using old \@makefntext due to compatibility level
+(scrreprt)           less than 3.22 on input line 599.
+
+Using KOMA-command "deffootnote" for footnote setup
+(/home/fred/.miktex/texmfs/install/tex/latex/koma-script/scrtime.sty
+Package: scrtime 2023/07/07 v3.41 KOMA-Script package (time of LaTeX run)
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/prelim2e/prelim2e.sty
+Package: prelim2e 2020/11/24 v2.0 prelim2e Package
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/carlisle/remreset.sty
+
+Package remreset Warning: The remreset package is obsolete:
+(remreset)                \@removefromreset is defined.
+
+)
+Package hyperref Info: Option `colorlinks' set `true' on input line 679.
+Package hyperref Info: Option `linktocpage' set `true' on input line 679.
+Package hyperref Info: Option `breaklinks' set `true' on input line 679.
+) (/home/fred/.miktex/texmfs/install/tex/latex/pdfpages/pdfpages.sty
+Package: pdfpages 2024/01/21 v0.5y Insert pages of external PDF documents (AM)
+
+(/home/fred/.miktex/texmfs/install/tex/latex/tools/calc.sty
+Package: calc 2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+\calc@Acount=\count444
+\calc@Bcount=\count445
+\calc@Adimen=\dimen195
+\calc@Bdimen=\dimen196
+\calc@Askip=\skip149
+\calc@Bskip=\skip150
+LaTeX Info: Redefining \setlength on input line 80.
+LaTeX Info: Redefining \addtolength on input line 81.
+\calc@Ccount=\count446
+\calc@Cskip=\skip151
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/eso-pic/eso-pic.sty
+Package: eso-pic 2023/05/03 v3.0c eso-pic (RN)
+\ESO@tempdima=\dimen197
+\ESO@tempdimb=\dimen198
+)
+\AM@pagewidth=\dimen199
+\AM@pageheight=\dimen256
+\AM@fboxrule=\dimen257
+
+(/home/fred/.miktex/texmfs/install/tex/latex/pdfpages/pppdftex.def
+File: pppdftex.def 2024/01/21 v0.5y Pdfpages driver for pdfTeX (AM)
+)
+\pdfpages@includegraphics@status=\count447
+\AM@pagebox=\box62
+\AM@global@opts=\toks34
+\AM@pagecnt=\count448
+\AM@toc@title=\toks35
+\AM@lof@heading=\toks36
+\c@AM@survey=\count449
+\AM@templatesizebox=\box63
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/setspace/setspace.sty
+Package: setspace 2022/12/04 v6.7b set line spacing
+)
+Package scrhack Info: loading setspace hack on input line 288.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/koma-script/setspace.hak
+File: setspace.hak 2023/07/07 v3.41 KOMA-Script scrhack part (hacking package s
+etspace)
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/lm/lmodern.sty
+Package: lmodern 2015/05/01 v1.6.1 Latin Modern Fonts
+LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
+(Font)              `operators' in the math version `normal' on input line 22.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `normal'
+(Font)                  T1/pplj/m/n --> OT1/lmr/m/n on input line 22.
+LaTeX Font Info:    Encoding `U' has changed to `OML' for symbol font
+(Font)              `letters' in the math version `normal' on input line 23.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `normal'
+(Font)                  U/zeur/m/n --> OML/lmm/m/it on input line 23.
+LaTeX Font Info:    Encoding `U' has changed to `OMS' for symbol font
+(Font)              `symbols' in the math version `normal' on input line 24.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `normal'
+(Font)                  U/zeus/m/n --> OMS/lmsy/m/n on input line 24.
+LaTeX Font Info:    Encoding `U' has changed to `OMX' for symbol font
+(Font)              `largesymbols' in the math version `normal' on input line 2
+5.
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `normal'
+(Font)                  U/zeuex/m/n --> OMX/lmex/m/n on input line 25.
+LaTeX Font Info:    Encoding `T1' has changed to `OT1' for symbol font
+(Font)              `operators' in the math version `bold' on input line 26.
+LaTeX Font Info:    Overwriting symbol font `operators' in version `bold'
+(Font)                  T1/pplj/b/n --> OT1/lmr/bx/n on input line 26.
+LaTeX Font Info:    Encoding `U' has changed to `OML' for symbol font
+(Font)              `letters' in the math version `bold' on input line 27.
+LaTeX Font Info:    Overwriting symbol font `letters' in version `bold'
+(Font)                  U/zeur/b/n --> OML/lmm/b/it on input line 27.
+LaTeX Font Info:    Encoding `U' has changed to `OMS' for symbol font
+(Font)              `symbols' in the math version `bold' on input line 28.
+LaTeX Font Info:    Overwriting symbol font `symbols' in version `bold'
+(Font)                  U/zeus/b/n --> OMS/lmsy/b/n on input line 28.
+LaTeX Font Info:    Encoding `U' has changed to `OMX' for symbol font
+(Font)              `largesymbols' in the math version `bold' on input line 29.
+
+LaTeX Font Info:    Overwriting symbol font `largesymbols' in version `bold'
+(Font)                  U/zeuex/m/n --> OMX/lmex/m/n on input line 29.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `normal'
+(Font)                  T1/pplj/b/n --> OT1/lmr/bx/n on input line 31.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `normal'
+(Font)                  T1/cmss/m/n --> OT1/lmss/m/n on input line 32.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `normal'
+(Font)                  T1/pplj/m/it --> OT1/lmr/m/it on input line 33.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `normal'
+(Font)                  T1/fvm/m/n --> OT1/lmtt/m/n on input line 34.
+LaTeX Font Info:    Overwriting math alphabet `\mathbf' in version `bold'
+(Font)                  T1/pplj/b/n --> OT1/lmr/bx/n on input line 35.
+LaTeX Font Info:    Overwriting math alphabet `\mathsf' in version `bold'
+(Font)                  T1/cmss/b/n --> OT1/lmss/bx/n on input line 36.
+LaTeX Font Info:    Overwriting math alphabet `\mathit' in version `bold'
+(Font)                  T1/pplj/b/it --> OT1/lmr/bx/it on input line 37.
+LaTeX Font Info:    Overwriting math alphabet `\mathtt' in version `bold'
+(Font)                  T1/fvm/b/n --> OT1/lmtt/m/n on input line 38.
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/minted/minted.sty
+Package: minted 2023/12/18 v2.9 Yet another Pygments shim for LaTeX
+
+(/home/fred/.miktex/texmfs/install/tex/latex/fvextra/fvextra.sty
+Package: fvextra 2023/11/28 v1.6.1 fvextra - extensions and patches for fancyvr
+b
+
+(/home/fred/.miktex/texmfs/install/tex/latex/fancyvrb/fancyvrb.sty
+Package: fancyvrb 2024/01/20 4.5c verbatim text (tvz,hv)
+\FV@CodeLineNo=\count450
+\FV@InFile=\read4
+\FV@TabBox=\box64
+\c@FancyVerbLine=\count451
+\FV@StepNumber=\count452
+\FV@OutFile=\write4
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/upquote/upquote.sty
+Package: upquote 2012/04/19 v1.3 upright-quote and grave-accent glyphs in verba
+tim
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/lineno/lineno.sty
+Package: lineno 2023/05/20 line numbers on paragraphs v5.3
+\linenopenalty=\count453
+\output=\toks37
+\linenoprevgraf=\count454
+\linenumbersep=\dimen258
+\linenumberwidth=\dimen259
+\c@linenumber=\count455
+\c@pagewiselinenumber=\count456
+\c@LN@truepage=\count457
+\c@internallinenumber=\count458
+\c@internallinenumbers=\count459
+\quotelinenumbersep=\dimen260
+\bframerule=\dimen261
+\bframesep=\dimen262
+\bframebox=\box65
+\linenoamsmath@ams@eqpen=\count460
+
+
+LaTeX Warning: Command \@parboxrestore  has changed.
+               Check if current package is valid.
+
+LaTeX Info: Redefining \\ on input line 3180.
+)
+
+Package fvextra Warning: csquotes should be loaded after fvextra, to avoid a wa
+rning from the lineno package on input line 36.
+
+\c@FancyVerbWriteLine=\count461
+\c@FancyVerbBufferIndex=\count462
+\c@FancyVerbBufferLength=\count463
+\c@FancyVerbBufferLine=\count464
+\c@FV@oldbufferlength=\count465
+\c@FV@TrueTabGroupLevel=\count466
+\c@FV@TrueTabCounter=\count467
+\FV@TabBox@Group=\box66
+\FV@TmpLength=\skip152
+\c@FV@HighlightLinesStart=\count468
+\c@FV@HighlightLinesStop=\count469
+\FV@LoopCount=\count470
+\FV@NCharsBox=\box67
+\FV@BreakIndent=\dimen263
+\FV@BreakIndentNChars=\count471
+\FV@BreakSymbolSepLeft=\dimen264
+\FV@BreakSymbolSepLeftNChars=\count472
+\FV@BreakSymbolSepRight=\dimen265
+\FV@BreakSymbolSepRightNChars=\count473
+\FV@BreakSymbolIndentLeft=\dimen266
+\FV@BreakSymbolIndentLeftNChars=\count474
+\FV@BreakSymbolIndentRight=\dimen267
+\FV@BreakSymbolIndentRightNChars=\count475
+\c@FancyVerbLineBreakLast=\count476
+\FV@LineBox=\box68
+\FV@LineIndentBox=\box69
+\c@FV@BreakBufferDepth=\count477
+\FV@LineWidth=\dimen268
+) (/home/fred/.miktex/texmfs/install/tex/latex/tools/shellesc.sty
+Package: shellesc 2023/07/08 v1.0d unified shell escape interface for LaTeX
+Package shellesc Info: Unrestricted shell escape enabled on input line 75.
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/ifplatform/ifplatform.sty
+Package: ifplatform 2017/10/13 v0.4a Testing for the operating system
+
+(/home/fred/.miktex/texmfs/install/tex/generic/catchfile/catchfile.sty
+Package: catchfile 2019/12/09 v1.8 Catch the contents of a file (HO)
+
+(/home/fred/.miktex/texmfs/install/tex/generic/etexcmds/etexcmds.sty
+Package: etexcmds 2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+))
+runsystem(uname -s > "main.w18")...executed.
+
+
+(main.w18)
+runsystem(rm -- "main.w18")...executed.
+
+) (/home/fred/.miktex/texmfs/install/tex/latex/framed/framed.sty
+Package: framed 2011/10/22 v 0.96: framed or shaded text with page breaks
+\OuterFrameSep=\skip153
+\fb@frw=\dimen269
+\fb@frh=\dimen270
+\FrameRule=\dimen271
+\FrameSep=\dimen272
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/newfloat/newfloat.sty
+Package: newfloat 2023/10/01 v1.2 Defining new floating environments (AR)
+)
+\minted@appexistsfile=\read5
+\minted@bgbox=\box70
+\minted@code=\write5
+\c@minted@FancyVerbLineTemp=\count478
+\c@minted@pygmentizecounter=\count479
+Package newfloat Info: New float `listing' with options `fileext=lol,placement=
+tbp' on input line 1221.
+\c@listing=\count480
+Package newfloat Info: float type `listing'=4 on input line 1221.
+\c@loldepth=\count481
+Package tocbasic Info: setting babel extension for `lol' on input line 1221.
+)
+runsystem(mkdir -p _minted-main)...executed.
+
+
+(/home/fred/.miktex/texmfs/install/tex/latex/eurosym/eurosym.sty
+Package: eurosym 1998/08/06 v1.1 European currency symbol ``Euro''
+\@eurobox=\box71
+)
+   defining Unicode char U+20AC (decimal 8364)
+
+(/home/fred/.miktex/texmfs/install/tex/latex/was/icomma.sty
+Package: icomma 2002/03/10 v2.0 (WaS)
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/glossaries/base/glossaries.sty
+Package: glossaries 2024/04/03 v4.54 (NLCT)
+
+(/home/fred/.miktex/texmfs/install/tex/latex/xkeyval/xkeyval.sty
+Package: xkeyval 2022/06/16 v2.9 package option processing (HA)
+
+(/home/fred/.miktex/texmfs/install/tex/generic/xkeyval/xkeyval.tex
+(/home/fred/.miktex/texmfs/install/tex/generic/xkeyval/xkvutils.tex
+\XKV@toks=\toks38
+\XKV@tempa@toks=\toks39
+)
+\XKV@depth=\count482
+File: xkeyval.tex 2014/12/03 v2.7a key=value parser (HA)
+))
+(/home/fred/.miktex/texmfs/install/tex/latex/mfirstuc/mfirstuc.sty
+Package: mfirstuc 2022/10/14 v2.08 (NLCT)
+\@glsmfirst=\toks40
+\@glsmrest=\toks41
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/xfor/xfor.sty
+Package: xfor 2009/02/05 v1.05 (NLCT)
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/datatool/datatool-base.sty
+Package: datatool-base 2019/09/27 v2.32 (NLCT)
+
+(/home/fred/.miktex/texmfs/install/tex/latex/substr/substr.sty
+Package: substr 2009/10/20 v1.2 Handle substrings
+\c@su@anzahl=\count483
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/datatool/datatool-fp.sty
+Package: datatool-fp 2019/09/27 v2.32 (NLCT)
+
+(/home/fred/.miktex/texmfs/install/tex/latex/fp/fp.sty
+Package: fp 1995/04/02
+
+`Fixed Point Package', Version 0.8, April 2, 1995 (C) Michael Mehlich
+(/home/fred/.miktex/texmfs/install/tex/latex/fp/defpattern.sty
+Package: defpattern 1994/10/12
+\actioncount=\count484
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/fp/fp-basic.sty
+Package: fp-basic 1996/05/13
+\FP@xs=\count485
+\FP@xia=\count486
+\FP@xib=\count487
+\FP@xfa=\count488
+\FP@xfb=\count489
+\FP@rega=\count490
+\FP@regb=\count491
+\FP@regs=\count492
+\FP@times=\count493
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/fp/fp-addons.sty
+Package: fp-addons 1995/03/15
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/fp/fp-snap.sty
+Package: fp-snap 1995/04/05
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/fp/fp-exp.sty
+Package: fp-exp 1995/04/03
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/fp/fp-trigo.sty
+Package: fp-trigo 1995/04/14
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/fp/fp-pas.sty
+Package: fp-pas 1994/08/29
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/fp/fp-random.sty
+Package: fp-random 1995/02/23
+\FPseed=\count494
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/fp/fp-eqn.sty
+Package: fp-eqn 1995/04/03
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/fp/fp-upn.sty
+Package: fp-upn 1996/10/21
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/fp/fp-eval.sty
+Package: fp-eval 1995/04/03
+)))
+\@dtl@toks=\toks42
+\@dtl@tmpcount=\count495
+\dtl@tmplength=\skip154
+\dtl@sortresult=\count496
+\@dtl@numgrpsepcount=\count497
+\@dtl@datatype=\count498
+\dtl@codeA=\count499
+\dtl@codeB=\count500
+\@dtl@foreach@level=\count501
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/tracklang/tracklang.sty
+Package: tracklang 2022/12/13 v1.6.1 (NLCT) Track Languages
+
+(/home/fred/.miktex/texmfs/install/tex/generic/tracklang/tracklang.tex))
+(/home/fred/.miktex/texmfs/install/tex/latex/translator/translator.sty
+Package: translator 2021-05-31 v1.12d Easy translation of strings in LaTeX
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/glossaries-portuges/glossaries-por
+tuges.ldf
+File: glossaries-portuges.ldf 2014/11/23 v1.0
+
+(/home/fred/.miktex/texmfs/install/tex/latex/glossaries-portuges/glossaries-por
+tuges-utf8.ldf))
+\gls@level=\count502
+\@gls@tmpb=\toks43
+\gls@tmplen=\skip155
+\glskeylisttok=\toks44
+\glslabeltok=\toks45
+\glsshorttok=\toks46
+\glslongtok=\toks47
+
+(/home/fred/.miktex/texmfs/install/tex/latex/glossaries/styles/glossary-hyperna
+v.sty
+Package: glossary-hypernav 2024/04/03 v4.54 (NLCT)
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/glossaries/styles/glossary-long.st
+y
+Package: glossary-long 2024/04/03 v4.54 (NLCT)
+ (/home/fred/.miktex/texmfs/install/tex/latex/tools/longtable.sty
+Package: longtable 2023-11-01 v4.19 Multi-page Table package (DPC)
+\LTleft=\skip156
+\LTright=\skip157
+\LTpre=\skip158
+\LTpost=\skip159
+\LTchunksize=\count503
+\LTcapwidth=\dimen273
+\LT@head=\box72
+\LT@firsthead=\box73
+\LT@foot=\box74
+\LT@lastfoot=\box75
+\LT@gbox=\box76
+\LT@cols=\count504
+\LT@rows=\count505
+\c@LT@tables=\count506
+\c@LT@chunks=\count507
+\LT@p@ftn=\toks48
+)
+Class scrreprt Info: longtable captions redefined on input line 47.
+\glsdescwidth=\skip160
+\glspagelistwidth=\skip161
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/glossaries/styles/glossary-super.s
+ty
+Package: glossary-super 2024/04/03 v4.54 (NLCT)
+ (/home/fred/.miktex/texmfs/install/tex/latex/supertabular/supertabular.sty
+Package: supertabular 2020/02/02 v4.1g the supertabular environment
+\c@tracingst=\count508
+\ST@wd=\dimen274
+\ST@rightskip=\skip162
+\ST@leftskip=\skip163
+\ST@parfillskip=\skip164
+\ST@pageleft=\dimen275
+\ST@headht=\dimen276
+\ST@tailht=\dimen277
+\ST@pagesofar=\dimen278
+\ST@pboxht=\dimen279
+\ST@lineht=\dimen280
+\ST@prevht=\dimen281
+\ST@toadd=\dimen282
+\ST@dimen=\dimen283
+\ST@pbox=\box77
+))
+(/home/fred/.miktex/texmfs/install/tex/latex/glossaries/styles/glossary-tree.st
+y
+Package: glossary-tree 2024/04/03 v4.54 (NLCT)
+\glstreeindent=\skip165
+))
+
+Class scrreprt Warning: Usage of package `emptypage' together
+(scrreprt)              with a KOMA-Script class is not recommended.
+(scrreprt)              I'd suggest to use option
+(scrreprt)              `cleardoublepage' with one of it's
+(scrreprt)              several values.
+(scrreprt)              Nevertheless, using requested
+(scrreprt)              package `emptypage' on input line 438.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/emptypage/emptypage.sty
+Package: emptypage 2010/05/30 v1.2 Suppress page numbers and headings on empty 
+pages
+))
+(/home/fred/.miktex/texmfs/install/tex/latex/lipsum/lipsum.sty
+(/home/fred/.miktex/texmfs/install/tex/latex/l3packages/l3keys2e/l3keys2e.sty
+Package: l3keys2e 2024-03-14 LaTeX2e option processing using LaTeX3 keys
+)
+Package: lipsum 2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+\g__lipsum_par_int=\count509
+\l__lipsum_a_int=\count510
+\l__lipsum_b_int=\count511
+
+(/home/fred/.miktex/texmfs/install/tex/latex/lipsum/lipsum.ltd.tex))
+(/home/fred/.miktex/texmfs/install/tex/latex/colortbl/colortbl.sty
+Package: colortbl 2024/02/20 v1.0g Color table columns (DPC)
+\everycr=\toks49
+\minrowclearance=\skip166
+\rownum=\count512
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/pgfplots/pgfplots.sty
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplots 2021/05/15 v1.18.1 Data Visualization (1.18.1)
+
+(/home/fred/.miktex/texmfs/install/tex/latex/pgf/frontendlayer/tikz.sty
+(/home/fred/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgf.sty
+(/home/fred/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfrcs.sty
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-common.tex
+\pgfutil@everybye=\toks50
+\pgfutil@tempdima=\dimen284
+\pgfutil@tempdimb=\dimen285
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfutil-latex.def
+\pgfutil@abb=\box78
+) (/home/fred/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfrcs.code.tex
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/pgf.revision.tex)
+Package: pgfrcs 2023-01-15 v3.1.10 (3.1.10)
+))
+Package: pgf 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/fred/.miktex/texmfs/install/tex/latex/pgf/basiclayer/pgfcore.sty
+(/home/fred/.miktex/texmfs/install/tex/latex/pgf/systemlayer/pgfsys.sty
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys.code.tex
+Package: pgfsys 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.tex
+\pgfkeys@pathtoks=\toks51
+\pgfkeys@temptoks=\toks52
+
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeyslibraryfilt
+ered.code.tex
+\pgfkeys@tmptoks=\toks53
+))
+\pgf@x=\dimen286
+\pgf@y=\dimen287
+\pgf@xa=\dimen288
+\pgf@ya=\dimen289
+\pgf@xb=\dimen290
+\pgf@yb=\dimen291
+\pgf@xc=\dimen292
+\pgf@yc=\dimen293
+\pgf@xd=\dimen294
+\pgf@yd=\dimen295
+\w@pgf@writea=\write6
+\r@pgf@reada=\read6
+\c@pgf@counta=\count513
+\c@pgf@countb=\count514
+\c@pgf@countc=\count515
+\c@pgf@countd=\count516
+\t@pgf@toka=\toks54
+\t@pgf@tokb=\toks55
+\t@pgf@tokc=\toks56
+\pgf@sys@id@count=\count517
+
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgf.cfg
+File: pgf.cfg 2023-01-15 v3.1.10 (3.1.10)
+)
+Driver file for pgf: pgfsys-pdftex.def
+
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys-pdftex.de
+f
+File: pgfsys-pdftex.def 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsys-common-pd
+f.def
+File: pgfsys-common-pdf.def 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsyssoftpath.c
+ode.tex
+File: pgfsyssoftpath.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfsyssoftpath@smallbuffer@items=\count518
+\pgfsyssoftpath@bigbuffer@items=\count519
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/systemlayer/pgfsysprotocol.c
+ode.tex
+File: pgfsysprotocol.code.tex 2023-01-15 v3.1.10 (3.1.10)
+))
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcore.code.tex
+Package: pgfcore 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathutil.code.tex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathparser.code.tex
+\pgfmath@dimen=\dimen296
+\pgfmath@count=\count520
+\pgfmath@box=\box79
+\pgfmath@toks=\toks57
+\pgfmath@stack@operand=\toks58
+\pgfmath@stack@operation=\toks59
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.code.t
+ex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.basic.
+code.tex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.trigon
+ometric.code.tex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.random
+.code.tex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.compar
+ison.code.tex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.base.c
+ode.tex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.round.
+code.tex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.misc.c
+ode.tex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfunctions.intege
+rarithmetics.code.tex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathcalc.code.tex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/math/pgfmathfloat.code.tex
+\c@pgfmathroundto@lastzeros=\count521
+)) (/home/fred/.miktex/texmfs/install/tex/generic/pgf/math/pgfint.code.tex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepoints.cod
+e.tex
+File: pgfcorepoints.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@picminx=\dimen297
+\pgf@picmaxx=\dimen298
+\pgf@picminy=\dimen299
+\pgf@picmaxy=\dimen300
+\pgf@pathminx=\dimen301
+\pgf@pathmaxx=\dimen302
+\pgf@pathminy=\dimen303
+\pgf@pathmaxy=\dimen304
+\pgf@xx=\dimen305
+\pgf@xy=\dimen306
+\pgf@yx=\dimen307
+\pgf@yy=\dimen308
+\pgf@zx=\dimen309
+\pgf@zy=\dimen310
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathconstr
+uct.code.tex
+File: pgfcorepathconstruct.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@path@lastx=\dimen311
+\pgf@path@lasty=\dimen312
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathusage.
+code.tex
+File: pgfcorepathusage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@shorten@end@additional=\dimen313
+\pgf@shorten@start@additional=\dimen314
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorescopes.cod
+e.tex
+File: pgfcorescopes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfpic=\box80
+\pgf@hbox=\box81
+\pgf@layerbox@main=\box82
+\pgf@picture@serial@count=\count522
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoregraphicsta
+te.code.tex
+File: pgfcoregraphicstate.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgflinewidth=\dimen315
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretransforma
+tions.code.tex
+File: pgfcoretransformations.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@pt@x=\dimen316
+\pgf@pt@y=\dimen317
+\pgf@pt@temp=\dimen318
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorequick.code
+.tex
+File: pgfcorequick.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreobjects.co
+de.tex
+File: pgfcoreobjects.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepathproces
+sing.code.tex
+File: pgfcorepathprocessing.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorearrows.cod
+e.tex
+File: pgfcorearrows.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfarrowsep=\dimen319
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreshade.code
+.tex
+File: pgfcoreshade.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@max=\dimen320
+\pgf@sys@shading@range@num=\count523
+\pgf@shadingcount=\count524
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreimage.code
+.tex
+File: pgfcoreimage.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoreexternal.c
+ode.tex
+File: pgfcoreexternal.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfexternal@startupbox=\box83
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorelayers.cod
+e.tex
+File: pgfcorelayers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcoretransparen
+cy.code.tex
+File: pgfcoretransparency.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorepatterns.c
+ode.tex
+File: pgfcorepatterns.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/basiclayer/pgfcorerdf.code.t
+ex
+File: pgfcorerdf.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleshapes.code
+.tex
+File: pgfmoduleshapes.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfnodeparttextbox=\box84
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduleplot.code.t
+ex
+File: pgfmoduleplot.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-version-
+0-65.sty
+Package: pgfcomp-version-0-65 2023-01-15 v3.1.10 (3.1.10)
+\pgf@nodesepstart=\dimen321
+\pgf@nodesepend=\dimen322
+)
+(/home/fred/.miktex/texmfs/install/tex/latex/pgf/compatibility/pgfcomp-version-
+1-18.sty
+Package: pgfcomp-version-1-18 2023-01-15 v3.1.10 (3.1.10)
+))
+(/home/fred/.miktex/texmfs/install/tex/latex/pgf/utilities/pgffor.sty
+(/home/fred/.miktex/texmfs/install/tex/latex/pgf/utilities/pgfkeys.sty
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/utilities/pgfkeys.code.tex))
+(/home/fred/.miktex/texmfs/install/tex/latex/pgf/math/pgfmath.sty
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/math/pgfmath.code.tex))
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/utilities/pgffor.code.tex
+Package: pgffor 2023-01-15 v3.1.10 (3.1.10)
+\pgffor@iter=\dimen323
+\pgffor@skip=\dimen324
+\pgffor@stack=\toks60
+\pgffor@toks=\toks61
+))
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/tikz.code
+.tex
+Package: tikz 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryplothand
+lers.code.tex
+File: pgflibraryplothandlers.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgf@plot@mark@count=\count525
+\pgfplotmarksize=\dimen325
+)
+\tikz@lastx=\dimen326
+\tikz@lasty=\dimen327
+\tikz@lastxsaved=\dimen328
+\tikz@lastysaved=\dimen329
+\tikz@lastmovetox=\dimen330
+\tikz@lastmovetoy=\dimen331
+\tikzleveldistance=\dimen332
+\tikzsiblingdistance=\dimen333
+\tikz@figbox=\box85
+\tikz@figbox@bg=\box86
+\tikz@tempbox=\box87
+\tikz@tempbox@bg=\box88
+\tikztreelevel=\count526
+\tikznumberofchildren=\count527
+\tikznumberofcurrentchild=\count528
+\tikz@fig@count=\count529
+
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmodulematrix.code
+.tex
+File: pgfmodulematrix.code.tex 2023-01-15 v3.1.10 (3.1.10)
+\pgfmatrixcurrentrow=\count530
+\pgfmatrixcurrentcolumn=\count531
+\pgf@matrix@numberofcolumns=\count532
+)
+\tikz@expandcount=\count533
+
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries
+/tikzlibrarytopaths.code.tex
+File: tikzlibrarytopaths.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/pgfplots.code.tex
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/pgfplotscore.code.tex
+\t@pgfplots@toka=\toks62
+\t@pgfplots@tokb=\toks63
+\t@pgfplots@tokc=\toks64
+\pgfplots@tmpa=\dimen334
+\c@pgfplots@coordindex=\count534
+\c@pgfplots@scanlineindex=\count535
+
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/sys/pgfplotssysgeneric.
+code.tex))
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/libs/pgfplotslibrary.co
+de.tex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/oldpgfcompatib/pgfplots
+oldpgfsupp_loader.code.tex
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryfpu.code
+.tex)
+Package pgfplots: loading complementary utilities for your pgf version...
+\t@pgf@toka=\toks65
+\t@pgf@tokb=\toks66
+\t@pgf@tokc=\toks67
+
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/oldpgfcompatib/pgfplots
+oldpgfsupp_pgfutil-common-lists.tex))
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/util/pgfplotsutil.code.
+tex
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/liststructure/pgfplotsl
+iststructure.code.tex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/liststructure/pgfplotsl
+iststructureext.code.tex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/liststructure/pgfplotsa
+rray.code.tex
+\c@pgfplotsarray@tmp=\count536
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/liststructure/pgfplotsm
+atrix.code.tex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/numtable/pgfplotstables
+hared.code.tex
+\c@pgfplotstable@counta=\count537
+\t@pgfplotstable@a=\toks68
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/liststructure/pgfplotsd
+eque.code.tex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/util/pgfplotsbinary.cod
+e.tex
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/util/pgfplotsbinary.dat
+a.code.tex))
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/util/pgfplotsutil.verb.
+code.tex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/libs/pgflibrarypgfplots
+.surfshading.code.tex
+\c@pgfplotslibrarysurf@no=\count538
+
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/sys/pgflibrarypgfplots.
+surfshading.pgfsys-pdftex.def)))
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/util/pgfplotscolormap.c
+ode.tex
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/util/pgfplotscolor.code
+.tex))
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/pgfplotsstackedplots.co
+de.tex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/pgfplotsplothandlers.co
+de.tex
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/pgfplotsmeshplothandler
+.code.tex
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/pgfplotsmeshplotimage.c
+ode.tex)))
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/pgfplots.scaling.code.t
+ex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/pgfplotscoordprocessing
+.code.tex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/pgfplots.errorbars.code
+.tex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/pgfplots.markers.code.t
+ex)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/pgfplotsticks.code.tex)
+
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/pgfplots.paths.code.tex
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries
+/tikzlibrarydecorations.code.tex
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/modules/pgfmoduledecorations
+.code.tex
+\pgfdecoratedcompleteddistance=\dimen335
+\pgfdecoratedremainingdistance=\dimen336
+\pgfdecoratedinputsegmentcompleteddistance=\dimen337
+\pgfdecoratedinputsegmentremainingdistance=\dimen338
+\pgf@decorate@distancetomove=\dimen339
+\pgf@decorate@repeatstate=\count539
+\pgfdecorationsegmentamplitude=\dimen340
+\pgfdecorationsegmentlength=\dimen341
+)
+\tikz@lib@dec@box=\box89
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries
+/tikzlibrarydecorations.pathmorphing.code.tex
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/libraries/decorations/pgflib
+rarydecorations.pathmorphing.code.tex))
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries
+/tikzlibrarydecorations.pathreplacing.code.tex
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/libraries/decorations/pgflib
+rarydecorations.pathreplacing.code.tex))
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/libs/tikzlibrarypgfplot
+s.contourlua.code.tex)
+\pgfplots@numplots=\count540
+\pgfplots@xmin@reg=\dimen342
+\pgfplots@xmax@reg=\dimen343
+\pgfplots@ymin@reg=\dimen344
+\pgfplots@ymax@reg=\dimen345
+\pgfplots@zmin@reg=\dimen346
+\pgfplots@zmax@reg=\dimen347
+)
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/frontendlayer/tikz/libraries
+/tikzlibraryplotmarks.code.tex
+File: tikzlibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+
+(/home/fred/.miktex/texmfs/install/tex/generic/pgf/libraries/pgflibraryplotmark
+s.code.tex
+File: pgflibraryplotmarks.code.tex 2023-01-15 v3.1.10 (3.1.10)
+)))
+(/home/fred/.miktex/texmfs/install/tex/latex/pgfplots/pgfplotstable.sty
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/pgfplots.revision.tex)
+Package: pgfplotstable 2021/05/15 v1.18.1 Table typesetting and Pretty-printing
+ (1.18.1)
+
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/numtable/pgfplotstable.
+code.tex
+(/home/fred/.miktex/texmfs/install/tex/generic/pgfplots/numtable/pgfplotstable.
+coltype.code.tex)))
+\glswrite=\write7
+\glo@main@file=\write8
+\openout8 = `main.glo'.
+
+Package glossaries Info: Writing glossary file main.glo on input line 170.
+\glo@acronym@file=\write9
+\openout9 = `main.acn'.
+
+Package glossaries Info: Writing glossary file main.acn on input line 170.
+Package csquotes Info: Checking for multilingual support...
+Package csquotes Info: ... found 'babel' package.
+Package csquotes Info: Adjusting default style.
+Package csquotes Info: Redefining alias 'default' -> 'portuguese'.
+runsystem(command -v pygmentize && touch main.aex)...executed.
+
+runsystem(rm main.aex)...executed.
+
+LaTeX Font Info:    Trying to load font information for T1+lmr on input line 18
+2.
+ (/home/fred/.miktex/texmfs/install/tex/latex/lm/t1lmr.fd
+File: t1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+(main.aux (Covers/Titlepage.aux) (Covers/Titleback.aux)
+(Covers/Acknowledgments.aux) (Covers/Abstract.aux) (Covers/Contents.aux)
+(Covers/Acronyms.aux) (Chapters/Intro.aux) (Chapters/Background.aux)
+(Chapters/Development.aux
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
+LaTeX Warning: Label `fig:sub2' multiply defined.
+
+) (Chapters/Conclusion.aux) (Covers/Bibliography.aux) (Chapters/ApendixA.aux)
+(Chapters/ApendixB.aux) (Covers/Declaration.aux))
+\openout1 = `main.aux'.
+
+LaTeX Font Info:    Checking defaults for OML/cmm/m/it on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for OMS/cmsy/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for OT1/cmr/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for T1/cmr/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for TS1/cmr/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for OMX/cmex/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for U/cmr/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for PD1/pdf/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+LaTeX Font Info:    Checking defaults for PU/pdf/m/n on input line 182.
+LaTeX Font Info:    ... okay on input line 182.
+Package scrbase Info: activating portuguese \abstractname on input line 182.
+Package scrbase Info: activating portuguese \partname on input line 182.
+Package scrbase Info: activating portuguese \chaptername on input line 182.
+Package scrbase Info: activating portuguese \appendixname on input line 182.
+Package scrbase Info: activating portuguese \figurename on input line 182.
+Package scrbase Info: activating portuguese \tablename on input line 182.
+Package scrbase Info: activating portuguese \contentsname on input line 182.
+Package scrbase Info: activating portuguese \listfigurename on input line 182.
+Package scrbase Info: activating portuguese \listtablename on input line 182.
+Package scrbase Info: activating portuguese \bibname on input line 182.
+Package scrbase Info: activating portuguese \indexname on input line 182.
+Package biblatex Info: Trying to load language 'portuguese'...
+Package biblatex Info: ... file 'portuguese.lbx' found.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/biblatex/lbx/portuguese.lbx
+File: portuguese.lbx 2024/03/21 v3.20 biblatex localization (PK/MW)
+)
+Package biblatex Info: Input encoding 'utf8' detected.
+Package biblatex Info: Automatic encoding selection.
+(biblatex)             Assuming data encoding 'utf8'.
+\openout3 = `main.bcf'.
+
+Package biblatex Info: Trying to load bibliographic data...
+Package biblatex Info: ... file 'main.bbl' found.
+
+(main.bbl)
+Package biblatex Info: Reference section=0 on input line 182.
+Package biblatex Info: Reference segment=0 on input line 182.
+Package caption Info: Begin \AtBeginDocument code.
+Package caption Info: subfig package v1.3 is loaded.
+Package caption Info: hyperref package is loaded.
+Package caption Info: longtable package is loaded.
+ (/home/fred/.miktex/texmfs/install/tex/latex/caption/ltcaption.sty
+Package: ltcaption 2021/01/08 v1.4c longtable captions (AR)
+)
+Package caption Info: supertabular package is loaded.
+Package caption Info: End \AtBeginDocument code.
+Package hyperref Info: Link coloring ON on input line 182.
+
+(main.out) (main.out)
+\@outlinefile=\write10
+\openout10 = `main.out'.
+
+Class scrreprt Info: loading recommended package `bookmark'.
+(scrreprt)           Using `bookmark' together with `hyperref' is recommended,
+(scrreprt)           because of handling of possible bookmark level gaps.
+(scrreprt)           You can avoid loading `bookmark' with KOMA-Script option
+(scrreprt)           `bookmarkpackage=false' before \begin{document} and
+(scrreprt)           you can avoid this message adding:
+(scrreprt)             \usepackage{bookmark}
+(scrreprt)           before \begin{document} on input line 182.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/bookmark/bookmark.sty
+Package: bookmark 2023-12-10 v1.31 PDF bookmarks (HO)
+
+(/home/fred/.miktex/texmfs/install/tex/latex/bookmark/bkm-pdftex.def
+File: bkm-pdftex.def 2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO
+)
+\BKM@id=\count541
+))
+(/home/fred/.miktex/texmfs/install/tex/context/base/mkii/supp-pdf.mkii
+[Loading MPS to PDF converter (version 2006.09.02).]
+\scratchcounter=\count542
+\scratchdimen=\dimen348
+\scratchbox=\box90
+\nofMPsegments=\count543
+\nofMParguments=\count544
+\everyMPshowfont=\toks69
+\MPscratchCnt=\count545
+\MPscratchDim=\dimen349
+\MPnumerator=\count546
+\makeMPintoPDFobject=\count547
+\everyMPtoPDFconversion=\toks70
+) (/home/fred/.miktex/texmfs/install/tex/latex/epstopdf-pkg/epstopdf-base.sty
+Package: epstopdf-base 2020-01-24 v2.11 Base part for package epstopdf
+Package epstopdf-base Info: Redefining graphics rule for `.eps' on input line 4
+85.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/00miktex/epstopdf-sys.cfg
+File: epstopdf-sys.cfg 2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+))
+LaTeX Info: Redefining \microtypecontext on input line 182.
+Package microtype Info: Applying patch `item' on input line 182.
+Package microtype Info: Applying patch `toc' on input line 182.
+Package microtype Info: Applying patch `eqnum' on input line 182.
+Package microtype Info: Applying patch `footnote' on input line 182.
+Package microtype Info: Applying patch `verbatim' on input line 182.
+Package microtype Info: Generating PDF output.
+Package microtype Info: Character protrusion enabled (level 2).
+Package microtype Info: Using default protrusion set `alltext'.
+Package microtype Info: Automatic font expansion enabled (level 2),
+(microtype)             stretch: 20, shrink: 20, step: 1, non-selected.
+Package microtype Info: Using default expansion set `alltext-nott'.
+LaTeX Info: Redefining \showhyphens on input line 182.
+Package microtype Info: No adjustment of tracking.
+Package microtype Info: No adjustment of interword spacing.
+Package microtype Info: No adjustment of character kerning.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/microtype/mt-cmr.cfg
+File: mt-cmr.cfg 2013/05/19 v2.2 microtype config. file: Computer Modern Roman 
+(RS)
+)
+
+Package scrlayer-scrpage Warning: Very small head height detected!
+(scrlayer-scrpage)                Using scrlayer-scrpage the head height
+(scrlayer-scrpage)                should be at least \baselineskip, which is
+(scrlayer-scrpage)                17.68004pt currently.
+(scrlayer-scrpage)                But head height is currently 15.95pt only.
+(scrlayer-scrpage)                You may use
+(scrlayer-scrpage)                typearea option `headheight=17.68004pt'
+(scrlayer-scrpage)                or load package `scrlayer-scrpage' with
+(scrlayer-scrpage)                option `singlespacing=true'
+(scrlayer-scrpage)                to avoid this warning.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/pdflscape/pdflscape.sty
+Package: pdflscape 2022-10-27 v0.13 Display of landscape pages in PDF
+
+(/home/fred/.miktex/texmfs/install/tex/latex/pdflscape/pdflscape-nometadata.sty
+Package: pdflscape-nometadata 2022-10-28 v0.13 Display of landscape pages in PD
+F (HO)
+(/home/fred/.miktex/texmfs/install/tex/latex/graphics/lscape.sty
+Package: lscape 2020/05/28 v3.02 Landscape Pages (DPC)
+)
+Package scrhack Info: loading lscape hack on input line 77.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/koma-script/lscape.hak
+File: lscape.hak 2023/07/07 v3.41 KOMA-Script scrhack part (hacking package lsc
+ape)
+Package scrhack Info: \landscape patched to make \textheight change optional on
+ input line 90.
+\scrh@LT@textheight=\skip167
+)
+Package pdflscape Info: Auto-detected driver: pdftex on input line 81.
+))
+Package newfloat Info: `float' package detected.
+
+(main.glsdefs)
+(/home/fred/.miktex/texmfs/install/tex/latex/glossaries-english/glossaries-dict
+ionary-English.dict
+Dictionary: glossaries-dictionary, Language: English 
+)
+
+Package pgfplots Warning: running in backwards compatibility mode (unsuitable t
+ick labels; missing features). Consider writing \pgfplotsset{compat=1.18} into 
+your preamble.
+ on input line 182.
+
+\openout2 = `Covers/Titlepage.aux'.
+
+(Covers/Titlepage.tex
+
+pdfTeX warning: miktex-pdftex (file ./Covers/estg_h.pdf): PDF inclusion: found 
+PDF version <1.7>, but at most version <1.5> allowed
+<Covers/estg_h.pdf, id=6, 1405.25pt x 391.4625pt>
+File: Covers/estg_h.pdf Graphic file (type pdf)
+<use Covers/estg_h.pdf>
+Package pdftex.def Info: Covers/estg_h.pdf  used on input line 11.
+(pdftex.def)             Requested size: 392.9055pt x 109.45345pt.
+LaTeX Font Info:    Trying to load font information for TS1+lmr on input line 1
+8.
+(/home/fred/.miktex/texmfs/install/tex/latex/lm/ts1lmr.fd
+File: ts1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OT1+lmr on input line 2
+7.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/lm/ot1lmr.fd
+File: ot1lmr.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OML+lmm on input line 2
+7.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/lm/omllmm.fd
+File: omllmm.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMS+lmsy on input line 
+27.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/lm/omslmsy.fd
+File: omslmsy.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    Trying to load font information for OMX+lmex on input line 
+27.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/lm/omxlmex.fd
+File: omxlmex.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <12> on input line 27.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <9> on input line 27.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7> on input line 27.
+LaTeX Font Info:    Trying to load font information for OT1+zplm on input line 
+27.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/psnfss/ot1zplm.fd
+File: ot1zplm.fd 2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `zplm' (encoding: OT1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [1
+
+\openout7 = `main.xdy'.
+
+
+
+{/home/fred/.miktex/texmfs/data/fonts/map/pdftex/pdftex.map}{/home/fred/.miktex
+/texmfs/install/fonts/enc/dvips/lm/lm-ec.enc}{/home/fred/.miktex/texmfs/install
+/fonts/enc/dvips/lm/lm-ts1.enc} <./Covers/estg_h.pdf>])
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [2
+
+
+
+]
+\openout2 = `Covers/Titleback.aux'.
+
+
+(Covers/Titleback.tex
+File: Covers/estg_h.pdf Graphic file (type pdf)
+<use Covers/estg_h.pdf>
+Package pdftex.def Info: Covers/estg_h.pdf  used on input line 10.
+(pdftex.def)             Requested size: 392.9055pt x 109.45345pt.
+
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [3
+
+
+]
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10> on input line 65.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <7.6> on input line 65.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <6> on input line 65.
+
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [4])
+\openout2 = `Covers/Acknowledgments.aux'.
+
+
+(Covers/Acknowledgments.tex
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <10.95> on input line 25.
+LaTeX Font Info:    External font `lmex10' loaded for size
+(Font)              <8> on input line 25.
+
+Missing character: There is no จ in font lmsy10!
+)
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [1
+
+
+
+
+
+{/home/fred/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-mathit.enc}]
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [2
+
+
+
+]
+\openout2 = `Covers/Abstract.aux'.
+
+
+(Covers/Abstract.tex
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [3
+
+]
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [4
+
+]
+Missing character: There is no จ in font lmsy10!
+
+Underfull \hbox (badness 10000) in paragraph at lines 41--42
+
+ []
+
+)
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [5]
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [6
+
+
+
+]
+\openout2 = `Covers/Contents.aux'.
+
+
+(Covers/Contents.tex
+Missing character: There is no จ in font lmsy10!
+Package tocbasic Info: character protrusion at toc deactivated on input line 16
+.
+(main.toc
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Package microtype Info: Character `029' is missing
+(microtype)             in font `T1/lmr/m/sc/10.95'.
+(microtype)             Ignoring protrusion settings for this character.
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [7
+
+
+]
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [8]
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+)
+\tf@toc=\write11
+\openout11 = `main.toc'.
+
+
+1: section
+1: chapter
+1: chapter
+1: section
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [9]
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [10]
+Missing character: There is no จ in font lmsy10!
+Package tocbasic Info: character protrusion at lof deactivated on input line 40
+.
+(main.lof
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [11
+
+
+]
+Missing character: There is no จ in font lmsy10!
+)
+\tf@lof=\write12
+\openout12 = `main.lof'.
+
+
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [12]
+Missing character: There is no จ in font lmsy10!
+Package tocbasic Info: character protrusion at lot deactivated on input line 55
+.
+(main.lot)
+\tf@lot=\write13
+\openout13 = `main.lot'.
+
+
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [13
+
+
+])
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [14
+
+]
+\openout2 = `Covers/Acronyms.aux'.
+
+
+(Covers/Acronyms.tex
+\@gls@deffile=\write14
+\openout14 = `main.glsdefs'.
+
+
+No file main.acr.
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [15
+
+
+
+
+]
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [16
+
+])
+\openout2 = `Chapters/Intro.aux'.
+
+
+(Chapters/Intro.tex
+Cap\'{\i }tulo 1.
+
+Overfull \hbox (38.53226pt too wide) in paragraph at lines 4--4
+[]\U/eur/b/n/70 1 
+ []
+
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.1}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.27  \item Q
+             ual a razรฃo da escrita deste relatรณrio?
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [1
+
+
+
+
+
+])
+Missing character: There is no จ in font lmsy10!
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.2}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.216 \cleardoublepage\include{Chapters/Intro}
+                                              
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [2]
+\openout2 = `Chapters/Background.aux'.
+
+
+(Chapters/Background.tex
+Cap\'{\i }tulo 2.
+
+Overfull \hbox (38.53226pt too wide) in paragraph at lines 4--4
+[]\U/eur/b/n/70 2 
+ []
+
+Missing character: There is no จ in font lmsy10!
+)
+Missing character: There is no จ in font lmsy10!
+
+pdfTeX warning (ext4): destination with the same identifier (name{page.3}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.217 ...ardoublepage\include{Chapters/Background}
+                                                  
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [3
+
+
+
+
+
+]
+pdfTeX warning (ext4): destination with the same identifier (name{page.4}) has 
+been already used, duplicate ignored
+<to be read again> 
+                   \relax 
+l.218 \cleardoublepage
+                      \include{Chapters/Development}
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [4
+
+
+
+]
+\openout2 = `Chapters/Development.aux'.
+
+
+(Chapters/Development.tex
+Cap\'{\i }tulo 3.
+
+Overfull \hbox (38.53226pt too wide) in paragraph at lines 5--5
+[]\U/eur/b/n/70 3 
+ []
+
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+<imgs/Test_5/dataset_5/square_5501.png, id=406, 361.35pt x 361.35pt>
+File: imgs/Test_5/dataset_5/square_5501.png Graphic file (type png)
+<use imgs/Test_5/dataset_5/square_5501.png>
+Package pdftex.def Info: imgs/Test_5/dataset_5/square_5501.png  used on input l
+ine 23.
+(pdftex.def)             Requested size: 137.51932pt x 137.51843pt.
+<imgs/Test_5/dataset_5/square_cut_5501.png, id=408, 361.35pt x 361.35pt>
+File: imgs/Test_5/dataset_5/square_cut_5501.png Graphic file (type png)
+<use imgs/Test_5/dataset_5/square_cut_5501.png>
+Package pdftex.def Info: imgs/Test_5/dataset_5/square_cut_5501.png  used on inp
+ut line 24.
+(pdftex.def)             Requested size: 137.51932pt x 137.51843pt.
+<imgs/Test_5/dataset_5/Squares_Area_Distribution_Hist.png, id=409, 1927.2pt x 1
+084.05pt>
+File: imgs/Test_5/dataset_5/Squares_Area_Distribution_Hist.png Graphic file (ty
+pe png)
+<use imgs/Test_5/dataset_5/Squares_Area_Distribution_Hist.png>
+Package pdftex.def Info: imgs/Test_5/dataset_5/Squares_Area_Distribution_Hist.p
+ng  used on input line 30.
+(pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
+<imgs/Test_5/dataset_5/Partial_Squares_Area_Distribution_Hist.png, id=410, 1927
+.2pt x 1084.05pt>
+File: imgs/Test_5/dataset_5/Partial_Squares_Area_Distribution_Hist.png Graphic 
+file (type png)
+<use imgs/Test_5/dataset_5/Partial_Squares_Area_Distribution_Hist.png>
+Package pdftex.def Info: imgs/Test_5/dataset_5/Partial_Squares_Area_Distributio
+n_Hist.png  used on input line 36.
+(pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [5
+
+
+ <./imgs/Test_5/dataset_5/square_5501.png> <./imgs/Test_5/dataset_5/square_cut_
+5501.png>]
+<imgs/Test_5/dataset_5/train_test_acc.png, id=418, 462.528pt x 346.896pt>
+File: imgs/Test_5/dataset_5/train_test_acc.png Graphic file (type png)
+<use imgs/Test_5/dataset_5/train_test_acc.png>
+Package pdftex.def Info: imgs/Test_5/dataset_5/train_test_acc.png  used on inpu
+t line 45.
+(pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
+<imgs/Test_5/dataset_5/train_test_loss.png, id=419, 462.528pt x 346.896pt>
+File: imgs/Test_5/dataset_5/train_test_loss.png Graphic file (type png)
+<use imgs/Test_5/dataset_5/train_test_loss.png>
+Package pdftex.def Info: imgs/Test_5/dataset_5/train_test_loss.png  used on inp
+ut line 47.
+(pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
+
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [6 <./imgs/Test_5/dataset_5/Squares_Area_Distribution_Hist.png> <./imgs/Test_5
+/dataset_5/Partial_Squares_Area_Distribution_Hist.png>]
+Overfull \vbox (14.6973pt too high) has occurred while \output is active []
+
+
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [7 <./imgs/Test_5/dataset_5/train_test_acc.png> <./imgs/Test_5/dataset_5/train
+_test_loss.png>]
+LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
+2.
+ (/home/fred/.miktex/texmfs/install/tex/latex/lm/t1lmtt.fd
+File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
+)
+Package microtype Info: Loading generic protrusion settings for font family
+(microtype)             `lmtt' (encoding: T1).
+(microtype)             For optimal results, create family-specific settings.
+(microtype)             See the microtype manual for details.
+
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [8{/home/fred/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-rm.enc}]
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [9]
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [10]
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [11]
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [12]
+Missing character: There is no จ in font lmsy10!
+<imgs//Test_7/7_1/dataset/car_5629.png, id=457, 361.35pt x 361.35pt>
+File: imgs//Test_7/7_1/dataset/car_5629.png Graphic file (type png)
+<use imgs//Test_7/7_1/dataset/car_5629.png>
+Package pdftex.def Info: imgs//Test_7/7_1/dataset/car_5629.png  used on input l
+ine 155.
+(pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
+<imgs//Test_7/7_1/dataset/car_7413.png, id=458, 361.35pt x 361.35pt>
+File: imgs//Test_7/7_1/dataset/car_7413.png Graphic file (type png)
+<use imgs//Test_7/7_1/dataset/car_7413.png>
+Package pdftex.def Info: imgs//Test_7/7_1/dataset/car_7413.png  used on input l
+ine 156.
+(pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
+<imgs//Test_7/7_1/dataset/sar_5705.png, id=459, 361.35pt x 361.35pt>
+File: imgs//Test_7/7_1/dataset/sar_5705.png Graphic file (type png)
+<use imgs//Test_7/7_1/dataset/sar_5705.png>
+Package pdftex.def Info: imgs//Test_7/7_1/dataset/sar_5705.png  used on input l
+ine 162.
+(pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
+<imgs//Test_7/7_1/dataset/sar_7153.png, id=460, 361.35pt x 361.35pt>
+File: imgs//Test_7/7_1/dataset/sar_7153.png Graphic file (type png)
+<use imgs//Test_7/7_1/dataset/sar_7153.png>
+Package pdftex.def Info: imgs//Test_7/7_1/dataset/sar_7153.png  used on input l
+ine 163.
+(pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
+<imgs//Test_7/7_1/dataset/distribution_squares.png, id=461, 1323.94624pt x 867.
+24pt>
+File: imgs//Test_7/7_1/dataset/distribution_squares.png Graphic file (type png)
+
+<use imgs//Test_7/7_1/dataset/distribution_squares.png>
+Package pdftex.def Info: imgs//Test_7/7_1/dataset/distribution_squares.png  use
+d on input line 169.
+(pdftex.def)             Requested size: 392.9055pt x 257.3686pt.
+<imgs//Test_7/7_1/dataset/distribution_circles.png, id=462, 1332.98pt x 860.213
+75pt>
+File: imgs//Test_7/7_1/dataset/distribution_circles.png Graphic file (type png)
+
+<use imgs//Test_7/7_1/dataset/distribution_circles.png>
+Package pdftex.def Info: imgs//Test_7/7_1/dataset/distribution_circles.png  use
+d on input line 175.
+(pdftex.def)             Requested size: 392.9055pt x 253.55084pt.
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [13 <./imgs//Test_7/7_1/dataset/car_5629.png> <./imgs//Test_7/7_1/dataset/car_
+7413.png> <./imgs//Test_7/7_1/dataset/sar_5705.png> <./imgs//Test_7/7_1/dataset
+/sar_7153.png>]
+<imgs//Test_7/7_1/train_test_acc.png, id=471, 462.528pt x 346.896pt>
+File: imgs//Test_7/7_1/train_test_acc.png Graphic file (type png)
+<use imgs//Test_7/7_1/train_test_acc.png>
+Package pdftex.def Info: imgs//Test_7/7_1/train_test_acc.png  used on input lin
+e 182.
+(pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
+<imgs//Test_7/7_1/train_test_loss.png, id=472, 462.528pt x 346.896pt>
+File: imgs//Test_7/7_1/train_test_loss.png Graphic file (type png)
+<use imgs//Test_7/7_1/train_test_loss.png>
+Package pdftex.def Info: imgs//Test_7/7_1/train_test_loss.png  used on input li
+ne 184.
+(pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
+
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [14 <./imgs//Test_7/7_1/dataset/distribution_squares.png> <./imgs//Test_7/7_1/
+dataset/distribution_circles.png>]
+Overfull \vbox (40.4264pt too high) has occurred while \output is active []
+
+
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [15 <./imgs//Test_7/7_1/train_test_acc.png> <./imgs//Test_7/7_1/train_test_los
+s.png>]
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [16]
+Missing character: There is no จ in font lmsy10!
+<imgs/Test_7/7_2/dataset/car_1.png, id=490, 361.35pt x 361.35pt>
+File: imgs/Test_7/7_2/dataset/car_1.png Graphic file (type png)
+<use imgs/Test_7/7_2/dataset/car_1.png>
+Package pdftex.def Info: imgs/Test_7/7_2/dataset/car_1.png  used on input line 
+234.
+(pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
+<imgs/Test_7/7_2/dataset/car_3116.png, id=491, 361.35pt x 361.35pt>
+File: imgs/Test_7/7_2/dataset/car_3116.png Graphic file (type png)
+<use imgs/Test_7/7_2/dataset/car_3116.png>
+Package pdftex.def Info: imgs/Test_7/7_2/dataset/car_3116.png  used on input li
+ne 235.
+(pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
+<imgs/Test_7/7_2/dataset/sar_9.png, id=492, 361.35pt x 361.35pt>
+File: imgs/Test_7/7_2/dataset/sar_9.png Graphic file (type png)
+<use imgs/Test_7/7_2/dataset/sar_9.png>
+Package pdftex.def Info: imgs/Test_7/7_2/dataset/sar_9.png  used on input line 
+241.
+(pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
+<imgs/Test_7/7_2/dataset/sar_3873.png, id=493, 361.35pt x 361.35pt>
+File: imgs/Test_7/7_2/dataset/sar_3873.png Graphic file (type png)
+<use imgs/Test_7/7_2/dataset/sar_3873.png>
+Package pdftex.def Info: imgs/Test_7/7_2/dataset/sar_3873.png  used on input li
+ne 242.
+(pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
+<imgs/Test_7/7_2/dataset/car_ci_distribution_hist.png, id=494, 1927.2pt x 1084.
+05pt>
+File: imgs/Test_7/7_2/dataset/car_ci_distribution_hist.png Graphic file (type p
+ng)
+<use imgs/Test_7/7_2/dataset/car_ci_distribution_hist.png>
+Package pdftex.def Info: imgs/Test_7/7_2/dataset/car_ci_distribution_hist.png  
+used on input line 248.
+(pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
+<imgs/Test_7/7_2/dataset/sar_sq_distribution_hist.png, id=495, 1927.2pt x 1084.
+05pt>
+File: imgs/Test_7/7_2/dataset/sar_sq_distribution_hist.png Graphic file (type p
+ng)
+<use imgs/Test_7/7_2/dataset/sar_sq_distribution_hist.png>
+Package pdftex.def Info: imgs/Test_7/7_2/dataset/sar_sq_distribution_hist.png  
+used on input line 254.
+(pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [17 <./imgs/Test_7/7_2/dataset/car_1.png> <./imgs/Test_7/7_2/dataset/car_3116.
+png> <./imgs/Test_7/7_2/dataset/sar_9.png> <./imgs/Test_7/7_2/dataset/sar_3873.
+png>]
+<imgs/Test_7/7_2/train_test_acc.png, id=505, 462.528pt x 346.896pt>
+File: imgs/Test_7/7_2/train_test_acc.png Graphic file (type png)
+<use imgs/Test_7/7_2/train_test_acc.png>
+Package pdftex.def Info: imgs/Test_7/7_2/train_test_acc.png  used on input line
+ 261.
+(pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
+<imgs/Test_7/7_2/train_test_loss.png, id=506, 462.528pt x 346.896pt>
+File: imgs/Test_7/7_2/train_test_loss.png Graphic file (type png)
+<use imgs/Test_7/7_2/train_test_loss.png>
+Package pdftex.def Info: imgs/Test_7/7_2/train_test_loss.png  used on input lin
+e 263.
+(pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
+
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [18 <./imgs/Test_7/7_2/dataset/car_ci_distribution_hist.png> <./imgs/Test_7/7_
+2/dataset/sar_sq_distribution_hist.png>]
+Overfull \vbox (40.4264pt too high) has occurred while \output is active []
+
+
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [19 <./imgs/Test_7/7_2/train_test_acc.png> <./imgs/Test_7/7_2/train_test_loss.
+png>]
+Missing character: There is no จ in font lmsy10!
+<imgs/Test_7/7_2/failed/car_ci_failed_area_hist.png, id=519, 1927.2pt x 1084.05
+pt>
+File: imgs/Test_7/7_2/failed/car_ci_failed_area_hist.png Graphic file (type png
+)
+<use imgs/Test_7/7_2/failed/car_ci_failed_area_hist.png>
+Package pdftex.def Info: imgs/Test_7/7_2/failed/car_ci_failed_area_hist.png  us
+ed on input line 296.
+(pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
+<imgs/Test_7/7_2/failed/sar_sq_failed_area_hist.png, id=520, 1927.2pt x 1084.05
+pt>
+File: imgs/Test_7/7_2/failed/sar_sq_failed_area_hist.png Graphic file (type png
+)
+<use imgs/Test_7/7_2/failed/sar_sq_failed_area_hist.png>
+Package pdftex.def Info: imgs/Test_7/7_2/failed/sar_sq_failed_area_hist.png  us
+ed on input line 303.
+(pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [20 <./imgs/Test_7/7_2/failed/car_ci_failed_area_hist.png>]
+<imgs/Test_7/7_2/failed/car_ci_failed_right_left_scatter.png, id=527, 1927.2pt 
+x 1084.05pt>
+File: imgs/Test_7/7_2/failed/car_ci_failed_right_left_scatter.png Graphic file 
+(type png)
+<use imgs/Test_7/7_2/failed/car_ci_failed_right_left_scatter.png>
+Package pdftex.def Info: imgs/Test_7/7_2/failed/car_ci_failed_right_left_scatte
+r.png  used on input line 310.
+(pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
+File: imgs/Test_7/7_2/failed/car_ci_failed_right_left_scatter.png Graphic file 
+(type png)
+<use imgs/Test_7/7_2/failed/car_ci_failed_right_left_scatter.png>
+Package pdftex.def Info: imgs/Test_7/7_2/failed/car_ci_failed_right_left_scatte
+r.png  used on input line 317.
+(pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
+
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [21 <./imgs/Test_7/7_2/failed/sar_sq_failed_area_hist.png> <./imgs/Test_7/7_2/
+failed/car_ci_failed_right_left_scatter.png>]
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+! Missing $ inserted.
+<inserted text> 
+                $
+l.344 ... dataset foi tambem utilizado no teste 5_
+                                                  1.
+? 
+! Missing $ inserted.
+<inserted text> 
+                $
+l.345 
+      
+? 
+<imgs/Test_8/area_diference_hist.png, id=534, 1927.2pt x 1084.05pt>
+File: imgs/Test_8/area_diference_hist.png Graphic file (type png)
+<use imgs/Test_8/area_diference_hist.png>
+Package pdftex.def Info: imgs/Test_8/area_diference_hist.png  used on input lin
+e 349.
+(pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [22]
+<imgs/Test_8/area_predict_true_line.png, id=539, 1927.2pt x 1084.05pt>
+File: imgs/Test_8/area_predict_true_line.png Graphic file (type png)
+<use imgs/Test_8/area_predict_true_line.png>
+Package pdftex.def Info: imgs/Test_8/area_predict_true_line.png  used on input 
+line 357.
+(pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
+<imgs/Test_8/loss.png, id=540, 462.528pt x 346.896pt>
+File: imgs/Test_8/loss.png Graphic file (type png)
+<use imgs/Test_8/loss.png>
+Package pdftex.def Info: imgs/Test_8/loss.png  used on input line 364.
+(pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
+
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [23 <./imgs/Test_8/area_diference_hist.png> <./imgs/Test_8/area_predict_true_l
+ine.png>]
+<imgs/Test_8/mae.png, id=549, 462.528pt x 346.896pt>
+File: imgs/Test_8/mae.png Graphic file (type png)
+<use imgs/Test_8/mae.png>
+Package pdftex.def Info: imgs/Test_8/mae.png  used on input line 372.
+(pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
+
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [24 <./imgs/Test_8/loss.png> <./imgs/Test_8/mae.png>]
+<imgs/Test_9/dataset_9/circles_4.png, id=556, 361.35pt x 361.35pt>
+File: imgs/Test_9/dataset_9/circles_4.png Graphic file (type png)
+<use imgs/Test_9/dataset_9/circles_4.png>
+Package pdftex.def Info: imgs/Test_9/dataset_9/circles_4.png  used on input lin
+e 391.
+(pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
+<imgs/Test_9/dataset_9/squares_4.png, id=557, 361.35pt x 361.35pt>
+File: imgs/Test_9/dataset_9/squares_4.png Graphic file (type png)
+<use imgs/Test_9/dataset_9/squares_4.png>
+Package pdftex.def Info: imgs/Test_9/dataset_9/squares_4.png  used on input lin
+e 392.
+(pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
+<imgs/Test_9/dataset_9/nones_3.png, id=558, 361.35pt x 361.35pt>
+File: imgs/Test_9/dataset_9/nones_3.png Graphic file (type png)
+<use imgs/Test_9/dataset_9/nones_3.png>
+Package pdftex.def Info: imgs/Test_9/dataset_9/nones_3.png  used on input line 
+393.
+(pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
+<imgs/Test_9/dataset_9/Squares_Area_Distribution_Hist.png, id=559, 1927.2pt x 1
+084.05pt>
+File: imgs/Test_9/dataset_9/Squares_Area_Distribution_Hist.png Graphic file (ty
+pe png)
+<use imgs/Test_9/dataset_9/Squares_Area_Distribution_Hist.png>
+Package pdftex.def Info: imgs/Test_9/dataset_9/Squares_Area_Distribution_Hist.p
+ng  used on input line 399.
+(pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
+<imgs/Test_9/dataset_9/Circles_Area_Distribution_Hist.png, id=560, 1927.2pt x 1
+084.05pt>
+File: imgs/Test_9/dataset_9/Circles_Area_Distribution_Hist.png Graphic file (ty
+pe png)
+<use imgs/Test_9/dataset_9/Circles_Area_Distribution_Hist.png>
+Package pdftex.def Info: imgs/Test_9/dataset_9/Circles_Area_Distribution_Hist.p
+ng  used on input line 405.
+(pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
+
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [25 <./imgs/Test_9/dataset_9/circles_4.png> <./imgs/Test_9/dataset_9/squares_4
+.png> <./imgs/Test_9/dataset_9/nones_3.png>]
+<imgs/Test_9/train_test_acc.png, id=568, 462.528pt x 346.896pt>
+File: imgs/Test_9/train_test_acc.png Graphic file (type png)
+<use imgs/Test_9/train_test_acc.png>
+Package pdftex.def Info: imgs/Test_9/train_test_acc.png  used on input line 414
+.
+(pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
+<imgs/Test_9/train_test_loss.png, id=569, 462.528pt x 346.896pt>
+File: imgs/Test_9/train_test_loss.png Graphic file (type png)
+<use imgs/Test_9/train_test_loss.png>
+Package pdftex.def Info: imgs/Test_9/train_test_loss.png  used on input line 41
+6.
+(pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
+
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [26 <./imgs/Test_9/dataset_9/Squares_Area_Distribution_Hist.png> <./imgs/Test_
+9/dataset_9/Circles_Area_Distribution_Hist.png>]
+Overfull \vbox (40.4264pt too high) has occurred while \output is active []
+
+
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [27 <./imgs/Test_9/train_test_acc.png> <./imgs/Test_9/train_test_loss.png>]
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [28]
+Missing character: There is no จ in font lmsy10!
+<imgs/Test_10/dataset_10/circles_9.png, id=587, 361.35pt x 361.35pt>
+File: imgs/Test_10/dataset_10/circles_9.png Graphic file (type png)
+<use imgs/Test_10/dataset_10/circles_9.png>
+Package pdftex.def Info: imgs/Test_10/dataset_10/circles_9.png  used on input l
+ine 455.
+(pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
+<imgs/Test_10/dataset_10/squares_9.png, id=588, 361.35pt x 361.35pt>
+File: imgs/Test_10/dataset_10/squares_9.png Graphic file (type png)
+<use imgs/Test_10/dataset_10/squares_9.png>
+Package pdftex.def Info: imgs/Test_10/dataset_10/squares_9.png  used on input l
+ine 456.
+(pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
+
+LaTeX Warning: File `imgs/Test_10/dataset_910triangles_9.png' not found on inpu
+t line 457.
+
+
+! Package pdftex.def Error: File `imgs/Test_10/dataset_910triangles_9.png' not 
+found: using draft setting.
+
+See the pdftex.def package documentation for explanation.
+Type  H <return>  for immediate help.
+ ...                                              
+                                                  
+l.457 ...{imgs/Test_10/dataset_910triangles_9.png}
+                                                  
+? 
+File: imgs/Test_9/dataset_9/Squares_Area_Distribution_Hist.png Graphic file (ty
+pe png)
+<use imgs/Test_9/dataset_9/Squares_Area_Distribution_Hist.png>
+Package pdftex.def Info: imgs/Test_9/dataset_9/Squares_Area_Distribution_Hist.p
+ng  used on input line 463.
+(pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
+File: imgs/Test_9/dataset_9/Circles_Area_Distribution_Hist.png Graphic file (ty
+pe png)
+<use imgs/Test_9/dataset_9/Circles_Area_Distribution_Hist.png>
+Package pdftex.def Info: imgs/Test_9/dataset_9/Circles_Area_Distribution_Hist.p
+ng  used on input line 469.
+(pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [29 <./imgs/Test_10/dataset_10/circles_9.png> <./imgs/Test_10/dataset_10/squar
+es_9.png>]
+File: imgs/Test_9/train_test_acc.png Graphic file (type png)
+<use imgs/Test_9/train_test_acc.png>
+Package pdftex.def Info: imgs/Test_9/train_test_acc.png  used on input line 478
+.
+(pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
+File: imgs/Test_9/train_test_loss.png Graphic file (type png)
+<use imgs/Test_9/train_test_loss.png>
+Package pdftex.def Info: imgs/Test_9/train_test_loss.png  used on input line 48
+0.
+(pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [30]
+Overfull \vbox (40.4264pt too high) has occurred while \output is active []
+
+
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [31]
+Missing character: There is no จ in font lmsy10!
+)
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [32]
+\openout2 = `Chapters/Conclusion.aux'.
+
+
+(Chapters/Conclusion.tex
+Cap\'{\i }tulo 4.
+
+Overfull \hbox (38.53226pt too wide) in paragraph at lines 5--5
+[]\U/eur/b/n/70 4 
+ []
+
+Missing character: There is no จ in font lmsy10!
+)
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [33
+
+
+
+
+
+]
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [34
+
+
+
+]
+\openout2 = `Covers/Bibliography.aux'.
+
+
+(Covers/Bibliography.tex
+Missing character: There is no จ in font lmsy10!
+)
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [35
+
+
+]
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [36
+
+
+
+]
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [37
+
+]
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [38]
+\openout2 = `Chapters/ApendixA.aux'.
+
+
+(Chapters/ApendixA.tex
+Ap\^endice A.
+
+Overfull \hbox (58.08998pt too wide) in paragraph at lines 7--7
+[]\U/eur/b/n/70 A 
+ []
+
+Missing character: There is no จ in font lmsy10!
+
+Package lipsum Warning: Unknown language 'latin'. Hyphenation patterns for
+(lipsum)                'portuguese' will be used instead.
+
+
+Overfull \hbox (5.56313pt too wide) in paragraph at lines 12--12
+[]\T1/lmr/m/n/10.95 (-20) Etiam ac leo a risus tristique nonummy. Donec digniss
+im tincidunt nulla. Vestibulum
+ []
+
+
+Overfull \hbox (16.9181pt too wide) in paragraph at lines 12--12
+\T1/lmr/m/n/10.95 (-20) rhoncus molestie odio. Sed lobortis, justo et pretium l
+obortis, mauris turpis condimentum
+ []
+
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [39
+
+
+
+]
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+Missing character: There is no จ in font lmsy10!
+)
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [40]
+\openout2 = `Chapters/ApendixB.aux'.
+
+
+(Chapters/ApendixB.tex
+Ap\^endice B.
+
+Overfull \hbox (50.84175pt too wide) in paragraph at lines 4--4
+[]\U/eur/b/n/70 B 
+ []
+
+Missing character: There is no จ in font lmsy10!
+)
+Missing character: There is no จ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [41
+
+
+
+
+
+]
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [42
+
+
+
+]
+\openout2 = `Covers/Declaration.aux'.
+
+
+(Covers/Declaration.tex
+Missing character: There is no จ in font lmsy10!
+)
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [43
+
+
+]
+
+Package caption Warning: Unused \captionsetup[listing] on input line 336.
+See the caption package documentation for explanation.
+
+(main.aux (Covers/Titlepage.aux) (Covers/Titleback.aux)
+(Covers/Acknowledgments.aux) (Covers/Abstract.aux) (Covers/Contents.aux)
+(Covers/Acronyms.aux) (Chapters/Intro.aux) (Chapters/Background.aux)
+(Chapters/Development.aux) (Chapters/Conclusion.aux) (Covers/Bibliography.aux)
+(Chapters/ApendixA.aux) (Chapters/ApendixB.aux) (Covers/Declaration.aux)
+
+Package mparhack Warning: Marginpars may have changed.
+(mparhack)                Rerun to get them right.
+
+)
+ ***********
+LaTeX2e <2023-11-01> patch level 1
+L3 programming layer <2020/03/25>
+ ***********
+
+
+ *File List*
+scrreprt.cls    2023/07/07 v3.41 KOMA-Script document class (report)
+scrkbase.sty    2023/07/07 v3.41 KOMA-Script package (KOMA-Script-dependent bas
+ics and keyval usage)
+ scrbase.sty    2023/07/07 v3.41 KOMA-Script package (KOMA-Script-independent b
+asics and keyval usage)
+scrlfile.sty    2023/07/07 v3.41 KOMA-Script package (file load hooks)
+scrlfile-hook.sty    2023/07/07 v3.41 KOMA-Script package (using LaTeX hooks)
+ scrlogo.sty    2023/07/07 v3.41 KOMA-Script package (logo)
+  keyval.sty    2022/05/29 v1.15 key=value parser (DPC)
+tocbasic.sty    2023/07/07 v3.41 KOMA-Script package (handling toc-files)
+scrsize11pt.clo    2023/07/07 v3.41 KOMA-Script font size class option (11pt)
+typearea.sty    2023/07/07 v3.41 KOMA-Script package (type area)
+inputenc.sty    2021/02/14 v1.3d Input encoding file
+  config.tex
+  ifthen.sty    2022/04/13 v1.1d Standard LaTeX ifthen package (DPC)
+   babel.sty    2024/04/20 v24.4 The Babel package
+ bblopts.cfg    2005/09/08 v0.1 add Arabic and Farsi to "declared" options of b
+abel
+portuguese.ldf
+babel-portuguese.tex
+csquotes.sty    2024-04-04 v5.2o context-sensitive quotations (JAW)
+etoolbox.sty    2020/10/05 v2.5k e-TeX tools for LaTeX (JAW)
+csquotes.def    2024-04-04 v5.2o csquotes generic definitions (JAW)
+csquotes.cfg    
+biblatex.sty    2024/03/21 v3.20 programmable bibliographies (PK/MW)
+pdftexcmds.sty    2020-06-27 v0.33 Utility functions of pdfTeX for LuaTeX (HO)
+infwarerr.sty    2019/12/03 v1.5 Providing info/warning/error messages (HO)
+   iftex.sty    2022/02/03 v1.0f TeX engine tests
+ ltxcmds.sty    2023-12-04 v1.26 LaTeX kernel commands for general use (HO)
+kvoptions.sty    2022-06-15 v3.15 Key value format for package options (HO)
+kvsetkeys.sty    2022-10-05 v1.19 Key value parser (HO)
+  logreq.sty    2010/08/04 v1.0 xml request logger
+  logreq.def    2010/08/04 v1.0 logreq spec v1.0
+     url.sty    2013/09/16  ver 3.4  Verb mode for urls, etc.
+  blx-dm.def    2024/03/21 v3.20 biblatex datamodel (PK/MW)
+blx-compat.def    2024/03/21 v3.20 biblatex compatibility (PK/MW)
+biblatex.def    2024/03/21 v3.20 biblatex compatibility (PK/MW)
+standard.bbx    2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+authoryear.bbx    2024/03/21 v3.20 biblatex bibliography style (PK/MW)
+authoryear.cbx    2024/03/21 v3.20 biblatex citation style (PK/MW)
+biblatex.cfg    
+   expl3.sty    2024-04-11 L3 programming layer (loader) 
+l3backend-pdftex.def    2024-04-11 L3 backend support: PDF output (pdfTeX)
+blx-case-expl3.sty    2024/03/21 v3.20 expl3 case changing code for biblatex
+  xparse.sty    2024-03-14 L3 Experimental document command parser
+   float.sty    2001/11/08 v1.3d Float enhancements (AL)
+ amsmath.sty    2023/05/13 v2.17o AMS math features
+ amstext.sty    2021/08/26 v2.01 AMS text
+  amsgen.sty    1999/11/30 v2.0 generic functions
+  amsbsy.sty    1999/11/29 v1.2d Bold Symbols
+  amsopn.sty    2022/04/08 v2.04 operator names
+multirow.sty    2021/03/15 v2.8 Span multiple rows of a table
+ fontenc.sty    2021/04/29 v2.0v Standard LaTeX package
+textcomp.sty    2020/02/02 v2.0n Standard LaTeX package
+ scrhack.sty    2023/07/07 v3.41 KOMA-Script package (hacking other packages)
+  xpatch.sty    2020/03/25 v0.3a Extending etoolbox patching commands
+   float.hak    2023/07/07 v3.41 KOMA-Script scrhack part (hacking package floa
+t)
+  xspace.sty    2014/10/28 v1.13 Space after command names (DPC,MH)
+mparhack.sty    2021-05-02 v1.5 (T. Sgouros and S. Ulrich)
+ acronym.sty    2020/04/17 v1.47 Support for acronyms (Tobias Oetiker)
+  suffix.sty    2006/07/15 1.5a Variant command support
+ xstring.sty    2023/08/22 v1.86 String manipulations (CT)
+ relsize.sty    2013/03/29 ver 4.1
+tabularx.sty    2023/07/08 v2.11c `tabularx' package (DPC)
+   array.sty    2023/10/16 v2.5g Tabular extension package (FMi)
+ caption.sty    2023/08/05 v3.6o Customizing captions (AR)
+caption3.sty    2023/07/31 v2.4d caption3 kernel (AR)
+caption-koma.sto    2023/09/08 v2.0e Adaption of the caption package to the KOM
+A-Script document classes (AR)
+  subfig.sty    2005/06/28 ver: 1.3 subfig package
+hyperref.sty    2024-01-20 v7.01h Hypertext links for LaTeX
+kvdefinekeys.sty    2019-12-19 v1.6 Define keys (HO)
+pdfescape.sty    2019/12/09 v1.15 Implements pdfTeX's escape features (HO)
+ hycolor.sty    2020-01-27 v1.10 Color options for hyperref/bookmark (HO)
+ auxhook.sty    2019-12-17 v1.6 Hooks for auxiliary files (HO)
+ nameref.sty    2023-11-26 v2.56 Cross-referencing by name of section
+refcount.sty    2019/12/15 v3.6 Data extraction from label references (HO)
+gettitlestring.sty    2019/12/15 v1.6 Cleanup title references (HO)
+  pd1enc.def    2024-01-20 v7.01h Hyperref: PDFDocEncoding definition (HO)
+ intcalc.sty    2019/12/15 v1.3 Expandable calculations with integers (HO)
+   puenc.def    2024-01-20 v7.01h Hyperref: PDF Unicode definition (HO)
+  bitset.sty    2019/12/09 v1.3 Handle bit-vector datatype (HO)
+bigintcalc.sty    2019/12/15 v1.5 Expandable calculations on big integers (HO)
+atbegshi-ltx.sty    2021/01/10 v1.0c Emulation of the original atbegshi
+package with kernel methods
+ hpdftex.def    2024-01-20 v7.01h Hyperref driver for pdfTeX
+atveryend-ltx.sty    2020/08/19 v1.0a Emulation of the original atveryend packa
+ge
+with kernel methods
+rerunfilecheck.sty    2022-07-10 v1.10 Rerun checks for auxiliary files (HO)
+uniquecounter.sty    2019/12/15 v1.4 Provide unlimited unique counter (HO)
+graphicx.sty    2021/09/16 v1.2d Enhanced LaTeX Graphics (DPC,SPQR)
+graphics.sty    2022/03/10 v1.4e Standard LaTeX Graphics (DPC,SPQR)
+    trig.sty    2021/08/11 v1.11 sin cos tan (DPC)
+graphics.cfg    2016/06/04 v1.11 sample graphics configuration
+  pdftex.def    2024/04/13 v1.2c Graphics/color driver for pdftex
+classicthesis.sty    2018/06/03 v4.6 Typographic style for a classic-looking th
+esis
+   ifpdf.sty    2019/10/25 v3.4 ifpdf legacy package. Use iftex instead.
+ ifxetex.sty    2019/10/25 v0.7 ifxetex legacy package. Use iftex instead.
+ifluatex.sty    2019/10/25 v1.5 ifluatex legacy package. Use iftex instead.
+  xcolor.sty    2023/11/15 v3.01 LaTeX color extensions (UK)
+   color.cfg    2016/01/02 v1.6 sample color configuration
+mathcolor.ltx
+dvipsnam.def    2016/06/17 v3.0m Driver-dependent file (DPC,SPQR)
+mathpazo.sty    2020/03/25 PSNFSS-v9.3 Palatino w/ Pazo Math (D.Puga, WaS) 
+beramono.sty    2004/01/31 (WaS)
+ eulervm.sty    2005/01/11 v4.0 (WaS)
+    ueur.fd    2013/01/14 v3.01 Euler Roman
+microtype.sty    2024/03/29 v3.1b Micro-typographical refinements (RS)
+microtype-pdftex.def    2024/03/29 v3.1b Definitions specific to pdftex (RS)
+microtype.cfg    2024/03/29 v3.1b microtype main configuration file (RS)
+booktabs.sty    2020/01/12 v1.61803398 Publication quality tables
+textcase.sty    2023/07/27 v1.04 Text only upper/lower case changing (DPC)
+scrlayer-scrpage.sty    2023/07/07 v3.41 KOMA-Script package (end user interfac
+e for scrlayer)
+scrlayer.sty    2023/07/07 v3.41 KOMA-Script package (defining layers and page 
+styles)
+titlesec.sty    2023/10/27 v2.16 Sectioning titles
+ tocloft.sty    2017/08/31 v2.3i parameterised ToC, etc., typesetting
+ scrtime.sty    2023/07/07 v3.41 KOMA-Script package (time of LaTeX run)
+prelim2e.sty    2020/11/24 v2.0 prelim2e Package
+remreset.sty    
+pdfpages.sty    2024/01/21 v0.5y Insert pages of external PDF documents (AM)
+    calc.sty    2023/07/08 v4.3 Infix arithmetic (KKT,FJ)
+ eso-pic.sty    2023/05/03 v3.0c eso-pic (RN)
+pppdftex.def    2024/01/21 v0.5y Pdfpages driver for pdfTeX (AM)
+setspace.sty    2022/12/04 v6.7b set line spacing
+setspace.hak    2023/07/07 v3.41 KOMA-Script scrhack part (hacking package sets
+pace)
+ lmodern.sty    2015/05/01 v1.6.1 Latin Modern Fonts
+  minted.sty    2023/12/18 v2.9 Yet another Pygments shim for LaTeX
+ fvextra.sty    2023/11/28 v1.6.1 fvextra - extensions and patches for fancyvrb
+
+fancyvrb.sty    2024/01/20 4.5c verbatim text (tvz,hv)
+ upquote.sty    2012/04/19 v1.3 upright-quote and grave-accent glyphs in verbat
+im
+  lineno.sty    2023/05/20 line numbers on paragraphs v5.3
+shellesc.sty    2023/07/08 v1.0d unified shell escape interface for LaTeX
+ifplatform.sty    2017/10/13 v0.4a Testing for the operating system
+catchfile.sty    2019/12/09 v1.8 Catch the contents of a file (HO)
+etexcmds.sty    2019/12/15 v1.7 Avoid name clashes with e-TeX commands (HO)
+   "main.w18"
+  framed.sty    2011/10/22 v 0.96: framed or shaded text with page breaks
+newfloat.sty    2023/10/01 v1.2 Defining new floating environments (AR)
+ eurosym.sty    1998/08/06 v1.1 European currency symbol ``Euro''
+  icomma.sty    2002/03/10 v2.0 (WaS)
+glossaries.sty    2024/04/03 v4.54 (NLCT)
+ xkeyval.sty    2022/06/16 v2.9 package option processing (HA)
+ xkeyval.tex    2014/12/03 v2.7a key=value parser (HA)
+mfirstuc.sty    2022/10/14 v2.08 (NLCT)
+    xfor.sty    2009/02/05 v1.05 (NLCT)
+datatool-base.sty    2019/09/27 v2.32 (NLCT)
+  substr.sty    2009/10/20 v1.2 Handle substrings
+datatool-fp.sty    2019/09/27 v2.32 (NLCT)
+      fp.sty    1995/04/02
+defpattern.sty    1994/10/12
+fp-basic.sty    1996/05/13
+fp-addons.sty    1995/03/15
+ fp-snap.sty    1995/04/05
+  fp-exp.sty    1995/04/03
+fp-trigo.sty    1995/04/14
+  fp-pas.sty    1994/08/29
+fp-random.sty    1995/02/23
+  fp-eqn.sty    1995/04/03
+  fp-upn.sty    1996/10/21
+ fp-eval.sty    1995/04/03
+tracklang.sty    2022/12/13 v1.6.1 (NLCT) Track Languages
+tracklang.tex    2022/12/13 v1.6.1 (NLCT) Track Languages Generic Code
+translator.sty    2021-05-31 v1.12d Easy translation of strings in LaTeX
+glossaries-portuges.ldf    2014/11/23 v1.0
+glossaries-portuges-utf8.ldf
+glossary-hypernav.sty    2024/04/03 v4.54 (NLCT)
+glossary-long.sty    2024/04/03 v4.54 (NLCT)
+longtable.sty    2023-11-01 v4.19 Multi-page Table package (DPC)
+glossary-super.sty    2024/04/03 v4.54 (NLCT)
+supertabular.sty    2020/02/02 v4.1g the supertabular environment
+glossary-tree.sty    2024/04/03 v4.54 (NLCT)
+emptypage.sty    2010/05/30 v1.2 Suppress page numbers and headings on empty pa
+ges
+  lipsum.sty    2021-09-20 v2.7 150 paragraphs of Lorem Ipsum dummy text
+l3keys2e.sty    2024-03-14 LaTeX2e option processing using LaTeX3 keys
+  lipsum.ltd
+colortbl.sty    2024/02/20 v1.0g Color table columns (DPC)
+pgfplots.sty    2021/05/15 v1.18.1 Data Visualization (1.18.1)
+    tikz.sty    2023-01-15 v3.1.10 (3.1.10)
+     pgf.sty    2023-01-15 v3.1.10 (3.1.10)
+  pgfrcs.sty    2023-01-15 v3.1.10 (3.1.10)
+pgfrcs.code.tex
+ pgfcore.sty    2023-01-15 v3.1.10 (3.1.10)
+  pgfsys.sty    2023-01-15 v3.1.10 (3.1.10)
+pgfsys.code.tex
+pgfsyssoftpath.code.tex    2023-01-15 v3.1.10 (3.1.10)
+pgfsysprotocol.code.tex    2023-01-15 v3.1.10 (3.1.10)
+pgfcore.code.tex
+pgfcomp-version-0-65.sty    2023-01-15 v3.1.10 (3.1.10)
+pgfcomp-version-1-18.sty    2023-01-15 v3.1.10 (3.1.10)
+  pgffor.sty    2023-01-15 v3.1.10 (3.1.10)
+ pgfkeys.sty    
+pgfkeys.code.tex
+ pgfmath.sty    
+pgfmath.code.tex
+pgffor.code.tex
+tikz.code.tex
+pgfplotstable.sty    2021/05/15 v1.18.1 Table typesetting and Pretty-printing (
+1.18.1)
+   t1lmr.fd    2015/05/01 v1.6.1 Font defs for Latin Modern
+portuguese.lbx    2024/03/21 v3.20 biblatex localization (PK/MW)
+    main.bbl
+ltcaption.sty    2021/01/08 v1.4c longtable captions (AR)
+    main.out
+    main.out
+bookmark.sty    2023-12-10 v1.31 PDF bookmarks (HO)
+bkm-pdftex.def    2023-12-10 v1.31 bookmark driver for pdfTeX and luaTeX (HO)
+supp-pdf.mkii
+epstopdf-base.sty    2020-01-24 v2.11 Base part for package epstopdf
+epstopdf-sys.cfg    2021/03/18 v2.0 Configuration of epstopdf for MiKTeX
+  mt-cmr.cfg    2013/05/19 v2.2 microtype config. file: Computer Modern Roman (
+RS)
+pdflscape.sty    2022-10-27 v0.13 Display of landscape pages in PDF
+pdflscape-nometadata.sty    2022-10-28 v0.13 Display of landscape pages in PDF 
+(HO)
+  lscape.sty    2020/05/28 v3.02 Landscape Pages (DPC)
+  lscape.hak    2023/07/07 v3.41 KOMA-Script scrhack part (hacking package lsca
+pe)
+    main.glsdefs
+glossaries-dictionary-English.dict    
+Covers/Titlepage.tex
+Covers/estg_h.pdf
+  ts1lmr.fd    2015/05/01 v1.6.1 Font defs for Latin Modern
+  ot1lmr.fd    2015/05/01 v1.6.1 Font defs for Latin Modern
+  omllmm.fd    2015/05/01 v1.6.1 Font defs for Latin Modern
+ omslmsy.fd    2015/05/01 v1.6.1 Font defs for Latin Modern
+ omxlmex.fd    2015/05/01 v1.6.1 Font defs for Latin Modern
+ ot1zplm.fd    2002/09/08 Fontinst v1.914 font definitions for OT1/zplm.
+Covers/Titleback.tex
+Covers/estg_h.pdf
+Covers/Acknowledgments.tex
+Covers/Abstract.tex
+Covers/Contents.tex
+Covers/Acronyms.tex
+Chapters/Intro.tex
+Chapters/Background.tex
+Chapters/Development.tex
+imgs/Test_5/dataset_5/square_5501.png
+imgs/Test_5/dataset_5/square_cut_5501.png
+imgs/Test_5/dataset_5/Squares_Area_Distribution_Hist.png
+imgs/Test_5/dataset_5/Partial_Squares_Area_Distribution_Hist.png
+imgs/Test_5/dataset_5/train_test_acc.png
+imgs/Test_5/dataset_5/train_test_loss.png
+  t1lmtt.fd    2015/05/01 v1.6.1 Font defs for Latin Modern
+imgs//Test_7/7_1/dataset/car_5629.png
+imgs//Test_7/7_1/dataset/car_7413.png
+imgs//Test_7/7_1/dataset/sar_5705.png
+imgs//Test_7/7_1/dataset/sar_7153.png
+imgs//Test_7/7_1/dataset/distribution_squares.png
+imgs//Test_7/7_1/dataset/distribution_circles.png
+imgs//Test_7/7_1/train_test_acc.png
+imgs//Test_7/7_1/train_test_loss.png
+imgs/Test_7/7_2/dataset/car_1.png
+imgs/Test_7/7_2/dataset/car_3116.png
+imgs/Test_7/7_2/dataset/sar_9.png
+imgs/Test_7/7_2/dataset/sar_3873.png
+imgs/Test_7/7_2/dataset/car_ci_distribution_hist.png
+imgs/Test_7/7_2/dataset/sar_sq_distribution_hist.png
+imgs/Test_7/7_2/train_test_acc.png
+imgs/Test_7/7_2/train_test_loss.png
+imgs/Test_7/7_2/failed/car_ci_failed_area_hist.png
+imgs/Test_7/7_2/failed/sar_sq_failed_area_hist.png
+imgs/Test_7/7_2/failed/car_ci_failed_right_left_scatter.png
+imgs/Test_7/7_2/failed/car_ci_failed_right_left_scatter.png
+imgs/Test_8/area_diference_hist.png
+imgs/Test_8/area_predict_true_line.png
+imgs/Test_8/loss.png
+imgs/Test_8/mae.png
+imgs/Test_9/dataset_9/circles_4.png
+imgs/Test_9/dataset_9/squares_4.png
+imgs/Test_9/dataset_9/nones_3.png
+imgs/Test_9/dataset_9/Squares_Area_Distribution_Hist.png
+imgs/Test_9/dataset_9/Circles_Area_Distribution_Hist.png
+imgs/Test_9/train_test_acc.png
+imgs/Test_9/train_test_loss.png
+imgs/Test_10/dataset_10/circles_9.png
+imgs/Test_10/dataset_10/squares_9.png
+imgs/Test_9/dataset_9/Squares_Area_Distribution_Hist.png
+imgs/Test_9/dataset_9/Circles_Area_Distribution_Hist.png
+imgs/Test_9/train_test_acc.png
+imgs/Test_9/train_test_loss.png
+Chapters/Conclusion.tex
+Covers/Bibliography.tex
+Chapters/ApendixA.tex
+Chapters/ApendixB.tex
+Covers/Declaration.tex
+ ***********
+
+
+LaTeX Warning: There were multiply-defined labels.
+
+Package rerunfilecheck Info: File `main.out' has not changed.
+(rerunfilecheck)             Checksum: D41D8CD98F00B204E9800998ECF8427E;0.
+Package logreq Info: Writing requests to 'main.run.xml'.
+\openout1 = `main.run.xml'.
+
+ )
+(\end occurred inside a group at level 1)
+
+### semi simple group (level 1) entered at line 290 (\begingroup)
+### bottom level 
+Here is how much of TeX's memory you used:
+ 62150 strings out of 476305
+ 1402999 string characters out of 5792341
+ 2670244 words of memory out of 5000000
+ 82814 multiletter control sequences out of 15000+600000
+ 665022 words of font info for 187 fonts, out of 8000000 for 9000
+ 0 hyphenation exceptions out of 8191
+ 108i,22n,130p,10901b,31918s stack positions out of 10000i,1000n,20000p,200000b,200000s
+</home/fred/.miktex/texmfs/install/fonts/type1/public/amsfonts/
+euler/eurb10.pfb></home/fred/.miktex/texmfs/install/fonts/type1/public/lm/lmcsc
+10.pfb></home/fred/.miktex/texmfs/install/fonts/type1/public/lm/lmmi10.pfb></ho
+me/fred/.miktex/texmfs/install/fonts/type1/public/lm/lmmi8.pfb></home/fred/.mik
+tex/texmfs/install/fonts/type1/public/lm/lmr10.pfb></home/fred/.miktex/texmfs/i
+nstall/fonts/type1/public/lm/lmr12.pfb></home/fred/.miktex/texmfs/install/fonts
+/type1/public/lm/lmr8.pfb></home/fred/.miktex/texmfs/install/fonts/type1/public
+/lm/lmr9.pfb></home/fred/.miktex/texmfs/install/fonts/type1/public/lm/lmri10.pf
+b></home/fred/.miktex/texmfs/install/fonts/type1/public/lm/lmri8.pfb></home/fre
+d/.miktex/texmfs/install/fonts/type1/public/lm/lmtt10.pfb>
+Output written on main.pdf (63 pages, 1251668 bytes).
+PDF statistics:
+ 1060 PDF objects out of 1200 (max. 8388607)
+ 216 named destinations out of 1000 (max. 500000)
+ 69088 words of extra memory for PDF output out of 74296 (max. 10000000)
+

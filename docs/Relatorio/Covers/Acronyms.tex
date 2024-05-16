@@ -1,0 +1,50 @@
+%----------------------------------------------------------------------------------------
+%   Acronyms
+%----------------------------------------------------------------------------------------
+
+\newacronym{dns}{DNS}{Domain Name System}
+\newacronym{adsl}{ADSL}{Assimetric Digital Subscriber Line}
+\newacronym{ascii}{ASCII}{American Standard Code for Information Interchange}
+\newacronym{bios}{BIOS}{Basic Input/Output System}
+\newacronym{bit}{bit}{Digito binário}
+\newacronym{byte}{Byte}{Unidade de informação digital composta por oito bits}
+\newacronym{cpu}{CPU}{Central Processing Unit}
+\newacronym{codec}{CODEC}{COmpression/DECompression}
+\newacronym{dll}{DLL}{Dynamic Link Library}
+\newacronym{dhcp}{DHCP}{Dynamic Host Configuration Protocol}
+\newacronym{ftp}{FTP}{File Transfer Protocol}
+\newacronym{ip}{IP}{Internet Protocol}
+\newacronym{isp}{ISP}{Internet Service Provider}
+\newacronym{so}{SO}{Sistema Operativo}
+\newacronym{tcp}{TCP}{Transmission Control Protocol}
+\newacronym{abc}{ABC}{A lista de acrónimos deve ficar ordenada alfabeticamente}
+
+
+%----------------------------------------------------------------------------------------
+%   Formatação da página dos acrónimos
+%----------------------------------------------------------------------------------------
+\renewcommand{\acronymname}{Lista de Abreviaturas}
+% \markboth{\spacedlowsmallcaps{\acronymname}}{\spacedlowsmallcaps{\acronymname}}
+\refstepcounter{dummy}
+\phantomsection 
+\addcontentsline{toc}{chapter}{\acronymname}
+% \addtocontents{toc}{\protect\vspace{\beforebibskip}} % to have the bib a bit from the rest in the toc
+
+%  serve para eliminar quebras de página a mais
+\begingroup
+\let\clearpage\relax
+\let\cleardoublepage\relax
+\let\cleardoublepage\relax
+
+
+\glsaddall
+
+\printglossary[type=\acronymtype,style=super,title=\acronymname]
+
+% as definições de abreviaturas estão no ficheiro
+% 	Covers/Acronyms-list.tex
+
+
+\endgroup	
+
+\cleardoublepage

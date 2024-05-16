@@ -1,0 +1,207 @@
+% $ biblatex auxiliary file $
+% $ biblatex bbl format version 3.3 $
+% Do not modify the above lines!
+%
+% This is an auxiliary file used by the 'biblatex' package.
+% This file may safely be deleted. It will be recreated by
+% biber as required.
+%
+\begingroup
+\makeatletter
+\@ifundefined{ver@biblatex.sty}
+  {\@latex@error
+     {Missing 'biblatex' package}
+     {The bibliography requires the 'biblatex' package.}
+      \aftergroup\endinput}
+  {}
+\endgroup
+
+
+\refsection{0}
+  \datalist[entry]{nyt/global//global/global/global}
+    \entry{Darwin1859}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=a14236c2ceb2dd05dcdab8227460aea1}{%
+           family={Darwin},
+           familyi={D\bibinitperiod},
+           given={C.},
+           giveni={C\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {John Murray}%
+      }
+      \strng{namehash}{a14236c2ceb2dd05dcdab8227460aea1}
+      \strng{fullhash}{a14236c2ceb2dd05dcdab8227460aea1}
+      \strng{fullhashraw}{a14236c2ceb2dd05dcdab8227460aea1}
+      \strng{bibnamehash}{a14236c2ceb2dd05dcdab8227460aea1}
+      \strng{authorbibnamehash}{a14236c2ceb2dd05dcdab8227460aea1}
+      \strng{authornamehash}{a14236c2ceb2dd05dcdab8227460aea1}
+      \strng{authorfullhash}{a14236c2ceb2dd05dcdab8227460aea1}
+      \strng{authorfullhashraw}{a14236c2ceb2dd05dcdab8227460aea1}
+      \field{sortinit}{D}
+      \field{sortinithash}{6f385f66841fb5e82009dc833c761848}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{title}{On the Origin of Species by Means of Natural Selection}
+      \field{year}{1859}
+    \endentry
+    \entry{Koza1992}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=34e11484ceb01437ef4dab79c4b8c38d}{%
+           family={Koza},
+           familyi={K\bibinitperiod},
+           given={J.\bibnamedelimi R.},
+           giveni={J\bibinitperiod\bibinitdelim R\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{34e11484ceb01437ef4dab79c4b8c38d}
+      \strng{fullhash}{34e11484ceb01437ef4dab79c4b8c38d}
+      \strng{fullhashraw}{34e11484ceb01437ef4dab79c4b8c38d}
+      \strng{bibnamehash}{34e11484ceb01437ef4dab79c4b8c38d}
+      \strng{authorbibnamehash}{34e11484ceb01437ef4dab79c4b8c38d}
+      \strng{authornamehash}{34e11484ceb01437ef4dab79c4b8c38d}
+      \strng{authorfullhash}{34e11484ceb01437ef4dab79c4b8c38d}
+      \strng{authorfullhashraw}{34e11484ceb01437ef4dab79c4b8c38d}
+      \field{sortinit}{K}
+      \field{sortinithash}{c02bf6bff1c488450c352b40f5d853ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{journaltitle}{Cambridge MA: The MIT Press.}
+      \field{title}{Genetic Programming. On the programming of computers by means of natural selection}
+      \field{year}{1992}
+    \endentry
+    \entry{oetiker2000nss}{book}{}{}
+      \name{author}{4}{}{%
+        {{un=0,uniquepart=base,hash=3b8673baa791c419ebeb1f50411d9b50}{%
+           family={Oetiker},
+           familyi={O\bibinitperiod},
+           given={T.},
+           giveni={T\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=4036abde1e7548a72578419041a3738e}{%
+           family={Partl},
+           familyi={P\bibinitperiod},
+           given={H.},
+           giveni={H\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=a22e1b6e5ee9c60c3bf0af606cec44f2}{%
+           family={Hyna},
+           familyi={H\bibinitperiod},
+           given={I.},
+           giveni={I\bibinitperiod},
+           givenun=0}}%
+        {{un=0,uniquepart=base,hash=765eaab1ba41657fe52ecd33f34c2f4e}{%
+           family={Schlegl},
+           familyi={S\bibinitperiod},
+           given={E.},
+           giveni={E\bibinitperiod},
+           givenun=0}}%
+      }
+      \strng{namehash}{a889a1560def4fc6f02617169df01cf0}
+      \strng{fullhash}{109d1e040e2d712f4a841a0c236d79fb}
+      \strng{fullhashraw}{109d1e040e2d712f4a841a0c236d79fb}
+      \strng{bibnamehash}{a889a1560def4fc6f02617169df01cf0}
+      \strng{authorbibnamehash}{a889a1560def4fc6f02617169df01cf0}
+      \strng{authornamehash}{a889a1560def4fc6f02617169df01cf0}
+      \strng{authorfullhash}{109d1e040e2d712f4a841a0c236d79fb}
+      \strng{authorfullhashraw}{109d1e040e2d712f4a841a0c236d79fb}
+      \field{sortinit}{O}
+      \field{sortinithash}{2cd7140a07aea5341f9e2771efe90aae}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{http://www.ctan.org/tex-archive/info/lshort/english/lshort.pdf}}
+      \field{title}{{The Not So Short Introduction to \LaTeXe}}
+      \field{year}{2000}
+    \endentry
+    \entry{Rudolph2016}{book}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=c0649e317f5448568f1e709483dbd33c}{%
+           family={Rudolph},
+           familyi={R\bibinitperiod},
+           given={Konrad},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \list{publisher}{1}{%
+        {CTAN}%
+      }
+      \strng{namehash}{c0649e317f5448568f1e709483dbd33c}
+      \strng{fullhash}{c0649e317f5448568f1e709483dbd33c}
+      \strng{fullhashraw}{c0649e317f5448568f1e709483dbd33c}
+      \strng{bibnamehash}{c0649e317f5448568f1e709483dbd33c}
+      \strng{authorbibnamehash}{c0649e317f5448568f1e709483dbd33c}
+      \strng{authornamehash}{c0649e317f5448568f1e709483dbd33c}
+      \strng{authorfullhash}{c0649e317f5448568f1e709483dbd33c}
+      \strng{authorfullhashraw}{c0649e317f5448568f1e709483dbd33c}
+      \field{sortinit}{R}
+      \field{sortinithash}{5e1c39a9d46ffb6bebd8f801023a9486}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{note}{\url{http://mirrors.fe.up.pt/pub/CTAN/macros/latex/contrib/minted/minted.pdf}}
+      \field{title}{The minted package: Highlighted source code in \LaTeXe}
+      \field{year}{2016}
+    \endentry
+    \entry{Sims1992}{inproceedings}{}{}
+      \name{author}{1}{}{%
+        {{un=0,uniquepart=base,hash=e82e28049026b1f21b03e44e54185318}{%
+           family={Sims},
+           familyi={S\bibinitperiod},
+           given={Karl},
+           giveni={K\bibinitperiod},
+           givenun=0}}%
+      }
+      \name{editor}{2}{}{%
+        {{hash=3753afcb01bf332c638c173e7949fe54}{%
+           family={Varela},
+           familyi={V\bibinitperiod},
+           given={F.},
+           giveni={F\bibinitperiod}}}%
+        {{hash=b18ecc800fbee5935358b4b016c2de0f}{%
+           family={Bourgine},
+           familyi={B\bibinitperiod},
+           given={P.},
+           giveni={P\bibinitperiod}}}%
+      }
+      \list{location}{1}{%
+        {Paris, FR}%
+      }
+      \list{publisher}{1}{%
+        {MIT Press}%
+      }
+      \strng{namehash}{e82e28049026b1f21b03e44e54185318}
+      \strng{fullhash}{e82e28049026b1f21b03e44e54185318}
+      \strng{fullhashraw}{e82e28049026b1f21b03e44e54185318}
+      \strng{bibnamehash}{e82e28049026b1f21b03e44e54185318}
+      \strng{authorbibnamehash}{e82e28049026b1f21b03e44e54185318}
+      \strng{authornamehash}{e82e28049026b1f21b03e44e54185318}
+      \strng{authorfullhash}{e82e28049026b1f21b03e44e54185318}
+      \strng{authorfullhashraw}{e82e28049026b1f21b03e44e54185318}
+      \strng{editorbibnamehash}{3e96d3beb6045e8642e799b54a9f9f43}
+      \strng{editornamehash}{3e96d3beb6045e8642e799b54a9f9f43}
+      \strng{editorfullhash}{3e96d3beb6045e8642e799b54a9f9f43}
+      \strng{editorfullhashraw}{3e96d3beb6045e8642e799b54a9f9f43}
+      \field{sortinit}{S}
+      \field{sortinithash}{b164b07b29984b41daf1e85279fbc5ab}
+      \field{extradatescope}{labelyear}
+      \field{labeldatesource}{}
+      \field{labelnamesource}{author}
+      \field{labeltitlesource}{title}
+      \field{booktitle}{Toward a Practice of Autonomous Systems: Proceedings of the First European Conference on Artificial Life}
+      \field{title}{{Interactive evolution of dynamical systems}}
+      \field{year}{1992}
+      \field{pages}{171\bibrangedash 178}
+      \range{pages}{8}
+    \endentry
+  \enddatalist
+\endrefsection
+\endinput
+
