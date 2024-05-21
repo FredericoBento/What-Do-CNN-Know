@@ -11,12 +11,10 @@ from variables import *
 matplotlib.use('QtAgg')
 
 
-# Dataset 2 Circles with different sizes, per image
+circle_folder_train = 'Datasets/Dataset_R2/train/circles'
+circle_folder_test = 'Datasets/Dataset_R2/test/circles'
 
-circle_folder_train = 'Datasets/Dataset_8/train/circles'
-circle_folder_test = 'Datasets/Dataset_8/test/circles'
-
-data_folder = 'Datasets/Dataset_8/data'
+data_folder = 'Datasets/Dataset_R2/data'
 seed = 122
 np.random.seed(seed)
 
@@ -30,10 +28,10 @@ file.write(str(seed))
 
 start = pc()
 ci_big_writer = csv.writer(open(os.path.join(data_folder, 'circles_big.csv'), 'w'))
-ci_big_writer.writerow(['Filename', 'X', 'Y', 'Radius', 'Area', 'Distance From Center', 'Distance From Center Further', 'Proportion', 'Color', 'Bg_color', 'Variant'])
+ci_big_writer.writerow(['Filename', 'X', 'Y', 'Radius', 'Area', 'Distance From Center', 'Distance From Center Further', 'Proportion', 'Distance', 'Color', 'Bg_color', 'Variant'])
 
 ci_small_writer = csv.writer(open(os.path.join(data_folder, 'circles_small.csv'), 'w'))
-ci_small_writer.writerow(['Filename', 'X', 'Y', 'Radius', 'Area', 'Distance From Center', 'Distance From Center Further', 'Proportion', 'Color', 'Bg_color', 'Variant'])
+ci_small_writer.writerow(['Filename', 'X', 'Y', 'Radius', 'Area', 'Distance From Center', 'Distance From Center Further', 'Proportion', 'Distance', 'Color', 'Bg_color', 'Variant'])
 
 fig = plt.figure(figsize=(img_width/100, img_height/100))
 fig.subplots_adjust(left=0, right=1, top=1, bottom=0)
@@ -103,6 +101,9 @@ for j in range(2):
         small_proportion = ci_small_area / ci_big_area
         small_proportion = round(small_proportion, 3)
 
+        distance_between_centers = np.sqrt((ci_big_x - ci_small_x)**2 + (ci_big_y - ci_small_y)**2)
+        distance_between_centers = round(distance_between_centers, 3)
+
         # Draw circles
         ax.add_patch(patches.Circle((ci_big_x, ci_big_y), ci_big_radius, color=ci_big_color))
         ax.add_patch(patches.Circle((ci_small_x, ci_small_y), ci_small_radius, color=ci_small_color))
@@ -121,8 +122,8 @@ for j in range(2):
 
         plt.clf()
         # Write CSV
-        ci_big_writer.writerow([filename, ci_big_x, ci_big_y, ci_big_radius, ci_big_area, ci_big_dfc, ci_big_dfc_f, big_proportion, ci_big_color, bg_color, variant])
-        ci_small_writer.writerow([filename, ci_small_x, ci_small_y, ci_small_radius, ci_small_area, ci_small_dfc, ci_small_dfc_f, small_proportion, ci_small_color, bg_color, variant])
+        ci_big_writer.writerow([filename, ci_big_x, ci_big_y, ci_big_radius, ci_big_area, ci_big_dfc, ci_big_dfc_f, big_proportion, distance_between_centers, ci_big_color, bg_color, variant])
+        ci_small_writer.writerow([filename, ci_small_x, ci_small_y, ci_small_radius, ci_small_area, ci_small_dfc, ci_small_dfc_f, small_proportion, distance_between_centers, ci_small_color, bg_color, variant])
         counter += 1
 
 end = pc()
