@@ -1,4 +1,4 @@
-This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.9)  16 MAY 2024 23:38
+This is pdfTeX, Version 3.141592653-2.6-1.40.26 (MiKTeX 24.4) (preloaded format=pdflatex 2024.5.9)  17 MAY 2024 15:41
 entering extended mode
  \write18 enabled.
  %&-line parsing enabled.
@@ -1988,6 +1988,9 @@ LaTeX Warning: Label `fig:enter-label' multiply defined.
 LaTeX Warning: Label `fig:enter-label' multiply defined.
 
 
+LaTeX Warning: Label `fig:enter-label' multiply defined.
+
+
 LaTeX Warning: Label `fig:sub2' multiply defined.
 
 
@@ -2018,10 +2021,7 @@ LaTeX Warning: Label `fig:sub2' multiply defined.
 LaTeX Warning: Label `fig:sub2' multiply defined.
 
 
-LaTeX Warning: Label `fig:enter-label' multiply defined.
-
-
-LaTeX Warning: Label `fig:enter-label' multiply defined.
+LaTeX Warning: Label `fig:sub2' multiply defined.
 
 
 LaTeX Warning: Label `fig:enter-label' multiply defined.
@@ -2622,33 +2622,33 @@ Overfull \hbox (38.53226pt too wide) in paragraph at lines 5--5
 
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
-<imgs/Test_5/dataset_5/square_5501.png, id=406, 361.35pt x 361.35pt>
-File: imgs/Test_5/dataset_5/square_5501.png Graphic file (type png)
-<use imgs/Test_5/dataset_5/square_5501.png>
-Package pdftex.def Info: imgs/Test_5/dataset_5/square_5501.png  used on input l
-ine 23.
+<imgs/Test_5/5/dataset/square_5501.png, id=411, 361.35pt x 361.35pt>
+File: imgs/Test_5/5/dataset/square_5501.png Graphic file (type png)
+<use imgs/Test_5/5/dataset/square_5501.png>
+Package pdftex.def Info: imgs/Test_5/5/dataset/square_5501.png  used on input l
+ine 22.
 (pdftex.def)             Requested size: 137.51932pt x 137.51843pt.
-<imgs/Test_5/dataset_5/square_cut_5501.png, id=408, 361.35pt x 361.35pt>
-File: imgs/Test_5/dataset_5/square_cut_5501.png Graphic file (type png)
-<use imgs/Test_5/dataset_5/square_cut_5501.png>
-Package pdftex.def Info: imgs/Test_5/dataset_5/square_cut_5501.png  used on inp
-ut line 24.
+<imgs/Test_5/5/dataset/square_cut_5501.png, id=413, 361.35pt x 361.35pt>
+File: imgs/Test_5/5/dataset/square_cut_5501.png Graphic file (type png)
+<use imgs/Test_5/5/dataset/square_cut_5501.png>
+Package pdftex.def Info: imgs/Test_5/5/dataset/square_cut_5501.png  used on inp
+ut line 23.
 (pdftex.def)             Requested size: 137.51932pt x 137.51843pt.
-<imgs/Test_5/dataset_5/Squares_Area_Distribution_Hist.png, id=409, 1927.2pt x 1
+<imgs/Test_5/5/dataset/Squares_Area_Distribution_Hist.png, id=414, 1927.2pt x 1
 084.05pt>
-File: imgs/Test_5/dataset_5/Squares_Area_Distribution_Hist.png Graphic file (ty
+File: imgs/Test_5/5/dataset/Squares_Area_Distribution_Hist.png Graphic file (ty
 pe png)
-<use imgs/Test_5/dataset_5/Squares_Area_Distribution_Hist.png>
-Package pdftex.def Info: imgs/Test_5/dataset_5/Squares_Area_Distribution_Hist.p
-ng  used on input line 30.
+<use imgs/Test_5/5/dataset/Squares_Area_Distribution_Hist.png>
+Package pdftex.def Info: imgs/Test_5/5/dataset/Squares_Area_Distribution_Hist.p
+ng  used on input line 29.
 (pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
-<imgs/Test_5/dataset_5/Partial_Squares_Area_Distribution_Hist.png, id=410, 1927
+<imgs/Test_5/5/dataset/Partial_Squares_Area_Distribution_Hist.png, id=415, 1927
 .2pt x 1084.05pt>
-File: imgs/Test_5/dataset_5/Partial_Squares_Area_Distribution_Hist.png Graphic 
+File: imgs/Test_5/5/dataset/Partial_Squares_Area_Distribution_Hist.png Graphic 
 file (type png)
-<use imgs/Test_5/dataset_5/Partial_Squares_Area_Distribution_Hist.png>
-Package pdftex.def Info: imgs/Test_5/dataset_5/Partial_Squares_Area_Distributio
-n_Hist.png  used on input line 36.
+<use imgs/Test_5/5/dataset/Partial_Squares_Area_Distribution_Hist.png>
+Package pdftex.def Info: imgs/Test_5/5/dataset/Partial_Squares_Area_Distributio
+n_Hist.png  used on input line 35.
 (pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
 Missing character: There is no ¨ in font lmsy10!
 
@@ -2657,27 +2657,27 @@ Overfull \vbox (6.75pt too high) has occurred while \output is active []
  [5
 
 
- <./imgs/Test_5/dataset_5/square_5501.png> <./imgs/Test_5/dataset_5/square_cut_
+ <./imgs/Test_5/5/dataset/square_5501.png> <./imgs/Test_5/5/dataset/square_cut_
 5501.png>]
-<imgs/Test_5/dataset_5/train_test_acc.png, id=418, 462.528pt x 346.896pt>
-File: imgs/Test_5/dataset_5/train_test_acc.png Graphic file (type png)
-<use imgs/Test_5/dataset_5/train_test_acc.png>
-Package pdftex.def Info: imgs/Test_5/dataset_5/train_test_acc.png  used on inpu
-t line 45.
+<imgs/Test_5/5/train_test_acc.png, id=423, 462.528pt x 346.896pt>
+File: imgs/Test_5/5/train_test_acc.png Graphic file (type png)
+<use imgs/Test_5/5/train_test_acc.png>
+Package pdftex.def Info: imgs/Test_5/5/train_test_acc.png  used on input line 4
+4.
 (pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
-<imgs/Test_5/dataset_5/train_test_loss.png, id=419, 462.528pt x 346.896pt>
-File: imgs/Test_5/dataset_5/train_test_loss.png Graphic file (type png)
-<use imgs/Test_5/dataset_5/train_test_loss.png>
-Package pdftex.def Info: imgs/Test_5/dataset_5/train_test_loss.png  used on inp
-ut line 47.
+<imgs/Test_5/5/train_test_loss.png, id=424, 462.528pt x 346.896pt>
+File: imgs/Test_5/5/train_test_loss.png Graphic file (type png)
+<use imgs/Test_5/5/train_test_loss.png>
+Package pdftex.def Info: imgs/Test_5/5/train_test_loss.png  used on input line 
+46.
 (pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
 
 Missing character: There is no ¨ in font lmsy10!
 
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
- [6 <./imgs/Test_5/dataset_5/Squares_Area_Distribution_Hist.png> <./imgs/Test_5
-/dataset_5/Partial_Squares_Area_Distribution_Hist.png>]
+ [6 <./imgs/Test_5/5/dataset/Squares_Area_Distribution_Hist.png> <./imgs/Test_5
+/5/dataset/Partial_Squares_Area_Distribution_Hist.png>]
 Overfull \vbox (14.6973pt too high) has occurred while \output is active []
 
 
@@ -2685,11 +2685,11 @@ Missing character: There is no ¨ in font lmsy10!
 
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
- [7 <./imgs/Test_5/dataset_5/train_test_acc.png> <./imgs/Test_5/dataset_5/train
-_test_loss.png>]
+ [7 <./imgs/Test_5/5/train_test_acc.png> <./imgs/Test_5/5/train_test_loss.png>]
 LaTeX Font Info:    Trying to load font information for T1+lmtt on input line 5
-2.
- (/home/fred/.miktex/texmfs/install/tex/latex/lm/t1lmtt.fd
+1.
+
+(/home/fred/.miktex/texmfs/install/tex/latex/lm/t1lmtt.fd
 File: t1lmtt.fd 2015/05/01 v1.6.1 Font defs for Latin Modern
 )
 Package microtype Info: Loading generic protrusion settings for font family
@@ -2704,13 +2704,27 @@ Missing character: There is no ¨ in font lmsy10!
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
  [8{/home/fred/.miktex/texmfs/install/fonts/enc/dvips/lm/lm-rm.enc}]
+<imgs/Test_5/5_1/dataset/square_5.png, id=445, 361.35pt x 361.35pt>
+File: imgs/Test_5/5_1/dataset/square_5.png Graphic file (type png)
+<use imgs/Test_5/5_1/dataset/square_5.png>
+Package pdftex.def Info: imgs/Test_5/5_1/dataset/square_5.png  used on input li
+ne 97.
+(pdftex.def)             Requested size: 137.51932pt x 137.51843pt.
+<imgs/Test_5/5_1/dataset/square_cut_6.png, id=446, 361.35pt x 361.35pt>
+File: imgs/Test_5/5_1/dataset/square_cut_6.png Graphic file (type png)
+<use imgs/Test_5/5_1/dataset/square_cut_6.png>
+Package pdftex.def Info: imgs/Test_5/5_1/dataset/square_cut_6.png  used on inpu
+t line 98.
+(pdftex.def)             Requested size: 137.51932pt x 137.51843pt.
+
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
- [9]
+ [9 <./imgs/Test_5/5_1/dataset/square_5.png> <./imgs/Test_5/5_1/dataset/square_
+cut_6.png>]
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 
@@ -2728,45 +2742,45 @@ Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
  [12]
 Missing character: There is no ¨ in font lmsy10!
-<imgs//Test_7/7_1/dataset/car_5629.png, id=457, 361.35pt x 361.35pt>
+<imgs//Test_7/7_1/dataset/car_5629.png, id=466, 361.35pt x 361.35pt>
 File: imgs//Test_7/7_1/dataset/car_5629.png Graphic file (type png)
 <use imgs//Test_7/7_1/dataset/car_5629.png>
 Package pdftex.def Info: imgs//Test_7/7_1/dataset/car_5629.png  used on input l
-ine 155.
+ine 168.
 (pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
-<imgs//Test_7/7_1/dataset/car_7413.png, id=458, 361.35pt x 361.35pt>
+<imgs//Test_7/7_1/dataset/car_7413.png, id=467, 361.35pt x 361.35pt>
 File: imgs//Test_7/7_1/dataset/car_7413.png Graphic file (type png)
 <use imgs//Test_7/7_1/dataset/car_7413.png>
 Package pdftex.def Info: imgs//Test_7/7_1/dataset/car_7413.png  used on input l
-ine 156.
+ine 169.
 (pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
-<imgs//Test_7/7_1/dataset/sar_5705.png, id=459, 361.35pt x 361.35pt>
+<imgs//Test_7/7_1/dataset/sar_5705.png, id=468, 361.35pt x 361.35pt>
 File: imgs//Test_7/7_1/dataset/sar_5705.png Graphic file (type png)
 <use imgs//Test_7/7_1/dataset/sar_5705.png>
 Package pdftex.def Info: imgs//Test_7/7_1/dataset/sar_5705.png  used on input l
-ine 162.
+ine 175.
 (pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
-<imgs//Test_7/7_1/dataset/sar_7153.png, id=460, 361.35pt x 361.35pt>
+<imgs//Test_7/7_1/dataset/sar_7153.png, id=469, 361.35pt x 361.35pt>
 File: imgs//Test_7/7_1/dataset/sar_7153.png Graphic file (type png)
 <use imgs//Test_7/7_1/dataset/sar_7153.png>
 Package pdftex.def Info: imgs//Test_7/7_1/dataset/sar_7153.png  used on input l
-ine 163.
+ine 176.
 (pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
-<imgs//Test_7/7_1/dataset/distribution_squares.png, id=461, 1323.94624pt x 867.
+<imgs//Test_7/7_1/dataset/distribution_squares.png, id=470, 1323.94624pt x 867.
 24pt>
 File: imgs//Test_7/7_1/dataset/distribution_squares.png Graphic file (type png)
 
 <use imgs//Test_7/7_1/dataset/distribution_squares.png>
 Package pdftex.def Info: imgs//Test_7/7_1/dataset/distribution_squares.png  use
-d on input line 169.
+d on input line 182.
 (pdftex.def)             Requested size: 392.9055pt x 257.3686pt.
-<imgs//Test_7/7_1/dataset/distribution_circles.png, id=462, 1332.98pt x 860.213
+<imgs//Test_7/7_1/dataset/distribution_circles.png, id=471, 1332.98pt x 860.213
 75pt>
 File: imgs//Test_7/7_1/dataset/distribution_circles.png Graphic file (type png)
 
 <use imgs//Test_7/7_1/dataset/distribution_circles.png>
 Package pdftex.def Info: imgs//Test_7/7_1/dataset/distribution_circles.png  use
-d on input line 175.
+d on input line 188.
 (pdftex.def)             Requested size: 392.9055pt x 253.55084pt.
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
@@ -2776,17 +2790,17 @@ Overfull \vbox (6.75pt too high) has occurred while \output is active []
  [13 <./imgs//Test_7/7_1/dataset/car_5629.png> <./imgs//Test_7/7_1/dataset/car_
 7413.png> <./imgs//Test_7/7_1/dataset/sar_5705.png> <./imgs//Test_7/7_1/dataset
 /sar_7153.png>]
-<imgs//Test_7/7_1/train_test_acc.png, id=471, 462.528pt x 346.896pt>
+<imgs//Test_7/7_1/train_test_acc.png, id=480, 462.528pt x 346.896pt>
 File: imgs//Test_7/7_1/train_test_acc.png Graphic file (type png)
 <use imgs//Test_7/7_1/train_test_acc.png>
 Package pdftex.def Info: imgs//Test_7/7_1/train_test_acc.png  used on input lin
-e 182.
+e 195.
 (pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
-<imgs//Test_7/7_1/train_test_loss.png, id=472, 462.528pt x 346.896pt>
+<imgs//Test_7/7_1/train_test_loss.png, id=481, 462.528pt x 346.896pt>
 File: imgs//Test_7/7_1/train_test_loss.png Graphic file (type png)
 <use imgs//Test_7/7_1/train_test_loss.png>
 Package pdftex.def Info: imgs//Test_7/7_1/train_test_loss.png  used on input li
-ne 184.
+ne 197.
 (pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
 
 Missing character: There is no ¨ in font lmsy10!
@@ -2811,45 +2825,45 @@ Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
  [16]
 Missing character: There is no ¨ in font lmsy10!
-<imgs/Test_7/7_2/dataset/car_1.png, id=490, 361.35pt x 361.35pt>
+<imgs/Test_7/7_2/dataset/car_1.png, id=499, 361.35pt x 361.35pt>
 File: imgs/Test_7/7_2/dataset/car_1.png Graphic file (type png)
 <use imgs/Test_7/7_2/dataset/car_1.png>
 Package pdftex.def Info: imgs/Test_7/7_2/dataset/car_1.png  used on input line 
-234.
+247.
 (pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
-<imgs/Test_7/7_2/dataset/car_3116.png, id=491, 361.35pt x 361.35pt>
+<imgs/Test_7/7_2/dataset/car_3116.png, id=500, 361.35pt x 361.35pt>
 File: imgs/Test_7/7_2/dataset/car_3116.png Graphic file (type png)
 <use imgs/Test_7/7_2/dataset/car_3116.png>
 Package pdftex.def Info: imgs/Test_7/7_2/dataset/car_3116.png  used on input li
-ne 235.
+ne 248.
 (pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
-<imgs/Test_7/7_2/dataset/sar_9.png, id=492, 361.35pt x 361.35pt>
+<imgs/Test_7/7_2/dataset/sar_9.png, id=501, 361.35pt x 361.35pt>
 File: imgs/Test_7/7_2/dataset/sar_9.png Graphic file (type png)
 <use imgs/Test_7/7_2/dataset/sar_9.png>
 Package pdftex.def Info: imgs/Test_7/7_2/dataset/sar_9.png  used on input line 
-241.
+254.
 (pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
-<imgs/Test_7/7_2/dataset/sar_3873.png, id=493, 361.35pt x 361.35pt>
+<imgs/Test_7/7_2/dataset/sar_3873.png, id=502, 361.35pt x 361.35pt>
 File: imgs/Test_7/7_2/dataset/sar_3873.png Graphic file (type png)
 <use imgs/Test_7/7_2/dataset/sar_3873.png>
 Package pdftex.def Info: imgs/Test_7/7_2/dataset/sar_3873.png  used on input li
-ne 242.
+ne 255.
 (pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
-<imgs/Test_7/7_2/dataset/car_ci_distribution_hist.png, id=494, 1927.2pt x 1084.
+<imgs/Test_7/7_2/dataset/car_ci_distribution_hist.png, id=503, 1927.2pt x 1084.
 05pt>
 File: imgs/Test_7/7_2/dataset/car_ci_distribution_hist.png Graphic file (type p
 ng)
 <use imgs/Test_7/7_2/dataset/car_ci_distribution_hist.png>
 Package pdftex.def Info: imgs/Test_7/7_2/dataset/car_ci_distribution_hist.png  
-used on input line 248.
+used on input line 261.
 (pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
-<imgs/Test_7/7_2/dataset/sar_sq_distribution_hist.png, id=495, 1927.2pt x 1084.
+<imgs/Test_7/7_2/dataset/sar_sq_distribution_hist.png, id=504, 1927.2pt x 1084.
 05pt>
 File: imgs/Test_7/7_2/dataset/sar_sq_distribution_hist.png Graphic file (type p
 ng)
 <use imgs/Test_7/7_2/dataset/sar_sq_distribution_hist.png>
 Package pdftex.def Info: imgs/Test_7/7_2/dataset/sar_sq_distribution_hist.png  
-used on input line 254.
+used on input line 267.
 (pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
@@ -2859,17 +2873,17 @@ Overfull \vbox (6.75pt too high) has occurred while \output is active []
  [17 <./imgs/Test_7/7_2/dataset/car_1.png> <./imgs/Test_7/7_2/dataset/car_3116.
 png> <./imgs/Test_7/7_2/dataset/sar_9.png> <./imgs/Test_7/7_2/dataset/sar_3873.
 png>]
-<imgs/Test_7/7_2/train_test_acc.png, id=505, 462.528pt x 346.896pt>
+<imgs/Test_7/7_2/train_test_acc.png, id=514, 462.528pt x 346.896pt>
 File: imgs/Test_7/7_2/train_test_acc.png Graphic file (type png)
 <use imgs/Test_7/7_2/train_test_acc.png>
 Package pdftex.def Info: imgs/Test_7/7_2/train_test_acc.png  used on input line
- 261.
+ 274.
 (pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
-<imgs/Test_7/7_2/train_test_loss.png, id=506, 462.528pt x 346.896pt>
+<imgs/Test_7/7_2/train_test_loss.png, id=515, 462.528pt x 346.896pt>
 File: imgs/Test_7/7_2/train_test_loss.png Graphic file (type png)
 <use imgs/Test_7/7_2/train_test_loss.png>
 Package pdftex.def Info: imgs/Test_7/7_2/train_test_loss.png  used on input lin
-e 263.
+e 276.
 (pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
 
 Missing character: There is no ¨ in font lmsy10!
@@ -2888,40 +2902,40 @@ Overfull \vbox (6.75pt too high) has occurred while \output is active []
  [19 <./imgs/Test_7/7_2/train_test_acc.png> <./imgs/Test_7/7_2/train_test_loss.
 png>]
 Missing character: There is no ¨ in font lmsy10!
-<imgs/Test_7/7_2/failed/car_ci_failed_area_hist.png, id=519, 1927.2pt x 1084.05
+<imgs/Test_7/7_2/failed/car_ci_failed_area_hist.png, id=528, 1927.2pt x 1084.05
 pt>
 File: imgs/Test_7/7_2/failed/car_ci_failed_area_hist.png Graphic file (type png
 )
 <use imgs/Test_7/7_2/failed/car_ci_failed_area_hist.png>
 Package pdftex.def Info: imgs/Test_7/7_2/failed/car_ci_failed_area_hist.png  us
-ed on input line 296.
+ed on input line 309.
 (pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
-<imgs/Test_7/7_2/failed/sar_sq_failed_area_hist.png, id=520, 1927.2pt x 1084.05
+<imgs/Test_7/7_2/failed/sar_sq_failed_area_hist.png, id=529, 1927.2pt x 1084.05
 pt>
 File: imgs/Test_7/7_2/failed/sar_sq_failed_area_hist.png Graphic file (type png
 )
 <use imgs/Test_7/7_2/failed/sar_sq_failed_area_hist.png>
 Package pdftex.def Info: imgs/Test_7/7_2/failed/sar_sq_failed_area_hist.png  us
-ed on input line 303.
+ed on input line 316.
 (pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
 Missing character: There is no ¨ in font lmsy10!
 
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
  [20 <./imgs/Test_7/7_2/failed/car_ci_failed_area_hist.png>]
-<imgs/Test_7/7_2/failed/car_ci_failed_right_left_scatter.png, id=527, 1927.2pt 
+<imgs/Test_7/7_2/failed/car_ci_failed_right_left_scatter.png, id=536, 1927.2pt 
 x 1084.05pt>
 File: imgs/Test_7/7_2/failed/car_ci_failed_right_left_scatter.png Graphic file 
 (type png)
 <use imgs/Test_7/7_2/failed/car_ci_failed_right_left_scatter.png>
 Package pdftex.def Info: imgs/Test_7/7_2/failed/car_ci_failed_right_left_scatte
-r.png  used on input line 310.
+r.png  used on input line 323.
 (pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
 File: imgs/Test_7/7_2/failed/car_ci_failed_right_left_scatter.png Graphic file 
 (type png)
 <use imgs/Test_7/7_2/failed/car_ci_failed_right_left_scatter.png>
 Package pdftex.def Info: imgs/Test_7/7_2/failed/car_ci_failed_right_left_scatte
-r.png  used on input line 317.
+r.png  used on input line 330.
 (pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
 
 Missing character: There is no ¨ in font lmsy10!
@@ -2932,119 +2946,121 @@ Overfull \vbox (6.75pt too high) has occurred while \output is active []
 failed/car_ci_failed_right_left_scatter.png>]
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
-Missing character: There is no ¨ in font lmsy10!
-! Missing $ inserted.
-<inserted text> 
-                $
-l.344 ... dataset foi tambem utilizado no teste 5_
-                                                  1.
-? 
-! Missing $ inserted.
-<inserted text> 
-                $
-l.345 
-      
-? 
-<imgs/Test_8/area_diference_hist.png, id=534, 1927.2pt x 1084.05pt>
-File: imgs/Test_8/area_diference_hist.png Graphic file (type png)
-<use imgs/Test_8/area_diference_hist.png>
-Package pdftex.def Info: imgs/Test_8/area_diference_hist.png  used on input lin
-e 349.
-(pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
+<imgs/Test_8/dataset/square_22.png, id=543, 361.35pt x 361.35pt>
+File: imgs/Test_8/dataset/square_22.png Graphic file (type png)
+<use imgs/Test_8/dataset/square_22.png>
+Package pdftex.def Info: imgs/Test_8/dataset/square_22.png  used on input line 
+354.
+(pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
 Missing character: There is no ¨ in font lmsy10!
 
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
  [22]
-<imgs/Test_8/area_predict_true_line.png, id=539, 1927.2pt x 1084.05pt>
-File: imgs/Test_8/area_predict_true_line.png Graphic file (type png)
-<use imgs/Test_8/area_predict_true_line.png>
-Package pdftex.def Info: imgs/Test_8/area_predict_true_line.png  used on input 
-line 357.
-(pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
-<imgs/Test_8/loss.png, id=540, 462.528pt x 346.896pt>
+<imgs/Test_8/loss.png, id=549, 462.528pt x 346.896pt>
 File: imgs/Test_8/loss.png Graphic file (type png)
 <use imgs/Test_8/loss.png>
-Package pdftex.def Info: imgs/Test_8/loss.png  used on input line 364.
+Package pdftex.def Info: imgs/Test_8/loss.png  used on input line 360.
+(pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
+<imgs/Test_8/mae.png, id=550, 462.528pt x 346.896pt>
+File: imgs/Test_8/mae.png Graphic file (type png)
+<use imgs/Test_8/mae.png>
+Package pdftex.def Info: imgs/Test_8/mae.png  used on input line 362.
 (pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
 
 Missing character: There is no ¨ in font lmsy10!
 
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
- [23 <./imgs/Test_8/area_diference_hist.png> <./imgs/Test_8/area_predict_true_l
-ine.png>]
-<imgs/Test_8/mae.png, id=549, 462.528pt x 346.896pt>
-File: imgs/Test_8/mae.png Graphic file (type png)
-<use imgs/Test_8/mae.png>
-Package pdftex.def Info: imgs/Test_8/mae.png  used on input line 372.
-(pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
+ [23 <./imgs/Test_8/dataset/square_22.png>]
+Overfull \vbox (14.6973pt too high) has occurred while \output is active []
 
-Missing character: There is no ¨ in font lmsy10!
+
 Missing character: There is no ¨ in font lmsy10!
 
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
  [24 <./imgs/Test_8/loss.png> <./imgs/Test_8/mae.png>]
-<imgs/Test_9/dataset_9/circles_4.png, id=556, 361.35pt x 361.35pt>
+<imgs/Test_8/area_predict_true_line.png, id=565, 1927.2pt x 1084.05pt>
+File: imgs/Test_8/area_predict_true_line.png Graphic file (type png)
+<use imgs/Test_8/area_predict_true_line.png>
+Package pdftex.def Info: imgs/Test_8/area_predict_true_line.png  used on input 
+line 371.
+(pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
+<imgs/Test_8/area_diference_hist.png, id=566, 1927.2pt x 1084.05pt>
+File: imgs/Test_8/area_diference_hist.png Graphic file (type png)
+<use imgs/Test_8/area_diference_hist.png>
+Package pdftex.def Info: imgs/Test_8/area_diference_hist.png  used on input lin
+e 377.
+(pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
+
+Missing character: There is no ¨ in font lmsy10!
+Missing character: There is no ¨ in font lmsy10!
+Missing character: There is no ¨ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [25 <./imgs/Test_8/area_predict_true_line.png> <./imgs/Test_8/area_diference_h
+ist.png>]
+<imgs/Test_9/dataset_9/circles_4.png, id=574, 361.35pt x 361.35pt>
 File: imgs/Test_9/dataset_9/circles_4.png Graphic file (type png)
 <use imgs/Test_9/dataset_9/circles_4.png>
 Package pdftex.def Info: imgs/Test_9/dataset_9/circles_4.png  used on input lin
-e 391.
+e 396.
 (pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
-<imgs/Test_9/dataset_9/squares_4.png, id=557, 361.35pt x 361.35pt>
+<imgs/Test_9/dataset_9/squares_4.png, id=575, 361.35pt x 361.35pt>
 File: imgs/Test_9/dataset_9/squares_4.png Graphic file (type png)
 <use imgs/Test_9/dataset_9/squares_4.png>
 Package pdftex.def Info: imgs/Test_9/dataset_9/squares_4.png  used on input lin
-e 392.
+e 397.
 (pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
-<imgs/Test_9/dataset_9/nones_3.png, id=558, 361.35pt x 361.35pt>
+<imgs/Test_9/dataset_9/nones_3.png, id=576, 361.35pt x 361.35pt>
 File: imgs/Test_9/dataset_9/nones_3.png Graphic file (type png)
 <use imgs/Test_9/dataset_9/nones_3.png>
 Package pdftex.def Info: imgs/Test_9/dataset_9/nones_3.png  used on input line 
-393.
+398.
 (pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
-<imgs/Test_9/dataset_9/Squares_Area_Distribution_Hist.png, id=559, 1927.2pt x 1
+<imgs/Test_9/dataset_9/Squares_Area_Distribution_Hist.png, id=577, 1927.2pt x 1
 084.05pt>
 File: imgs/Test_9/dataset_9/Squares_Area_Distribution_Hist.png Graphic file (ty
 pe png)
 <use imgs/Test_9/dataset_9/Squares_Area_Distribution_Hist.png>
 Package pdftex.def Info: imgs/Test_9/dataset_9/Squares_Area_Distribution_Hist.p
-ng  used on input line 399.
+ng  used on input line 404.
 (pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
-<imgs/Test_9/dataset_9/Circles_Area_Distribution_Hist.png, id=560, 1927.2pt x 1
+<imgs/Test_9/dataset_9/Circles_Area_Distribution_Hist.png, id=578, 1927.2pt x 1
 084.05pt>
 File: imgs/Test_9/dataset_9/Circles_Area_Distribution_Hist.png Graphic file (ty
 pe png)
 <use imgs/Test_9/dataset_9/Circles_Area_Distribution_Hist.png>
 Package pdftex.def Info: imgs/Test_9/dataset_9/Circles_Area_Distribution_Hist.p
-ng  used on input line 405.
+ng  used on input line 410.
 (pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
 
 Missing character: There is no ¨ in font lmsy10!
 
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
- [25 <./imgs/Test_9/dataset_9/circles_4.png> <./imgs/Test_9/dataset_9/squares_4
+ [26 <./imgs/Test_9/dataset_9/circles_4.png> <./imgs/Test_9/dataset_9/squares_4
 .png> <./imgs/Test_9/dataset_9/nones_3.png>]
-<imgs/Test_9/train_test_acc.png, id=568, 462.528pt x 346.896pt>
+<imgs/Test_9/train_test_acc.png, id=586, 462.528pt x 346.896pt>
 File: imgs/Test_9/train_test_acc.png Graphic file (type png)
 <use imgs/Test_9/train_test_acc.png>
-Package pdftex.def Info: imgs/Test_9/train_test_acc.png  used on input line 414
+Package pdftex.def Info: imgs/Test_9/train_test_acc.png  used on input line 419
 .
 (pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
-<imgs/Test_9/train_test_loss.png, id=569, 462.528pt x 346.896pt>
+<imgs/Test_9/train_test_loss.png, id=587, 462.528pt x 346.896pt>
 File: imgs/Test_9/train_test_loss.png Graphic file (type png)
 <use imgs/Test_9/train_test_loss.png>
-Package pdftex.def Info: imgs/Test_9/train_test_loss.png  used on input line 41
-6.
+Package pdftex.def Info: imgs/Test_9/train_test_loss.png  used on input line 42
+1.
 (pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
 
 Missing character: There is no ¨ in font lmsy10!
 
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
- [26 <./imgs/Test_9/dataset_9/Squares_Area_Distribution_Hist.png> <./imgs/Test_
+ [27 <./imgs/Test_9/dataset_9/Squares_Area_Distribution_Hist.png> <./imgs/Test_
 9/dataset_9/Circles_Area_Distribution_Hist.png>]
 Overfull \vbox (40.4264pt too high) has occurred while \output is active []
 
@@ -3053,75 +3069,67 @@ Missing character: There is no ¨ in font lmsy10!
 
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
- [27 <./imgs/Test_9/train_test_acc.png> <./imgs/Test_9/train_test_loss.png>]
+ [28 <./imgs/Test_9/train_test_acc.png> <./imgs/Test_9/train_test_loss.png>]
+Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
- [28]
+ [29]
 Missing character: There is no ¨ in font lmsy10!
-<imgs/Test_10/dataset_10/circles_9.png, id=587, 361.35pt x 361.35pt>
+<imgs/Test_10/dataset_10/circles_9.png, id=608, 361.35pt x 361.35pt>
 File: imgs/Test_10/dataset_10/circles_9.png Graphic file (type png)
 <use imgs/Test_10/dataset_10/circles_9.png>
 Package pdftex.def Info: imgs/Test_10/dataset_10/circles_9.png  used on input l
-ine 455.
+ine 460.
 (pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
-<imgs/Test_10/dataset_10/squares_9.png, id=588, 361.35pt x 361.35pt>
+<imgs/Test_10/dataset_10/squares_9.png, id=609, 361.35pt x 361.35pt>
 File: imgs/Test_10/dataset_10/squares_9.png Graphic file (type png)
 <use imgs/Test_10/dataset_10/squares_9.png>
 Package pdftex.def Info: imgs/Test_10/dataset_10/squares_9.png  used on input l
-ine 456.
+ine 461.
 (pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
-
-LaTeX Warning: File `imgs/Test_10/dataset_910triangles_9.png' not found on inpu
-t line 457.
-
-
-! Package pdftex.def Error: File `imgs/Test_10/dataset_910triangles_9.png' not 
-found: using draft setting.
-
-See the pdftex.def package documentation for explanation.
-Type  H <return>  for immediate help.
- ...                                              
-                                                  
-l.457 ...{imgs/Test_10/dataset_910triangles_9.png}
-                                                  
-? 
+<imgs/Test_10/dataset_10/triangles_9.png, id=610, 361.35pt x 361.35pt>
+File: imgs/Test_10/dataset_10/triangles_9.png Graphic file (type png)
+<use imgs/Test_10/dataset_10/triangles_9.png>
+Package pdftex.def Info: imgs/Test_10/dataset_10/triangles_9.png  used on input
+ line 462.
+(pdftex.def)             Requested size: 98.22636pt x 98.22745pt.
 File: imgs/Test_9/dataset_9/Squares_Area_Distribution_Hist.png Graphic file (ty
 pe png)
 <use imgs/Test_9/dataset_9/Squares_Area_Distribution_Hist.png>
 Package pdftex.def Info: imgs/Test_9/dataset_9/Squares_Area_Distribution_Hist.p
-ng  used on input line 463.
+ng  used on input line 468.
 (pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
 File: imgs/Test_9/dataset_9/Circles_Area_Distribution_Hist.png Graphic file (ty
 pe png)
 <use imgs/Test_9/dataset_9/Circles_Area_Distribution_Hist.png>
 Package pdftex.def Info: imgs/Test_9/dataset_9/Circles_Area_Distribution_Hist.p
-ng  used on input line 469.
+ng  used on input line 474.
 (pdftex.def)             Requested size: 392.9055pt x 221.00763pt.
-Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
- [29 <./imgs/Test_10/dataset_10/circles_9.png> <./imgs/Test_10/dataset_10/squar
-es_9.png>]
+ [30 <./imgs/Test_10/dataset_10/circles_9.png> <./imgs/Test_10/dataset_10/squar
+es_9.png> <./imgs/Test_10/dataset_10/triangles_9.png>]
 File: imgs/Test_9/train_test_acc.png Graphic file (type png)
 <use imgs/Test_9/train_test_acc.png>
-Package pdftex.def Info: imgs/Test_9/train_test_acc.png  used on input line 478
+Package pdftex.def Info: imgs/Test_9/train_test_acc.png  used on input line 483
 .
 (pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
 File: imgs/Test_9/train_test_loss.png Graphic file (type png)
 <use imgs/Test_9/train_test_loss.png>
 Package pdftex.def Info: imgs/Test_9/train_test_loss.png  used on input line 48
-0.
+5.
 (pdftex.def)             Requested size: 392.9055pt x 294.6936pt.
+
 Missing character: There is no ¨ in font lmsy10!
 
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
- [30]
+ [31]
 Overfull \vbox (40.4264pt too high) has occurred while \output is active []
 
 
@@ -3129,14 +3137,22 @@ Missing character: There is no ¨ in font lmsy10!
 
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
- [31]
+ [32]
 Missing character: There is no ¨ in font lmsy10!
 )
+Missing character: There is no ¨ in font lmsy10!
 Missing character: There is no ¨ in font lmsy10!
 
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
- [32]
+ [33]
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [34
+
+
+
+]
 \openout2 = `Chapters/Conclusion.aux'.
 
 
@@ -3147,30 +3163,6 @@ Overfull \hbox (38.53226pt too wide) in paragraph at lines 5--5
 []\U/eur/b/n/70 4 
  []
 
-Missing character: There is no ¨ in font lmsy10!
-)
-Missing character: There is no ¨ in font lmsy10!
-
-Overfull \vbox (6.75pt too high) has occurred while \output is active []
-
- [33
-
-
-
-
-
-]
-Overfull \vbox (6.75pt too high) has occurred while \output is active []
-
- [34
-
-
-
-]
-\openout2 = `Covers/Bibliography.aux'.
-
-
-(Covers/Bibliography.tex
 Missing character: There is no ¨ in font lmsy10!
 )
 Missing character: There is no ¨ in font lmsy10!
@@ -3188,17 +3180,38 @@ Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
 
 ]
+\openout2 = `Covers/Bibliography.aux'.
+
+
+(Covers/Bibliography.tex
 Missing character: There is no ¨ in font lmsy10!
+)
 Missing character: There is no ¨ in font lmsy10!
 
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
  [37
 
+
 ]
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
- [38]
+ [38
+
+
+
+]
+Missing character: There is no ¨ in font lmsy10!
+Missing character: There is no ¨ in font lmsy10!
+
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [39
+
+]
+Overfull \vbox (6.75pt too high) has occurred while \output is active []
+
+ [40]
 \openout2 = `Chapters/ApendixA.aux'.
 
 
@@ -3231,7 +3244,7 @@ Missing character: There is no ¨ in font lmsy10!
 
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
- [39
+ [41
 
 
 
@@ -3251,7 +3264,7 @@ Missing character: There is no ¨ in font lmsy10!
 
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
- [40]
+ [42]
 \openout2 = `Chapters/ApendixB.aux'.
 
 
@@ -3268,7 +3281,7 @@ Missing character: There is no ¨ in font lmsy10!
 
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
- [41
+ [43
 
 
 
@@ -3277,7 +3290,7 @@ Overfull \vbox (6.75pt too high) has occurred while \output is active []
 ]
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
- [42
+ [44
 
 
 
@@ -3290,7 +3303,7 @@ Missing character: There is no ¨ in font lmsy10!
 )
 Overfull \vbox (6.75pt too high) has occurred while \output is active []
 
- [43
+ [45
 
 
 ]
@@ -3560,13 +3573,15 @@ Covers/Acronyms.tex
 Chapters/Intro.tex
 Chapters/Background.tex
 Chapters/Development.tex
-imgs/Test_5/dataset_5/square_5501.png
-imgs/Test_5/dataset_5/square_cut_5501.png
-imgs/Test_5/dataset_5/Squares_Area_Distribution_Hist.png
-imgs/Test_5/dataset_5/Partial_Squares_Area_Distribution_Hist.png
-imgs/Test_5/dataset_5/train_test_acc.png
-imgs/Test_5/dataset_5/train_test_loss.png
+imgs/Test_5/5/dataset/square_5501.png
+imgs/Test_5/5/dataset/square_cut_5501.png
+imgs/Test_5/5/dataset/Squares_Area_Distribution_Hist.png
+imgs/Test_5/5/dataset/Partial_Squares_Area_Distribution_Hist.png
+imgs/Test_5/5/train_test_acc.png
+imgs/Test_5/5/train_test_loss.png
   t1lmtt.fd    2015/05/01 v1.6.1 Font defs for Latin Modern
+imgs/Test_5/5_1/dataset/square_5.png
+imgs/Test_5/5_1/dataset/square_cut_6.png
 imgs//Test_7/7_1/dataset/car_5629.png
 imgs//Test_7/7_1/dataset/car_7413.png
 imgs//Test_7/7_1/dataset/sar_5705.png
@@ -3587,10 +3602,11 @@ imgs/Test_7/7_2/failed/car_ci_failed_area_hist.png
 imgs/Test_7/7_2/failed/sar_sq_failed_area_hist.png
 imgs/Test_7/7_2/failed/car_ci_failed_right_left_scatter.png
 imgs/Test_7/7_2/failed/car_ci_failed_right_left_scatter.png
-imgs/Test_8/area_diference_hist.png
-imgs/Test_8/area_predict_true_line.png
+imgs/Test_8/dataset/square_22.png
 imgs/Test_8/loss.png
 imgs/Test_8/mae.png
+imgs/Test_8/area_predict_true_line.png
+imgs/Test_8/area_diference_hist.png
 imgs/Test_9/dataset_9/circles_4.png
 imgs/Test_9/dataset_9/squares_4.png
 imgs/Test_9/dataset_9/nones_3.png
@@ -3600,6 +3616,7 @@ imgs/Test_9/train_test_acc.png
 imgs/Test_9/train_test_loss.png
 imgs/Test_10/dataset_10/circles_9.png
 imgs/Test_10/dataset_10/squares_9.png
+imgs/Test_10/dataset_10/triangles_9.png
 imgs/Test_9/dataset_9/Squares_Area_Distribution_Hist.png
 imgs/Test_9/dataset_9/Circles_Area_Distribution_Hist.png
 imgs/Test_9/train_test_acc.png
@@ -3625,26 +3642,53 @@ Package logreq Info: Writing requests to 'main.run.xml'.
 ### semi simple group (level 1) entered at line 290 (\begingroup)
 ### bottom level 
 Here is how much of TeX's memory you used:
- 62150 strings out of 476305
- 1402999 string characters out of 5792341
- 2670244 words of memory out of 5000000
- 82814 multiletter control sequences out of 15000+600000
- 665022 words of font info for 187 fonts, out of 8000000 for 9000
+ 62170 strings out of 476305
+ 1402980 string characters out of 5792341
+ 2670250 words of memory out of 5000000
+ 82822 multiletter control sequences out of 15000+600000
+ 665105 words of font info for 188 fonts, out of 8000000 for 9000
  0 hyphenation exceptions out of 8191
  108i,22n,130p,10901b,31918s stack positions out of 10000i,1000n,20000p,200000b,200000s
-</home/fred/.miktex/texmfs/install/fonts/type1/public/amsfonts/
-euler/eurb10.pfb></home/fred/.miktex/texmfs/install/fonts/type1/public/lm/lmcsc
-10.pfb></home/fred/.miktex/texmfs/install/fonts/type1/public/lm/lmmi10.pfb></ho
-me/fred/.miktex/texmfs/install/fonts/type1/public/lm/lmmi8.pfb></home/fred/.mik
-tex/texmfs/install/fonts/type1/public/lm/lmr10.pfb></home/fred/.miktex/texmfs/i
-nstall/fonts/type1/public/lm/lmr12.pfb></home/fred/.miktex/texmfs/install/fonts
-/type1/public/lm/lmr8.pfb></home/fred/.miktex/texmfs/install/fonts/type1/public
-/lm/lmr9.pfb></home/fred/.miktex/texmfs/install/fonts/type1/public/lm/lmri10.pf
-b></home/fred/.miktex/texmfs/install/fonts/type1/public/lm/lmri8.pfb></home/fre
-d/.miktex/texmfs/install/fonts/type1/public/lm/lmtt10.pfb>
-Output written on main.pdf (63 pages, 1251668 bytes).
+
+pdfTeX warning (dest): name{subsection.3.11.5} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.3.11.4} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.3.11.3} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.3.11.2} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.3.11.1} has been referenced but does not
+ exist, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{section.3.11} has been referenced but does not exis
+t, replaced by a fixed one
+
+
+pdfTeX warning (dest): name{subsection.3.10.6} has been referenced but does not
+ exist, replaced by a fixed one
+
+</home/fred/.miktex/texmfs/install/fonts/type1/public/amsfonts/euler/eurb10.pfb
+></home/fred/.miktex/texmfs/install/fonts/type1/public/lm/lmcsc10.pfb></home/fr
+ed/.miktex/texmfs/install/fonts/type1/public/lm/lmmi10.pfb></home/fred/.miktex/
+texmfs/install/fonts/type1/public/lm/lmr10.pfb></home/fred/.miktex/texmfs/insta
+ll/fonts/type1/public/lm/lmr12.pfb></home/fred/.miktex/texmfs/install/fonts/typ
+e1/public/lm/lmr8.pfb></home/fred/.miktex/texmfs/install/fonts/type1/public/lm/
+lmr9.pfb></home/fred/.miktex/texmfs/install/fonts/type1/public/lm/lmri10.pfb></
+home/fred/.miktex/texmfs/install/fonts/type1/public/lm/lmri8.pfb></home/fred/.m
+iktex/texmfs/install/fonts/type1/public/lm/lmtt10.pfb>
+Output written on main.pdf (65 pages, 1285369 bytes).
 PDF statistics:
- 1060 PDF objects out of 1200 (max. 8388607)
- 216 named destinations out of 1000 (max. 500000)
- 69088 words of extra memory for PDF output out of 74296 (max. 10000000)
+ 1087 PDF objects out of 1200 (max. 8388607)
+ 226 named destinations out of 1000 (max. 500000)
+ 69108 words of extra memory for PDF output out of 74296 (max. 10000000)
 

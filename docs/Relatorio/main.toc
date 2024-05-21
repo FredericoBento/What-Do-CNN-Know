@@ -23,8 +23,8 @@
 \contentsline {subsection}{\numberline {3.1.6}{Metricas de Avaliação}}{8}{subsection.3.1.6}%
 \contentsline {subsection}{\numberline {3.1.7}{Matriz de Correlação}}{8}{subsection.3.1.7}%
 \contentsline {subsection}{\numberline {3.1.8}{Conclusão de Teste}}{8}{subsection.3.1.8}%
-\contentsline {section}{\numberline {3.2}{Teste 5.1}}{9}{section.3.2}%
-\contentsline {subsection}{\numberline {3.2.1}{Objetivo}}{9}{subsection.3.2.1}%
+\contentsline {section}{\numberline {3.2}{Teste 5.1}}{8}{section.3.2}%
+\contentsline {subsection}{\numberline {3.2.1}{Objetivo}}{8}{subsection.3.2.1}%
 \contentsline {subsection}{\numberline {3.2.2}{Dataset}}{9}{subsection.3.2.2}%
 \contentsline {subsection}{\numberline {3.2.3}{Treino}}{9}{subsection.3.2.3}%
 \contentsline {subsection}{\numberline {3.2.4}{Amostras Mal Classificadas}}{9}{subsection.3.2.4}%
@@ -76,35 +76,35 @@
 \contentsline {subsection}{\numberline {3.6.6}{Análise}}{20}{subsection.3.6.6}%
 \contentsline {section}{\numberline {3.7}{Teste 7.3}}{22}{section.3.7}%
 \contentsline {subsection}{\numberline {3.7.1}{Objetivo}}{22}{subsection.3.7.1}%
-\contentsline {section}{\numberline {3.8}{Teste 8-ALT}}{22}{section.3.8}%
+\contentsline {section}{\numberline {3.8}{Teste 8}}{22}{section.3.8}%
 \contentsline {subsection}{\numberline {3.8.1}{Objetivo}}{22}{subsection.3.8.1}%
-\contentsline {section}{\numberline {3.9}{Teste 8}}{23}{section.3.9}%
-\contentsline {subsection}{\numberline {3.9.1}{Objetivo}}{23}{subsection.3.9.1}%
-\contentsline {subsection}{\numberline {3.9.2}{Dataset}}{23}{subsection.3.9.2}%
-\contentsline {section}{\numberline {3.10}{Teste 9}}{25}{section.3.10}%
-\contentsline {subsection}{\numberline {3.10.1}{Objetivo}}{25}{subsection.3.10.1}%
-\contentsline {subsection}{\numberline {3.10.2}{Dataset}}{25}{subsection.3.10.2}%
-\contentsline {subsection}{\numberline {3.10.3}{Treino}}{27}{subsection.3.10.3}%
-\contentsline {subsection}{\numberline {3.10.4}{Amostras Mal Classificadas}}{28}{subsection.3.10.4}%
-\contentsline {subsection}{\numberline {3.10.5}{Matriz de Confusão}}{28}{subsection.3.10.5}%
-\contentsline {subsection}{\numberline {3.10.6}{Análise}}{28}{subsection.3.10.6}%
-\contentsline {section}{\numberline {3.11}{Teste 10}}{29}{section.3.11}%
-\contentsline {subsection}{\numberline {3.11.1}{Objetivo}}{29}{subsection.3.11.1}%
-\contentsline {subsection}{\numberline {3.11.2}{Dataset}}{29}{subsection.3.11.2}%
-\contentsline {subsection}{\numberline {3.11.3}{Treino}}{31}{subsection.3.11.3}%
-\contentsline {subsection}{\numberline {3.11.4}{Amostras Mal Classificadas}}{32}{subsection.3.11.4}%
-\contentsline {subsection}{\numberline {3.11.5}{Matriz de Confusão}}{32}{subsection.3.11.5}%
+\contentsline {subsection}{\numberline {3.8.2}{Dataset}}{22}{subsection.3.8.2}%
+\contentsline {subsection}{\numberline {3.8.3}{Treino}}{24}{subsection.3.8.3}%
+\contentsline {subsection}{\numberline {3.8.4}{Análise}}{25}{subsection.3.8.4}%
+\contentsline {section}{\numberline {3.9}{Teste 9}}{26}{section.3.9}%
+\contentsline {subsection}{\numberline {3.9.1}{Objetivo}}{26}{subsection.3.9.1}%
+\contentsline {subsection}{\numberline {3.9.2}{Dataset}}{26}{subsection.3.9.2}%
+\contentsline {subsection}{\numberline {3.9.3}{Treino}}{28}{subsection.3.9.3}%
+\contentsline {subsection}{\numberline {3.9.4}{Amostras Mal Classificadas}}{29}{subsection.3.9.4}%
+\contentsline {subsection}{\numberline {3.9.5}{Matriz de Confusão}}{29}{subsection.3.9.5}%
+\contentsline {subsection}{\numberline {3.9.6}{Análise}}{29}{subsection.3.9.6}%
+\contentsline {section}{\numberline {3.10}{Teste 10}}{30}{section.3.10}%
+\contentsline {subsection}{\numberline {3.10.1}{Objetivo}}{30}{subsection.3.10.1}%
+\contentsline {subsection}{\numberline {3.10.2}{Dataset}}{30}{subsection.3.10.2}%
+\contentsline {subsection}{\numberline {3.10.3}{Treino}}{32}{subsection.3.10.3}%
+\contentsline {subsection}{\numberline {3.10.4}{Amostras Mal Classificadas}}{33}{subsection.3.10.4}%
+\contentsline {subsection}{\numberline {3.10.5}{Matriz de Confusão}}{33}{subsection.3.10.5}%
 \vspace {\beforebibskip }
-\contentsline {chapter}{\numberline {4}{Conclusões}}{33}{chapter.4}%
+\contentsline {chapter}{\numberline {4}{Conclusões}}{35}{chapter.4}%
 \vspace {\beforebibskip }
-\contentsline {chapter}{\numberline {}{Bibliografia}}{35}{dummy.8}%
-\contentsline {part}{{Apêndices}}{37}{section*.39}%
+\contentsline {chapter}{\numberline {}{Bibliografia}}{37}{dummy.8}%
+\contentsline {part}{{Apêndices}}{39}{section*.40}%
 \vspace {\beforebibskip }
-\contentsline {chapter}{\numberline {A}{Apêncice A}}{39}{appendix.A}%
-\contentsline {section}{\numberline {A.1}{Appendix Section Test}}{39}{section.A.1}%
-\contentsline {section}{\numberline {A.2}{Another Appendix Section Test}}{40}{section.A.2}%
+\contentsline {chapter}{\numberline {A}{Apêncice A}}{41}{appendix.A}%
+\contentsline {section}{\numberline {A.1}{Appendix Section Test}}{41}{section.A.1}%
+\contentsline {section}{\numberline {A.2}{Another Appendix Section Test}}{42}{section.A.2}%
 \vspace {\beforebibskip }
-\contentsline {chapter}{\numberline {B}{Apêncice B}}{41}{appendix.B}%
+\contentsline {chapter}{\numberline {B}{Apêncice B}}{43}{appendix.B}%
 \vspace {\beforebibskip }
-\contentsline {chapter}{\numberline {}{Declaração}}{43}{dummy.9}%
+\contentsline {chapter}{\numberline {}{Declaração}}{45}{dummy.9}%
 \providecommand \tocbasic@end@toc@file {}\tocbasic@end@toc@file 

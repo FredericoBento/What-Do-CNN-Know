@@ -16,24 +16,23 @@ O Dataset é composto por 11000 imagens de treino e 5000 de teste. Composto por 
 \begin{itemize}
     \item Quadrados 
     \item Quadrados Parciais
-
 \end{itemize}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=0.35\linewidth]{imgs/Test_5/dataset_5/square_5501.png}
-    \includegraphics[width=0.35\linewidth]{imgs/Test_5/dataset_5/square_cut_5501.png}
+    \includegraphics[width=0.35\linewidth]{imgs/Test_5/5/dataset/square_5501.png}
+    \includegraphics[width=0.35\linewidth]{imgs/Test_5/5/dataset/square_cut_5501.png}
     \caption{Quadrado e Quadrado Parcial}
     \label{fig:enter-label}
 \end{figure}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\linewidth]{imgs/Test_5/dataset_5/Squares_Area_Distribution_Hist.png}
+    \includegraphics[width=1.0\linewidth]{imgs/Test_5/5/dataset/Squares_Area_Distribution_Hist.png}
     \caption{Distribuição da Área (Quadrados)}
     \label{fig:enter-label}
 \end{figure}
 \begin{figure}[H]
     \centering
-    \includegraphics[width=1.0\linewidth]{imgs/Test_5/dataset_5/Partial_Squares_Area_Distribution_Hist.png}
+    \includegraphics[width=1.0\linewidth]{imgs/Test_5/5/dataset/Partial_Squares_Area_Distribution_Hist.png}
     \caption{Distribuição da Área Visivel (Quadrados Parcial)}
     \label{fig:enter-label}
 \end{figure}
@@ -42,9 +41,9 @@ O Dataset é composto por 11000 imagens de treino e 5000 de teste. Composto por 
 
 \begin{figure}[H]
     \centering
-    \includegraphics[width=\textwidth]{imgs/Test_5/dataset_5/train_test_acc.png}
+    \includegraphics[width=\textwidth]{imgs/Test_5/5/train_test_acc.png}
     \caption{Acurácia de Validação e de Treino}
-    \includegraphics[width=\textwidth]{imgs/Test_5/dataset_5/train_test_loss.png}
+    \includegraphics[width=\textwidth]{imgs/Test_5/5/train_test_loss.png}
     \caption{Perda de Validação e de Treino}
     \label{fig:sub2}
 \end{figure}
@@ -85,7 +84,21 @@ Quadrados Parciais & 95           & 2330                  \\
 
 \section{Teste 5.1}
 \subsection{Objetivo}
+Classificar imagens com vários quadrados parciais e imagens com vários quadrados normais. É importante mencionar que os quadrados parciais estão todos com parte fora da imagem, nas extremidades. 
 \subsection{Dataset}
+O Dataset é composto por 11000 imagens de treino e 5000 de teste. Composto por 2 classes: 
+\begin{itemize}
+    \item Quadrados (1 a 5 quadrados em cada imagem)
+    \item Quadrados Parciais  (1 a 5 quadrados em cada imagem)
+\end{itemize}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[width=0.35\linewidth]{imgs/Test_5/5_1/dataset/square_5.png}
+    \includegraphics[width=0.35\linewidth]{imgs/Test_5/5_1/dataset/square_cut_6.png}
+    \caption{Quadrados e Quadrados Parciais}
+    \label{fig:enter-label}
+\end{figure}
 \subsection{Treino}
 \subsection{Amostras Mal Classificadas}
 \subsection{Matriz de Confusão}
@@ -328,53 +341,8 @@ Como podemos ver partir dos histogramas, o que causa o modelo ao engano é quand
     Tamanhos diferentes
     Com Intersecções
 
-
-\section{Teste 8-ALT}
-\subsection{Objetivo}
-       Circlos com Circlos
-       Ver Porpoção
-    
-    
-
-\section{Teste 8}
-\subsection{Objetivo}
-
-\subsection{Dataset}
-    O Dataset é composto por 5500 imagens de treino e 2500 de teste. Composto por apenas imagens com 1 circulo.
-    Este dataset foi tambem utilizado no teste 5_1.
-    
-   
-        \begin{figure}[H]
-        \centering
-        \includegraphics[width=1.0\linewidth]{imgs/Test_8/area_diference_hist.png}
-
-        \label{fig:enter-label}
-    \end{figure}
-    
-       
-        \begin{figure}[H]
-        \centering
-        \includegraphics[width=1.0\linewidth]{imgs/Test_8/area_predict_true_line.png}
-        \label{fig:enter-label}
-    \end{figure}
-    
-       
-        \begin{figure}[H]
-        \centering
-        \includegraphics[width=1.0\linewidth]{imgs/Test_8/loss.png}
+ 	    
  
-        \label{fig:enter-label}
-    \end{figure}
-    
-       
-        \begin{figure}[H]
-        \centering
-        \includegraphics[width=1.0\linewidth]{imgs/Test_8/mae.png}
-  
-        \label{fig:enter-label}
-    \end{figure}
-    
-    
 
 \section{Teste 9}
 \subsection{Objetivo}
@@ -430,9 +398,9 @@ No total foram mal classificadas 66 (1.32\% ) imagens, sendo 26 (39.39\%) delas 
 \begin{tabular}{l|c c c}
                  & Circulo & Quadrado & Vazio \\
 \hline
-Circulo          & 2405         & 22     & 1           \\
-Quadrado         & 95           & 2330   & 1           \\
-Vazio            & 95           & 2330   & 1           \\
+Circulo          & 0.98       & 0.02       & 0.000059          \\
+Quadrado    & 0.02       & 0.98       & 0.000058           \\
+Vazio             & 0            & 0            & 1           \\
 \end{tabular}
 \end{table}
 
@@ -442,7 +410,7 @@ Vazio            & 95           & 2330   & 1           \\
 
 \section{Teste 10}
 \subsection{Objetivo}
-    Classificar Imagens com quadrados, circulos e vazios. Ao seja, um problema de classificação não binário.
+    Classificar Imagens com quadrados, circulos e triangulos. Ao seja, um problema de classificação não binário.
 \subsection{Dataset}
     O Dataset é composto por 10998 imagens de treino e 4998 de teste. Composto por 3 classes: 
     \begin{itemize}
@@ -454,7 +422,7 @@ Vazio            & 95           & 2330   & 1           \\
         \centering
         \includegraphics[width=0.25\linewidth]{imgs/Test_10/dataset_10/circles_9.png}
         \includegraphics[width=0.25\linewidth]{imgs/Test_10/dataset_10/squares_9.png}
-        \includegraphics[width=0.25\linewidth]{imgs/Test_10/dataset_910triangles_9.png}
+        \includegraphics[width=0.25\linewidth]{imgs/Test_10/dataset_10/triangles_9.png}
         \caption{Circlos, Quadrados e Triangulos}
         \label{fig:enter-label}
     \end{figure}
@@ -499,3 +467,77 @@ Quadrado         & 95           & 2330   & 1           \\
 Vazio            & 95           & 2330   & 1           \\
 \end{tabular}
 \end{table}
+
+
+\section{Teste 8 R1}
+\subsection{Objetivo}
+
+\subsection{Dataset}
+O Dataset é composto por 5500 imagens de treino e 2500 de teste. Composto por apenas imagens com 1 quadrado. 
+Este dataset foi tambem utilizado no teste 5.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.25\linewidth]{imgs/Test_8/dataset/square_22.png}
+        \label{fig:enter-label}
+    \end{figure}
+\subsection{Treino}
+	\begin{figure}[H]
+	    \centering
+	      \includegraphics[width=1.0\linewidth]{imgs/Test_8/loss.png}
+	    \caption{Loss}
+	        \includegraphics[width=1.0\linewidth]{imgs/Test_8/mae.png}
+	    \caption{MAE}
+	    \label{fig:sub2}
+	\end{figure}
+	  Com as 50 épocas realizadas, conseguimos obter previsões das áreas com uma margem de erro por volta de 2000px de área.
+	
+ \subsection{Análise}       
+        \begin{figure}[H]
+	        \centering
+	        \includegraphics[width=1.0\linewidth]{imgs/Test_8/area_predict_true_line.png}
+	          \caption{área prevista e área verdadeira}
+	        \label{fig:enter-label}
+        \end{figure}
+        \begin{figure}[H]
+	        \centering
+	        \includegraphics[width=1.0\linewidth]{imgs/Test_8/area_diference_hist.png}
+	        \caption{Diferença entre area prevista e a area verdadeira}
+	        \label{fig:enter-label}
+    \end{figure}
+    
+   \section{Teste R2}
+\subsection{Objetivo}
+
+\subsection{Dataset}
+O Dataset é composto por 5500 imagens de treino e 2500 de teste. Composto por apenas imagens com 1 quadrado. 
+Este dataset foi tambem utilizado no teste 5.
+    \begin{figure}[H]
+        \centering
+        \includegraphics[width=0.25\linewidth]{imgs/Test_8/dataset/square_22.png}
+        \label{fig:enter-label}
+    \end{figure}
+\subsection{Treino}
+	\begin{figure}[H]
+	    \centering
+	      \includegraphics[width=1.0\linewidth]{imgs/Test_8/loss.png}
+	    \caption{Loss}
+	        \includegraphics[width=1.0\linewidth]{imgs/Test_8/mae.png}
+	    \caption{MAE}
+	    \label{fig:sub2}
+	\end{figure}
+	  Com as 50 épocas realizadas, conseguimos obter previsões das áreas com uma margem de erro por volta de 2000px de área.
+	
+ \subsection{Análise}       
+        \begin{figure}[H]
+	        \centering
+	        \includegraphics[width=1.0\linewidth]{imgs/Test_8/area_predict_true_line.png}
+	          \caption{área prevista e área verdadeira}
+	        \label{fig:enter-label}
+        \end{figure}
+        \begin{figure}[H]
+	        \centering
+	        \includegraphics[width=1.0\linewidth]{imgs/Test_8/area_diference_hist.png}
+	        \caption{Diferença entre area prevista e a area verdadeira}
+	        \label{fig:enter-label}
+    \end{figure}
+    

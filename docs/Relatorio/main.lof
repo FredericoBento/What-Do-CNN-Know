@@ -15,32 +15,37 @@
 \contentsline {figure}{\numberline {3}{\ignorespaces Distribuição da Área Visivel (Quadrados Parcial)}}{6}{figure.caption.4}%
 \contentsline {figure}{\numberline {4}{\ignorespaces Acurácia de Validação e de Treino}}{7}{figure.caption.5}%
 \contentsline {figure}{\numberline {5}{\ignorespaces Perda de Validação e de Treino}}{7}{figure.caption.5}%
-\contentsline {figure}{\numberline {6}{\ignorespaces Circulo à direita}}{13}{figure.caption.8}%
-\contentsline {figure}{\numberline {7}{\ignorespaces Quadrado à direita}}{13}{figure.caption.9}%
-\contentsline {figure}{\numberline {8}{\ignorespaces Distribuição da Área (Circulos à direita)}}{14}{figure.caption.10}%
-\contentsline {figure}{\numberline {9}{\ignorespaces Distribuição da Área (Quadrados à direita)}}{14}{figure.caption.11}%
-\contentsline {figure}{\numberline {10}{\ignorespaces Acurácia de Validação e de Treino}}{15}{figure.caption.12}%
-\contentsline {figure}{\numberline {11}{\ignorespaces Perda de Validação e de Treino}}{15}{figure.caption.12}%
-\contentsline {figure}{\numberline {12}{\ignorespaces Circulo à direita}}{17}{figure.caption.14}%
-\contentsline {figure}{\numberline {13}{\ignorespaces Quadrado à direita}}{17}{figure.caption.15}%
-\contentsline {figure}{\numberline {14}{\ignorespaces Distribuição da Área (Circulos à direita)}}{18}{figure.caption.16}%
-\contentsline {figure}{\numberline {15}{\ignorespaces Distribuição da Área (Quadrados à direita)}}{18}{figure.caption.17}%
-\contentsline {figure}{\numberline {16}{\ignorespaces Acurácia de Validação e de Treino}}{19}{figure.caption.18}%
-\contentsline {figure}{\numberline {17}{\ignorespaces Perda de Validação e de Treino}}{19}{figure.caption.18}%
-\contentsline {figure}{\numberline {18}{\ignorespaces Distribuição da Área dos Circulos à direita }}{20}{figure.caption.20}%
-\contentsline {figure}{\numberline {19}{\ignorespaces Distribuição da Área dos Quadrados à direita }}{21}{figure.caption.21}%
-\contentsline {figure}{\numberline {20}{\ignorespaces Scatter dos circulos, em imagens de circulos à direita}}{21}{figure.caption.22}%
-\contentsline {figure}{\numberline {21}{\ignorespaces Scatter dos quadrados, em imagens de quadrados à direita}}{22}{figure.caption.23}%
-\contentsline {figure}{\numberline {22}{\ignorespaces Circlos, Quadrados e Vazios}}{25}{figure.caption.28}%
-\contentsline {figure}{\numberline {23}{\ignorespaces Distribuição da Área (Quadrados)}}{26}{figure.caption.29}%
-\contentsline {figure}{\numberline {24}{\ignorespaces Distribuição da Área (Circulos)}}{26}{figure.caption.30}%
-\contentsline {figure}{\numberline {25}{\ignorespaces Acurácia de Validação e de Treino}}{27}{figure.caption.31}%
-\contentsline {figure}{\numberline {26}{\ignorespaces Perda de Validação e de Treino}}{27}{figure.caption.31}%
-\contentsline {figure}{\numberline {27}{\ignorespaces Circlos, Quadrados e Triangulos}}{29}{figure.caption.33}%
-\contentsline {figure}{\numberline {28}{\ignorespaces Distribuição da Área (Quadrados)}}{30}{figure.caption.34}%
-\contentsline {figure}{\numberline {29}{\ignorespaces Distribuição da Área (Circulos)}}{30}{figure.caption.35}%
-\contentsline {figure}{\numberline {30}{\ignorespaces Acurácia de Validação e de Treino}}{31}{figure.caption.36}%
-\contentsline {figure}{\numberline {31}{\ignorespaces Perda de Validação e de Treino}}{31}{figure.caption.36}%
+\contentsline {figure}{\numberline {6}{\ignorespaces Quadrados e Quadrados Parciais}}{9}{figure.caption.8}%
+\contentsline {figure}{\numberline {7}{\ignorespaces Circulo à direita}}{13}{figure.caption.9}%
+\contentsline {figure}{\numberline {8}{\ignorespaces Quadrado à direita}}{13}{figure.caption.10}%
+\contentsline {figure}{\numberline {9}{\ignorespaces Distribuição da Área (Circulos à direita)}}{14}{figure.caption.11}%
+\contentsline {figure}{\numberline {10}{\ignorespaces Distribuição da Área (Quadrados à direita)}}{14}{figure.caption.12}%
+\contentsline {figure}{\numberline {11}{\ignorespaces Acurácia de Validação e de Treino}}{15}{figure.caption.13}%
+\contentsline {figure}{\numberline {12}{\ignorespaces Perda de Validação e de Treino}}{15}{figure.caption.13}%
+\contentsline {figure}{\numberline {13}{\ignorespaces Circulo à direita}}{17}{figure.caption.15}%
+\contentsline {figure}{\numberline {14}{\ignorespaces Quadrado à direita}}{17}{figure.caption.16}%
+\contentsline {figure}{\numberline {15}{\ignorespaces Distribuição da Área (Circulos à direita)}}{18}{figure.caption.17}%
+\contentsline {figure}{\numberline {16}{\ignorespaces Distribuição da Área (Quadrados à direita)}}{18}{figure.caption.18}%
+\contentsline {figure}{\numberline {17}{\ignorespaces Acurácia de Validação e de Treino}}{19}{figure.caption.19}%
+\contentsline {figure}{\numberline {18}{\ignorespaces Perda de Validação e de Treino}}{19}{figure.caption.19}%
+\contentsline {figure}{\numberline {19}{\ignorespaces Distribuição da Área dos Circulos à direita }}{20}{figure.caption.21}%
+\contentsline {figure}{\numberline {20}{\ignorespaces Distribuição da Área dos Quadrados à direita }}{21}{figure.caption.22}%
+\contentsline {figure}{\numberline {21}{\ignorespaces Scatter dos circulos, em imagens de circulos à direita}}{21}{figure.caption.23}%
+\contentsline {figure}{\numberline {22}{\ignorespaces Scatter dos quadrados, em imagens de quadrados à direita}}{22}{figure.caption.24}%
+\contentsline {figure}{\numberline {23}{\ignorespaces Loss}}{24}{figure.caption.26}%
+\contentsline {figure}{\numberline {24}{\ignorespaces MAE}}{24}{figure.caption.26}%
+\contentsline {figure}{\numberline {25}{\ignorespaces área prevista e área verdadeira}}{25}{figure.caption.27}%
+\contentsline {figure}{\numberline {26}{\ignorespaces Diferença entre area prevista e a area verdadeira}}{25}{figure.caption.28}%
+\contentsline {figure}{\numberline {27}{\ignorespaces Circlos, Quadrados e Vazios}}{26}{figure.caption.29}%
+\contentsline {figure}{\numberline {28}{\ignorespaces Distribuição da Área (Quadrados)}}{27}{figure.caption.30}%
+\contentsline {figure}{\numberline {29}{\ignorespaces Distribuição da Área (Circulos)}}{27}{figure.caption.31}%
+\contentsline {figure}{\numberline {30}{\ignorespaces Acurácia de Validação e de Treino}}{28}{figure.caption.32}%
+\contentsline {figure}{\numberline {31}{\ignorespaces Perda de Validação e de Treino}}{28}{figure.caption.32}%
+\contentsline {figure}{\numberline {32}{\ignorespaces Circlos, Quadrados e Triangulos}}{30}{figure.caption.34}%
+\contentsline {figure}{\numberline {33}{\ignorespaces Distribuição da Área (Quadrados)}}{31}{figure.caption.35}%
+\contentsline {figure}{\numberline {34}{\ignorespaces Distribuição da Área (Circulos)}}{31}{figure.caption.36}%
+\contentsline {figure}{\numberline {35}{\ignorespaces Acurácia de Validação e de Treino}}{32}{figure.caption.37}%
+\contentsline {figure}{\numberline {36}{\ignorespaces Perda de Validação e de Treino}}{32}{figure.caption.37}%
 \ttl@tocsep 
 \ttl@tocsep 
 \ttl@tocsep 
